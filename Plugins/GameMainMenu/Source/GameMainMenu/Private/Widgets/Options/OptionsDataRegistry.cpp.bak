@@ -1,0 +1,258 @@
+// HangHang All Rights Reserved
+
+
+#include "Widgets/Options/OptionsDataRegistry.h"
+
+#include "FrontendSettings/FrontendGameUserSettings.h"
+#include "Widgets/Options/OptionsDataInteractionHelper.h"
+#include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
+#include "Widgets/Options/DataObjects/ListDataObject_Scalar.h"
+#include "Widgets/Options/DataObjects/ListDataObject_String.h"
+
+#define MAKE_OPTIONS_DATA_CONTROL(SetterOrGetterFuncName) \
+MakeShared<FOptionsDataInteractionHelper>(GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings,SetterOrGetterFuncName))
+
+void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer)
+{
+	InitGameplayCollectionTab();
+	InitAudioCollectionTab();
+	InitVideoCollectionTab();
+	InitControlCollectionTab(InOwningLocalPlayer);
+}
+
+TArray<UListDataObject_Base*> UOptionsDataRegistry::GetListSourceItemBySelectedTabId(const FName& InSelectedTabId) const
+{
+	UListDataObject_Collection* const* FoundCollectionTabPointer = RegisteredOptionsCollectionTabs.FindByPredicate(
+	[InSelectedTabId](const UListDataObject_Collection* AvailableCollectionTab)->bool
+	{
+		return AvailableCollectionTab->GetDataId() == InSelectedTabId;
+	}
+	
+	);
+
+	checkf(FoundCollectionTabPointer,TEXT("No valid found under the ID %s"),*InSelectedTabId.ToString());
+
+	const UListDataObject_Collection* FoundCollectionTab = *FoundCollectionTabPointer;
+
+	TArray<UListDataObject_Base*> AllChildListItems;
+
+	for (UListDataObject_Base* ChildListData : FoundCollectionTab->GetAllChildListData())
+	{
+		if (!ChildListData) continue;
+
+		AllChildListItems.Add(ChildListData);
+
+		if (ChildListData->HasAnyChildListData())
+		{
+			FindChildListDataRecursively(ChildListData,AllChildListItems);
+		}
+	}
+
+	return AllChildListItems;
+}
+
+void UOptionsDataRegistry::FindChildListDataRecursively(UListDataObject_Base* InParentData,
+                                                        TArray<UListDataObject_Base*>& OutFoundChildListData) const
+{
+	if (!InParentData || !InParentData->HasAnyChildListData()) return;
+
+	for (UListDataObject_Base* SubChildListData : InParentData->GetAllChildListData())
+	{
+		if (!SubChildListData) continue;
+
+		OutFoundChildListData.Add(SubChildListData);
+
+		if (SubChildListData->HasAnyChildListData())
+		{
+			FindChildListDataRecursively(SubChildListData,OutFoundChildListData);
+		}
+	}
+}
+
+void UOptionsDataRegistry::InitGameplayCollectionTab()
+{
+	UListDataObject_Collection* GameplayCollectionTab = NewObject<UListDataObject_Collection>();
+	
+	GameplayCollectionTab->SetDataId(FName("Tab-Gameplay"));
+	GameplayCollectionTab->SetDataDisplayName(FText::FromString("Gameplay"));	
+	
+	//难度
+	{
+		UListDataObject_String* GameDifficulty = NewObject<UListDataObject_String>();
+		GameDifficulty->SetDataId(FName("Entry-Difficulty"));
+		//设置条目名
+		GameDifficulty->SetDataDisplayName(FText::FromString("Difficulty"));
+		//设置条目描述
+		GameDifficulty->SetDescriptionRichText(FText::FromString("Set the game difficulty level."));
+		//添加条目选项
+		GameDifficulty->AddDynamicString(TEXT("Easy"),FText::FromString("Easy"));
+		GameDifficulty->AddDynamicString(TEXT("Normal"),FText::FromString("Normal"));
+		GameDifficulty->AddDynamicString(TEXT("Hard"),FText::FromString("Hard"));
+		GameDifficulty->AddDynamicString(TEXT("Nightmare"),FText::FromString("Nightmare"));
+		//设置条目默认值
+		GameDifficulty->SetDefaultValueFromString(TEXT("Normal"));
+		
+		GameDifficulty->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetDifficulty));
+		GameDifficulty->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetDifficulty));
+		
+		GameDifficulty->SetShouldApplyChangeImmediately(true);
+
+		GameplayCollectionTab->AddChildListData(GameDifficulty);
+	}
+
+	//血条
+	{
+		UListDataObject_String* HealthBarEntry = NewObject<UListDataObject_String>();
+		HealthBarEntry->SetDataId(FName("Entry-HealthBar"));
+		HealthBarEntry->SetDataDisplayName(FText::FromString("Health Bar"));
+		HealthBarEntry->SetDescriptionRichText(FText::FromString("Toggle the display of enemy health bars."));
+		HealthBarEntry->AddDynamicString(TEXT("Enable"),FText::FromString("Enable"));
+		HealthBarEntry->AddDynamicString(TEXT("Disable"),FText::FromString("Disable"));
+
+		HealthBarEntry->SetDefaultValueFromString(TEXT("Enable"));
+
+		HealthBarEntry->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetShowHealthBar));
+		HealthBarEntry->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetShowHealthBar));
+
+		HealthBarEntry->SetShouldApplyChangeImmediately(true);
+
+		GameplayCollectionTab->AddChildListData(HealthBarEntry);
+	}
+
+	//伤害数字
+	{
+		UListDataObject_String* DamageNumbersEntry = NewObject<UListDataObject_String>();
+		DamageNumbersEntry->SetDataId(FName("Entry-DamageNumbers"));
+		DamageNumbersEntry->SetDataDisplayName(FText::FromString("Damage Numbers"));
+		DamageNumbersEntry->SetDescriptionRichText(FText::FromString("Toggle the display of floating damage numbers."));
+		DamageNumbersEntry->AddDynamicString(TEXT("Enable"),FText::FromString("Enable"));
+		DamageNumbersEntry->AddDynamicString(TEXT("Disable"),FText::FromString("Disable"));
+
+		DamageNumbersEntry->SetDefaultValueFromString(TEXT("Enable"));
+
+		DamageNumbersEntry->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetShowDamageNumbers));
+		DamageNumbersEntry->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetShowDamageNumbers));
+
+		DamageNumbersEntry->SetShouldApplyChangeImmediately(true);
+
+		GameplayCollectionTab->AddChildListData(DamageNumbersEntry);
+	}
+
+	//高亮互动
+	{
+		UListDataObject_String* HighlightInteractionEntry = NewObject<UListDataObject_String>();
+		HighlightInteractionEntry->SetDataId(FName("Entry-HighlightInteraction"));
+		HighlightInteractionEntry->SetDataDisplayName(FText::FromString("Highlight Interaction"));
+		HighlightInteractionEntry->SetDescriptionRichText(FText::FromString("Toggle the highlight outline on interactive objects."));
+		HighlightInteractionEntry->AddDynamicString(TEXT("Enable"),FText::FromString("Enable"));
+		HighlightInteractionEntry->AddDynamicString(TEXT("Disable"),FText::FromString("Disable"));
+
+		HighlightInteractionEntry->SetDefaultValueFromString(TEXT("Enable"));
+
+		HighlightInteractionEntry->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetHighlightInteraction));
+		HighlightInteractionEntry->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetHighlightInteraction));
+
+		HighlightInteractionEntry->SetShouldApplyChangeImmediately(true);
+
+		GameplayCollectionTab->AddChildListData(HighlightInteractionEntry);
+	}
+
+	//字幕显示
+	{
+		UListDataObject_String* SubtitlesEntry = NewObject<UListDataObject_String>();
+		SubtitlesEntry->SetDataId(FName("Entry-Subtitles"));
+		SubtitlesEntry->SetDataDisplayName(FText::FromString("Subtitles"));
+		SubtitlesEntry->SetDescriptionRichText(FText::FromString("Toggle subtitle display during dialogues and cutscenes."));
+		SubtitlesEntry->AddDynamicString(TEXT("Enable"),FText::FromString("Enable"));
+		SubtitlesEntry->AddDynamicString(TEXT("Disable"),FText::FromString("Disable"));
+
+		SubtitlesEntry->SetDefaultValueFromString(TEXT("Enable"));
+
+		SubtitlesEntry->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetShowSubtitles));
+		SubtitlesEntry->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetShowSubtitles));
+
+		SubtitlesEntry->SetShouldApplyChangeImmediately(true);
+
+		GameplayCollectionTab->AddChildListData(SubtitlesEntry);
+	}
+
+	//自动存档
+	{
+		UListDataObject_String* AutoSaveEntry = NewObject<UListDataObject_String>();
+		AutoSaveEntry->SetDataId(FName("Entry-AutoSave"));
+		AutoSaveEntry->SetDataDisplayName(FText::FromString("Auto Save"));
+		AutoSaveEntry->SetDescriptionRichText(FText::FromString("Toggle automatic game progress saving."));
+		AutoSaveEntry->AddDynamicString(TEXT("Enable"),FText::FromString("Enable"));
+		AutoSaveEntry->AddDynamicString(TEXT("Disable"),FText::FromString("Disable"));
+
+		AutoSaveEntry->SetDefaultValueFromString(TEXT("Enable"));
+
+		AutoSaveEntry->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetAutoSave));
+		AutoSaveEntry->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetAutoSave));
+
+		AutoSaveEntry->SetShouldApplyChangeImmediately(true);
+
+		GameplayCollectionTab->AddChildListData(AutoSaveEntry);
+	}
+
+	RegisteredOptionsCollectionTabs.Add(GameplayCollectionTab);
+}
+
+void UOptionsDataRegistry::InitAudioCollectionTab()
+{
+	UListDataObject_Collection* AudioCollectionTab = NewObject<UListDataObject_Collection>();
+	
+	AudioCollectionTab->SetDataId(FName("Tab-Audio"));
+	AudioCollectionTab->SetDataDisplayName(FText::FromString("Audio"));
+	
+	// Volume Category
+	{
+		UListDataObject_Collection* VolumeCategory = NewObject<UListDataObject_Collection>();
+		VolumeCategory->SetDataId(FName("Category-Volume"));
+		VolumeCategory->SetDataDisplayName(FText::FromString("Volume"));
+		
+		AudioCollectionTab->AddChildListData(VolumeCategory);
+		//Overall Volume
+		{
+			UListDataObject_Scalar* OverallVolume = NewObject<UListDataObject_Scalar>();
+			OverallVolume->SetDataId(FName("OverallVolume"));
+			OverallVolume->SetDataDisplayName(FText::FromString("Overall Volume"));
+			OverallVolume->SetDescriptionRichText(FText::FromString("Adjust the overall volume level of the game."));
+			OverallVolume->SetDisplayValueRange(TRange<float>(0.f,1.f));
+			OverallVolume->SetOutValueRange(TRange<float>(0.f, 2.f));
+			OverallVolume->SetSliderStepSize(0.01f);
+			OverallVolume->SetDefaultValueFromString(LexToString(1.f));
+			OverallVolume->SetCommonNumericType(ECommonNumericType::Percentage);
+			OverallVolume->SetCommonNumberFormattingOptions(UListDataObject_Scalar::NoDecimal()); //No 50% OneDecimal 50.5%
+
+			OverallVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetOverallVolume));
+			OverallVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetOverallVolume));
+
+			OverallVolume->SetShouldApplyChangeImmediately(true);
+
+			VolumeCategory->AddChildListData(OverallVolume);
+		}
+	}
+	
+	RegisteredOptionsCollectionTabs.Add(AudioCollectionTab);
+}
+
+void UOptionsDataRegistry::InitVideoCollectionTab()
+{
+	UListDataObject_Collection* VideoCollectionTab = NewObject<UListDataObject_Collection>();
+	
+	VideoCollectionTab->SetDataId(FName("Tab-Video"));
+	VideoCollectionTab->SetDataDisplayName(FText::FromString("Video"));
+	
+	RegisteredOptionsCollectionTabs.Add(VideoCollectionTab);
+}
+
+void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalPlayer)
+{
+	UListDataObject_Collection* ControlCollectionTab = NewObject<UListDataObject_Collection>();
+	
+	ControlCollectionTab->SetDataId(FName("Tab-Control"));
+	ControlCollectionTab->SetDataDisplayName(FText::FromString("Control"));
+	
+	RegisteredOptionsCollectionTabs.Add(ControlCollectionTab);
+}
