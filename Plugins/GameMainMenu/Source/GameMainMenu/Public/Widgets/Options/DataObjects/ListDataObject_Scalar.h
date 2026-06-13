@@ -8,25 +8,35 @@
 #include "ListDataObject_Scalar.generated.h"
 
 /**
- * 
+ * Numeric data object for sliders with display/out value ranges.
+ *
+ * DisplayValueRange is what the user sees/selects (e.g. 0-100%).
+ * OutValueRange is the actual config value (e.g. 0.0-2.0 for volume scaling).
+ * Values are mapped linearly between the two ranges.
  */
 UCLASS()
 class GAMEMAINMENU_API UListDataObject_Scalar : public UListDataObject_Value
 {
 	GENERATED_BODY()
-	
+
 public:
 
+	/** Range shown in the UI slider. */
 	LIST_DATA_ACCESSOR(TRange<float>, DisplayValueRange);
+	/** Range stored in config (mapped from DisplayValueRange). */
 	LIST_DATA_ACCESSOR(TRange<float>, OutValueRange);
 	LIST_DATA_ACCESSOR(float, SliderStepSize);
 	LIST_DATA_ACCESSOR(ECommonNumericType, CommonNumericType);
 	LIST_DATA_ACCESSOR(FCommonNumberFormattingOptions, CommonNumberFormattingOptions);
 
+	/** Whole-number formatting (no decimal places). */
 	static FCommonNumberFormattingOptions NoDecimal();
+	/** Fractional formatting with specified decimal places. */
 	static FCommonNumberFormattingOptions WithDecimal(int32 NumFracDigit);
 
+	/** Read current value from UFrontendGameUserSettings via the getter helper. */
 	float GetCurrentValue() const;
+	/** Write value to UFrontendGameUserSettings via the setter helper. */
 	void SetCurrentValue(float NewValue);
 	
 	

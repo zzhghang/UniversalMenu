@@ -10,6 +10,13 @@
 class UCommonRichTextBlock;
 class FKeyRemapScreenInputPreprocessor;
 
+/**
+ * Modal overlay that captures a single key/mouse press for key rebinding.
+ *
+ * Installs a Slate input preprocessor to intercept all input until a valid
+ * key is pressed or the user cancels (Escape / incompatible input type).
+ * Results are reported via OnKeyRemapScreenKeyPressed and OnKeyRemapScreenKeyCancel delegates.
+ */
 UCLASS(Abstract, BlueprintType, meta=(DisableNativeTick))
 class GAMEMAINMENU_API UW_KeyRemapScreen : public UW_ActivatableBase
 {
@@ -18,9 +25,11 @@ class GAMEMAINMENU_API UW_KeyRemapScreen : public UW_ActivatableBase
 public:
 
 	DECLARE_DELEGATE_OneParam(FOnKeyRemapScreenKeyPressedDelegate, const FKey& /*PressedKey*/)
+	/** Broadcast when a valid key is captured by the input preprocessor. */
 	FOnKeyRemapScreenKeyPressedDelegate OnKeyRemapScreenKeyPressed;
 
 	DECLARE_DELEGATE_OneParam(FOnKeyRemapScreenKeyCancledDelegate, const FString& /*CancelReason*/)
+	/** Broadcast when the user cancels (Escape or incompatible input type). */
 	FOnKeyRemapScreenKeyCancledDelegate OnKeyRemapScreenKeyCancel;
 
 	void SetRemapInputType(ECommonInputType InInputType, ULocalPlayer* InLocalPlayer);

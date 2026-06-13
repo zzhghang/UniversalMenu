@@ -7,7 +7,11 @@
 #include "FrontendGameUserSettings.generated.h"
 
 /**
+ * Custom game user settings for the frontend menu.
  *
+ * Extends UGameUserSettings with gameplay, audio, video, and localization settings.
+ * All UFUNCTION getters/setters are callable via PropertyPathHelpers string reflection
+ * through FOptionsDataInteractionHelper, enabling data-driven options configuration.
  */
 UCLASS()
 class GAMEMAINMENU_API UFrontendGameUserSettings : public UGameUserSettings
@@ -18,9 +22,11 @@ public:
 
 	UFrontendGameUserSettings();
 
+	/** Returns the singleton instance via GEngine->GetGameUserSettings(). */
 	static UFrontendGameUserSettings* Get();
 
-	/******   gameplay    ******/
+	// ---- Gameplay ----
+	/**@{*/
 	UFUNCTION()
 	FString GetDifficulty() const {return Difficulty;}
 
@@ -56,10 +62,10 @@ public:
 
 	UFUNCTION()
 	void SetAutoSave(const bool InValue);
+	/**@}*/
 
-	/******   gameplay    ******/
-
-	/******   Audio    ******/
+	// ---- Audio ----
+	/**@{*/
 	
 	UFUNCTION()
 	float GetOverallVolume() const {return OverallVolume;}
@@ -132,34 +138,33 @@ public:
 
 	UFUNCTION()
 	void SetDialogueBoost(const bool InValue);
+	/**@}*/
 
-	/******   Audio    ******/
-	
-	
-	/******   Video    ******/
+
+	// ---- Video ----
+	/**@{*/
 	
 	UFUNCTION()
 	float GetCurrentDisplayGamma() const;
 
 	UFUNCTION()
 	void SetCurrentDisplayGamma(const float InValue);
+	/**@}*/
 
-	/******   Video    ******/
-
-	/******   Language    ******/
+	// ---- Language ----
+	/**@{*/
 
 	UFUNCTION()
 	FString GetCurrentCulture() const { return CurrentCulture; }
 
 	UFUNCTION()
 	void SetCurrentCulture(const FString& InCulture);
-
-	/******   Language    ******/
+	/**@}*/
 
 
 private:
 
-	/******   gameplay    ******/
+	// ---- Gameplay ----
 	UPROPERTY(Config)
 	FString Difficulty;
 
@@ -177,11 +182,10 @@ private:
 
 	UPROPERTY(Config)
 	bool bAutoSave;
-	/******   gameplay    ******/
-	
-	
-	/******   Audio    ******/
-	
+
+
+	// ---- Audio ----
+
 	UPROPERTY(Config)
 	float OverallVolume;
 
@@ -199,7 +203,7 @@ private:
 
 	UPROPERTY(Config)
 	float UIVolume;
-	
+
 	UPROPERTY(Config)
 	bool bAllowBackgroundSound;
 
@@ -218,17 +222,13 @@ private:
 	UPROPERTY(Config)
 	bool bDialogueBoost;
 
-	/******   Audio    ******/
-	
-	/******   Video    ******/
-	
-	
-	/******   Video    ******/
+	// ---- Video ----
 
-	/******   Language    ******/
+	// (Video properties are inherited from UGameUserSettings)
+
+
+	// ---- Language ----
 
 	UPROPERTY(Config)
 	FString CurrentCulture;
-
-	/******   Language    ******/
 };

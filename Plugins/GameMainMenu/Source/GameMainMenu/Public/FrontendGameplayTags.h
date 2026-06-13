@@ -4,22 +4,34 @@
 
 #include "NativeGameplayTags.h"
 
+/**
+ * Gameplay tags for frontend UI routing and resource resolution.
+ *
+ * Tags are grouped into:
+ * - Widget stacks (Modal, GameMenu, GameHud, Frontend)
+ * - Widget types (PressAnyKey, MainMenu, Confirm, Options, KeyRemap)
+ * - Image references (Test)
+ * - Audio volume channels (Overall, Music, SFX, Voice, Ambient, UI)
+ */
 namespace FrontendGameplayTags
 {
+	// ---- Widget Stacks ----
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_WidgetStack_Modal);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_WidgetStack_GameMenu);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_WidgetStack_GameHud);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_WidgetStack_Frontend);
 
+	// ---- Widget Types ----
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_PressAnyKey);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_MainMenu);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_Confirm);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_Options);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_KeyRemap);
 
+	// ---- Image References ----
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Image_Test);
 
-	// Audio Volume Tags
+	// ---- Audio Volume Channels ----
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Audio_Volume_Overall);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Audio_Volume_Music);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Audio_Volume_SFX);

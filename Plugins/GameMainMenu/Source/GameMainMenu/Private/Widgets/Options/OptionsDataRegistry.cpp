@@ -685,6 +685,14 @@ UListDataObject_Base* UOptionsDataRegistry::CreateEntryFromDataAsset(UOptionEntr
 	return Entry;
 }
 
+/**
+ * Build the options hierarchy from UOptionsConfigData DataAsset.
+ *
+ * Walks Tabs → Categories → Entries, creating UListDataObject_Base instances
+ * via CreateEntryFromData and wiring up EditConditions for cross-entry dependencies
+ * (e.g. WindowMode affects Resolution, VSync requires Fullscreen, OverallQuality
+ * bidirectionally links with quality presets).
+ */
 void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 {
 	UListDataObject_StringEnum* CreatedWindowMode = nullptr;

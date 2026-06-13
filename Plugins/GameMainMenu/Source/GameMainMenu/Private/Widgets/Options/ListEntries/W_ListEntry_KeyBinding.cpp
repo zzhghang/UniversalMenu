@@ -138,6 +138,7 @@ FReply UW_ListEntry_KeyBinding::HandleListeningKeyInput(const FKeyEvent& InKeyEv
 
 	const FKey PressedKey = InKeyEvent.GetKey();
 
+	// Escape always cancels listening.
 	if (PressedKey == EKeys::Escape)
 	{
 		CancelListening();
@@ -154,9 +155,11 @@ FReply UW_ListEntry_KeyBinding::HandleListeningKeyInput(const FKeyEvent& InKeyEv
 		return FReply::Handled();
 	}
 
+	// Event handled (consumed) but no action taken — prevents fallthrough.
 	return FReply::Handled();
 }
 
+/** Returns false for modifier/lock keys and keys incompatible with the active slot's input type. */
 bool UW_ListEntry_KeyBinding::IsValidKeyForListeningSlot(const FKey& Key) const
 {
 	if (!Key.IsValid())
@@ -280,6 +283,7 @@ void UW_ListEntry_KeyBinding::OnGamepadSlotClicked()
 		});
 }
 
+/** Handle key press from the KeyRemap overlay. Shows conflict dialog if key is already bound. */
 void UW_ListEntry_KeyBinding::OnKeyRemapPressed(const FKey& PressedKey)
 {
 	if (!CachedOwningKeyBindingDataObject)
@@ -314,6 +318,7 @@ void UW_ListEntry_KeyBinding::OnKeyRemapPressed(const FKey& PressedKey)
 		return;
 	}
 
+	// No conflict — bind directly.
 	CachedOwningKeyBindingDataObject->BindNewInputKey(PressedKey);
 }
 

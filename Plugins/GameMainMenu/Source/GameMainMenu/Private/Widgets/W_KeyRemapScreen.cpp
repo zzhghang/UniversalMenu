@@ -13,6 +13,14 @@
 
 #include "LocalizationKeys.h"
 
+/**
+ * Slate input preprocessor that captures the next valid key/mouse press.
+ *
+ * Installed during key remapping to intercept all input. Filters by input type:
+ * - MouseAndKeyboard mode: rejects gamepad keys and cancels if current input switches to gamepad.
+ * - Gamepad mode: rejects keyboard/mouse keys and maps LeftMouseButton → the configured gamepad confirm key.
+ * Escape always cancels.
+ */
 class FKeyRemapScreenInputPreprocessor : public IInputProcessor
 {
 public:
@@ -47,6 +55,7 @@ protected:
 
 	void ProcessPressedKey(const FKey& InPressedKey)
 	{
+		// Escape always cancels the remap session.
 		if (InPressedKey == EKeys::Escape)
 		{
 			OnInputPreProcessorKeySelectedCancel.ExecuteIfBound(TEXT("Key Remap Canceled by Escape Key"));
@@ -61,6 +70,7 @@ protected:
 		switch (CachedInputType)
 		{
 		case ECommonInputType::MouseAndKeyboard:
+			// Cancel if the user pressed a gamepad key, or if the active input type changed to gamepad.
 			if (InPressedKey.IsGamepadKey() || CurrentInputType == ECommonInputType::Gamepad)
 			{
 				OnInputPreProcessorKeySelectedCancel.ExecuteIfBound(TEXT("Key Remap Canceled by Gamepad Key Pressed"));
@@ -68,6 +78,7 @@ protected:
 			}
 			break;
 		case ECommonInputType::Gamepad:
+			// On gamepad, left mouse click is remapped to the gamepad confirm key (e.g. FaceButtonBottom).
 			if (CurrentInputType == ECommonInputType::Gamepad && InPressedKey == EKeys::LeftMouseButton)
 			{
 				FCommonInputActionDataBase* InputActionData = ICommonInputModule::GetSettings().GetDefaultClickAction().GetRow<FCommonInputActionDataBase>(TEXT(""));
@@ -76,6 +87,7 @@ protected:
 				OnInputPreProcessorKeyPressed.ExecuteIfBound(InputActionData->GetDefaultGamepadInputTypeInfo().GetKey());
 				return;
 			}
+			// Reject non-gamepad keys when remapping a gamepad slot.
 			if (!InPressedKey.IsGamepadKey())
 			{
 				OnInputPreProcessorKeySelectedCancel.ExecuteIfBound(TEXT("Key Remap Canceled by MouseAndKeyboard Key Pressed"));
@@ -86,6 +98,7 @@ protected:
 			break;
 		}
 
+		// Valid key for the requested input type.
 		OnInputPreProcessorKeyPressed.ExecuteIfBound(InPressedKey);
 	}
 

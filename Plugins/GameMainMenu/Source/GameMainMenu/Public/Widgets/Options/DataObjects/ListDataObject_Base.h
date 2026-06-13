@@ -40,18 +40,18 @@ public:
 	
 	LIST_DATA_ACCESSOR(UListDataObject_Base*, ParentData)
 	
-	//子类(UListDataObject_Collection)需要重写,返回该标签下的所有子数据
+	/** Override in UListDataObject_Collection to return all child entries. */
 	virtual TArray<UListDataObject_Base*> GetAllChildListData() const { return TArray<UListDataObject_Base*>();}
-	
-	//子类(UListDataObject_Collection)需要重写
+
+	/** Override in UListDataObject_Collection to indicate whether this node has children. */
 	virtual bool HasAnyChildListData() const { return false;}
-	
-	//初始化数据对象
+
+	/** Initialize data object state. Calls OnDataObjectInitialized. */
 	void InitializeDataObject();
 	
 	void SetShouldApplyChangeImmediately(const bool bShouldApplyRightAway) {bShouldApplyChangeImmediately = bShouldApplyRightAway;}
 	
-	//子类需要重写,用于重置条目
+	/** Override in subclasses to support reset-to-default behavior. */
 	virtual bool HasDefaultValue() const {return false;};
 	virtual bool CanResetBackToDefaultValue() const { return false; };
 	virtual bool TryResetBackToDefaultValue() { return false; };
@@ -62,7 +62,7 @@ public:
 	
 protected:
 	
-	//子类应该重写此方法，以相应地处理所需的初始化
+	/** Override in subclasses for custom initialization logic. */
 	virtual void OnDataObjectInitialized();
 	
 	virtual void NotifyListDataModified(UListDataObject_Base* ModifyData, const EOptionsListDataModifyReason ModifyReason = EOptionsListDataModifyReason::DirectlyModified);

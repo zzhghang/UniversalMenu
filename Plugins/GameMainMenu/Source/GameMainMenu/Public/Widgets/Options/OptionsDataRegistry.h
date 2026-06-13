@@ -19,6 +19,13 @@ class UOptionTabData;
 class UOptionEntryData;
 enum class ECommonNumericType : uint8;
 
+/**
+ * Builds and owns the options data hierarchy (tabs -> categories -> entries).
+ *
+ * Supports two initialization paths:
+ * - DataAsset-driven via UOptionsConfigData (InitFromDataAsset)
+ * - Hardcoded fallback when no DataAsset is assigned
+ */
 UCLASS()
 class GAMEMAINMENU_API UOptionsDataRegistry : public UObject
 {
@@ -26,12 +33,16 @@ class GAMEMAINMENU_API UOptionsDataRegistry : public UObject
 
 public:
 
+	/** Initialize all option tabs, either from DataAsset or hardcoded fallback. */
 	void InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer);
 
+	/** Assign a DataAsset config. Must be called before InitOptionsDataRegistry. */
 	void SetOptionsConfig(UOptionsConfigData* InConfig) { OptionsConfig = InConfig; }
 
+	/** Returns the top-level collection tabs after initialization. */
 	const TArray<UListDataObject_Collection*>& GetRegisteredOptionsCollectionTabs() { return RegisteredOptionsCollectionTabs;}
 
+	/** Returns all flattened list items for a given tab, including nested category children. */
 	TArray<UListDataObject_Base*> GetListSourceItemBySelectedTabId(const FName& InSelectedTabId) const;
 
 private:

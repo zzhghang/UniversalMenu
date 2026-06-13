@@ -45,15 +45,15 @@ protected:
 	virtual FReply NativeOnFocusReceived(const FGeometry& InGeometry, const FFocusEvent& InFocusEvent) override;
 	// ~End UUserWidget Interface
 	
-	// 子类需要重写进行初始化,super是必须的
+	/** Override in subclass for initialization when list data is set. Must call Super. */
 	virtual void OnOwningListDataObjectSet(UListDataObject_Base* InOwningListDataObject);
-	
-	// 子类需要重写更新ui界面上的值,在数据改变被修改时,super不需要
+
+	/** Override in subclass to update UI when owning data changes. Super call is optional. */
 	virtual void OnOwningListDataObjectModified(UListDataObject_Base* OwningModifyData, EOptionsListDataModifyReason OwningModifyReason);
-	
+
 	virtual void OnOwningDependencyDataModified(UListDataObject_Base* DependencyModifyData, EOptionsListDataModifyReason DependencyModifyReason);
-	
-	// 子类需要重写进行切换条目可编辑状态,super是必须的
+
+	/** Override in subclass to handle edit-state toggling. Must call Super. */
 	virtual void OnToggleEditableState(bool bIsEditable);
 	
 	void SelectedThisEntryWidget();

@@ -46,14 +46,14 @@ protected:
 	
 protected:
 	
-	// 当前配置正在使用的
+	/** Current value stored in the config. */
 	FString CurrentStringValue;
-	// 当前显示正在使用的
+	/** Current display text shown in the UI. */
 	FText CurrentTextValue;
 
-	// 用于保存到配置文件
+	/** Values saved to configuration (internal representation). */
 	TArray<FString> StringArray;
-	// 用于界面上显示
+	/** Display texts shown in UI (localized). */
 	TArray<FText> TextArray;
 	
 };

@@ -9,6 +9,13 @@
 class UUListDataObject_KeyBinding;
 class UFrontendCommonButtonBase;
 
+/**
+ * List entry widget for key binding rows.
+ *
+ * Displays two buttons (keyboard + gamepad slots). Clicking a slot opens
+ * the UW_KeyRemapScreen overlay to capture a new key. Handles conflict
+ * detection and rebinding via UUListDataObject_KeyBinding.
+ */
 UCLASS(Abstract, BlueprintType, meta=(DisableNativeTick))
 class GAMEMAINMENU_API UW_ListEntry_KeyBinding : public UW_ListEntry_Base
 {
@@ -16,9 +23,11 @@ class GAMEMAINMENU_API UW_ListEntry_KeyBinding : public UW_ListEntry_Base
 
 public:
 
+	/** Begin listening for a key press on the specified slot. Opens the key remap overlay. */
 	UFUNCTION(BlueprintCallable)
 	void StartListeningForSlot(int32 SlotIndex);
 
+	/** Cancel the current key listening session. */
 	UFUNCTION(BlueprintCallable)
 	void CancelListening();
 
@@ -67,11 +76,11 @@ private:
 
 	int32 ListeningSlotIndex = INDEX_NONE;
 
-	/***** Bind Widget — 键盘槽位 *****/
+	/***** Bind Widget — Keyboard Slot *****/
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = true))
 	UFrontendCommonButtonBase* Cbb_KeyboardSlot;
 
-	/***** Bind Widget — 手柄槽位 *****/
+	/***** Bind Widget — Gamepad Slot *****/
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = true))
 	UFrontendCommonButtonBase* Cbb_GamepadSlot;
 };

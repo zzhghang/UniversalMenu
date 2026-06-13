@@ -15,20 +15,16 @@ UAA_PushSoftWidget* UAA_PushSoftWidget::PushSoftWidget(const UObject* WorldConte
 	
 	if (GEngine)
 	{
-		// 从世界上下文对象获取世界实例
 		if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
 		{
-			// 创建新的异步操作实例
 			UAA_PushSoftWidget* Node  = NewObject<UAA_PushSoftWidget>();
 
-			// 缓存所有参数
 			Node->CachedOwningWorld = World;
 			Node->CachedOwningPlayerController = OwningPlayerController;
 			Node->CachedSoftWidgetClass = SoftWidgetClass;
 			Node->CachedWidgetStackTag = WidgetStackTag;
 			Node->bCachedFocus = bFocus; 
 
-			// 注册到游戏实例
 			Node->RegisterWithGameInstance(World);
 
 			return Node;

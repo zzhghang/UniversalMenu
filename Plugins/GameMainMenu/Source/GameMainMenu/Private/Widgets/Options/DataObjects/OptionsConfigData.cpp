@@ -14,11 +14,20 @@ TSharedPtr<FOptionsDataInteractionHelper> CreateHelperFromEnum(EGameUserSettingF
 {
 	if (Func == EGameUserSettingFunction::None) return nullptr;
 
+	// Convert enum value to its name string (e.g. EGameUserSettingFunction::GetOverallVolume → "GetOverallVolume")
+	// This string is then used by PropertyPathHelpers to call the corresponding UFUNCTION on UFrontendGameUserSettings.
 	const UEnum* Enum = StaticEnum<EGameUserSettingFunction>();
 	const FString FuncName = Enum->GetNameStringByValue(static_cast<int64>(Func));
 	return MakeShared<FOptionsDataInteractionHelper>(FuncName);
 }
 
+/**
+ * Factory that creates a UListDataObject_Base from DataAsset configuration.
+ *
+ * Dispatches on EOptionValueType to instantiate the correct subclass
+ * (StringBool, Scalar, String, Enum, QualityPreset, Culture, Resolution)
+ * and wires up getter/setter helpers from EGameUserSettingFunction enums.
+ */
 UListDataObject_Base* CreateEntryFromData(UOptionEntryData* Data)
 {
 	if (!Data) return nullptr;

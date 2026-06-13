@@ -9,6 +9,12 @@
 
 class UEnhancedInputUserSettings;
 
+/**
+ * Data object for a key binding entry in the options control tab.
+ *
+ * Wraps one or more FKeyBindingSlotDescriptor (e.g. keyboard + gamepad slots)
+ * and delegates to UEnhancedInputUserSettings for key mapping operations.
+ */
 UCLASS()
 class GAMEMAINMENU_API UUListDataObject_KeyBinding : public UListDataObject_Base
 {
@@ -16,6 +22,7 @@ class GAMEMAINMENU_API UUListDataObject_KeyBinding : public UListDataObject_Base
 
 public:
 
+	/** Add a key binding slot for a specific input type (keyboard or gamepad). */
 	void AddKeyBindingSlot(const FKeyBindingSlotDescriptor& InSlot);
 
 	const TArray<FKeyBindingSlotDescriptor>& GetKeyBindingSlots() const { return KeyBindingSlots; }
@@ -27,9 +34,9 @@ public:
 	void ResetSlotToDefault(int32 SlotIndex);
 
 	FText GetCurrentKeyDisplayName(int32 SlotIndex) const;
-	
+
 	FSlateBrush GetKeyboardIconFromCurrentKey() const;
-	
+
 	FSlateBrush GetGamepadIconFromCurrentKey() const;
 
 	/** Returns the first keyboard/mouse slot's current key, or EKeys::Invalid */
@@ -41,7 +48,8 @@ public:
 	FKey GetGamepadKey() const;
 
 	void SetOwningLocalPlayer(ULocalPlayer* InLocalPlayer);
-	
+
+	/** Bind NewKey to the first compatible slot (gamepad or keyboard). */
 	void BindNewInputKey(const FKey& NewKey);
 
 	/** Check if NewKey is already bound to a different action. Returns the conflicting action's info. */
