@@ -5,6 +5,7 @@
 
 #include "FrontendDebugHelper.h"
 #include "Widgets/Options/OptionsDataInteractionHelper.h"
+#include "LocalizationKeys.h"
 
 void UListDataObject_String::AddDynamicString(const FString& InString, const FText& InText)
 {
@@ -104,7 +105,7 @@ void UListDataObject_String::OnDataObjectInitialized()
 		}
 	}
 
-	if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = FText::FromString(TEXT("Invalid"));
+	if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = TXT_VAL_INVALID();
 }
 
 bool UListDataObject_String::CanResetBackToDefaultValue() const
@@ -194,11 +195,11 @@ void UListDataObject_StringBool::TryInitializeBoolOptions()
 {
 	if (!StringArray.Contains(OnString))
 	{
-		AddDynamicString(OnString, FText::FromString(TEXT("ON")));
+		AddDynamicString(OnString, TXT_VAL_ON());
 	}
 	if (!StringArray.Contains(OffString))
 	{
-		AddDynamicString(OffString, FText::FromString(TEXT("OFF")));
+		AddDynamicString(OffString, TXT_VAL_OFF());
 	}
 }
 
@@ -217,7 +218,7 @@ void UListDataObject_StringInteger::OnDataObjectInitialized()
 {
 	Super::OnDataObjectInitialized();
 	
-	if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = FText::FromString(TEXT("Custom"));
+	if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = TXT_VAL_CUSTOM();
 }
 
 void UListDataObject_StringInteger::OnEditDependencyDataModified(UListDataObject_Base* ModifyDependencyData,
@@ -229,7 +230,7 @@ void UListDataObject_StringInteger::OnEditDependencyDataModified(UListDataObject
 		
 		CurrentStringValue = DataDynamicGetter->GetValueAsString();
 
-		if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = FText::FromString(TEXT("Custom"));
+		if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = TXT_VAL_CUSTOM();
 
 		NotifyListDataModified(this,EOptionsListDataModifyReason::DependencyModified);
 	}

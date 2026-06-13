@@ -12,6 +12,7 @@ class UW_OptionDetailView;
 class UFrontendCommonListView;
 class UFrontendCommonTabListWidgetBase;
 class UOptionsDataRegistry;
+class UOptionsConfigData;
 /**
  * 
  */
@@ -63,6 +64,9 @@ private:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Frontend Options Screen", meta = (RowType = "/Script/CommonUI.CommonInputActionDataBase"))
 	FDataTableRowHandle ResetAllAction;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Frontend Options Screen")
+	UOptionsConfigData* OptionsConfig;
 	
 	FUIActionBindingHandle ResetActionHandle;
 	

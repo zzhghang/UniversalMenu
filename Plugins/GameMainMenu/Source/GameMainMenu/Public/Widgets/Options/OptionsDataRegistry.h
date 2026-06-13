@@ -14,6 +14,9 @@ class UListDataObject_Scalar;
 class UListDataObject_String;
 class UListDataObject_StringInteger;
 class FOptionsDataInteractionHelper;
+class UOptionsConfigData;
+class UOptionTabData;
+class UOptionEntryData;
 enum class ECommonNumericType : uint8;
 
 UCLASS()
@@ -24,6 +27,8 @@ class GAMEMAINMENU_API UOptionsDataRegistry : public UObject
 public:
 
 	void InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer);
+
+	void SetOptionsConfig(UOptionsConfigData* InConfig) { OptionsConfig = InConfig; }
 
 	const TArray<UListDataObject_Collection*>& GetRegisteredOptionsCollectionTabs() { return RegisteredOptionsCollectionTabs;}
 
@@ -37,6 +42,11 @@ private:
 	void InitAudioCollectionTab();
 	void InitVideoCollectionTab();
 	void InitControlCollectionTab(ULocalPlayer* InOwningLocalPlayer);
+
+	// ---- Data-driven init ----
+	void InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer);
+	UListDataObject_Base* CreateEntryFromDataAsset(UOptionEntryData* Data, UListDataObject_Collection* OwnerCategory) const;
+	UListDataObject_Base* FindEntryInCategory(const FName& Id, UListDataObject_Collection* Cat) const;
 
 	// ---- Factory helpers ----
 
@@ -67,6 +77,9 @@ private:
 		const FName& Id, const FText& DisplayName, const FText& Description,
 		const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
 		const TSharedPtr<FOptionsDataInteractionHelper>& Setter) const;
+
+	UPROPERTY(EditAnywhere, Category = "Options")
+	UOptionsConfigData* OptionsConfig;
 
 	UPROPERTY(Transient)
 	TArray<UListDataObject_Collection*> RegisteredOptionsCollectionTabs;

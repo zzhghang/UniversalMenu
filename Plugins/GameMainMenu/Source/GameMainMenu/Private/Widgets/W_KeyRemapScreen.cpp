@@ -11,7 +11,7 @@
 #include "Framework/Application/IInputProcessor.h"
 #include "Framework/Application/SlateApplication.h"
 
-#define LOCTEXT_NAMESPACE "W_KeyRemapScreen"
+#include "LocalizationKeys.h"
 
 class FKeyRemapScreenInputPreprocessor : public IInputProcessor
 {
@@ -118,15 +118,11 @@ void UW_KeyRemapScreen::NativeOnActivated()
 	{
 		const bool bIsKeyboard = (CachedDesiredInputType == ECommonInputType::MouseAndKeyboard);
 
-		const FText DeviceName = bIsKeyboard
-			? LOCTEXT("RemapDevice_Keyboard", "Keyboard")
-			: LOCTEXT("RemapDevice_Gamepad", "Gamepad");
+		const FText Prompt = bIsKeyboard
+			? TXT_KEYREMAP_PROMPT_KEYBOARD()
+			: TXT_KEYREMAP_PROMPT_GAMEPAD();
 
-		const FText PromptFormat = bIsKeyboard
-			? LOCTEXT("RemapPrompt_Keyboard", "<KR_Default>Press any </><KR_HighLight>{0}</><KR_Default> key</>")
-			: LOCTEXT("RemapPrompt_Gamepad", "<KR_Default>Press any </><KR_HighLight>{0}</><KR_Default> button</>");
-
-		Ctb_RemapMessage->SetText(FText::Format(PromptFormat, DeviceName));
+		Ctb_RemapMessage->SetText(Prompt);
 	}
 }
 
@@ -175,4 +171,4 @@ void UW_KeyRemapScreen::RequestDeactivationWidget(TFunction<void()> PreDeactivat
 	);
 }
 
-#undef LOCTEXT_NAMESPACE
+

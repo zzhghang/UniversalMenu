@@ -6,6 +6,7 @@
 #include "CommonTextBlock.h"
 #include "Components/DynamicEntryBox.h"
 #include "Components/FrontendCommonButtonBase.h"
+#include "LocalizationKeys.h"
 
 UConfirmScreenInfoObject* UConfirmScreenInfoObject::CreateOkScreen(const FText& InTitle, const FText& InMessage)
 {
@@ -16,8 +17,8 @@ UConfirmScreenInfoObject* UConfirmScreenInfoObject::CreateOkScreen(const FText& 
 
 	FConfirmScreenButtonInfo OkButtonInfo;
 	OkButtonInfo.ConfirmScreenButtonType = EConfirmScreenButtonType::Closed;
-	OkButtonInfo.ButtonTextToDisplay = FText::FromString(TEXT("OK"));
-	
+	OkButtonInfo.ButtonTextToDisplay = TXT_UI_OK();
+
 	InfoObject->AvailableScreenButtons.Add(OkButtonInfo);
 
 	return InfoObject;
@@ -32,11 +33,11 @@ UConfirmScreenInfoObject* UConfirmScreenInfoObject::CreateYesNoScreen(const FTex
 	
 	FConfirmScreenButtonInfo YesButtonInfo;
 	YesButtonInfo.ConfirmScreenButtonType = EConfirmScreenButtonType::Confirmed;
-	YesButtonInfo.ButtonTextToDisplay = FText::FromString(TEXT("YES"));
-	
+	YesButtonInfo.ButtonTextToDisplay = TXT_UI_YES();
+
 	FConfirmScreenButtonInfo NoButtonInfo;
 	NoButtonInfo.ConfirmScreenButtonType = EConfirmScreenButtonType::Cancelled;
-	NoButtonInfo.ButtonTextToDisplay = FText::FromString(TEXT("NO"));
+	NoButtonInfo.ButtonTextToDisplay = TXT_UI_NO();
 	
 	InfoObject->AvailableScreenButtons.Add(YesButtonInfo);
 	InfoObject->AvailableScreenButtons.Add(NoButtonInfo);
@@ -53,11 +54,11 @@ UConfirmScreenInfoObject* UConfirmScreenInfoObject::CreateOkCancelScreen(const F
 
 	FConfirmScreenButtonInfo OkButtonInfo;
 	OkButtonInfo.ConfirmScreenButtonType = EConfirmScreenButtonType::Confirmed;
-	OkButtonInfo.ButtonTextToDisplay = FText::FromString(TEXT("OK"));
+	OkButtonInfo.ButtonTextToDisplay = TXT_UI_OK();
 
 	FConfirmScreenButtonInfo CancelButtonInfo;
 	CancelButtonInfo.ConfirmScreenButtonType = EConfirmScreenButtonType::Cancelled;
-	CancelButtonInfo.ButtonTextToDisplay = FText::FromString(TEXT("CANCEL"));
+	CancelButtonInfo.ButtonTextToDisplay = TXT_UI_CANCEL();
 	
 	InfoObject->AvailableScreenButtons.Add(OkButtonInfo);
 	InfoObject->AvailableScreenButtons.Add(CancelButtonInfo);

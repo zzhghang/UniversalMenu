@@ -11,6 +11,8 @@
 #include "Widgets/Options/DataObjects/ListDataObject_StringCulture.h"
 #include "Widgets/Options/DataObjects/ListDataObject_StringResolution.h"
 #include "Widgets/Options/DataObjects/UListDataObject_KeyBinding.h"
+#include "Widgets/Options/DataObjects/OptionsConfigData.h"
+#include "LocalizationKeys.h"
 
 #include "EnhancedInputSubsystems.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
@@ -103,11 +105,11 @@ UListDataObject_StringInteger* UOptionsDataRegistry::CreateQualityPresetEntry(
 	Entry->SetDataId(Id);
 	Entry->SetDataDisplayName(DisplayName);
 	Entry->SetDescriptionRichText(Description);
-	Entry->AddIntegerOption(0, FText::FromString("Low"));
-	Entry->AddIntegerOption(1, FText::FromString("Medium"));
-	Entry->AddIntegerOption(2, FText::FromString("High"));
-	Entry->AddIntegerOption(3, FText::FromString("Epic"));
-	Entry->AddIntegerOption(4, FText::FromString("Cinematic"));
+	Entry->AddIntegerOption(0, TXT_VAL_QUALITY_LOW());
+	Entry->AddIntegerOption(1, TXT_VAL_QUALITY_MEDIUM());
+	Entry->AddIntegerOption(2, TXT_VAL_QUALITY_HIGH());
+	Entry->AddIntegerOption(3, TXT_VAL_QUALITY_EPIC());
+	Entry->AddIntegerOption(4, TXT_VAL_QUALITY_CINEMATIC());
 	Entry->SetDataDynamicGetter(Getter);
 	Entry->SetDataDynamicSetter(Setter);
 	Entry->SetShouldApplyChangeImmediately(true);
@@ -120,6 +122,13 @@ UListDataObject_StringInteger* UOptionsDataRegistry::CreateQualityPresetEntry(
 
 void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer)
 {
+	if (OptionsConfig)
+	{
+		InitFromDataAsset(InOwningLocalPlayer);
+		return;
+	}
+
+	// Fallback: hardcoded init (legacy path without DataAsset)
 	InitGameplayCollectionTab();
 	InitAudioCollectionTab();
 	InitVideoCollectionTab();
@@ -181,60 +190,60 @@ void UOptionsDataRegistry::FindChildListDataRecursively(UListDataObject_Base* In
 
 void UOptionsDataRegistry::InitGameplayCollectionTab()
 {
-	UListDataObject_Collection* Tab = CreateCollection("Tab-Gameplay", FText::FromString("Gameplay"));
+	UListDataObject_Collection* Tab = CreateCollection("Tab-Gameplay", TXT_OPT_TAB_GAMEPLAY());
 
 	// ---- HUD ----
 	{
-		UListDataObject_Collection* Cat = CreateCollection("Category-HUD", FText::FromString("HUD"));
+		UListDataObject_Collection* Cat = CreateCollection("Category-HUD", TXT_OPT_CAT_HUD());
 		Tab->AddChildListData(Cat);
 
 		Cat->AddChildListData(CreateBoolEntry("Entry-HealthBar",
-			FText::FromString("Health Bar"),
-			FText::FromString("Toggle the display of enemy health bars."),
+			TXT_OPT_HEALTH_BAR(),
+			TXT_OPT_HEALTH_BAR_DESC(),
 			CREATE_HELPER(GetShowHealthBar), CREATE_HELPER(SetShowHealthBar), true));
 
 		Cat->AddChildListData(CreateBoolEntry("Entry-DamageNumbers",
-			FText::FromString("Damage Numbers"),
-			FText::FromString("Toggle the display of floating damage numbers."),
+			TXT_OPT_DAMAGE_NUMBERS(),
+			TXT_OPT_DAMAGE_NUMBERS_DESC(),
 			CREATE_HELPER(GetShowDamageNumbers), CREATE_HELPER(SetShowDamageNumbers), true));
 
 		Cat->AddChildListData(CreateBoolEntry("Entry-HighlightInteraction",
-			FText::FromString("Highlight Interaction"),
-			FText::FromString("Toggle the highlight outline on interactive objects."),
+			TXT_OPT_HIGHLIGHT_INTERACTION(),
+			TXT_OPT_HIGHLIGHT_INTERACTION_DESC(),
 			CREATE_HELPER(GetHighlightInteraction), CREATE_HELPER(SetHighlightInteraction), true));
 
 		Cat->AddChildListData(CreateBoolEntry("Entry-Subtitles",
-			FText::FromString("Subtitles"),
-			FText::FromString("Toggle subtitle display during dialogues and cutscenes."),
+			TXT_OPT_SUBTITLES(),
+			TXT_OPT_SUBTITLES_DESC(),
 			CREATE_HELPER(GetShowSubtitles), CREATE_HELPER(SetShowSubtitles), true));
 	}
 
 	// ---- Game ----
 	{
-		UListDataObject_Collection* Cat = CreateCollection("Category-Game", FText::FromString("Game"));
+		UListDataObject_Collection* Cat = CreateCollection("Category-Game", TXT_OPT_CAT_GAME());
 		Tab->AddChildListData(Cat);
 
 		Cat->AddChildListData(CreateStringEntry("Entry-Difficulty",
-			FText::FromString("Difficulty"),
-			FText::FromString("Set the game difficulty level."),
+			TXT_OPT_DIFFICULTY(),
+			TXT_OPT_DIFFICULTY_DESC(),
 			CREATE_HELPER(GetDifficulty), CREATE_HELPER(SetDifficulty),
-			{{TEXT("Easy"), FText::FromString("Easy")},
-			 {TEXT("Normal"), FText::FromString("Normal")},
-			 {TEXT("Hard"), FText::FromString("Hard")},
-			 {TEXT("Nightmare"), FText::FromString("Nightmare")}},
+			{{TEXT("Easy"), TXT_VAL_DIFFICULTY_EASY()},
+			 {TEXT("Normal"), TXT_VAL_DIFFICULTY_NORMAL()},
+			 {TEXT("Hard"), TXT_VAL_DIFFICULTY_HARD()},
+			 {TEXT("Nightmare"), TXT_VAL_DIFFICULTY_NIGHTMARE()}},
 			TEXT("Normal")));
 
 		Cat->AddChildListData(CreateBoolEntry("Entry-AutoSave",
-			FText::FromString("Auto Save"),
-			FText::FromString("Toggle automatic game progress saving."),
+			TXT_OPT_AUTO_SAVE(),
+			TXT_OPT_AUTO_SAVE_DESC(),
 			CREATE_HELPER(GetAutoSave), CREATE_HELPER(SetAutoSave), true));
 
 		// Language — special type
 		{
 			UListDataObject_StringCulture* Language = NewObject<UListDataObject_StringCulture>();
 			Language->SetDataId("Entry-Language");
-			Language->SetDataDisplayName(FText::FromString("Language"));
-			Language->SetDescriptionRichText(FText::FromString("Select the display language. Changes take effect immediately."));
+			Language->SetDataDisplayName(TXT_OPT_LANGUAGE());
+			Language->SetDescriptionRichText(TXT_OPT_LANGUAGE_DESC());
 			Language->SetDefaultValueFromString(TEXT("en"));
 			Language->SetDataDynamicGetter(CREATE_HELPER(GetCurrentCulture));
 			Language->SetDataDynamicSetter(CREATE_HELPER(SetCurrentCulture));
@@ -255,83 +264,83 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 	static const TRange<float> VolDisplayRange(0.f, 1.f);
 	static const TRange<float> VolOutRange(0.f, 2.f);
 
-	UListDataObject_Collection* Tab = CreateCollection("Tab-Audio", FText::FromString("Audio"));
+	UListDataObject_Collection* Tab = CreateCollection("Tab-Audio", TXT_OPT_TAB_AUDIO());
 
 	// ---- Volume ----
 	{
-		UListDataObject_Collection* Cat = CreateCollection("Category-Volume", FText::FromString("Volume"));
+		UListDataObject_Collection* Cat = CreateCollection("Category-Volume", TXT_OPT_CAT_VOLUME());
 		Tab->AddChildListData(Cat);
 
 		Cat->AddChildListData(CreateScalarEntry("OverallVolume",
-			FText::FromString("Overall Volume"),
-			FText::FromString("Adjust the overall volume level of the game."),
+			TXT_OPT_OVERALL_VOLUME(),
+			TXT_OPT_OVERALL_VOLUME_DESC(),
 			CREATE_HELPER(GetOverallVolume), CREATE_HELPER(SetOverallVolume),
 			VolDisplayRange, VolOutRange, 0.01f, 1.f, ECommonNumericType::Percentage));
 
 		Cat->AddChildListData(CreateScalarEntry("MusicVolume",
-			FText::FromString("Music Volume"),
-			FText::FromString("Adjust the music volume level."),
+			TXT_OPT_MUSIC_VOLUME(),
+			TXT_OPT_MUSIC_VOLUME_DESC(),
 			CREATE_HELPER(GetMusicVolume), CREATE_HELPER(SetMusicVolume),
 			VolDisplayRange, VolOutRange, 0.01f, 1.f, ECommonNumericType::Percentage));
 
 		Cat->AddChildListData(CreateScalarEntry("SFXVolume",
-			FText::FromString("SFX Volume"),
-			FText::FromString("Adjust the sound effects volume level."),
+			TXT_OPT_SFX_VOLUME(),
+			TXT_OPT_SFX_VOLUME_DESC(),
 			CREATE_HELPER(GetSFXVolume), CREATE_HELPER(SetSFXVolume),
 			VolDisplayRange, VolOutRange, 0.01f, 1.f, ECommonNumericType::Percentage));
 
 		Cat->AddChildListData(CreateScalarEntry("VoiceVolume",
-			FText::FromString("Voice Volume"),
-			FText::FromString("Adjust the voice/dialogue volume level."),
+			TXT_OPT_VOICE_VOLUME(),
+			TXT_OPT_VOICE_VOLUME_DESC(),
 			CREATE_HELPER(GetVoiceVolume), CREATE_HELPER(SetVoiceVolume),
 			VolDisplayRange, VolOutRange, 0.01f, 1.f, ECommonNumericType::Percentage));
 
 		Cat->AddChildListData(CreateScalarEntry("AmbientVolume",
-			FText::FromString("Ambient Volume"),
-			FText::FromString("Adjust the ambient sounds volume level."),
+			TXT_OPT_AMBIENT_VOLUME(),
+			TXT_OPT_AMBIENT_VOLUME_DESC(),
 			CREATE_HELPER(GetAmbientVolume), CREATE_HELPER(SetAmbientVolume),
 			VolDisplayRange, VolOutRange, 0.01f, 1.f, ECommonNumericType::Percentage));
 
 		Cat->AddChildListData(CreateScalarEntry("UIVolume",
-			FText::FromString("UI Volume"),
-			FText::FromString("Adjust the UI sounds volume level."),
+			TXT_OPT_UI_VOLUME(),
+			TXT_OPT_UI_VOLUME_DESC(),
 			CREATE_HELPER(GetUIVolume), CREATE_HELPER(SetUIVolume),
 			VolDisplayRange, VolOutRange, 0.01f, 1.f, ECommonNumericType::Percentage));
 	}
 
 	// ---- Sound ----
 	{
-		UListDataObject_Collection* Cat = CreateCollection("Category-Sound", FText::FromString("Sound"));
+		UListDataObject_Collection* Cat = CreateCollection("Category-Sound", TXT_OPT_CAT_SOUND());
 		Tab->AddChildListData(Cat);
 
 		Cat->AddChildListData(CreateBoolEntry("Background-Sound",
-			FText::FromString("Background Sound"),
-			FText::FromString("Allow the game to continue playing sounds when it's running in the background."),
+			TXT_OPT_BACKGROUND_SOUND(),
+			TXT_OPT_BACKGROUND_SOUND_DESC(),
 			CREATE_HELPER(GetAllowBackgroundSound), CREATE_HELPER(SetAllowBackgroundSound), false));
 
 		Cat->AddChildListData(CreateBoolEntry("Sound-Subtitles",
-			FText::FromString("Subtitles"),
-			FText::FromString("Toggle subtitle display during dialogues and cutscenes."),
+			TXT_OPT_SUBTITLES_SOUND(),
+			TXT_OPT_SUBTITLES_SOUND_DESC(),
 			CREATE_HELPER(GetSubtitlesEnabled), CREATE_HELPER(SetSubtitlesEnabled), true));
 
 		Cat->AddChildListData(CreateBoolEntry("Sound-HRTF",
-			FText::FromString("3D Spatial Audio"),
-			FText::FromString("Enable HRTF-based 3D spatial audio for headphones. Provides immersive directional sound."),
+			TXT_OPT_3D_SPATIAL_AUDIO(),
+			TXT_OPT_3D_SPATIAL_AUDIO_DESC(),
 			CREATE_HELPER(GetHRTFEnabled), CREATE_HELPER(SetHRTFEnabled), true));
 
 		Cat->AddChildListData(CreateBoolEntry("Sound-Mono",
-			FText::FromString("Mono Output"),
-			FText::FromString("Downmix all audio to mono. Useful for single-speaker setups or accessibility needs."),
+			TXT_OPT_MONO_OUTPUT(),
+			TXT_OPT_MONO_OUTPUT_DESC(),
 			CREATE_HELPER(GetMonoOutput), CREATE_HELPER(SetMonoOutput), false));
 
 		Cat->AddChildListData(CreateBoolEntry("Sound-DRC",
-			FText::FromString("Dynamic Range Compression"),
-			FText::FromString("Reduce the volume difference between loud and quiet sounds. Ideal for late-night gaming."),
+			TXT_OPT_DYNAMIC_RANGE(),
+			TXT_OPT_DYNAMIC_RANGE_DESC(),
 			CREATE_HELPER(GetDynamicRangeCompression), CREATE_HELPER(SetDynamicRangeCompression), false));
 
 		Cat->AddChildListData(CreateBoolEntry("Sound-DialogueBoost",
-			FText::FromString("Dialogue Boost"),
-			FText::FromString("Enhance voice and dialogue clarity by boosting mid-range frequencies."),
+			TXT_OPT_DIALOGUE_BOOST(),
+			TXT_OPT_DIALOGUE_BOOST_DESC(),
 			CREATE_HELPER(GetDialogueBoost), CREATE_HELPER(SetDialogueBoost), true));
 	}
 
@@ -344,7 +353,7 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 
 void UOptionsDataRegistry::InitVideoCollectionTab()
 {
-	UListDataObject_Collection* Tab = CreateCollection("Tab-Video", FText::FromString("Video"));
+	UListDataObject_Collection* Tab = CreateCollection("Tab-Video", TXT_OPT_TAB_VIDEO());
 
 	UListDataObject_StringEnum* CreatedWindowMode = nullptr;
 
@@ -354,22 +363,22 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		{
 			return !(GIsEditor || GIsPlayInEditorWorld);
 		});
-	PackagedBuildOnlyCondition.SetDisableRichReason(TEXT("\n\n<Warning>This setting can only adjusted in a packaged build</>"));
+	PackagedBuildOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_PACKAGED_ONLY().ToString());
 
 	// ---- Display ----
 	{
-		UListDataObject_Collection* Cat = CreateCollection("Tab-Display", FText::FromString("Display"));
+		UListDataObject_Collection* Cat = CreateCollection("Tab-Display", TXT_OPT_CAT_DISPLAY());
 		Tab->AddChildListData(Cat);
 
 		// Window Mode — special Enum type with EditCondition
 		{
 			UListDataObject_StringEnum* WindowMode = NewObject<UListDataObject_StringEnum>();
 			WindowMode->SetDataId("WindowMode");
-			WindowMode->SetDataDisplayName(FText::FromString("Window Mode"));
-			WindowMode->SetDescriptionRichText(FText::FromString("Select the window display mode"));
-			WindowMode->AddEnumOption(EWindowMode::Fullscreen, FText::FromString("Fullscreen Mode"));
-			WindowMode->AddEnumOption(EWindowMode::WindowedFullscreen, FText::FromString("Borderless Window"));
-			WindowMode->AddEnumOption(EWindowMode::Windowed, FText::FromString("Windowed"));
+			WindowMode->SetDataDisplayName(TXT_OPT_WINDOW_MODE());
+			WindowMode->SetDescriptionRichText(TXT_OPT_WINDOW_MODE_DESC());
+			WindowMode->AddEnumOption(EWindowMode::Fullscreen, TXT_VAL_WINDOW_FULLSCREEN());
+			WindowMode->AddEnumOption(EWindowMode::WindowedFullscreen, TXT_VAL_WINDOW_BORDERLESS());
+			WindowMode->AddEnumOption(EWindowMode::Windowed, TXT_VAL_WINDOW_WINDOWED());
 			WindowMode->SetDefaultValueFromEnumOption(EWindowMode::WindowedFullscreen);
 			WindowMode->SetDataDynamicGetter(CREATE_HELPER(GetFullscreenMode));
 			WindowMode->SetDataDynamicSetter(CREATE_HELPER(SetFullscreenMode));
@@ -383,8 +392,8 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		{
 			UListDataObject_StringResolution* Resolution = NewObject<UListDataObject_StringResolution>();
 			Resolution->SetDataId("Resolution");
-			Resolution->SetDataDisplayName(FText::FromString("Resolution"));
-			Resolution->SetDescriptionRichText(FText::FromString("Select the screen resolution for the game. Higher resolutions provide better visual quality but may impact performance."));
+			Resolution->SetDataDisplayName(TXT_OPT_RESOLUTION());
+			Resolution->SetDescriptionRichText(TXT_OPT_RESOLUTION_DESC());
 			Resolution->InitResolutionValues();
 			Resolution->SetDataDynamicGetter(CREATE_HELPER(GetScreenResolution));
 			Resolution->SetDataDynamicSetter(CREATE_HELPER(SetScreenResolution));
@@ -397,7 +406,7 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 				{
 					return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() != EWindowMode::WindowedFullscreen;
 				});
-			WindowModeEditCondition.SetDisableRichReason(TEXT("\n\n<Warning>This setting is disabled in Borderless Window mode</>"));
+			WindowModeEditCondition.SetDisableRichReason(TXT_OPT_WARN_BORDERLESS_DISABLED().ToString());
 			WindowModeEditCondition.SetDisabledForcedStringValue(Resolution->GetMaxAllowedResolution());
 			Resolution->AddEditConditionDescriptor(WindowModeEditCondition);
 			Resolution->AddEditDependencyData(CreatedWindowMode);
@@ -409,13 +418,13 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 	// ---- Graphics ----
 	UListDataObject_StringInteger* CreatedOverallQuality = nullptr;
 	{
-		UListDataObject_Collection* Cat = CreateCollection("GraphicsCategoryCollection", FText::FromString("Graphics"));
+		UListDataObject_Collection* Cat = CreateCollection("GraphicsCategoryCollection", TXT_OPT_CAT_GRAPHICS());
 		Tab->AddChildListData(Cat);
 
 		// Display Gamma — scalar with non-standard ranges
 		Cat->AddChildListData(CreateScalarEntry("DisplayGamma",
-			FText::FromString("Display Gamma"),
-			FText::FromString("Adjust the display gamma correction value."),
+			TXT_OPT_DISPLAY_GAMMA(),
+			TXT_OPT_DISPLAY_GAMMA_DESC(),
 			CREATE_HELPER(GetCurrentDisplayGamma), CREATE_HELPER(SetCurrentDisplayGamma),
 			TRange<float>(0.f, 1.f), TRange<float>(1.7f, 2.7f), 0.01f, 2.2f,
 			ECommonNumericType::Percentage));
@@ -423,8 +432,8 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		// Overall Quality
 		{
 			CreatedOverallQuality = CreateQualityPresetEntry("OverallQuality",
-				FText::FromString("Overall Quality"),
-				FText::FromString("Sets the overall graphics quality preset."),
+				TXT_OPT_OVERALL_QUALITY(),
+				TXT_OPT_OVERALL_QUALITY_DESC(),
 				CREATE_HELPER(GetOverallScalabilityLevel), CREATE_HELPER(SetOverallScalabilityLevel));
 			Cat->AddChildListData(CreatedOverallQuality);
 		}
@@ -432,8 +441,8 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		// Resolution Scale — scalar with non-standard out-range
 		{
 			UListDataObject_Scalar* ResolutionScale = CreateScalarEntry("ResolutionScale",
-				FText::FromString("Resolution Scale"),
-				FText::FromString("Adjust the rendering resolution as a percentage of the native resolution. Lower values improve performance."),
+				TXT_OPT_RESOLUTION_SCALE(),
+				TXT_OPT_RESOLUTION_SCALE_DESC(),
 				CREATE_HELPER(GetResolutionScaleNormalized), CREATE_HELPER(SetResolutionScaleNormalized),
 				TRange<float>(0.f, 1.f), TRange<float>(0.5f, 1.f), 0.01f, 1.f,
 				ECommonNumericType::Percentage);
@@ -453,56 +462,56 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		};
 
 		AddQualitySubEntry("GlobalIlluminationQuality",
-			FText::FromString("Global Illumination Quality"),
-			FText::FromString("Adjust the quality of global illumination lighting effects."),
+			TXT_OPT_GI_QUALITY(),
+			TXT_OPT_GI_QUALITY_DESC(),
 			CREATE_HELPER(GetGlobalIlluminationQuality), CREATE_HELPER(SetGlobalIlluminationQuality));
 
 		AddQualitySubEntry("ShadowQuality",
-			FText::FromString("Shadow Quality"),
-			FText::FromString("Adjust the quality and resolution of shadow rendering."),
+			TXT_OPT_SHADOW_QUALITY(),
+			TXT_OPT_SHADOW_QUALITY_DESC(),
 			CREATE_HELPER(GetShadowQuality), CREATE_HELPER(SetShadowQuality));
 
 		AddQualitySubEntry("AntiAliasingQuality",
-			FText::FromString("AntiAliasing Quality"),
-			FText::FromString("Adjust the quality of anti-aliasing for smoother edges."),
+			TXT_OPT_AA_QUALITY(),
+			TXT_OPT_AA_QUALITY_DESC(),
 			CREATE_HELPER(GetAntiAliasingQuality), CREATE_HELPER(SetAntiAliasingQuality));
 
 		AddQualitySubEntry("ViewDistanceQuality",
-			FText::FromString("View Distance Quality"),
-			FText::FromString("Adjust the view distance for rendering distant objects."),
+			TXT_OPT_VIEW_DISTANCE_QUALITY(),
+			TXT_OPT_VIEW_DISTANCE_QUALITY_DESC(),
 			CREATE_HELPER(GetViewDistanceQuality), CREATE_HELPER(SetViewDistanceQuality));
 
 		AddQualitySubEntry("TextureQuality",
-			FText::FromString("Texture Quality"),
-			FText::FromString("Adjust the texture resolution and streaming quality."),
+			TXT_OPT_TEXTURE_QUALITY(),
+			TXT_OPT_TEXTURE_QUALITY_DESC(),
 			CREATE_HELPER(GetTextureQuality), CREATE_HELPER(SetTextureQuality));
 
 		AddQualitySubEntry("VisualEffectsQuality",
-			FText::FromString("Visual Effects Quality"),
-			FText::FromString("Adjust the quality of visual effects such as particles and explosions."),
+			TXT_OPT_VFX_QUALITY(),
+			TXT_OPT_VFX_QUALITY_DESC(),
 			CREATE_HELPER(GetVisualEffectQuality), CREATE_HELPER(SetVisualEffectQuality));
 
 		AddQualitySubEntry("ReflectionQuality",
-			FText::FromString("Reflection Quality"),
-			FText::FromString("Adjust the quality of screen-space and planar reflections."),
+			TXT_OPT_REFLECTION_QUALITY(),
+			TXT_OPT_REFLECTION_QUALITY_DESC(),
 			CREATE_HELPER(GetReflectionQuality), CREATE_HELPER(SetReflectionQuality));
 
 		AddQualitySubEntry("PostProcessingQuality",
-			FText::FromString("Post Processing Quality"),
-			FText::FromString("Adjust the quality of post-processing effects such as bloom and depth of field."),
+			TXT_OPT_POSTPROCESS_QUALITY(),
+			TXT_OPT_POSTPROCESS_QUALITY_DESC(),
 			CREATE_HELPER(GetPostProcessingQuality), CREATE_HELPER(SetPostProcessingQuality));
 	}
 
 	// ---- Advanced Graphics ----
 	{
-		UListDataObject_Collection* Cat = CreateCollection("AdvancedGraphicsCategoryCollection", FText::FromString("Advanced Graphics"));
+		UListDataObject_Collection* Cat = CreateCollection("AdvancedGraphicsCategoryCollection", TXT_OPT_CAT_ADVANCED_GRAPHICS());
 		Tab->AddChildListData(Cat);
 
 		// VSync — bool with special EditCondition
 		{
 			UListDataObject_StringBool* VSync = CreateBoolEntry("Entry-VSync",
-				FText::FromString("Vertical Sync"),
-				FText::FromString("Synchronize the frame rate with the display refresh rate to prevent screen tearing."),
+				TXT_OPT_VSYNC(),
+				TXT_OPT_VSYNC_DESC(),
 				CREATE_HELPER(IsVSyncEnabled), CREATE_HELPER(SetVSyncEnabled), true);
 
 			FOptionsDataEditConditionDescriptor FullscreenOnlyCondition;
@@ -511,7 +520,7 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 				{
 					return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() == EWindowMode::Fullscreen;
 				});
-			FullscreenOnlyCondition.SetDisableRichReason("\n\n<Warning>This setting is only available in Fullscreen mode</>");
+			FullscreenOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_FULLSCREEN_ONLY().ToString());
 			FullscreenOnlyCondition.SetDisabledForcedStringValue("false");
 			VSync->AddEditConditionDescriptor(FullscreenOnlyCondition);
 
@@ -520,15 +529,15 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 
 		// Frame Rate Limit
 		Cat->AddChildListData(CreateStringEntry("Entry-FrameRateLimit",
-			FText::FromString("Frame Rate Limit"),
-			FText::FromString("Limit the maximum frames per second. Lower values reduce system load but may feel less responsive."),
+			TXT_OPT_FRAME_RATE_LIMIT(),
+			TXT_OPT_FRAME_RATE_LIMIT_DESC(),
 			CREATE_HELPER(GetFrameRateLimit), CREATE_HELPER(SetFrameRateLimit),
-			{{LexToString(0.0f), FText::FromString("Unlimited")},
-			 {LexToString(30.0f), FText::FromString("30 FPS")},
-			 {LexToString(60.0f), FText::FromString("60 FPS")},
-			 {LexToString(120.0f), FText::FromString("120 FPS")},
-			 {LexToString(144.0f), FText::FromString("144 FPS")},
-			 {LexToString(240.0f), FText::FromString("240 FPS")}},
+			{{LexToString(0.0f), TXT_VAL_FPS_UNLIMITED()},
+			 {LexToString(30.0f), TXT_VAL_FPS_30()},
+			 {LexToString(60.0f), TXT_VAL_FPS_60()},
+			 {LexToString(120.0f), TXT_VAL_FPS_120()},
+			 {LexToString(144.0f), TXT_VAL_FPS_144()},
+			 {LexToString(240.0f), TXT_VAL_FPS_240()}},
 			LexToString(0.0f)));
 	}
 
@@ -541,7 +550,7 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 
 void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalPlayer)
 {
-	UListDataObject_Collection* Tab = CreateCollection("Tab-Control", FText::FromString("Control"));
+	UListDataObject_Collection* Tab = CreateCollection("Tab-Control", TXT_OPT_TAB_CONTROL());
 
 	if (!InOwningLocalPlayer)
 	{
@@ -603,7 +612,7 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 		UListDataObject_Collection*& TargetCategory = CategoryMap.FindOrAdd(CategoryKey);
 		if (!TargetCategory)
 		{
-			TargetCategory = CreateCollection(*CategoryKey, CategoryText.IsEmpty() ? FText::FromString("General") : CategoryText);
+			TargetCategory = CreateCollection(*CategoryKey, CategoryText.IsEmpty() ? TXT_VAL_GENERAL() : CategoryText);
 			Tab->AddChildListData(TargetCategory);
 		}
 
@@ -626,7 +635,7 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 			else
 			{
 				const bool bIsGamepad = PlayerMapping->GetPrimaryDeviceType() == EHardwareDevicePrimaryType::Gamepad;
-				Slot.SlotDisplayName = bIsGamepad ? FText::FromString(TEXT("Gamepad")) : FText::FromString(TEXT("Keyboard"));
+				Slot.SlotDisplayName = bIsGamepad ? TXT_VAL_GAMEPAD() : TXT_VAL_KEYBOARD();
 			}
 
 			const bool bIsGamepadKey = PlayerMapping->GetCurrentKey().IsGamepadKey();
@@ -639,4 +648,158 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 		TargetCategory->AddChildListData(KeyBindingEntry);
 	}
 	RegisteredOptionsCollectionTabs.Add(Tab);
+}
+
+// ============================================================================
+// Data-driven init — uses UOptionsConfigData DataAsset
+// ============================================================================
+
+UListDataObject_Base* UOptionsDataRegistry::FindEntryInCategory(const FName& Id, UListDataObject_Collection* Cat) const
+{
+	for (UListDataObject_Base* Child : Cat->GetAllChildListData())
+	{
+		if (Child && Child->GetDataId() == Id) return Child;
+	}
+	return nullptr;
+}
+
+UListDataObject_Base* UOptionsDataRegistry::CreateEntryFromDataAsset(UOptionEntryData* Data, UListDataObject_Collection* OwnerCategory) const
+{
+	if (!Data) return nullptr;
+
+	UListDataObject_Base* Entry = ::CreateEntryFromData(Data);
+	if (!Entry) return nullptr;
+
+	if (!Data->EditDependencyIds.IsEmpty() && OwnerCategory)
+	{
+		for (const FName& DepId : Data->EditDependencyIds)
+		{
+			UListDataObject_Base* DepEntry = FindEntryInCategory(DepId, OwnerCategory);
+			if (DepEntry)
+			{
+				Entry->AddEditDependencyData(DepEntry);
+			}
+		}
+	}
+
+	return Entry;
+}
+
+void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
+{
+	UListDataObject_StringEnum* CreatedWindowMode = nullptr;
+	UListDataObject_StringInteger* CreatedOverallQuality = nullptr;
+
+	FOptionsDataEditConditionDescriptor PackagedBuildOnlyCondition;
+	PackagedBuildOnlyCondition.SetEditConditionFunction(
+		[]()->bool { return !(GIsEditor || GIsPlayInEditorWorld); });
+	PackagedBuildOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_PACKAGED_ONLY().ToString());
+
+	for (UOptionTabData* TabData : OptionsConfig->Tabs)
+	{
+		UListDataObject_Collection* Tab = CreateCollection(TabData->TabId, TabData->TabName);
+
+		for (UOptionCategoryData* CatData : TabData->Categories)
+		{
+			UListDataObject_Collection* Cat = CreateCollection(CatData->CategoryId, CatData->CategoryName);
+
+			for (UOptionEntryData* EntryData : CatData->Entries)
+			{
+				UListDataObject_Base* Entry = CreateEntryFromDataAsset(EntryData, Cat);
+				if (!Entry) continue;
+
+				Cat->AddChildListData(Entry);
+
+				if (EntryData->DataId == "WindowMode")
+					CreatedWindowMode = Cast<UListDataObject_StringEnum>(Entry);
+				else if (EntryData->DataId == "OverallQuality")
+					CreatedOverallQuality = Cast<UListDataObject_StringInteger>(Entry);
+			}
+
+			Tab->AddChildListData(Cat);
+		}
+
+		// ---- Apply EditConditions for Video tab ----
+		if (TabData->TabId == "Tab-Video")
+		{
+			// Walk categories → entries (entries are children of categories, not Tab directly)
+			for (UListDataObject_Base* CatChild : Tab->GetAllChildListData())
+			{
+				UListDataObject_Collection* Cat = Cast<UListDataObject_Collection>(CatChild);
+				if (!Cat) continue;
+
+				for (UListDataObject_Base* Entry : Cat->GetAllChildListData())
+				{
+					const FName EntryId = Entry->GetDataId();
+
+					if (EntryId == "WindowMode")
+					{
+						Entry->AddEditConditionDescriptor(PackagedBuildOnlyCondition);
+					}
+					else if (EntryId == "Resolution")
+					{
+						UListDataObject_StringResolution* Res = Cast<UListDataObject_StringResolution>(Entry);
+						if (Res)
+						{
+							Res->AddEditConditionDescriptor(PackagedBuildOnlyCondition);
+
+							if (CreatedWindowMode)
+							{
+								FOptionsDataEditConditionDescriptor WindowModeEditCondition;
+								WindowModeEditCondition.SetEditConditionFunction(
+									[CreatedWindowMode]()->bool
+									{
+										return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() != EWindowMode::WindowedFullscreen;
+									});
+								WindowModeEditCondition.SetDisableRichReason(TXT_OPT_WARN_BORDERLESS_DISABLED().ToString());
+								WindowModeEditCondition.SetDisabledForcedStringValue(Res->GetMaxAllowedResolution());
+								Res->AddEditConditionDescriptor(WindowModeEditCondition);
+								Res->AddEditDependencyData(CreatedWindowMode);
+							}
+						}
+					}
+					else if (EntryId == "Entry-VSync" && CreatedWindowMode)
+					{
+						FOptionsDataEditConditionDescriptor FullscreenOnlyCondition;
+						FullscreenOnlyCondition.SetEditConditionFunction(
+							[CreatedWindowMode]()->bool
+							{
+								return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() == EWindowMode::Fullscreen;
+							});
+						FullscreenOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_FULLSCREEN_ONLY().ToString());
+						FullscreenOnlyCondition.SetDisabledForcedStringValue("false");
+						Entry->AddEditConditionDescriptor(FullscreenOnlyCondition);
+					}
+				}
+			}
+
+			// Bidirectional dependency: OverallQuality <-> quality sub-entries
+			if (CreatedOverallQuality)
+			{
+				for (UListDataObject_Base* CatChild : Tab->GetAllChildListData())
+				{
+					UListDataObject_Collection* Cat = Cast<UListDataObject_Collection>(CatChild);
+					if (!Cat) continue;
+
+					for (UListDataObject_Base* Entry : Cat->GetAllChildListData())
+					{
+						for (UOptionCategoryData* CatData : TabData->Categories)
+						{
+							for (UOptionEntryData* EntryData : CatData->Entries)
+							{
+								if (EntryData->EditDependencyIds.Contains("OverallQuality") && Entry->GetDataId() == EntryData->DataId)
+								{
+									CreatedOverallQuality->AddEditDependencyData(Entry);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		RegisteredOptionsCollectionTabs.Add(Tab);
+	}
+
+	InitControlCollectionTab(InOwningLocalPlayer);
 }

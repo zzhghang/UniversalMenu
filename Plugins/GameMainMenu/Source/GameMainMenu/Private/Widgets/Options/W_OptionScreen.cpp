@@ -14,6 +14,7 @@
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/ListEntries/W_ListEntry_Base.h"
 #include "Subsystems/FrontendUISubsystem.h"
+#include "LocalizationKeys.h"
 
 void UW_OptionScreen::NativeOnInitialized()
 {
@@ -118,7 +119,7 @@ void UW_OptionScreen::OnResetAllBoundActionTriggered()
 	UFrontendUISubsystem::Get(this)->PushConfirmWidgetToModalStackAsync(
 		EConfirmScreenType::YesNo,
 		FText::FromString(TEXT("")),
-		FText::FromString(TEXT("Are you sure you want to reset all options in this category to their default values?")),
+		TXT_OPT_RESET_CONFIRM(),
 		[WeakThis](EConfirmScreenButtonType ClickedButtonType)
 		{
 			if (ClickedButtonType != EConfirmScreenButtonType::Confirmed) return;
@@ -313,6 +314,7 @@ UOptionsDataRegistry* UW_OptionScreen::GetOrCreateDataRegistry()
 	if (!CreatedDataRegistry)
 	{
 		CreatedDataRegistry = NewObject<UOptionsDataRegistry>();
+		CreatedDataRegistry->SetOptionsConfig(OptionsConfig);
 		CreatedDataRegistry->InitOptionsDataRegistry(GetOwningLocalPlayer());
 	}
 

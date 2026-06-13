@@ -29,18 +29,22 @@ void UW_OptionDetailView::UpdateDetailsViewInfo(UListDataObject_Base* InDataObje
 	
 	/****************   DynamicDetails  ****************/
 	
-	const FString DynamicDetails = FString::Printf(
+	/*const FString DynamicDetails = FString::Printf(
 		TEXT("Data Object Class: <Bold>%s</>\n\nEntry Widget Class: <Bold>%s</>"),
 		*InDataObject->GetClass()->GetName(),
 		*InEntryWidgetClassName
-	);
+	);*/
 
-	Ctb_DynamicDetails->SetText(FText::FromString(DynamicDetails));
+	//Ctb_DynamicDetails->SetText(FText::FromString(DynamicDetails));
 
 	/****************   DynamicDetails  ****************/
+	
+	/****************   DisabledReason  ****************/
 
-	//Ctb_DisabledReason->SetText(InDataObject->GetDisableRichText());
 	Ctb_DisabledReason->SetText(InDataObject->IsDataCurrentlyEditable()? FText::GetEmpty() : InDataObject->GetDisableRichText());
+	
+	/****************   DisabledReason  ****************/
+	
 }
 
 void UW_OptionDetailView::ClearDetailsViewInfo()

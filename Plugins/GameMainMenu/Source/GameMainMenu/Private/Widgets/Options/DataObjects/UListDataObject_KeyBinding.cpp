@@ -1,6 +1,7 @@
 // HangHang All Rights Reserved
 
 #include "Widgets/Options/DataObjects/UListDataObject_KeyBinding.h"
+#include "LocalizationKeys.h"
 
 #include "EnhancedInputSubsystems.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
@@ -93,7 +94,7 @@ FText UUListDataObject_KeyBinding::GetCurrentKeyDisplayName(int32 SlotIndex) con
 	{
 		return Key.GetDisplayName();
 	}
-	return FText::FromString(TEXT("Unbound"));
+	return TXT_VAL_UNBOUND();
 }
 
 FSlateBrush UUListDataObject_KeyBinding::GetKeyboardIconFromCurrentKey() const
