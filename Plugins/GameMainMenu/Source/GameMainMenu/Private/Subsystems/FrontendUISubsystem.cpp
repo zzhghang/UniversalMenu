@@ -40,7 +40,7 @@ void UFrontendUISubsystem::PushSoftWidgetToStackAsync(const FGameplayTag& InWidg
 		TSoftClassPtr<UW_ActivatableBase> InSoftWidgetClass,
 		TFunction<void(EAsyncPushWidgetState, UW_ActivatableBase*)> AsyncPushStackCallBack) const
 {
-	check(!InSoftWidgetClass.IsNull());
+	if (!ensure(!InSoftWidgetClass.IsNull())) { return; }
 	
 	TWeakObjectPtr<UFrontendUISubsystem> WeakThis = const_cast<UFrontendUISubsystem*>(this);
 
@@ -55,7 +55,7 @@ void UFrontendUISubsystem::PushSoftWidgetToStackAsync(const FGameplayTag& InWidg
 				}
 
 				UClass* LoadWidgetClass =  InSoftWidgetClass.Get();
-				check(LoadWidgetClass && WeakThis->CreatedPrimaryLayout);
+				if (!ensure(LoadWidgetClass && WeakThis->CreatedPrimaryLayout)) { return; }
 
 				UCommonActivatableWidgetContainerBase* FoundWidgetStack =  WeakThis->CreatedPrimaryLayout->FindWidgetStackByTag(InWidgetStackTag);
 
@@ -96,7 +96,7 @@ void UFrontendUISubsystem::PushConfirmWidgetToModalStackAsync(const EConfirmScre
 			break;
 		}
 
-		check(CreateInfoObject);
+		if (!ensure(CreateInfoObject)) { return; }
 
 		PushSoftWidgetToStackAsync(
 			FrontendGameplayTags::Frontend_WidgetStack_Modal,

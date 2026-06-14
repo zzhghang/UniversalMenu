@@ -178,7 +178,7 @@ void UW_OptionScreen::OnListViewItemHovered(UObject* InHoveredItem, bool bWasHov
 
 	UW_ListEntry_Base* HoveredEntryWidget = CommonListView_OptionList->GetEntryWidgetFromItem<UW_ListEntry_Base>(InHoveredItem);
 
-	check(HoveredEntryWidget);
+	if (!ensure(HoveredEntryWidget)) { return; }
 
 	HoveredEntryWidget->NativeOnListEntryWidgetHovered(bWasHovered);
 	
@@ -318,7 +318,7 @@ UOptionsDataRegistry* UW_OptionScreen::GetOrCreateDataRegistry()
 		CreatedDataRegistry->InitOptionsDataRegistry(GetOwningLocalPlayer());
 	}
 
-	checkf(CreatedDataRegistry,TEXT("Data Registry for options screen is not valid"));
+	if (!ensureMsgf(CreatedDataRegistry, TEXT("Data Registry for options screen is not valid"))) { return nullptr; }
 
 	return CreatedDataRegistry;
 }

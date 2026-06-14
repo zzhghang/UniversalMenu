@@ -63,7 +63,7 @@ protected:
 		}
 
 		UCommonInputSubsystem* InputSubsystem = UCommonInputSubsystem::Get(CachedWeakLocalPlayer.Get());
-		check(InputSubsystem);
+		if (!ensure(InputSubsystem)) { return; }
 
 		ECommonInputType CurrentInputType = InputSubsystem->GetCurrentInputType();
 
@@ -82,7 +82,7 @@ protected:
 			if (CurrentInputType == ECommonInputType::Gamepad && InPressedKey == EKeys::LeftMouseButton)
 			{
 				FCommonInputActionDataBase* InputActionData = ICommonInputModule::GetSettings().GetDefaultClickAction().GetRow<FCommonInputActionDataBase>(TEXT(""));
-				check(InputActionData);
+				if (!ensure(InputActionData)) { return; }
 
 				OnInputPreProcessorKeyPressed.ExecuteIfBound(InputActionData->GetDefaultGamepadInputTypeInfo().GetKey());
 				return;

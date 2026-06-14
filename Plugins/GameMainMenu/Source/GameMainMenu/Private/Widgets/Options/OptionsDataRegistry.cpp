@@ -145,7 +145,7 @@ TArray<UListDataObject_Base*> UOptionsDataRegistry::GetListSourceItemBySelectedT
 
 	);
 
-	checkf(FoundCollectionTabPointer,TEXT("No valid found under the ID %s"),*InSelectedTabId.ToString());
+	if (!ensureMsgf(FoundCollectionTabPointer, TEXT("No valid found under the ID %s"), *InSelectedTabId.ToString())) { return {}; }
 
 	const UListDataObject_Collection* FoundCollectionTab = *FoundCollectionTabPointer;
 

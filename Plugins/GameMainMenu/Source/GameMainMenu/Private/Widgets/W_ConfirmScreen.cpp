@@ -69,7 +69,7 @@ UConfirmScreenInfoObject* UConfirmScreenInfoObject::CreateOkCancelScreen(const F
 void UW_ConfirmScreen::InitConfirmScreen(UConfirmScreenInfoObject* InScreenInfoObject,
 	TFunction<void(EConfirmScreenButtonType)> ClickButtonCallBack)
 {
-	check(InScreenInfoObject && Ctb_Title && Ctb_Message && DynamicEntryBox_Buttons);
+	if (!ensure(InScreenInfoObject && Ctb_Title && Ctb_Message && DynamicEntryBox_Buttons)) { return; }
 
 	Ctb_Title->SetText(InScreenInfoObject->Title);
 	Ctb_Message->SetText(InScreenInfoObject->Message);
@@ -84,7 +84,7 @@ void UW_ConfirmScreen::InitConfirmScreen(UConfirmScreenInfoObject* InScreenInfoO
 		);
 	}
 	
-	check(!InScreenInfoObject->AvailableScreenButtons.IsEmpty());
+	if (!ensure(!InScreenInfoObject->AvailableScreenButtons.IsEmpty())) { return; }
 	
 	for (const FConfirmScreenButtonInfo& AvailableButtonInfo: InScreenInfoObject->AvailableScreenButtons)
 	{

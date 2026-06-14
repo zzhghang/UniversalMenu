@@ -11,7 +11,7 @@ UAA_PushSoftWidget* UAA_PushSoftWidget::PushSoftWidget(const UObject* WorldConte
                                                        APlayerController* OwningPlayerController, TSoftClassPtr<UW_ActivatableBase> SoftWidgetClass,
                                                        UPARAM(meta = (Categories = "Frontend.WidgetStack")) FGameplayTag WidgetStackTag, bool bFocus)
 {
-	checkf(!SoftWidgetClass.IsNull(),TEXT("PushSoftWidgetToStack was passed a null soft widget class"));
+	if (!ensureMsgf(!SoftWidgetClass.IsNull(), TEXT("PushSoftWidgetToStack was passed a null soft widget class"))) { return nullptr; }
 	
 	if (GEngine)
 	{

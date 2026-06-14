@@ -7,7 +7,7 @@
 
 UCommonActivatableWidgetContainerBase* UW_PrimaryLayout::FindWidgetStackByTag(const FGameplayTag& WidgetStackTag) const
 {
-	checkf(RegisteredWidgetStackMap.Contains(WidgetStackTag), TEXT("Can not find widget stack by the tag %s"), *WidgetStackTag.ToString());
+	ensureMsgf(RegisteredWidgetStackMap.Contains(WidgetStackTag), TEXT("Can not find widget stack by the tag %s"), *WidgetStackTag.ToString());
 	
 	return RegisteredWidgetStackMap.FindRef(WidgetStackTag);
 }

@@ -8,7 +8,7 @@
 TSubclassOf<UW_ListEntry_Base> UDA_DataListEntryMapping::FindEntryWidgetClassByDataObject(
 	const UListDataObject_Base* InDataObject) const
 {
-	check(InDataObject);
+	if (!ensure(InDataObject)) { return TSubclassOf<UW_ListEntry_Base>(); }
 
 	for (UClass* DataObjectClass = InDataObject->GetClass(); DataObjectClass; DataObjectClass = DataObjectClass->GetSuperClass())
 	{

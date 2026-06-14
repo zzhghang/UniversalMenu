@@ -106,8 +106,11 @@ public:
 	{
 		const UEnum* StaticEnumOption = StaticEnum<EnumType>();
 		const int64 EnumValue = StaticEnumOption->GetValueByNameString(CurrentStringValue);
-		checkf(EnumValue != INDEX_NONE, TEXT("GetCurrentValueAsEnum: CurrentStringValue '%s' is not a valid name for enum %s"),
-			*CurrentStringValue, *StaticEnumOption->GetName());
+		if (!ensureMsgf(EnumValue != INDEX_NONE, TEXT("GetCurrentValueAsEnum: CurrentStringValue '%s' is not a valid name for enum %s"),
+			*CurrentStringValue, *StaticEnumOption->GetName()))
+		{
+			return EnumType();
+		}
 		return static_cast<EnumType>(EnumValue);
 	}
 

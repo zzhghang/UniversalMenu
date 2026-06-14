@@ -11,7 +11,7 @@ TSoftClassPtr<UW_ActivatableBase> UFrontendFunctionLibrary::GetFrontendSoftWidge
 {
 	const UFrontendDeveloperSettings* FrontendDeveloperSettings = GetDefault<UFrontendDeveloperSettings>();
 
-	checkf(FrontendDeveloperSettings->FrontendWidgetMap.Contains(InWidgetTag), TEXT("Can not find widget under the tag %s"), *InWidgetTag.ToString());
+	ensureMsgf(FrontendDeveloperSettings->FrontendWidgetMap.Contains(InWidgetTag), TEXT("Can not find widget under the tag %s"), *InWidgetTag.ToString());
 	
 	return FrontendDeveloperSettings->FrontendWidgetMap.FindRef(InWidgetTag);
 }
@@ -20,7 +20,7 @@ TSoftObjectPtr<UTexture2D> UFrontendFunctionLibrary::GetOptionsSoftImageByTag(UP
 {
 	const UFrontendDeveloperSettings* FrontendDeveloperSettings = GetDefault<UFrontendDeveloperSettings>();
 
-	checkf(FrontendDeveloperSettings->OptionsScreenSoftImageMap.Contains(InImageTag), TEXT("Can not find Image under the tag %s"), *InImageTag.ToString());
+	ensureMsgf(FrontendDeveloperSettings->OptionsScreenSoftImageMap.Contains(InImageTag), TEXT("Can not find Image under the tag %s"), *InImageTag.ToString());
 
 	return FrontendDeveloperSettings->OptionsScreenSoftImageMap.FindRef(InImageTag);
 }
