@@ -16,6 +16,7 @@
 
 #include "EnhancedInputSubsystems.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
+#include "InputAction.h"
 #include "FrontendDebugHelper.h"
 
 // ============================================================================
@@ -620,6 +621,11 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 		KeyBindingEntry->SetOwningLocalPlayer(InOwningLocalPlayer);
 		KeyBindingEntry->SetDataId(ActionMappingName);
 		KeyBindingEntry->SetDataDisplayName(ActionDisplayName);
+
+		if (const UInputAction* InputAction = Cast<UInputAction>(MappingsForAction[0]->GetAssociatedInputAction()))
+		{
+			KeyBindingEntry->SetDescriptionRichText(InputAction->ActionDescription);
+		}
 
 		for (const FPlayerKeyMapping* PlayerMapping : MappingsForAction)
 		{
