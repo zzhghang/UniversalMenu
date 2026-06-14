@@ -73,7 +73,6 @@ void UFrontendGameUserSettings::SetOverallVolume(const float InValue)
 		}
 	}
 
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetMusicVolume(const float InValue)
@@ -91,7 +90,6 @@ void UFrontendGameUserSettings::SetMusicVolume(const float InValue)
 		}
 	}
 
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetSFXVolume(const float InValue)
@@ -109,7 +107,6 @@ void UFrontendGameUserSettings::SetSFXVolume(const float InValue)
 		}
 	}
 
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetVoiceVolume(const float InValue)
@@ -127,7 +124,6 @@ void UFrontendGameUserSettings::SetVoiceVolume(const float InValue)
 		}
 	}
 
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetAmbientVolume(const float InValue)
@@ -145,7 +141,6 @@ void UFrontendGameUserSettings::SetAmbientVolume(const float InValue)
 		}
 	}
 
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetUIVolume(const float InValue)
@@ -163,7 +158,6 @@ void UFrontendGameUserSettings::SetUIVolume(const float InValue)
 		}
 	}
 
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetCurrentCulture(const FString& InCulture)
