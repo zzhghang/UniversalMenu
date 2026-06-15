@@ -60,6 +60,7 @@ void UUListDataObject_KeyBinding::SetKeyForSlot(int32 SlotIndex, const FKey& New
 
 	FGameplayTagContainer FailureReason;
 	Settings->MapPlayerKey(Args, FailureReason);
+	Settings->SaveSettings();
 
 	NotifyListDataModified(this, EOptionsListDataModifyReason::DirectlyModified);
 }
@@ -83,10 +84,10 @@ void UUListDataObject_KeyBinding::ResetSlotToDefault(int32 SlotIndex)
 
 	FGameplayTagContainer FailureReason;
 	Settings->ResetAllPlayerKeysInRow(Args, FailureReason);
+	Settings->SaveSettings();
 
 	NotifyListDataModified(this, EOptionsListDataModifyReason::ResetToDefault);
 }
-
 FText UUListDataObject_KeyBinding::GetCurrentKeyDisplayName(int32 SlotIndex) const
 {
 	const FKey Key = GetCurrentKeyForSlot(SlotIndex);
@@ -287,6 +288,8 @@ bool UUListDataObject_KeyBinding::TryResetBackToDefaultValue()
 		FGameplayTagContainer FailureReason;
 		Settings->ResetAllPlayerKeysInRow(Args, FailureReason);
 	}
+
+	Settings->SaveSettings();
 
 	NotifyListDataModified(this, EOptionsListDataModifyReason::ResetToDefault);
 	return true;
