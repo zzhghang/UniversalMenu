@@ -65,6 +65,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (EditCondition = "ValueType == EOptionValueType::String || ValueType == EOptionValueType::Enum", EditConditionHides))
 	TMap<FString, FText> AvailableOptions;
 
+	// ---- EditConditions ----
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bPackagedBuildOnly = false;
+
 	// ---- Dependencies (referenced Entry DataIds) ----
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TArray<FName> EditDependencyIds;

@@ -660,35 +660,10 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 // Data-driven init — uses UOptionsConfigData DataAsset
 // ============================================================================
 
-UListDataObject_Base* UOptionsDataRegistry::FindEntryInCategory(const FName& Id, UListDataObject_Collection* Cat) const
-{
-	for (UListDataObject_Base* Child : Cat->GetAllChildListData())
-	{
-		if (Child && Child->GetDataId() == Id) return Child;
-	}
-	return nullptr;
-}
-
 UListDataObject_Base* UOptionsDataRegistry::CreateEntryFromDataAsset(UOptionEntryData* Data, UListDataObject_Collection* OwnerCategory) const
 {
 	if (!Data) return nullptr;
-
-	UListDataObject_Base* Entry = ::CreateEntryFromData(Data);
-	if (!Entry) return nullptr;
-
-	if (!Data->EditDependencyIds.IsEmpty() && OwnerCategory)
-	{
-		for (const FName& DepId : Data->EditDependencyIds)
-		{
-			UListDataObject_Base* DepEntry = FindEntryInCategory(DepId, OwnerCategory);
-			if (DepEntry)
-			{
-				Entry->AddEditDependencyData(DepEntry);
-			}
-		}
-	}
-
-	return Entry;
+	return ::CreateEntryFromData(Data);
 }
 
 /**
@@ -701,9 +676,6 @@ UListDataObject_Base* UOptionsDataRegistry::CreateEntryFromDataAsset(UOptionEntr
  */
 void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 {
-	UListDataObject_StringEnum* CreatedWindowMode = nullptr;
-	UListDataObject_StringInteger* CreatedOverallQuality = nullptr;
-
 	FOptionsDataEditConditionDescriptor PackagedBuildOnlyCondition;
 	PackagedBuildOnlyCondition.SetEditConditionFunction(
 		[]()->bool { return !(GIsEditor || GIsPlayInEditorWorld); });
@@ -712,6 +684,7 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 	for (UOptionTabData* TabData : OptionsConfig->Tabs)
 	{
 		UListDataObject_Collection* Tab = CreateCollection(TabData->TabId, TabData->TabName);
+		TMap<FName, UListDataObject_Base*> EntryLookup;
 
 		for (UOptionCategoryData* CatData : TabData->Categories)
 		{
@@ -723,97 +696,114 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 				if (!Entry) continue;
 
 				Cat->AddChildListData(Entry);
-
-				if (EntryData->DataId == "WindowMode")
-					CreatedWindowMode = Cast<UListDataObject_StringEnum>(Entry);
-				else if (EntryData->DataId == "OverallQuality")
-					CreatedOverallQuality = Cast<UListDataObject_StringInteger>(Entry);
+				EntryLookup.Add(EntryData->DataId, Entry);
 			}
 
 			Tab->AddChildListData(Cat);
 		}
 
-		// ---- Apply EditConditions for Video tab ----
-		if (TabData->TabId == "Tab-Video")
-		{
-			// Walk categories → entries (entries are children of categories, not Tab directly)
-			for (UListDataObject_Base* CatChild : Tab->GetAllChildListData())
-			{
-				UListDataObject_Collection* Cat = Cast<UListDataObject_Collection>(CatChild);
-				if (!Cat) continue;
-
-				for (UListDataObject_Base* Entry : Cat->GetAllChildListData())
-				{
-					const FName EntryId = Entry->GetDataId();
-
-					if (EntryId == "WindowMode")
-					{
-						Entry->AddEditConditionDescriptor(PackagedBuildOnlyCondition);
-					}
-					else if (EntryId == "Resolution")
-					{
-						UListDataObject_StringResolution* Res = Cast<UListDataObject_StringResolution>(Entry);
-						if (Res)
-						{
-							Res->AddEditConditionDescriptor(PackagedBuildOnlyCondition);
-
-							if (CreatedWindowMode)
-							{
-								FOptionsDataEditConditionDescriptor WindowModeEditCondition;
-								WindowModeEditCondition.SetEditConditionFunction(
-									[CreatedWindowMode]()->bool
-									{
-										return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() != EWindowMode::WindowedFullscreen;
-									});
-								WindowModeEditCondition.SetDisableRichReason(TXT_OPT_WARN_BORDERLESS_DISABLED().ToString());
-								WindowModeEditCondition.SetDisabledForcedStringValue(Res->GetMaxAllowedResolution());
-								Res->AddEditConditionDescriptor(WindowModeEditCondition);
-								Res->AddEditDependencyData(CreatedWindowMode);
-							}
-						}
-					}
-					else if (EntryId == "Entry-VSync" && CreatedWindowMode)
-					{
-						FOptionsDataEditConditionDescriptor FullscreenOnlyCondition;
-						FullscreenOnlyCondition.SetEditConditionFunction(
-							[CreatedWindowMode]()->bool
-							{
-								return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() == EWindowMode::Fullscreen;
-							});
-						FullscreenOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_FULLSCREEN_ONLY().ToString());
-						FullscreenOnlyCondition.SetDisabledForcedStringValue("false");
-						Entry->AddEditConditionDescriptor(FullscreenOnlyCondition);
-					}
-				}
-			}
-
-			// Bidirectional dependency: OverallQuality <-> quality sub-entries
-			if (CreatedOverallQuality)
-			{
-				for (UListDataObject_Base* CatChild : Tab->GetAllChildListData())
-				{
-					UListDataObject_Collection* Cat = Cast<UListDataObject_Collection>(CatChild);
-					if (!Cat) continue;
-
-					for (UListDataObject_Base* Entry : Cat->GetAllChildListData())
-					{
-						for (UOptionCategoryData* CatData : TabData->Categories)
-						{
-							for (UOptionEntryData* EntryData : CatData->Entries)
-							{
-								if (EntryData->EditDependencyIds.Contains("OverallQuality") && Entry->GetDataId() == EntryData->DataId)
-								{
-									CreatedOverallQuality->AddEditDependencyData(Entry);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+		ApplyTabEditConditions(Tab, TabData, PackagedBuildOnlyCondition, EntryLookup);
 
 		RegisteredOptionsCollectionTabs.Add(Tab);
 	}
 
 	InitControlCollectionTab(InOwningLocalPlayer);
+}
+
+void UOptionsDataRegistry::ApplyTabEditConditions(
+	UListDataObject_Collection* Tab,
+	UOptionTabData* TabData,
+	const FOptionsDataEditConditionDescriptor& PackagedBuildOnlyCondition,
+	const TMap<FName, UListDataObject_Base*>& EntryLookup)
+{
+	// ---- PackagedBuildOnly via DataAsset flag ----
+	for (const UOptionCategoryData* CatData : TabData->Categories)
+	{
+		for (const UOptionEntryData* EntryData : CatData->Entries)
+		{
+			if (!EntryData->bPackagedBuildOnly) continue;
+			UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
+			if (EntryPtr && *EntryPtr)
+			{
+				(*EntryPtr)->AddEditConditionDescriptor(PackagedBuildOnlyCondition);
+			}
+		}
+	}
+
+	// ---- EditDependencyIds wiring ----
+	for (const UOptionCategoryData* CatData : TabData->Categories)
+	{
+		for (const UOptionEntryData* EntryData : CatData->Entries)
+		{
+			if (EntryData->EditDependencyIds.IsEmpty()) continue;
+			UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
+			if (!EntryPtr || !*EntryPtr) continue;
+
+			for (const FName& DepId : EntryData->EditDependencyIds)
+			{
+				UListDataObject_Base* const* DepPtr = EntryLookup.Find(DepId);
+				if (DepPtr && *DepPtr)
+				{
+					(*EntryPtr)->AddEditDependencyData(*DepPtr);
+				}
+			}
+		}
+	}
+
+	// ---- WindowMode-dependent EditConditions (hardcoded — enum-specific lambdas) ----
+	if (TabData->TabId != "Tab-Video") return;
+
+	UListDataObject_Base* const* WindowModePtr = EntryLookup.Find("WindowMode");
+	UListDataObject_Base* const* ResolutionPtr = EntryLookup.Find("Resolution");
+	UListDataObject_Base* const* VSyncPtr = EntryLookup.Find("Entry-VSync");
+
+	UListDataObject_StringEnum* CreatedWindowMode = WindowModePtr ? Cast<UListDataObject_StringEnum>(*WindowModePtr) : nullptr;
+
+	if (ResolutionPtr && *ResolutionPtr)
+	{
+		UListDataObject_StringResolution* Res = Cast<UListDataObject_StringResolution>(*ResolutionPtr);
+		if (Res && CreatedWindowMode)
+		{
+			FOptionsDataEditConditionDescriptor WindowModeEditCondition;
+			WindowModeEditCondition.SetEditConditionFunction(
+				[CreatedWindowMode]()->bool
+				{
+					return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() != EWindowMode::WindowedFullscreen;
+				});
+			WindowModeEditCondition.SetDisableRichReason(TXT_OPT_WARN_BORDERLESS_DISABLED().ToString());
+			WindowModeEditCondition.SetDisabledForcedStringValue(Res->GetMaxAllowedResolution());
+			Res->AddEditConditionDescriptor(WindowModeEditCondition);
+		}
+	}
+
+	if (VSyncPtr && *VSyncPtr && CreatedWindowMode)
+	{
+		FOptionsDataEditConditionDescriptor FullscreenOnlyCondition;
+		FullscreenOnlyCondition.SetEditConditionFunction(
+			[CreatedWindowMode]()->bool
+			{
+				return CreatedWindowMode->GetCurrentValueAsEnum<EWindowMode::Type>() == EWindowMode::Fullscreen;
+			});
+		FullscreenOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_FULLSCREEN_ONLY().ToString());
+		FullscreenOnlyCondition.SetDisabledForcedStringValue("false");
+		(*VSyncPtr)->AddEditConditionDescriptor(FullscreenOnlyCondition);
+	}
+
+	// ---- OverallQuality bidirectional: hub depends on every sub-entry that references it ----
+	UListDataObject_Base* const* OverallQualityPtr = EntryLookup.Find("OverallQuality");
+	if (OverallQualityPtr && *OverallQualityPtr)
+	{
+		for (const UOptionCategoryData* CatData : TabData->Categories)
+		{
+			for (const UOptionEntryData* EntryData : CatData->Entries)
+			{
+				if (!EntryData->EditDependencyIds.Contains("OverallQuality")) continue;
+				UListDataObject_Base* const* SubEntryPtr = EntryLookup.Find(EntryData->DataId);
+				if (SubEntryPtr && *SubEntryPtr)
+				{
+					(*OverallQualityPtr)->AddEditDependencyData(*SubEntryPtr);
+				}
+			}
+		}
+	}
 }

@@ -7,6 +7,8 @@
 #include "UObject/Object.h"
 #include "OptionsDataRegistry.generated.h"
 
+struct FOptionsDataEditConditionDescriptor;
+
 class UListDataObject_Base;
 class UListDataObject_Collection;
 class UListDataObject_StringBool;
@@ -56,8 +58,12 @@ private:
 
 	// ---- Data-driven init ----
 	void InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer);
+	void ApplyTabEditConditions(
+		UListDataObject_Collection* Tab,
+		UOptionTabData* TabData,
+		const FOptionsDataEditConditionDescriptor& PackagedBuildOnlyCondition,
+		const TMap<FName, UListDataObject_Base*>& EntryLookup);
 	UListDataObject_Base* CreateEntryFromDataAsset(UOptionEntryData* Data, UListDataObject_Collection* OwnerCategory) const;
-	UListDataObject_Base* FindEntryInCategory(const FName& Id, UListDataObject_Collection* Cat) const;
 
 	// ---- Factory helpers ----
 
