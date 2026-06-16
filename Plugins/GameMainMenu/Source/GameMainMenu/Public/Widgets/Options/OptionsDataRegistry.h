@@ -63,8 +63,6 @@ private:
 		UOptionTabData* TabData,
 		const FOptionsDataEditConditionDescriptor& PackagedBuildOnlyCondition,
 		const TMap<FName, UListDataObject_Base*>& EntryLookup);
-	UListDataObject_Base* CreateEntryFromDataAsset(UOptionEntryData* Data, UListDataObject_Collection* OwnerCategory) const;
-
 	// ---- Factory helpers ----
 
 	UListDataObject_Collection* CreateCollection(const FName& Id, const FText& DisplayName) const;

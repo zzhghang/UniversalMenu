@@ -44,10 +44,10 @@ public:
 	void RegisterCreatedPrimaryLayoutWidget(UW_PrimaryLayout* CreatedWidget) { CreatedPrimaryLayout = CreatedWidget; }
 
 	/** Async-load a widget class and push it to the specified widget stack. */
-	void PushSoftWidgetToStackAsync(const FGameplayTag& InWidgetStackTag, TSoftClassPtr<UW_ActivatableBase> InSoftWidgetClass, TFunction<void(EAsyncPushWidgetState, UW_ActivatableBase*)> AsyncPushStackCallBack) const;
+	void PushSoftWidgetToStackAsync(const FGameplayTag& InWidgetStackTag, TSoftClassPtr<UW_ActivatableBase> InSoftWidgetClass, TFunction<void(EAsyncPushWidgetState, UW_ActivatableBase*)> AsyncPushStackCallBack);
 
 	/** Push a confirm dialog to the modal stack with title, message, and callback. */
-	void PushConfirmWidgetToModalStackAsync(const EConfirmScreenType InConfirmType, const FText& InTitle, const FText& InMessage,TFunction<void(EConfirmScreenButtonType)> ButtonClickCallBack) const;
+	void PushConfirmWidgetToModalStackAsync(const EConfirmScreenType InConfirmType, const FText& InTitle, const FText& InMessage,TFunction<void(EConfirmScreenButtonType)> ButtonClickCallBack);
 
 	UPROPERTY(BlueprintAssignable)
 	FOnButtonDescriptionTextUpdateDelegate OnButtonDescriptionTextUpdate;

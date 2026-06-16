@@ -38,11 +38,11 @@ bool UFrontendUISubsystem::ShouldCreateSubsystem(UObject* Outer) const
 
 void UFrontendUISubsystem::PushSoftWidgetToStackAsync(const FGameplayTag& InWidgetStackTag,
 		TSoftClassPtr<UW_ActivatableBase> InSoftWidgetClass,
-		TFunction<void(EAsyncPushWidgetState, UW_ActivatableBase*)> AsyncPushStackCallBack) const
+		TFunction<void(EAsyncPushWidgetState, UW_ActivatableBase*)> AsyncPushStackCallBack)
 {
 	if (!ensure(!InSoftWidgetClass.IsNull())) { return; }
-	
-	TWeakObjectPtr<UFrontendUISubsystem> WeakThis = const_cast<UFrontendUISubsystem*>(this);
+
+	TWeakObjectPtr<UFrontendUISubsystem> WeakThis = this;
 
 	UAssetManager::Get().GetStreamableManager().RequestAsyncLoad(
 		InSoftWidgetClass.ToSoftObjectPath(),
@@ -58,6 +58,7 @@ void UFrontendUISubsystem::PushSoftWidgetToStackAsync(const FGameplayTag& InWidg
 				if (!ensure(LoadWidgetClass && WeakThis->CreatedPrimaryLayout)) { return; }
 
 				UCommonActivatableWidgetContainerBase* FoundWidgetStack =  WeakThis->CreatedPrimaryLayout->FindWidgetStackByTag(InWidgetStackTag);
+				if (!ensureMsgf(FoundWidgetStack, TEXT("Widget stack not found for tag %s"), *InWidgetStackTag.ToString())) { return; }
 
 				UW_ActivatableBase* CreatedWidget =  FoundWidgetStack->AddWidget<UW_ActivatableBase>(
 					LoadWidgetClass,
@@ -73,7 +74,7 @@ void UFrontendUISubsystem::PushSoftWidgetToStackAsync(const FGameplayTag& InWidg
 }
 
 void UFrontendUISubsystem::PushConfirmWidgetToModalStackAsync(const EConfirmScreenType InConfirmType,
-	const FText& InTitle, const FText& InMessage, TFunction<void(EConfirmScreenButtonType)> ButtonClickCallBack) const
+	const FText& InTitle, const FText& InMessage, TFunction<void(EConfirmScreenButtonType)> ButtonClickCallBack)
 {
 		UConfirmScreenInfoObject* CreateInfoObject = nullptr;
 

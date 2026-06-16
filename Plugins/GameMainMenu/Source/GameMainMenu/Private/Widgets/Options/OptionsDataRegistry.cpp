@@ -553,32 +553,13 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 {
 	UListDataObject_Collection* Tab = CreateCollection("Tab-Control", TXT_OPT_TAB_CONTROL());
 
-	if (!InOwningLocalPlayer)
-	{
-		RegisteredOptionsCollectionTabs.Add(Tab);
-		return;
-	}
+	UEnhancedInputLocalPlayerSubsystem* Subsystem = InOwningLocalPlayer
+		? InOwningLocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>() : nullptr;
+	UEnhancedInputUserSettings* UserSettings = Subsystem ? Subsystem->GetUserSettings() : nullptr;
+	UEnhancedPlayerMappableKeyProfile* ActiveProfile = UserSettings ? UserSettings->GetActiveKeyProfile() : nullptr;
 
-	UEnhancedInputLocalPlayerSubsystem* Subsystem = InOwningLocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>();
-	if (!Subsystem)
-	{
-		RegisteredOptionsCollectionTabs.Add(Tab);
-		return;
-	}
-
-	UEnhancedInputUserSettings* UserSettings = Subsystem->GetUserSettings();
-	if (!UserSettings)
-	{
-		RegisteredOptionsCollectionTabs.Add(Tab);
-		return;
-	}
-
-	UEnhancedPlayerMappableKeyProfile* ActiveProfile = UserSettings->GetActiveKeyProfile();
-	if (!ActiveProfile)
-	{
-		RegisteredOptionsCollectionTabs.Add(Tab);
-		return;
-	}
+	RegisteredOptionsCollectionTabs.Add(Tab);
+	if (!ActiveProfile) { return; }
 
 	const TMap<FName, FKeyMappingRow>& MappingRows = ActiveProfile->GetPlayerMappingRows();
 
@@ -653,18 +634,11 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 
 		TargetCategory->AddChildListData(KeyBindingEntry);
 	}
-	RegisteredOptionsCollectionTabs.Add(Tab);
 }
 
 // ============================================================================
 // Data-driven init — uses UOptionsConfigData DataAsset
 // ============================================================================
-
-UListDataObject_Base* UOptionsDataRegistry::CreateEntryFromDataAsset(UOptionEntryData* Data, UListDataObject_Collection* OwnerCategory) const
-{
-	if (!Data) return nullptr;
-	return ::CreateEntryFromData(Data);
-}
 
 /**
  * Build the options hierarchy from UOptionsConfigData DataAsset.
@@ -692,7 +666,7 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 
 			for (UOptionEntryData* EntryData : CatData->Entries)
 			{
-				UListDataObject_Base* Entry = CreateEntryFromDataAsset(EntryData, Cat);
+				UListDataObject_Base* Entry = CreateEntryFromData(EntryData);
 				if (!Entry) continue;
 
 				Cat->AddChildListData(Entry);

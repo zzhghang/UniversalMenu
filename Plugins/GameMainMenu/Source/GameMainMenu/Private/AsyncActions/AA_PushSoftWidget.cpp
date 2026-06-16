@@ -37,7 +37,7 @@ UAA_PushSoftWidget* UAA_PushSoftWidget::PushSoftWidget(const UObject* WorldConte
 
 void UAA_PushSoftWidget::Activate()
 {
-	const UFrontendUISubsystem* FrontendUISubsystem = UFrontendUISubsystem::Get(CachedOwningWorld.Get());
+	UFrontendUISubsystem* FrontendUISubsystem = UFrontendUISubsystem::Get(CachedOwningWorld.Get());
 
 	FrontendUISubsystem->PushSoftWidgetToStackAsync(CachedWidgetStackTag, CachedSoftWidgetClass, 
 		[this](const EAsyncPushWidgetState InPushState, UW_ActivatableBase* PushWidget)
