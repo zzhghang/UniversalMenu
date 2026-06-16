@@ -23,8 +23,8 @@
 // Factory helpers
 // ============================================================================
 
-#define CREATE_HELPER(SetterOrGetterFuncName) \
-	MakeShared<FOptionsDataInteractionHelper>(GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, SetterOrGetterFuncName))
+#define CREATE_HELPER(FuncName) \
+	CreateHelperFromEnum(EGameUserSettingFunction::FuncName)
 
 UListDataObject_Collection* UOptionsDataRegistry::CreateCollection(const FName& Id, const FText& DisplayName) const
 {
@@ -100,7 +100,8 @@ UListDataObject_String* UOptionsDataRegistry::CreateStringEntry(
 UListDataObject_StringInteger* UOptionsDataRegistry::CreateQualityPresetEntry(
 	const FName& Id, const FText& DisplayName, const FText& Description,
 	const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
-	const TSharedPtr<FOptionsDataInteractionHelper>& Setter) const
+	const TSharedPtr<FOptionsDataInteractionHelper>& Setter,
+	int32 DefaultValue) const
 {
 	UListDataObject_StringInteger* Entry = NewObject<UListDataObject_StringInteger>();
 	Entry->SetDataId(Id);
@@ -111,6 +112,7 @@ UListDataObject_StringInteger* UOptionsDataRegistry::CreateQualityPresetEntry(
 	Entry->AddIntegerOption(2, TXT_VAL_QUALITY_HIGH());
 	Entry->AddIntegerOption(3, TXT_VAL_QUALITY_EPIC());
 	Entry->AddIntegerOption(4, TXT_VAL_QUALITY_CINEMATIC());
+	Entry->SetDefaultValueFromString(LexToString(DefaultValue));
 	Entry->SetDataDynamicGetter(Getter);
 	Entry->SetDataDynamicSetter(Setter);
 	Entry->SetShouldApplyChangeImmediately(true);

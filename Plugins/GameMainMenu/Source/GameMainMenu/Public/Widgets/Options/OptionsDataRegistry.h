@@ -91,7 +91,8 @@ private:
 	UListDataObject_StringInteger* CreateQualityPresetEntry(
 		const FName& Id, const FText& DisplayName, const FText& Description,
 		const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Setter) const;
+		const TSharedPtr<FOptionsDataInteractionHelper>& Setter,
+		int32 DefaultValue = 3) const;
 
 	UPROPERTY(EditAnywhere, Category = "Options")
 	UOptionsConfigData* OptionsConfig;

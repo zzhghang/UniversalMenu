@@ -101,5 +101,7 @@ private:
 	TArray<UListDataObject_Base*> ResettableDataArray;
 
 	bool bIsResettingData = false;
-	
+
+	bool bIsSelectingTab = false;
+
 };

@@ -235,6 +235,7 @@ void UW_OptionScreen::OnOptionsTabSelected(const FName TabId)
 	}
 	
 	ResettableDataArray.Empty();
+	bIsSelectingTab = true;
 	
 	for (UListDataObject_Base* FoundListSourceItem : FoundListSourceItems)
 	{
@@ -247,11 +248,12 @@ void UW_OptionScreen::OnOptionsTabSelected(const FName TabId)
 			FoundListSourceItem->OnListDataModified.AddUObject(this,&ThisClass::OnListViewListDataModified);
 
 		}
-		if (FoundListSourceItem->CanResetBackToDefaultValue())
+		if (FoundListSourceItem->IsDataCurrentlyEditable() && FoundListSourceItem->CanResetBackToDefaultValue())
 		{
 			ResettableDataArray.AddUnique(FoundListSourceItem);
 		}
 	}
+	bIsSelectingTab = false;
 	
 	if (ResettableDataArray.IsEmpty())
 	{
@@ -274,7 +276,7 @@ void UW_OptionScreen::OnOptionsTabSelected(const FName TabId)
 void UW_OptionScreen::OnListViewListDataModified(UListDataObject_Base* ModifiedData,
 	EOptionsListDataModifyReason ModifiedReason)
 {
-	if (!ModifiedData || bIsResettingData) return;
+	if (!ModifiedData || bIsResettingData || bIsSelectingTab) return;
 
 	UpdateResetActionBindingForDataItem(ModifiedData);
 }
@@ -283,7 +285,7 @@ void UW_OptionScreen::UpdateResetActionBindingForDataItem(UListDataObject_Base* 
 {
 	if (!DataItem) return;
 
-	if (DataItem->CanResetBackToDefaultValue())
+	if (DataItem->IsDataCurrentlyEditable() && DataItem->CanResetBackToDefaultValue())
 	{
 		ResettableDataArray.AddUnique(DataItem);
 

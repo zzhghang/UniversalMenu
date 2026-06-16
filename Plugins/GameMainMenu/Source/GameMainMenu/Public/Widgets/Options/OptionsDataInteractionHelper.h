@@ -3,34 +3,27 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PropertyPathHelpers.h"
-
-
-class UFrontendGameUserSettings;
 
 /**
- * Bridges UFrontendGameUserSettings getters/setters with PropertyPathHelpers string reflection.
+ * Bridges UFrontendGameUserSettings getters/setters with direct function dispatch.
  *
- * Given a UFUNCTION name (e.g. "GetOverallVolume"), uses FCachedPropertyPath
- * to call that function on UFrontendGameUserSettings and convert results to/from strings.
+ * Stores TFunction getter (returns FString) and setter (accepts FString).
+ * Created via CreateHelperFromEnum which maps EGameUserSettingFunction to
+ * the corresponding UFUNCTION on UFrontendGameUserSettings.
  */
 class GAMEMAINMENU_API FOptionsDataInteractionHelper
 {
-
 public:
-	/** @param InSetterOrGetterPath UFUNCTION name on UFrontendGameUserSettings (e.g. "GetOverallVolume"). */
-	explicit FOptionsDataInteractionHelper(const FString& InSetterOrGetterPath);
+	using FGetter = TFunction<FString()>;
+	using FSetter = TFunction<void(const FString&)>;
 
-	/** Reads the current value from UFrontendGameUserSettings as a string. */
-	FString GetValueAsString() const;
-	/** Writes a string value to the bound UFrontendGameUserSettings property. */
-	void SetValueFromString(const FString& InStringValue) const;
+	FOptionsDataInteractionHelper(FGetter InGetter, FSetter InSetter)
+		: Getter(MoveTemp(InGetter)), Setter(MoveTemp(InSetter)) {}
+
+	FString GetValueAsString() const { return Getter ? Getter() : FString(); }
+	void SetValueFromString(const FString& InValue) const { if (Setter) Setter(InValue); }
 
 private:
-
-	FCachedPropertyPath CachedDynamicFunctionPath;
-
-	TWeakObjectPtr<UFrontendGameUserSettings> CachedWeakGameUserSettings;
-
-
+	FGetter Getter;
+	FSetter Setter;
 };

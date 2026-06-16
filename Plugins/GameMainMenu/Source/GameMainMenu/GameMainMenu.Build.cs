@@ -32,7 +32,6 @@ public class GameMainMenu : ModuleRules
 				"DeveloperSettings",
 				"InputCore",
 				"CommonInput",
-				"PropertyPath",
 				"EnhancedInput",
 				// ... add other public dependencies that you statically link with here ...
 			}

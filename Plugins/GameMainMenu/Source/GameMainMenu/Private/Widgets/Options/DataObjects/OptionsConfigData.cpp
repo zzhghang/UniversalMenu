@@ -8,17 +8,221 @@
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 #include "Widgets/Options/DataObjects/ListDataObject_StringCulture.h"
 #include "Widgets/Options/DataObjects/ListDataObject_StringResolution.h"
+#include "FrontendSettings/FrontendGameUserSettings.h"
 #include "LocalizationKeys.h"
+
+namespace
+{
+	FORCEINLINE UFrontendGameUserSettings* GetGS()
+	{
+		return UFrontendGameUserSettings::Get();
+	}
+}
+
+// ============================================================================
+// Static dispatch: EGameUserSettingFunction → getter/setter lambdas
+// ============================================================================
+
+static FOptionsDataInteractionHelper::FGetter MakeGetter(EGameUserSettingFunction Func)
+{
+	switch (Func)
+	{
+	// ---- Gameplay ----
+	case EGameUserSettingFunction::GetDifficulty:
+		return []{ auto* S = GetGS(); return S ? S->GetDifficulty() : FString(); };
+	case EGameUserSettingFunction::GetShowHealthBar:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetShowHealthBar()) : FString(); };
+	case EGameUserSettingFunction::GetShowDamageNumbers:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetShowDamageNumbers()) : FString(); };
+	case EGameUserSettingFunction::GetHighlightInteraction:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetHighlightInteraction()) : FString(); };
+	case EGameUserSettingFunction::GetShowSubtitles:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetShowSubtitles()) : FString(); };
+	case EGameUserSettingFunction::GetAutoSave:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetAutoSave()) : FString(); };
+	case EGameUserSettingFunction::GetCurrentCulture:
+		return []{ auto* S = GetGS(); return S ? S->GetCurrentCulture() : FString(); };
+
+	// ---- Audio ----
+	case EGameUserSettingFunction::GetOverallVolume:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetOverallVolume()) : FString(); };
+	case EGameUserSettingFunction::GetMusicVolume:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetMusicVolume()) : FString(); };
+	case EGameUserSettingFunction::GetSFXVolume:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetSFXVolume()) : FString(); };
+	case EGameUserSettingFunction::GetVoiceVolume:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetVoiceVolume()) : FString(); };
+	case EGameUserSettingFunction::GetAmbientVolume:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetAmbientVolume()) : FString(); };
+	case EGameUserSettingFunction::GetUIVolume:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetUIVolume()) : FString(); };
+	case EGameUserSettingFunction::GetAllowBackgroundSound:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetAllowBackgroundSound()) : FString(); };
+	case EGameUserSettingFunction::GetSubtitlesEnabled:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetSubtitlesEnabled()) : FString(); };
+	case EGameUserSettingFunction::GetHRTFEnabled:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetHRTFEnabled()) : FString(); };
+	case EGameUserSettingFunction::GetMonoOutput:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetMonoOutput()) : FString(); };
+	case EGameUserSettingFunction::GetDynamicRangeCompression:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetDynamicRangeCompression()) : FString(); };
+	case EGameUserSettingFunction::GetDialogueBoost:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetDialogueBoost()) : FString(); };
+
+	// ---- Video ----
+	case EGameUserSettingFunction::GetFullscreenMode:
+		return []{
+			auto* S = GetGS();
+			if (!S) return FString();
+			return StaticEnum<EWindowMode::Type>()->GetNameStringByValue(static_cast<int64>(S->GetFullscreenMode()));
+		};
+	case EGameUserSettingFunction::GetScreenResolution:
+		return []{
+			auto* S = GetGS();
+			if (!S) return FString();
+			const FIntPoint Res = S->GetScreenResolution();
+			return FString::Printf(TEXT("(X=%d,Y=%d)"), Res.X, Res.Y);
+		};
+	case EGameUserSettingFunction::GetCurrentDisplayGamma:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetCurrentDisplayGamma()) : FString(); };
+	case EGameUserSettingFunction::GetOverallScalabilityLevel:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetOverallScalabilityLevel()) : FString(); };
+	case EGameUserSettingFunction::GetResolutionScaleNormalized:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetResolutionScaleNormalized()) : FString(); };
+	case EGameUserSettingFunction::GetGlobalIlluminationQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetGlobalIlluminationQuality()) : FString(); };
+	case EGameUserSettingFunction::GetShadowQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetShadowQuality()) : FString(); };
+	case EGameUserSettingFunction::GetAntiAliasingQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetAntiAliasingQuality()) : FString(); };
+	case EGameUserSettingFunction::GetViewDistanceQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetViewDistanceQuality()) : FString(); };
+	case EGameUserSettingFunction::GetTextureQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetTextureQuality()) : FString(); };
+	case EGameUserSettingFunction::GetVisualEffectQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetVisualEffectQuality()) : FString(); };
+	case EGameUserSettingFunction::GetReflectionQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetReflectionQuality()) : FString(); };
+	case EGameUserSettingFunction::GetPostProcessingQuality:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetPostProcessingQuality()) : FString(); };
+	case EGameUserSettingFunction::IsVSyncEnabled:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->IsVSyncEnabled()) : FString(); };
+	case EGameUserSettingFunction::GetFrameRateLimit:
+		return []{ auto* S = GetGS(); return S ? LexToString(S->GetFrameRateLimit()) : FString(); };
+
+	default:
+		return nullptr;
+	}
+}
+
+static FOptionsDataInteractionHelper::FSetter MakeSetter(EGameUserSettingFunction Func)
+{
+	switch (Func)
+	{
+	// ---- Gameplay ----
+	case EGameUserSettingFunction::SetDifficulty:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetDifficulty(V); };
+	case EGameUserSettingFunction::SetShowHealthBar:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetShowHealthBar(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetShowDamageNumbers:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetShowDamageNumbers(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetHighlightInteraction:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetHighlightInteraction(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetShowSubtitles:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetShowSubtitles(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetAutoSave:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetAutoSave(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetCurrentCulture:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetCurrentCulture(V); };
+
+	// ---- Audio ----
+	case EGameUserSettingFunction::SetOverallVolume:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetOverallVolume(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetMusicVolume:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetMusicVolume(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetSFXVolume:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetSFXVolume(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetVoiceVolume:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetVoiceVolume(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetAmbientVolume:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetAmbientVolume(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetUIVolume:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetUIVolume(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetAllowBackgroundSound:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetAllowBackgroundSound(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetSubtitlesEnabled:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetSubtitlesEnabled(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetHRTFEnabled:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetHRTFEnabled(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetMonoOutput:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetMonoOutput(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetDynamicRangeCompression:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetDynamicRangeCompression(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetDialogueBoost:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetDialogueBoost(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+
+	// ---- Video ----
+	case EGameUserSettingFunction::SetFullscreenMode:
+		return [](const FString& V){
+			if (auto* S = GetGS())
+			{
+				const int64 ModeVal = StaticEnum<EWindowMode::Type>()->GetValueByNameString(V);
+				if (ModeVal != INDEX_NONE) S->SetFullscreenMode(static_cast<EWindowMode::Type>(ModeVal));
+			}
+		};
+	case EGameUserSettingFunction::SetScreenResolution:
+		return [](const FString& V){
+			if (auto* S = GetGS())
+			{
+				FIntPoint Res;
+				FParse::Value(*V, TEXT("X="), Res.X);
+				FParse::Value(*V, TEXT("Y="), Res.Y);
+				if (Res.X > 0 && Res.Y > 0) S->SetScreenResolution(Res);
+			}
+		};
+	case EGameUserSettingFunction::SetCurrentDisplayGamma:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetCurrentDisplayGamma(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetOverallScalabilityLevel:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetOverallScalabilityLevel(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetResolutionScaleNormalized:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetResolutionScaleNormalized(FCString::Atof(*V)); };
+	case EGameUserSettingFunction::SetGlobalIlluminationQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetGlobalIlluminationQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetShadowQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetShadowQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetAntiAliasingQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetAntiAliasingQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetViewDistanceQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetViewDistanceQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetTextureQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetTextureQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetVisualEffectQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetVisualEffectQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetReflectionQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetReflectionQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetPostProcessingQuality:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetPostProcessingQuality(FCString::Atoi(*V)); };
+	case EGameUserSettingFunction::SetVSyncEnabled:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetVSyncEnabled(V.Equals(TEXT("true"), ESearchCase::IgnoreCase)); };
+	case EGameUserSettingFunction::SetFrameRateLimit:
+		return [](const FString& V){ if (auto* S = GetGS()) S->SetFrameRateLimit(FCString::Atof(*V)); };
+
+	default:
+		return nullptr;
+	}
+}
+
+// ============================================================================
+// Public API
+// ============================================================================
 
 TSharedPtr<FOptionsDataInteractionHelper> CreateHelperFromEnum(EGameUserSettingFunction Func)
 {
 	if (Func == EGameUserSettingFunction::None) return nullptr;
 
-	// Convert enum value to its name string (e.g. EGameUserSettingFunction::GetOverallVolume → "GetOverallVolume")
-	// This string is then used by PropertyPathHelpers to call the corresponding UFUNCTION on UFrontendGameUserSettings.
-	const UEnum* Enum = StaticEnum<EGameUserSettingFunction>();
-	const FString FuncName = Enum->GetNameStringByValue(static_cast<int64>(Func));
-	return MakeShared<FOptionsDataInteractionHelper>(FuncName);
+	auto Getter = MakeGetter(Func);
+	auto Setter = MakeSetter(Func);
+	return MakeShared<FOptionsDataInteractionHelper>(MoveTemp(Getter), MoveTemp(Setter));
 }
 
 /**
@@ -118,6 +322,7 @@ UListDataObject_Base* CreateEntryFromData(UOptionEntryData* Data)
 			Entry->AddIntegerOption(2, TXT_VAL_QUALITY_HIGH());
 			Entry->AddIntegerOption(3, TXT_VAL_QUALITY_EPIC());
 			Entry->AddIntegerOption(4, TXT_VAL_QUALITY_CINEMATIC());
+			if (!Data->DefaultValue.IsEmpty()) { Entry->SetDefaultValueFromString(Data->DefaultValue); }
 			if (Getter) Entry->SetDataDynamicGetter(Getter);
 			if (Setter) Entry->SetDataDynamicSetter(Setter);
 			Entry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
@@ -144,6 +349,7 @@ UListDataObject_Base* CreateEntryFromData(UOptionEntryData* Data)
 			Entry->SetDataDisplayName(Data->DisplayName);
 			Entry->SetDescriptionRichText(Data->Description);
 			Entry->InitResolutionValues();
+			if (!Data->DefaultValue.IsEmpty()) { Entry->SetDefaultValueFromString(Data->DefaultValue); }
 			if (Getter) Entry->SetDataDynamicGetter(Getter);
 			if (Setter) Entry->SetDataDynamicSetter(Setter);
 			Entry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);

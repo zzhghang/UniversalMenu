@@ -10,7 +10,7 @@
  * Custom game user settings for the frontend menu.
  *
  * Extends UGameUserSettings with gameplay, audio, video, and localization settings.
- * All UFUNCTION getters/setters are callable via PropertyPathHelpers string reflection
+ * All UFUNCTION getters/setters are callable via TFunction dispatch
  * through FOptionsDataInteractionHelper, enabling data-driven options configuration.
  */
 UCLASS()

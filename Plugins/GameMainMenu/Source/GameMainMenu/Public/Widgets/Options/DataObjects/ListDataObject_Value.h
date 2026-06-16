@@ -12,8 +12,8 @@ class FOptionsDataInteractionHelper;
 /**
  * Abstract base for data objects that hold a config value with getter/setter helpers.
  *
- * Uses FOptionsDataInteractionHelper to bridge UFrontendGameUserSettings
- * getter/setter UFUNCTIONs with string-based value read/write.
+ * Uses FOptionsDataInteractionHelper which dispatches to UFrontendGameUserSettings
+ * UFUNCTIONs via TFunction — getter returns FString, setter accepts FString.
  */
 UCLASS(Abstract)
 class GAMEMAINMENU_API UListDataObject_Value : public UListDataObject_Base
@@ -38,10 +38,10 @@ protected:
 
 	FString GetDefaultStringValue() const { return DefaultStringValue.GetValue();}
 
-	/** Helper for reading the current config value via PropertyPathHelpers. */
+	/** Helper for reading the current config value via TFunction dispatch. */
 	TSharedPtr<FOptionsDataInteractionHelper> DataDynamicGetter;
 
-	/** Helper for writing the config value via PropertyPathHelpers. */
+	/** Helper for writing the config value via TFunction dispatch. */
 	TSharedPtr<FOptionsDataInteractionHelper> DataDynamicSetter;
 
 private:
