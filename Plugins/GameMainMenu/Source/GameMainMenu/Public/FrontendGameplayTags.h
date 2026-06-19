@@ -39,4 +39,11 @@ namespace FrontendGameplayTags
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Audio_Volume_Ambient);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Audio_Volume_UI);
 
+	// ---- Loading Screen Phases ----
+	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Loading_Phase_LevelLoad);
+	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Loading_Phase_WorldInit);
+	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Loading_Phase_BeginPlay);
+	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Loading_Phase_PlayerController);
+	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Loading_Phase_TextureStreaming);
+
 }

@@ -26,4 +26,11 @@ namespace FrontendGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Audio_Volume_Ambient, "Frontend.Audio.Volume.Ambient");
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Audio_Volume_UI, "Frontend.Audio.Volume.UI");
 
+	// Loading Screen Phase Tags
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Loading_Phase_LevelLoad, "Frontend.Loading.Phase.LevelLoad");
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Loading_Phase_WorldInit, "Frontend.Loading.Phase.WorldInit");
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Loading_Phase_BeginPlay, "Frontend.Loading.Phase.BeginPlay");
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Loading_Phase_PlayerController, "Frontend.Loading.Phase.PlayerController");
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Loading_Phase_TextureStreaming, "Frontend.Loading.Phase.TextureStreaming");
+
 }

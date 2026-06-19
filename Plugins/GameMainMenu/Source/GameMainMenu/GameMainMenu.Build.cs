@@ -33,6 +33,7 @@ public class GameMainMenu : ModuleRules
 				"InputCore",
 				"CommonInput",
 				"EnhancedInput",
+				"PreLoadScreen",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
