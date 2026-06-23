@@ -303,7 +303,7 @@ FLoadingPhaseDisplayInfo UFrontendLoadingScreenSubsystem::GetLoadingPhaseDisplay
 {
 	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
 
-	if (const ULoadingScreenPhaseMapping* PhaseMapping = LoadScreenSettings->PhaseMapping.Get())
+	if (const ULoadingScreenPhaseMapping* PhaseMapping = LoadScreenSettings->PhaseMapping.LoadSynchronous())
 	{
 		return PhaseMapping->FindDisplayInfo(PhaseTag);
 	}

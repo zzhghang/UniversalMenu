@@ -15,7 +15,8 @@ namespace FrontendGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_Confirm, "Frontend.Widget.Confirm");
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_Options, "Frontend.Widget.Options");
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_KeyRemap, "Frontend.Widget.KeyRemap");
-	
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_Credits, "Frontend.Widget.Credits");
+
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Image_Test, "Frontend.Image.Test");
 
 	// Audio Volume Tags

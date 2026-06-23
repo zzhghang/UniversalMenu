@@ -74,7 +74,6 @@ private:
 
 	double HoldLoadingScreenStartUpTime = -1.0;
 
-	//todo notify widget with delegate
 	FGameplayTag CurrentLoadingPhase;
 
 	TSharedPtr<SWidget> CachedLoadingScreenWidget = nullptr;
