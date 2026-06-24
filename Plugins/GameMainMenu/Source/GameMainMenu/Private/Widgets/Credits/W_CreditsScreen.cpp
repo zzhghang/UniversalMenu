@@ -16,6 +16,11 @@ void UW_CreditsScreen::NativeOnActivated()
 {
 	Super::NativeOnActivated();
 
+	if (!CreditsData)
+	{
+		return;
+	}
+
 	CurrentScrollOffset = 0.f;
 
 	if (CreditsScrollBox)
@@ -27,8 +32,7 @@ void UW_CreditsScreen::NativeOnActivated()
 
 	if (UWorld* World = GetWorld())
 	{
-		const float Delay = CreditsData ? CreditsData->StartDelay : 1.f;
-		World->GetTimerManager().SetTimer(StartDelayHandle, this, &UW_CreditsScreen::StartScrolling, Delay, false);
+		World->GetTimerManager().SetTimer(StartDelayHandle, this, &UW_CreditsScreen::StartScrolling, CreditsData->StartDelay, false);
 	}
 }
 
@@ -41,6 +45,20 @@ void UW_CreditsScreen::NativeOnDeactivated()
 	}
 
 	Super::NativeOnDeactivated();
+}
+
+void UW_CreditsScreen::AddSpacerLines(int32 Count)
+{
+	for (int32 i = 0; i < Count; ++i)
+	{
+		UCommonTextBlock* Spacer = NewObject<UCommonTextBlock>(CreditsContentBox);
+		Spacer->SetText(FText::FromString(TEXT(" ")));
+		if (CreditsTextStyle)
+		{
+			Spacer->SetStyle(CreditsTextStyle);
+		}
+		CreditsContentBox->AddChildToVerticalBox(Spacer);
+	}
 }
 
 void UW_CreditsScreen::PopulateCreditsEntries()
@@ -66,56 +84,47 @@ void UW_CreditsScreen::PopulateCreditsEntries()
 		}
 
 		UVerticalBoxSlot* VBoxSlot = CreditsContentBox->AddChildToVerticalBox(LineBlock);
+		VBoxSlot->SetPadding(FMargin(0.f, 0.f, 0.f, CreditsData->EntrySpacing));
 		VBoxSlot->SetHorizontalAlignment(HAlign_Center);
-	}
-
-	for (int32 i = 0; i < 3; ++i)
-	{
-		UCommonTextBlock* Spacer = NewObject<UCommonTextBlock>(CreditsContentBox);
-		Spacer->SetText(FText::FromString(TEXT(" ")));
-		if (CreditsTextStyle)
-		{
-			Spacer->SetStyle(CreditsTextStyle);
-		}
-		CreditsContentBox->AddChildToVerticalBox(Spacer);
 	}
 
 	if (UELogoImage)
 	{
 		UVerticalBoxSlot* LogoSlog = CreditsContentBox->AddChildToVerticalBox(UELogoImage);
-		LogoSlog->SetPadding(FMargin(0.f, 50.f, 0.f, 0.f));
+		LogoSlog->SetPadding(FMargin(0.f, CreditsData->LogoSpacing, 0.f, 0.f));
 		LogoSlog->SetHorizontalAlignment(HAlign_Center);
 	}
 }
 
 void UW_CreditsScreen::StartScrolling()
 {
-	if (UELogoImage && CreditsScrollBox)
+	if (UELogoImage && CreditsScrollBox && CreditsData)
 	{
 		const FGeometry& LogoGeo = UELogoImage->GetCachedGeometry();
 		const FGeometry& ScrollGeo = CreditsScrollBox->GetCachedGeometry();
 		const float LogoH = LogoGeo.GetLocalSize().Y;
 		const float ViewportH = ScrollGeo.GetLocalSize().Y;
+
+		float SpacerPx = 0.f;
 		if (LogoH > 0.f && ViewportH > 0.f)
 		{
-			const float SpacerPx = (ViewportH - LogoH) * 0.5f;
-			const int32 SpacerCount = FMath::Max(0, FMath::CeilToInt(SpacerPx / 30.f));
-			for (int32 i = 0; i < SpacerCount; ++i)
-			{
-				UCommonTextBlock* Spacer = NewObject<UCommonTextBlock>(CreditsContentBox);
-				Spacer->SetText(FText::FromString(TEXT(" ")));
-				if (CreditsTextStyle)
-				{
-					Spacer->SetStyle(CreditsTextStyle);
-				}
-				CreditsContentBox->AddChildToVerticalBox(Spacer);
-			}
+			SpacerPx = (ViewportH - LogoH) * 0.5f;
+		}
+		else if (ViewportH > 0.f)
+		{
+			SpacerPx = ViewportH * 0.5f;
+		}
+
+		if (SpacerPx > 0.f)
+		{
+			const int32 SpacerCount = FMath::Max(0, FMath::CeilToInt(SpacerPx / CreditsData->LineHeight));
+			AddSpacerLines(SpacerCount);
 		}
 	}
 
 	if (UWorld* World = GetWorld())
 	{
-		World->GetTimerManager().SetTimer(ScrollTickHandle, this, &UW_CreditsScreen::UpdateScroll, ScrollTickInterval, true);
+		World->GetTimerManager().SetTimer(ScrollTickHandle, this, &UW_CreditsScreen::UpdateScroll, 0.016f, true);
 	}
 }
 
@@ -126,7 +135,8 @@ void UW_CreditsScreen::UpdateScroll()
 		return;
 	}
 
-	CurrentScrollOffset += CreditsData->ScrollSpeed * ScrollTickInterval;
+	const float DeltaTime = FMath::Max(GetWorld()->GetDeltaSeconds(), 0.001f);
+	CurrentScrollOffset += CreditsData->ScrollSpeed * DeltaTime;
 	CreditsScrollBox->SetScrollOffset(CurrentScrollOffset);
 
 	const float ScrollEnd = CreditsScrollBox->GetScrollOffsetOfEnd();

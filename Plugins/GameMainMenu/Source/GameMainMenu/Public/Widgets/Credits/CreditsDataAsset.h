@@ -21,4 +21,13 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Credits")
 	float StartDelay = 1.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Credits")
+	float LineHeight = 30.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Credits")
+	float EntrySpacing = 0.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Credits")
+	float LogoSpacing = 120.f;
 };

@@ -32,6 +32,7 @@ private:
 	void UpdateScroll();
 	void OnCreditsFinished();
 	void PopulateCreditsEntries();
+	void AddSpacerLines(int32 Count);
 
 	UPROPERTY(EditDefaultsOnly, Category = "Credits")
 	UCreditsDataAsset* CreditsData;
@@ -58,6 +59,4 @@ private:
 	FTimerHandle ScrollTickHandle;
 
 	float CurrentScrollOffset = 0.f;
-
-	static constexpr float ScrollTickInterval = 0.016f;
 };
