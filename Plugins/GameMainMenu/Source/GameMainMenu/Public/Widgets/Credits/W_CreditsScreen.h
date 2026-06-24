@@ -6,6 +6,7 @@
 #include "Widgets/W_ActivatableBase.h"
 #include "Components/ScrollBox.h"
 #include "Components/VerticalBox.h"
+#include "CommonLazyImage.h"
 #include "W_CreditsScreen.generated.h"
 
 class UCreditsDataAsset;
@@ -30,7 +31,6 @@ private:
 	void StartScrolling();
 	void UpdateScroll();
 	void OnCreditsFinished();
-	/** Create text widgets for each credits entry and add them to the content box. */
 	void PopulateCreditsEntries();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Credits")
@@ -38,7 +38,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Credits")
 	TSubclassOf<UCommonTextStyle> CreditsTextStyle;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category = "Credits")
 	bool bAutoReturnOnFinish = true;
 
@@ -49,14 +49,15 @@ private:
 	UPROPERTY(meta = (BindWidget))
 	UVerticalBox* CreditsContentBox;
 
+	UPROPERTY(meta = (BindWidget))
+	UCommonLazyImage* UELogoImage;
+
 	/***** Bind Widgets *****/
 
 	FTimerHandle StartDelayHandle;
 	FTimerHandle ScrollTickHandle;
 
 	float CurrentScrollOffset = 0.f;
-
-	
 
 	static constexpr float ScrollTickInterval = 0.016f;
 };
