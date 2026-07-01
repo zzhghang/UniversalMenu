@@ -40,4 +40,8 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Frontend Function Library")
 	static USoundClass* GetSoundClassByVolumeTag(UPARAM(meta = (Categories = "Frontend.Audio.Volume")) FGameplayTag InVolumeTag);
 
+	/** Get the project version from Project Settings. */
+	UFUNCTION(BlueprintPure, Category = "Frontend Function Library")
+	static FString GetProjectVersion();
+
 };

@@ -4,6 +4,7 @@
 #include "FunctionLibrary/FrontendFunctionLibrary.h"
 
 #include "FrontendSettings/FrontendDeveloperSettings.h"
+#include "GeneralProjectSettings.h"
 #include "Sound/SoundClass.h"
 #include "Sound/SoundMix.h"
 
@@ -42,4 +43,9 @@ USoundClass* UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FGameplayTag InV
 	if (!FoundSoundClass || FoundSoundClass->IsNull()) return nullptr;
 
 	return FoundSoundClass->LoadSynchronous();
+}
+
+FString UFrontendFunctionLibrary::GetProjectVersion()
+{
+	return GetDefault<UGeneralProjectSettings>()->ProjectVersion;
 }
