@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS(Config = Game,DefaultConfig)
+UCLASS(Config = GameMainMenu,DefaultConfig)
 class GAMEMAINMENU_API UFrontendLoadingScreenSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()

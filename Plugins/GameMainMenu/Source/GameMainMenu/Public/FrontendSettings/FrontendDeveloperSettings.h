@@ -17,7 +17,7 @@ class USoundMix;
  * Maps GameplayTags to widget classes, images, audio resources, and localization cultures.
  * Used by UFrontendFunctionLibrary to resolve tag-based resource lookups at runtime.
  */
-UCLASS(Config = Game, defaultconfig, meta = (DisplayName = "Frontend UI Settings"))
+UCLASS(Config = GameMainMenu, defaultconfig, meta = (DisplayName = "Frontend UI Settings"))
 class GAMEMAINMENU_API UFrontendDeveloperSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()
