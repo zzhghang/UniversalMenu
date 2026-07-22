@@ -11,6 +11,7 @@
 #define ST_OPTIONS_SCREEN   "/GameMainMenu/BP/StringTable/ST_OptionsScreen"
 #define ST_OPTIONS_VALUES   "/GameMainMenu/BP/StringTable/ST_OptionsValues"
 #define ST_GAME_MESSAGES    "/GameMainMenu/BP/StringTable/ST_GameMessages"
+#define ST_MULTIPLAYER      "/GameMainMenu/BP/StringTable/ST_Multiplayer"
 
 // ============================================================================
 // UI Common — shared across all screens (OK, Cancel, Back, etc.)
@@ -214,3 +215,67 @@
 #define TXT_GAME_LOADING()          LOCTABLE(ST_GAME_MESSAGES, "Loading")
 #define TXT_GAME_AUTOSAVE()         LOCTABLE(ST_GAME_MESSAGES, "AutoSave")
 #define TXT_GAME_QUIT_CONFIRM()     LOCTABLE(ST_GAME_MESSAGES, "Quit_Confirm")
+
+// ============================================================================
+// Multiplayer Screen — Tab names
+// ============================================================================
+
+#define TXT_MP_TAB_CREATE_GAME()    LOCTABLE(ST_MULTIPLAYER, "Tab_CreateGame")
+#define TXT_MP_TAB_JOIN_GAME()      LOCTABLE(ST_MULTIPLAYER, "Tab_JoinGame")
+
+// ============================================================================
+// Multiplayer Screen — Category names
+// ============================================================================
+
+#define TXT_MP_CAT_BASIC()          LOCTABLE(ST_MULTIPLAYER, "Category_Basic")
+#define TXT_MP_CAT_ADVANCED()       LOCTABLE(ST_MULTIPLAYER, "Category_Advanced")
+
+// ============================================================================
+// Multiplayer Screen — Labels
+// ============================================================================
+
+#define TXT_MP_LABEL_GAME_NAME()    LOCTABLE(ST_MULTIPLAYER, "Label_GameName")
+#define TXT_MP_LABEL_HAS_PASSWORD() LOCTABLE(ST_MULTIPLAYER, "Label_HasPassword")
+#define TXT_MP_LABEL_PASSWORD()     LOCTABLE(ST_MULTIPLAYER, "Label_Password")
+#define TXT_MP_LABEL_MAX_PLAYERS()  LOCTABLE(ST_MULTIPLAYER, "Label_MaxPlayers")
+#define TXT_MP_LABEL_MAP()          LOCTABLE(ST_MULTIPLAYER, "Label_Map")
+#define TXT_MP_LABEL_GAME_MODE()    LOCTABLE(ST_MULTIPLAYER, "Label_GameMode")
+#define TXT_MP_LABEL_SERVER_REGION() LOCTABLE(ST_MULTIPLAYER, "Label_ServerRegion")
+#define TXT_MP_LABEL_PRIVACY()      LOCTABLE(ST_MULTIPLAYER, "Label_Privacy")
+#define TXT_MP_LABEL_SERVER_LIST()  LOCTABLE(ST_MULTIPLAYER, "Label_ServerList")
+
+// ============================================================================
+// Multiplayer Screen — Descriptions
+// ============================================================================
+
+#define TXT_MP_HINT_GAME_NAME()     LOCTABLE(ST_MULTIPLAYER, "Hint_GameName")
+#define TXT_MP_HINT_PASSWORD()      LOCTABLE(ST_MULTIPLAYER, "Hint_Password")
+
+#define TXT_MP_DESC_GAME_NAME()     LOCTABLE(ST_MULTIPLAYER, "Desc_GameName")
+#define TXT_MP_DESC_HAS_PASSWORD()  LOCTABLE(ST_MULTIPLAYER, "Desc_HasPassword")
+#define TXT_MP_DESC_PASSWORD()      LOCTABLE(ST_MULTIPLAYER, "Desc_Password")
+#define TXT_MP_DESC_MAX_PLAYERS()   LOCTABLE(ST_MULTIPLAYER, "Desc_MaxPlayers")
+#define TXT_MP_DESC_MAP()           LOCTABLE(ST_MULTIPLAYER, "Desc_Map")
+#define TXT_MP_DESC_GAME_MODE()     LOCTABLE(ST_MULTIPLAYER, "Desc_GameMode")
+#define TXT_MP_DESC_SERVER_REGION() LOCTABLE(ST_MULTIPLAYER, "Desc_ServerRegion")
+#define TXT_MP_DESC_PRIVACY()       LOCTABLE(ST_MULTIPLAYER, "Desc_Privacy")
+#define TXT_MP_DESC_SERVER_LIST()   LOCTABLE(ST_MULTIPLAYER, "Desc_ServerList")
+
+// ============================================================================
+// Multiplayer Screen — Buttons
+// ============================================================================
+
+#define TXT_MP_BUTTON_CREATE()      LOCTABLE(ST_MULTIPLAYER, "Button_Create")
+#define TXT_MP_BUTTON_JOIN()        LOCTABLE(ST_MULTIPLAYER, "Button_Join")
+#define TXT_MP_BUTTON_REFRESH()     LOCTABLE(ST_MULTIPLAYER, "Button_Refresh")
+
+// ============================================================================
+// Validation Messages
+// ============================================================================
+
+#define TXT_MP_VALIDATION_TITLE()           LOCTABLE(ST_MULTIPLAYER, "Validation_Title")
+#define TXT_MP_VALIDATION_FILTERED()        LOCTABLE(ST_MULTIPLAYER, "Validation_Filtered")
+#define TXT_MP_VALIDATION_NUMBERS_ONLY()    LOCTABLE(ST_MULTIPLAYER, "Validation_NumbersOnly")
+#define TXT_MP_VALIDATION_LETTERS_ONLY()    LOCTABLE(ST_MULTIPLAYER, "Validation_LettersOnly")
+#define TXT_MP_VALIDATION_ALPHANUMERIC()    LOCTABLE(ST_MULTIPLAYER, "Validation_Alphanumeric")
+#define TXT_MP_VALIDATION_MAX_CHARS()       LOCTABLE(ST_MULTIPLAYER, "Validation_MaxChars")

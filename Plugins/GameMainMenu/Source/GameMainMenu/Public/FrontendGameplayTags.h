@@ -28,6 +28,7 @@ namespace FrontendGameplayTags
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_Options);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_KeyRemap);
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_Credits);
+	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_Multiplayer);
 
 	// ---- Image References ----
 	GAMEMAINMENU_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Image_Test);

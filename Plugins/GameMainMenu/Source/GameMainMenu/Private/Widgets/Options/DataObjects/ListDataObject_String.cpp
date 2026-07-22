@@ -34,9 +34,9 @@ void UListDataObject_String::GotoPreOption()
 	if (DataDynamicSetter)
 	{
 		DataDynamicSetter->SetValueFromString(CurrentStringValue);
-
-		NotifyListDataModified(this);
 	}
+
+	NotifyListDataModified(this);
 }
 
 void UListDataObject_String::GotoNextOption()
@@ -60,9 +60,9 @@ void UListDataObject_String::GotoNextOption()
 	if (DataDynamicSetter)
 	{
 		DataDynamicSetter->SetValueFromString(CurrentStringValue);
-
-		NotifyListDataModified(this);
 	}
+
+	NotifyListDataModified(this);
 }
 
 void UListDataObject_String::OnRotatorInitiatedValueChanged(const FText& InNewSelectedText)
@@ -82,9 +82,9 @@ void UListDataObject_String::OnRotatorInitiatedValueChanged(const FText& InNewSe
 		if (DataDynamicSetter)
 		{
 			DataDynamicSetter->SetValueFromString(CurrentStringValue);
-
-			NotifyListDataModified(this);
 		}
+
+		NotifyListDataModified(this);
 	}
 }
 
@@ -124,7 +124,7 @@ bool UListDataObject_String::TryResetBackToDefaultValue()
 		if (DataDynamicSetter)
 		{
 			DataDynamicSetter->SetValueFromString(CurrentStringValue);
-			
+
 			NotifyListDataModified(this,EOptionsListDataModifyReason::ResetToDefault);
 
 			return true;
@@ -187,7 +187,7 @@ void UListDataObject_StringBool::SetFalseAsDefaultValue()
 void UListDataObject_StringBool::OnDataObjectInitialized()
 {
 	TryInitializeBoolOptions();
-	
+
 	Super::OnDataObjectInitialized();
 }
 
@@ -217,7 +217,7 @@ void UListDataObject_StringInteger::AddIntegerOption(int32 InIntegerValue, const
 void UListDataObject_StringInteger::OnDataObjectInitialized()
 {
 	Super::OnDataObjectInitialized();
-	
+
 	if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = TXT_VAL_CUSTOM();
 }
 
@@ -227,15 +227,14 @@ void UListDataObject_StringInteger::OnEditDependencyDataModified(UListDataObject
 	if (DataDynamicGetter)
 	{
 		if (CurrentStringValue == DataDynamicGetter->GetValueAsString()) return;
-		
+
 		CurrentStringValue = DataDynamicGetter->GetValueAsString();
 
 		if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = TXT_VAL_CUSTOM();
 
 		NotifyListDataModified(this,EOptionsListDataModifyReason::DependencyModified);
 	}
-	
+
 	Super::OnEditDependencyDataModified(ModifyDependencyData, ModifyReason);
 }
 //****** UListDataObject_StringInteger  ******//
-

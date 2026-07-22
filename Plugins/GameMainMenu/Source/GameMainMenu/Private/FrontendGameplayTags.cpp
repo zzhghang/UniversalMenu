@@ -16,6 +16,7 @@ namespace FrontendGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_Options, "Frontend.Widget.Options");
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_KeyRemap, "Frontend.Widget.KeyRemap");
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_Credits, "Frontend.Widget.Credits");
+	UE_DEFINE_GAMEPLAY_TAG(Frontend_Widget_Multiplayer, "Frontend.Widget.Multiplayer");
 
 	UE_DEFINE_GAMEPLAY_TAG(Frontend_Image_Test, "Frontend.Image.Test");
 

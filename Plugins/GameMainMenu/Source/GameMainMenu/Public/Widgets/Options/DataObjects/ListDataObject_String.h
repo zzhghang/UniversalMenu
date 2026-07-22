@@ -27,6 +27,8 @@ public:
 	FORCEINLINE const TArray<FText>& GetOptionsTextArray() const { return TextArray;}
 	
 	FORCEINLINE const FText& GetCurrentTextValue() const { return CurrentTextValue;}
+
+	FORCEINLINE const FString& GetCurrentStringValue() const { return CurrentStringValue;}
 	
 protected:
 	

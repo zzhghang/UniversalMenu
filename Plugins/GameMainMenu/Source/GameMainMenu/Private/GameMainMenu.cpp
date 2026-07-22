@@ -2,11 +2,25 @@
 
 #include "GameMainMenu.h"
 
+#include "UObject/UObjectGlobals.h"
+
 #define LOCTEXT_NAMESPACE "FGameMainMenuModule"
 
 void FGameMainMenuModule::StartupModule()
 {
-	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	// ponytail: pre-load StringTables so LOCTABLE macros resolve on first startup.
+	// Without this, the registry lookup fails until the assets are loaded async.
+	static const TCHAR* StringTables[] = {
+		TEXT("/GameMainMenu/BP/StringTable/ST_Multiplayer"),
+		TEXT("/GameMainMenu/BP/StringTable/ST_GameMessages"),
+		TEXT("/GameMainMenu/BP/StringTable/ST_UI_Common"),
+		TEXT("/GameMainMenu/BP/StringTable/ST_OptionsScreen"),
+		TEXT("/GameMainMenu/BP/StringTable/ST_OptionsValues"),
+	};
+	for (const TCHAR* Path : StringTables)
+	{
+		LoadObject<UObject>(nullptr, Path);
+	}
 }
 
 void FGameMainMenuModule::ShutdownModule()
