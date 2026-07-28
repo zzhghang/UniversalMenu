@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Widgets/Multiplayer/MultiplayerConfigData.h"
+#include "Widgets/MenuConfig/MenuConfigTypes.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Base.h"
 #include "ListDataObject_Editable.generated.h"
 

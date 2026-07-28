@@ -16,16 +16,16 @@ class UListDataObject_Scalar;
 class UListDataObject_String;
 class UListDataObject_StringInteger;
 class FOptionsDataInteractionHelper;
-class UOptionsConfigData;
-class UOptionTabData;
-class UOptionEntryData;
+class UMenuConfigData;
+class UMenuTabConfig;
+class UMenuEntryConfig;
 enum class ECommonNumericType : uint8;
 
 /**
  * Builds and owns the options data hierarchy (tabs -> categories -> entries).
  *
  * Supports two initialization paths:
- * - DataAsset-driven via UOptionsConfigData (InitFromDataAsset)
+ * - DataAsset-driven via UMenuConfigData (InitFromDataAsset)
  * - Hardcoded fallback when no DataAsset is assigned
  */
 UCLASS()
@@ -39,7 +39,7 @@ public:
 	void InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer);
 
 	/** Assign a DataAsset config. Must be called before InitOptionsDataRegistry. */
-	void SetOptionsConfig(UOptionsConfigData* InConfig) { OptionsConfig = InConfig; }
+	void SetOptionsConfig(UMenuConfigData* InConfig) { OptionsConfig = InConfig; }
 
 	/** Returns the top-level collection tabs after initialization. */
 	const TArray<UListDataObject_Collection*>& GetRegisteredOptionsCollectionTabs() { return RegisteredOptionsCollectionTabs;}
@@ -51,6 +51,8 @@ private:
 
 	void FindChildListDataRecursively(UListDataObject_Base* InParentData, TArray<UListDataObject_Base*>& OutFoundChildListData) const;
 
+	void InitBindingMap();
+
 	void InitGameplayCollectionTab();
 	void InitAudioCollectionTab();
 	void InitVideoCollectionTab();
@@ -60,44 +62,41 @@ private:
 	void InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer);
 	void ApplyTabEditConditions(
 		UListDataObject_Collection* Tab,
-		UOptionTabData* TabData,
+		UMenuTabConfig* TabData,
 		const FOptionsDataEditConditionDescriptor& PackagedBuildOnlyCondition,
 		const TMap<FName, UListDataObject_Base*>& EntryLookup);
-	// ---- Factory helpers ----
+
+	// ---- Helpers: look up BindingKey in BindingMap, return helper if found ----
+	TSharedPtr<FOptionsDataInteractionHelper> ResolveBinding(const FName& BindingKey) const;
 
 	UListDataObject_Collection* CreateCollection(const FName& Id, const FText& DisplayName) const;
 
 	UListDataObject_StringBool* CreateBoolEntry(
 		const FName& Id, const FText& DisplayName, const FText& Description,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Setter,
-		bool bDefaultValue) const;
+		const FName& BindingKey, bool bDefaultValue) const;
 
 	UListDataObject_Scalar* CreateScalarEntry(
 		const FName& Id, const FText& DisplayName, const FText& Description,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Setter,
+		const FName& BindingKey,
 		const TRange<float>& DisplayRange, const TRange<float>& OutRange,
 		float StepSize, float DefaultValue,
 		ECommonNumericType NumericType) const;
 
 	UListDataObject_String* CreateStringEntry(
 		const FName& Id, const FText& DisplayName, const FText& Description,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Setter,
+		const FName& BindingKey,
 		const TArray<TPair<FString, FText>>& Options,
 		const FString& DefaultValue) const;
 
 	UListDataObject_StringInteger* CreateQualityPresetEntry(
 		const FName& Id, const FText& DisplayName, const FText& Description,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Getter,
-		const TSharedPtr<FOptionsDataInteractionHelper>& Setter,
-		int32 DefaultValue = 3) const;
+		const FName& BindingKey, int32 DefaultValue = 3) const;
 
 	UPROPERTY(EditAnywhere, Category = "Options")
-	UOptionsConfigData* OptionsConfig;
+	UMenuConfigData* OptionsConfig;
 
 	UPROPERTY(Transient)
 	TArray<UListDataObject_Collection*> RegisteredOptionsCollectionTabs;
 
+	TMap<FName, TSharedPtr<FOptionsDataInteractionHelper>> BindingMap;
 };

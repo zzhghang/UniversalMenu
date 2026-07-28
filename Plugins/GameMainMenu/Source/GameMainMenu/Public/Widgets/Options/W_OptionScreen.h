@@ -12,7 +12,7 @@ class UW_OptionDetailView;
 class UFrontendCommonListView;
 class UFrontendCommonTabListWidgetBase;
 class UOptionsDataRegistry;
-class UOptionsConfigData;
+class UMenuConfigData;
 
 /**
  * Main options screen widget with tabbed navigation.
@@ -75,7 +75,7 @@ private:
 	FDataTableRowHandle ResetAllAction;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Frontend Options Screen")
-	UOptionsConfigData* OptionsConfig;
+	UMenuConfigData* OptionsConfig;
 	
 	FUIActionBindingHandle ResetActionHandle;
 	

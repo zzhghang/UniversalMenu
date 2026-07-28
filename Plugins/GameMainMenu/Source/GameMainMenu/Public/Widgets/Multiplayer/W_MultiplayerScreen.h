@@ -11,7 +11,7 @@ class UFrontendCommonListView;
 class UW_OptionDetailView;
 class UListDataObject_Base;
 class UMultiplayerDataRegistry;
-class UMultiplayerConfigData;
+class UMenuConfigData;
 
 /**
  * Multiplayer screen with two tabs: Create Game and Join Game.
@@ -58,7 +58,7 @@ private:
 
 	/** Optional DataAsset for designer-configurable tabs. Falls back to hardcoded when null. */
 	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen")
-	UMultiplayerConfigData* MultiplayerConfig;
+	UMenuConfigData* MultiplayerConfig;
 
 	FUIActionBindingHandle BackActionHandle;
 

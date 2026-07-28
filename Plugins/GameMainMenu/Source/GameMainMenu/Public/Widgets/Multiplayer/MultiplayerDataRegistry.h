@@ -8,13 +8,13 @@
 
 class UListDataObject_Base;
 class UListDataObject_Collection;
-class UMultiplayerConfigData;
+class UMenuConfigData;
 
 /**
  * Builds and owns the multiplayer data hierarchy (tabs -> categories -> entries).
  *
  * Supports two initialization paths:
- * - DataAsset-driven via UMultiplayerConfigData
+ * - DataAsset-driven via UMenuConfigData
  * - Hardcoded fallback when no DataAsset is assigned (mirrors UOptionsDataRegistry)
  */
 UCLASS()
@@ -28,7 +28,7 @@ public:
 	void InitRegistry();
 
 	/** Assign a DataAsset config. Must be called before InitRegistry. */
-	void SetConfig(UMultiplayerConfigData* InConfig) { Config = InConfig; }
+	void SetConfig(UMenuConfigData* InConfig) { Config = InConfig; }
 
 	/** Returns the top-level tab collections after initialization. */
 	const TArray<UListDataObject_Collection*>& GetRegisteredTabs() const { return RegisteredTabs; }
@@ -48,7 +48,7 @@ private:
 	UListDataObject_Collection* CreateCollection(const FName& Id, const FText& DisplayName) const;
 
 	UPROPERTY()
-	UMultiplayerConfigData* Config;
+	UMenuConfigData* Config;
 
 	UPROPERTY(Transient)
 	TArray<UListDataObject_Collection*> RegisteredTabs;

@@ -4,7 +4,7 @@
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
 
 #include "LocalizationKeys.h"
-#include "Widgets/Multiplayer/MultiplayerConfigData.h"
+#include "Widgets/MenuConfig/MenuConfigData.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
@@ -28,79 +28,43 @@ void UMultiplayerDataRegistry::InitRegistry()
 
 void UMultiplayerDataRegistry::InitFromConfig()
 {
-	for (UMultiplayerTabConfig* TabData : Config->Tabs)
+	for (UMenuTabConfig* TabData : Config->Tabs)
 	{
 		if (!TabData) continue;
 
 		UListDataObject_Collection* Tab = CreateCollection(TabData->TabId, TabData->TabName);
 		TMap<FName, UListDataObject_Base*> EntryLookup;
 
-		for (UMultiplayerCategoryConfig* CatData : TabData->Categories)
+		for (UMenuCategoryConfig* CatData : TabData->Categories)
 		{
 			if (!CatData) continue;
 
 			UListDataObject_Collection* Cat = CreateCollection(CatData->CategoryId, CatData->CategoryName);
 
-			for (UMultiplayerEntryConfig* EntryData : CatData->Entries)
+			for (UMenuEntryConfig* EntryData : CatData->Entries)
 			{
 				if (!EntryData) continue;
 
-				UListDataObject_Base* Entry = nullptr;
-
-				switch (EntryData->EntryType)
-				{
-				case EMultiplayerEntryType::Editable:
-					{
-						UListDataObject_Editable* Edt = NewObject<UListDataObject_Editable>();
-						if (EntryData->MaxCharCount > 0) Edt->SetMaxCharCount(EntryData->MaxCharCount);
-						Edt->SetbIsPassword(EntryData->bIsPassword);
-						Edt->SetHintText(EntryData->HintText);
-						Edt->SetCharFilter(EntryData->CharFilter);
-						Entry = Edt;
-					}
-					break;
-
-				case EMultiplayerEntryType::Bool:
-					{
-						UListDataObject_StringBool* BoolEntry = NewObject<UListDataObject_StringBool>();
-						if (EntryData->bDefaultBool)
-						{
-							BoolEntry->SetTrueAsDefaultValue();
-						}
-						else
-						{
-							BoolEntry->SetFalseAsDefaultValue();
-						}
-						Entry = BoolEntry;
-					}
-					break;
-
-				default:
-					Entry = NewObject<UListDataObject_Collection>();
-					break;
-				}
-
-				Entry->SetDataId(EntryData->EntryId);
-				Entry->SetDataDisplayName(EntryData->DisplayName);
-				Entry->SetDescriptionRichText(EntryData->Description);
+				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
+				if (!Entry) continue;
 
 				Cat->AddChildListData(Entry);
-				EntryLookup.Add(EntryData->EntryId, Entry);
+				EntryLookup.Add(EntryData->DataId, Entry);
 			}
 
 			Tab->AddChildListData(Cat);
 		}
 
 		// Wire edit dependencies
-		for (UMultiplayerCategoryConfig* CatData : TabData->Categories)
+		for (UMenuCategoryConfig* CatData : TabData->Categories)
 		{
 			if (!CatData) continue;
 
-			for (UMultiplayerEntryConfig* EntryData : CatData->Entries)
+			for (UMenuEntryConfig* EntryData : CatData->Entries)
 			{
 				if (!EntryData || EntryData->EditDependencyIds.IsEmpty()) continue;
 
-				UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->EntryId);
+				UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
 				if (!EntryPtr || !*EntryPtr) continue;
 
 				for (const FName& DepId : EntryData->EditDependencyIds)
