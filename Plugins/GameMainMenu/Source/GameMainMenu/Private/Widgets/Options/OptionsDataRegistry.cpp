@@ -98,8 +98,8 @@ void UOptionsDataRegistry::InitBindingMap()
 
 	// ---- Video ----
 	BindingMap.Add("FullscreenMode", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(static_cast<int32>(FSettings::Get()->GetFullscreenMode())); },
-		[](const FString& V) { FSettings::Get()->SetFullscreenMode(static_cast<EWindowMode::Type>(FCString::Atoi(*V))); }));
+		[]() { const UEnum* E = StaticEnum<EWindowMode::Type>(); return E->GetNameStringByValue(static_cast<int64>(FSettings::Get()->GetFullscreenMode())); },
+		[](const FString& V) { const UEnum* E = StaticEnum<EWindowMode::Type>(); const int64 Val = E->GetValueByNameString(V); if (Val != INDEX_NONE) FSettings::Get()->SetFullscreenMode(static_cast<EWindowMode::Type>(Val)); }));
 	BindingMap.Add("Resolution", MakeShared<FOptionsDataInteractionHelper>(
 		[]() { const FIntPoint R = FSettings::Get()->GetScreenResolution(); return FString::Printf(TEXT("(X=%d,Y=%d)"), R.X, R.Y); },
 		[](const FString& V) { FIntPoint R(0, 0); sscanf_s(TCHAR_TO_ANSI(*V), "(X=%d,Y=%d)", &R.X, &R.Y); if (R.X > 0 && R.Y > 0) FSettings::Get()->SetScreenResolution(R); }));
