@@ -262,6 +262,13 @@
 #define TXT_MP_DESC_SERVER_LIST()   LOCTABLE(ST_MULTIPLAYER, "Desc_ServerList")
 
 // ============================================================================
+// Multiplayer Screen — Warnings
+// ============================================================================
+
+#define TXT_MP_WARN_PASSWORD_DISABLED() \
+    LOCTABLE(ST_MULTIPLAYER, "Warning_PasswordDisabled")
+
+// ============================================================================
 // Multiplayer Screen — Buttons
 // ============================================================================
 

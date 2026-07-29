@@ -55,7 +55,7 @@ void UMultiplayerDataRegistry::InitFromConfig()
 			Tab->AddChildListData(Cat);
 		}
 
-		// Wire edit dependencies
+		// Wire edit dependencies + auto-create EditConditions
 		for (UMenuCategoryConfig* CatData : TabData->Categories)
 		{
 			if (!CatData) continue;
@@ -67,14 +67,40 @@ void UMultiplayerDataRegistry::InitFromConfig()
 				UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
 				if (!EntryPtr || !*EntryPtr) continue;
 
+				TArray<UListDataObject_StringBool*> BoolDeps;
+
 				for (const FName& DepId : EntryData->EditDependencyIds)
 				{
 					UListDataObject_Base* const* DepPtr = EntryLookup.Find(DepId);
 					if (DepPtr && *DepPtr)
 					{
 						(*EntryPtr)->AddEditDependencyData(*DepPtr);
+						if (UListDataObject_StringBool* BoolDep = Cast<UListDataObject_StringBool>(*DepPtr))
+						{
+							BoolDeps.Add(BoolDep);
+						}
 					}
 				}
+
+				if (BoolDeps.IsEmpty()) continue;
+
+				FOptionsDataEditConditionDescriptor Condition;
+				Condition.SetEditConditionFunction(
+					[BoolDeps]() -> bool
+					{
+						for (const UListDataObject_StringBool* Dep : BoolDeps)
+						{
+							if (Dep->GetCurrentStringValue() != TEXT("true")) return false;
+						}
+						return true;
+					});
+
+				if (!EntryData->DisableRichReason.IsEmpty())
+				{
+					Condition.SetDisableRichReason(EntryData->DisableRichReason.ToString());
+				}
+
+				(*EntryPtr)->AddEditConditionDescriptor(Condition);
 			}
 		}
 
@@ -118,6 +144,7 @@ void UMultiplayerDataRegistry::InitHardcodedFallback()
 		FOptionsDataEditConditionDescriptor PasswordCondition;
 		PasswordCondition.SetEditConditionFunction(
 			[HasPassword]() -> bool { return HasPassword->GetCurrentStringValue() == TEXT("true"); });
+		PasswordCondition.SetDisableRichReason(TXT_MP_WARN_PASSWORD_DISABLED().ToString());
 		Password->AddEditConditionDescriptor(PasswordCondition);
 	}
 	BasicCat->AddChildListData(Password);

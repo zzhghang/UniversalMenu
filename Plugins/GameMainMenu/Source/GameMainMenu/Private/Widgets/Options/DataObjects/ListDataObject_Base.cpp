@@ -39,6 +39,7 @@ bool UListDataObject_Base::IsDataCurrentlyEditable()
 		
 		bIsEditable = false;
 
+		if (!CachedDisableRichReason.IsEmpty()) CachedDisableRichReason.Append(TEXT("\n"));
 		CachedDisableRichReason.Append(EditConditionDesc.GetDisableRichReason());
 
 		SetDisableRichText(FText::FromString(CachedDisableRichReason));

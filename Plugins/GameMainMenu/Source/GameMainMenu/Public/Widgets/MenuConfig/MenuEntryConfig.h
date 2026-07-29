@@ -95,4 +95,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (EditCondition = "ValueType == EMenuEntryValueType::Editable", EditConditionHides))
 	EEditableCharFilter CharFilter = EEditableCharFilter::All;
+
+	// ---- Display metadata (all ValueTypes) ----
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText DisableRichReason;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText DynamicDetails;
 };

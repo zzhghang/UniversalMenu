@@ -29,14 +29,7 @@ void UW_OptionDetailView::UpdateDetailsViewInfo(UListDataObject_Base* InDataObje
 	
 	/****************   DynamicDetails  ****************/
 	
-	/*const FString DynamicDetails = FString::Printf(
-		TEXT("Data Object Class: <Bold>%s</>\n\nEntry Widget Class: <Bold>%s</>"),
-		*InDataObject->GetClass()->GetName(),
-		*InEntryWidgetClassName
-	);*/
-
-	//Ctb_DynamicDetails->SetText(FText::FromString(DynamicDetails));
-
+		Ctb_DynamicDetails->SetText(InDataObject->GetDynamicDetailsRichText());
 	/****************   DynamicDetails  ****************/
 	
 	/****************   DisabledReason  ****************/

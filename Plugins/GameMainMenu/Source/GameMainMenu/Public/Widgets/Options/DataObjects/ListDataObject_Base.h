@@ -38,6 +38,8 @@ public:
 	
 	LIST_DATA_ACCESSOR(TSoftObjectPtr<UTexture2D>, SoftDescriptionImage)
 	
+	LIST_DATA_ACCESSOR(FText, DynamicDetailsRichText)
+	
 	LIST_DATA_ACCESSOR(UListDataObject_Base*, ParentData)
 	
 	/** Override in UListDataObject_Collection to return all child entries. */
@@ -81,6 +83,8 @@ private:
 	FText DescriptionRichText;
 	
 	FText DisableRichText;
+	
+	FText DynamicDetailsRichText;
 	
 	TSoftObjectPtr<UTexture2D> SoftDescriptionImage;
 
