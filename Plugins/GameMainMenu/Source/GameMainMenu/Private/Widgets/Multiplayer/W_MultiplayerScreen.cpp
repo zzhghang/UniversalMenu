@@ -5,6 +5,7 @@
 
 #include "Components/FrontendCommonListView.h"
 #include "Components/FrontendCommonTabListWidgetBase.h"
+#include "FrontendDebugHelper.h"
 #include "Input/CommonUIInputTypes.h"
 #include "ICommonInputModule.h"
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
@@ -15,14 +16,36 @@
 void UW_MultiplayerScreen::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
+	
+	if (!StartGameAction.IsNull())
+	{
+		StartGameActionHandle = RegisterUIActionBinding(
+			FBindUIActionArgs(
+				StartGameAction,
+				true,
+				FSimpleDelegate::CreateUObject(this, &ThisClass::OnStartGameActionTriggered)
+			)
+		);
+	}
 
+	if (!JoinGameAction.IsNull())
+	{
+		JoinGameActionHandle = RegisterUIActionBinding(
+			FBindUIActionArgs(
+				JoinGameAction,
+				true,
+				FSimpleDelegate::CreateUObject(this, &ThisClass::OnJoinGameActionTriggered)
+			)
+		);
+	}
+	
 	BackActionHandle = RegisterUIActionBinding(
-		FBindUIActionArgs(
-			ICommonInputModule::GetSettings().GetDefaultBackAction(),
-			true,
-			FSimpleDelegate::CreateUObject(this, &ThisClass::OnBackBoundActionTriggered)
-		)
-	);
+	FBindUIActionArgs(
+		ICommonInputModule::GetSettings().GetDefaultBackAction(),
+		true,
+		FSimpleDelegate::CreateUObject(this, &ThisClass::OnBackBoundActionTriggered)
+	)
+);
 
 	TabListWidget_MultiplayerTabs->SetIsFocusable(true);
 	TabListWidget_MultiplayerTabs->OnTabSelected.AddUniqueDynamic(this, &ThisClass::OnMultiplayerTabSelected);
@@ -75,6 +98,16 @@ void UW_MultiplayerScreen::OnBackBoundActionTriggered()
 	DeactivateWidget();
 }
 
+void UW_MultiplayerScreen::OnStartGameActionTriggered()
+{
+	Debug::Print(TEXT("MultiplayerScreen - StartGame action triggered"));
+}
+
+void UW_MultiplayerScreen::OnJoinGameActionTriggered()
+{
+	Debug::Print(TEXT("MultiplayerScreen - JoinGame action triggered"));
+}
+
 void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 {
 	DetailsView_ListEntryInfo->ClearDetailsViewInfo();
@@ -88,6 +121,32 @@ void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 	{
 		CommonListView_MultiplayerList->NavigateToIndex(0);
 		CommonListView_MultiplayerList->SetSelectedIndex(0);
+	}
+
+	static const FName CreateGameTabId(TEXT("CreateGame"));
+	static const FName JoinGameTabId(TEXT("JoinGame"));
+
+	if (TabId == CreateGameTabId)
+	{
+		if (!StartGameAction.IsNull() && !GetActionBindings().Contains(StartGameActionHandle))
+		{
+			AddActionBinding(StartGameActionHandle);
+		}
+		if (!JoinGameAction.IsNull() && GetActionBindings().Contains(JoinGameActionHandle))
+		{
+			RemoveActionBinding(JoinGameActionHandle);
+		}
+	}
+	else if (TabId == JoinGameTabId)
+	{
+		if (!JoinGameAction.IsNull() && !GetActionBindings().Contains(JoinGameActionHandle))
+		{
+			AddActionBinding(JoinGameActionHandle);
+		}
+		if (!StartGameAction.IsNull() && GetActionBindings().Contains(StartGameActionHandle))
+		{
+			RemoveActionBinding(StartGameActionHandle);
+		}
 	}
 }
 

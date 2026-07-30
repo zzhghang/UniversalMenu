@@ -43,6 +43,10 @@ private:
 
 	void OnBackBoundActionTriggered();
 
+	void OnStartGameActionTriggered();
+
+	void OnJoinGameActionTriggered();
+
 	UFUNCTION()
 	void OnMultiplayerTabSelected(const FName TabId);
 
@@ -59,6 +63,16 @@ private:
 	/** Optional DataAsset for designer-configurable tabs. Falls back to hardcoded when null. */
 	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen")
 	UMenuConfigData* MultiplayerConfig;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen", meta = (RowType = "/Script/CommonUI.CommonInputActionDataBase"))
+	FDataTableRowHandle StartGameAction;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen", meta = (RowType = "/Script/CommonUI.CommonInputActionDataBase"))
+	FDataTableRowHandle JoinGameAction;
+
+	FUIActionBindingHandle StartGameActionHandle;
+
+	FUIActionBindingHandle JoinGameActionHandle;
 
 	FUIActionBindingHandle BackActionHandle;
 
