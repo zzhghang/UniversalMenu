@@ -319,7 +319,7 @@ UOptionsDataRegistry* UW_OptionScreen::GetOrCreateDataRegistry()
 		CreatedDataRegistry->InitOptionsDataRegistry(GetOwningLocalPlayer());
 	}
 
-	if (!ensureMsgf(CreatedDataRegistry, TEXT("Data Registry for options screen is not valid"))) { return nullptr; }
+	ensureMsgf(CreatedDataRegistry, TEXT("Data Registry for options screen is not valid"));
 
 	return CreatedDataRegistry;
 }
