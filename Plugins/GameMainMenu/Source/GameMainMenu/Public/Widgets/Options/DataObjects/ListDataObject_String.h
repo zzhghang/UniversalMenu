@@ -29,6 +29,9 @@ public:
 	FORCEINLINE const FText& GetCurrentTextValue() const { return CurrentTextValue;}
 
 	FORCEINLINE const FString& GetCurrentStringValue() const { return CurrentStringValue;}
+
+	/** Programmatically set the value from a saved string. */
+	void SetValueFromString(const FString& InValue) { OnSetForcedStringValue(InValue); }
 	
 protected:
 	

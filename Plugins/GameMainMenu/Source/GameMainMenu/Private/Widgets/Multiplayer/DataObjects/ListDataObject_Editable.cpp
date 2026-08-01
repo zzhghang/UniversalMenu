@@ -4,48 +4,37 @@
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
 
 #include "LocalizationKeys.h"
-#include "GenericPlatform/GenericPlatformMisc.h"
 
 void UListDataObject_Editable::SetText(const FText& InText)
 {
-	FString Filtered = InText.ToString();
+	const FString Raw = InText.ToString();
+	FString Filtered;
+	Filtered.Reserve(Raw.Len() + 1);
 
-	if (CharFilter != EEditableCharFilter::All)
+	if (CharFilter == EEditableCharFilter::All)
 	{
-		Filtered.GetCharArray().RemoveAll([this](TCHAR C) -> bool
+		Filtered = Raw;
+	}
+	else
+	{
+		for (const TCHAR C : Raw)
 		{
 			const bool bAlpha = FChar::IsAlpha(C);
 			const bool bDigit = FChar::IsDigit(C);
+			bool bKeep;
 			switch (CharFilter)
 			{
-			case EEditableCharFilter::LettersOnly:  return !bAlpha;
-			case EEditableCharFilter::NumbersOnly:  return !bDigit;
-			case EEditableCharFilter::Alphanumeric: return !bAlpha && !bDigit;
-			default: return false;
+			case EEditableCharFilter::LettersOnly:  bKeep = bAlpha;          break;
+			case EEditableCharFilter::NumbersOnly:  bKeep = bDigit;          break;
+			case EEditableCharFilter::Alphanumeric: bKeep = bAlpha || bDigit; break;
+			default: bKeep = true; break;
 			}
-		});
+			if (bKeep) Filtered.AppendChar(C);
+		}
 	}
 
-	const FString Truncated = Filtered.Left(MaxCharCount);
-
-	if (CurrentText.ToString().Equals(Truncated))
-	{
-		return;
-	}
-
-	CurrentText = FText::FromString(Truncated);
+	CurrentText = FText::FromString(Filtered.Left(MaxCharCount));
 	NotifyListDataModified(this);
-}
-
-FString UListDataObject_Editable::GetHashedPassword() const
-{
-	const FString PlainText = CurrentText.ToString();
-	if (PlainText.IsEmpty()) return FString();
-
-	FTCHARToUTF8 Utf8Str(*PlainText);
-	FSHA256Signature Hash;
-	FPlatformMisc::GetSHA256Signature(reinterpret_cast<const uint8*>(Utf8Str.Get()), Utf8Str.Length(), Hash);
-	return Hash.ToString();
 }
 
 bool UListDataObject_Editable::ValidateText(const FText& InText, FText& OutReason) const

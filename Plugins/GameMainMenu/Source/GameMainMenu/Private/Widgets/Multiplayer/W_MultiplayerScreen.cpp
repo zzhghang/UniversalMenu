@@ -8,15 +8,19 @@
 #include "FrontendDebugHelper.h"
 #include "Input/CommonUIInputTypes.h"
 #include "ICommonInputModule.h"
+#include "Kismet/GameplayStatics.h"
+#include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
+#include "Widgets/Multiplayer/MenuSessionData.h"
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
+#include "Widgets/Options/DataObjects/ListDataObject_String.h"
 #include "Widgets/Options/ListEntries/W_ListEntry_Base.h"
 #include "Widgets/Options/W_OptionDetailView.h"
 
 void UW_MultiplayerScreen::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
-	
+
 	if (!StartGameAction.IsNull())
 	{
 		StartGameActionHandle = RegisterUIActionBinding(
@@ -38,7 +42,7 @@ void UW_MultiplayerScreen::NativeOnInitialized()
 			)
 		);
 	}
-	
+
 	BackActionHandle = RegisterUIActionBinding(
 	FBindUIActionArgs(
 		ICommonInputModule::GetSettings().GetDefaultBackAction(),
@@ -71,6 +75,8 @@ void UW_MultiplayerScreen::NativeOnActivated()
 	}
 
 	TabListWidget_MultiplayerTabs->SelectTabByID(FName(TEXT("CreateGame")));
+
+	LoadSessionData();
 }
 
 void UW_MultiplayerScreen::NativeOnDeactivated()
@@ -100,6 +106,7 @@ void UW_MultiplayerScreen::OnBackBoundActionTriggered()
 
 void UW_MultiplayerScreen::OnStartGameActionTriggered()
 {
+	SaveSessionData();
 	Debug::Print(TEXT("MultiplayerScreen - StartGame action triggered"));
 }
 
@@ -210,4 +217,68 @@ FString UW_MultiplayerScreen::TryGetEntryWidgetClassName(const UObject* InListIt
 	}
 
 	return TEXT("Entry Widget Not Valid");
+}
+
+void UW_MultiplayerScreen::SaveSessionData()
+{
+	UMenuSessionData* Data = Cast<UMenuSessionData>(
+		UGameplayStatics::CreateSaveGameObject(UMenuSessionData::StaticClass()));
+	if (!Data) return;
+
+	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
+	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
+	{
+		const TArray<UListDataObject_Base*> AllItems = Registry->GetListItemsForTab(Tab->GetDataId());
+		for (UListDataObject_Base* Item : AllItems)
+		{
+			if (!Item) continue;
+
+			if (UListDataObject_Editable* EditItem = Cast<UListDataObject_Editable>(Item))
+			{
+				const FString Value = EditItem->GetText().ToString();
+				if (!Value.IsEmpty())
+				{
+					Data->SetSavedValue(Item->GetDataId(), Value);
+				}
+			}
+			else if (UListDataObject_String* StrItem = Cast<UListDataObject_String>(Item))
+			{
+				Data->SetSavedValue(Item->GetDataId(), StrItem->GetCurrentStringValue());
+			}
+		}
+	}
+
+	UGameplayStatics::SaveGameToSlot(Data, TEXT("MenuSession"), 0);
+	Debug::Print(TEXT("MultiplayerScreen - Session data saved to MenuSession slot"));
+}
+
+void UW_MultiplayerScreen::LoadSessionData()
+{
+	UMenuSessionData* Data = Cast<UMenuSessionData>(
+		UGameplayStatics::LoadGameFromSlot(TEXT("MenuSession"), 0));
+	if (!Data) return;
+
+	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
+	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
+	{
+		const TArray<UListDataObject_Base*> AllItems = Registry->GetListItemsForTab(Tab->GetDataId());
+		for (UListDataObject_Base* Item : AllItems)
+		{
+			if (!Item) continue;
+
+			const FString SavedValue = Data->GetSavedValue(Item->GetDataId());
+			if (SavedValue.IsEmpty()) continue;
+
+			if (UListDataObject_Editable* EditItem = Cast<UListDataObject_Editable>(Item))
+			{
+				EditItem->SetText(FText::FromString(SavedValue));
+			}
+			else if (UListDataObject_String* StrItem = Cast<UListDataObject_String>(Item))
+			{
+				StrItem->SetValueFromString(SavedValue);
+			}
+		}
+	}
+
+	Debug::Print(TEXT("MultiplayerScreen - Session data loaded from MenuSession slot"));
 }

@@ -20,8 +20,6 @@ public:
 
 	const FText& GetText() const { return CurrentText; }
 
-	FString GetHashedPassword() const;
-
 	/** Check whether InText passes MaxCharCount and CharFilter rules. Sets OutReason if invalid. */
 	bool ValidateText(const FText& InText, FText& OutReason) const;
 

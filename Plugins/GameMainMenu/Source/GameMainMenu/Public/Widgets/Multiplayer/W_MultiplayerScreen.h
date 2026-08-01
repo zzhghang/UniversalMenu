@@ -57,6 +57,10 @@ private:
 	/** Lazy-creates the data registry and initializes from config or fallback. */
 	UMultiplayerDataRegistry* GetOrCreateDataRegistry();
 
+	void SaveSessionData();
+
+	void LoadSessionData();
+
 	/** Returns the widget class name for the entry representing an item (for debug display). */
 	FString TryGetEntryWidgetClassName(const UObject* InListItem) const;
 

@@ -22,9 +22,9 @@
 		}
 	],
 	"Plugins": [
-	{
-		"Name": "CommonUI",
-		"Enabled": true
-	}
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		}
 	]
 }
