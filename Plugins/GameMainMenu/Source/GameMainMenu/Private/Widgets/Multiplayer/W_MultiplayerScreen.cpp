@@ -115,21 +115,6 @@ void UW_MultiplayerScreen::OnBackBoundActionTriggered()
 	DeactivateWidget();
 }
 
-void UW_MultiplayerScreen::OnStartGameActionTriggered()
-{
-	SaveSessionData();
-	Debug::Print(TEXT("MultiplayerScreen - StartGame action triggered"));
-}
-
-void UW_MultiplayerScreen::OnJoinGameActionTriggered()
-{
-	Debug::Print(TEXT("MultiplayerScreen - JoinGame action triggered"));
-}
-
-void UW_MultiplayerScreen::OnRefreshActionTriggered()
-{
-	Debug::Print(TEXT("MultiplayerScreen - Refresh action triggered"));
-}
 
 void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 {
@@ -245,9 +230,12 @@ FString UW_MultiplayerScreen::TryGetEntryWidgetClassName(const UObject* InListIt
 
 void UW_MultiplayerScreen::SaveSessionData()
 {
-	UMenuSessionData* Data = Cast<UMenuSessionData>(
-		UGameplayStatics::CreateSaveGameObject(UMenuSessionData::StaticClass()));
-	if (!Data) return;
+	if (!CachedSessionData)
+	{
+		CachedSessionData = Cast<UMenuSessionData>(
+			UGameplayStatics::CreateSaveGameObject(UMenuSessionData::StaticClass()));
+	}
+	if (!CachedSessionData) return;
 
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
@@ -262,25 +250,24 @@ void UW_MultiplayerScreen::SaveSessionData()
 				const FString Value = EditItem->GetText().ToString();
 				if (!Value.IsEmpty())
 				{
-					Data->SetSavedValue(Item->GetDataId(), Value);
+					CachedSessionData->SetSavedValue(Item->GetDataId(), Value);
 				}
 			}
 			else if (UListDataObject_String* StrItem = Cast<UListDataObject_String>(Item))
 			{
-				Data->SetSavedValue(Item->GetDataId(), StrItem->GetCurrentStringValue());
+				CachedSessionData->SetSavedValue(Item->GetDataId(), StrItem->GetCurrentStringValue());
 			}
 		}
 	}
 
-	UGameplayStatics::SaveGameToSlot(Data, TEXT("MenuSession"), 0);
-	Debug::Print(TEXT("MultiplayerScreen - Session data saved to MenuSession slot"));
+	UGameplayStatics::SaveGameToSlot(CachedSessionData, TEXT("MenuSession"), 0);
 }
 
 void UW_MultiplayerScreen::LoadSessionData()
 {
-	UMenuSessionData* Data = Cast<UMenuSessionData>(
+	CachedSessionData = Cast<UMenuSessionData>(
 		UGameplayStatics::LoadGameFromSlot(TEXT("MenuSession"), 0));
-	if (!Data) return;
+	if (!CachedSessionData) return;
 
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
@@ -290,7 +277,7 @@ void UW_MultiplayerScreen::LoadSessionData()
 		{
 			if (!Item) continue;
 
-			const FString SavedValue = Data->GetSavedValue(Item->GetDataId());
+			const FString SavedValue = CachedSessionData->GetSavedValue(Item->GetDataId());
 			if (SavedValue.IsEmpty()) continue;
 
 			if (UListDataObject_Editable* EditItem = Cast<UListDataObject_Editable>(Item))

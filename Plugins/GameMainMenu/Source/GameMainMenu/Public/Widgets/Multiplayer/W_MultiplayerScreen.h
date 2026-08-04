@@ -10,6 +10,7 @@ class UFrontendCommonTabListWidgetBase;
 class UFrontendCommonListView;
 class UW_OptionDetailView;
 class UListDataObject_Base;
+class UMenuSessionData;
 class UMultiplayerDataRegistry;
 class UMenuConfigData;
 
@@ -39,15 +40,27 @@ protected:
 	virtual UWidget* NativeGetDesiredFocusTarget() const override;
 	// ~ end UCommonActivableWidget interface
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
+	void OnStartGameActionTriggered();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
+	void OnJoinGameActionTriggered();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
+	void OnRefreshActionTriggered();
+
+	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
+	void SaveSessionData();
+
+	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
+	void LoadSessionData();
+
+	UFUNCTION(BlueprintPure, Category = "Multiplayer Screen")
+	UMenuSessionData* GetCachedSessionData() const { return CachedSessionData; }
+
 private:
 
 	void OnBackBoundActionTriggered();
-
-	void OnStartGameActionTriggered();
-
-	void OnJoinGameActionTriggered();
-
-	void OnRefreshActionTriggered();
 
 	UFUNCTION()
 	void OnMultiplayerTabSelected(const FName TabId);
@@ -58,10 +71,6 @@ private:
 
 	/** Lazy-creates the data registry and initializes from config or fallback. */
 	UMultiplayerDataRegistry* GetOrCreateDataRegistry();
-
-	void SaveSessionData();
-
-	void LoadSessionData();
 
 	/** Returns the widget class name for the entry representing an item (for debug display). */
 	FString TryGetEntryWidgetClassName(const UObject* InListItem) const;
@@ -89,6 +98,9 @@ private:
 
 	UPROPERTY(Transient)
 	UMultiplayerDataRegistry* CreatedDataRegistry;
+
+	UPROPERTY(Transient)
+	UMenuSessionData* CachedSessionData;
 
 	/***** Bind Widget *****/
 	UPROPERTY(meta = (BindWidget))

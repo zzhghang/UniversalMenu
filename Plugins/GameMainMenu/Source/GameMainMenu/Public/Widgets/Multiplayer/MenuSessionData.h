@@ -17,6 +17,7 @@ class GAMEMAINMENU_API UMenuSessionData : public USaveGame
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable, Category = "MenuSession")
 	FString GetSavedValue(const FName& DataId) const
 	{
 		if (const FString* Found = SavedValues.Find(DataId))
@@ -26,9 +27,17 @@ public:
 		return FString();
 	}
 
+	UFUNCTION(BlueprintCallable, Category = "MenuSession")
 	void SetSavedValue(const FName& DataId, const FString& Value)
 	{
 		SavedValues.Add(DataId, Value);
+	}
+
+	UFUNCTION(BlueprintPure, Category = "MenuSession")
+	bool GetSavedValueAsBool(const FName& DataId, bool bDefault = false) const
+	{
+		const FString* Found = SavedValues.Find(DataId);
+		return Found ? Found->Equals(TEXT("true"), ESearchCase::IgnoreCase) : bDefault;
 	}
 
 	UPROPERTY(SaveGame)
