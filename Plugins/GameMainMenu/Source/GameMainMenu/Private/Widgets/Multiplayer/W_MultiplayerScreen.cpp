@@ -43,6 +43,17 @@ void UW_MultiplayerScreen::NativeOnInitialized()
 		);
 	}
 
+	if (!RefreshAction.IsNull())
+	{
+		RefreshActionHandle = RegisterUIActionBinding(
+			FBindUIActionArgs(
+				RefreshAction,
+				true,
+				FSimpleDelegate::CreateUObject(this, &ThisClass::OnRefreshActionTriggered)
+			)
+		);
+	}
+
 	BackActionHandle = RegisterUIActionBinding(
 	FBindUIActionArgs(
 		ICommonInputModule::GetSettings().GetDefaultBackAction(),
@@ -115,6 +126,11 @@ void UW_MultiplayerScreen::OnJoinGameActionTriggered()
 	Debug::Print(TEXT("MultiplayerScreen - JoinGame action triggered"));
 }
 
+void UW_MultiplayerScreen::OnRefreshActionTriggered()
+{
+	Debug::Print(TEXT("MultiplayerScreen - Refresh action triggered"));
+}
+
 void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 {
 	DetailsView_ListEntryInfo->ClearDetailsViewInfo();
@@ -143,6 +159,10 @@ void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 		{
 			RemoveActionBinding(JoinGameActionHandle);
 		}
+		if (!RefreshAction.IsNull() && GetActionBindings().Contains(RefreshActionHandle))
+		{
+			RemoveActionBinding(RefreshActionHandle);
+		}
 	}
 	else if (TabId == JoinGameTabId)
 	{
@@ -153,6 +173,10 @@ void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 		if (!StartGameAction.IsNull() && GetActionBindings().Contains(StartGameActionHandle))
 		{
 			RemoveActionBinding(StartGameActionHandle);
+		}
+		if (!RefreshAction.IsNull() && !GetActionBindings().Contains(RefreshActionHandle))
+		{
+			AddActionBinding(RefreshActionHandle);
 		}
 	}
 }

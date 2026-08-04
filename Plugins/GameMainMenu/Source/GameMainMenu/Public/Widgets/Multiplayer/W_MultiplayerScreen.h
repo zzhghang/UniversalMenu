@@ -47,6 +47,8 @@ private:
 
 	void OnJoinGameActionTriggered();
 
+	void OnRefreshActionTriggered();
+
 	UFUNCTION()
 	void OnMultiplayerTabSelected(const FName TabId);
 
@@ -74,9 +76,14 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen", meta = (RowType = "/Script/CommonUI.CommonInputActionDataBase"))
 	FDataTableRowHandle JoinGameAction;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen", meta = (RowType = "/Script/CommonUI.CommonInputActionDataBase"))
+	FDataTableRowHandle RefreshAction;
+
 	FUIActionBindingHandle StartGameActionHandle;
 
 	FUIActionBindingHandle JoinGameActionHandle;
+
+	FUIActionBindingHandle RefreshActionHandle;
 
 	FUIActionBindingHandle BackActionHandle;
 
