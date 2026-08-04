@@ -6,6 +6,7 @@
 #include "LocalizationKeys.h"
 #include "Widgets/MenuConfig/MenuConfigData.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
+#include "Widgets/Multiplayer/DataObjects/ListDataObject_HeaderRow.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 
@@ -39,20 +40,40 @@ void UMultiplayerDataRegistry::InitFromConfig()
 		{
 			if (!CatData) continue;
 
-			UListDataObject_Collection* Cat = CreateCollection(CatData->CategoryId, CatData->CategoryName);
-
-			for (UMenuEntryConfig* EntryData : CatData->Entries)
+			if (!CatData->HeaderColumns.IsEmpty())
 			{
-				if (!EntryData) continue;
+				UListDataObject_HeaderRow* HeaderRow = NewObject<UListDataObject_HeaderRow>();
+				HeaderRow->SetHeaderConfig(CatData->HeaderColumns, CatData->HeaderColumnGap, CatData->HeaderEdgePadding, CatData->HeaderVerticalPadding);
+				Tab->AddChildListData(HeaderRow);
 
-				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
-				if (!Entry) continue;
+				for (UMenuEntryConfig* EntryData : CatData->Entries)
+				{
+					if (!EntryData) continue;
 
-				Cat->AddChildListData(Entry);
-				EntryLookup.Add(EntryData->DataId, Entry);
+					UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
+					if (!Entry) continue;
+
+					Tab->AddChildListData(Entry);
+					EntryLookup.Add(EntryData->DataId, Entry);
+				}
 			}
+			else
+			{
+				UListDataObject_Collection* Cat = CreateCollection(CatData->CategoryId, CatData->CategoryName);
 
-			Tab->AddChildListData(Cat);
+				for (UMenuEntryConfig* EntryData : CatData->Entries)
+				{
+					if (!EntryData) continue;
+
+					UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
+					if (!Entry) continue;
+
+					Cat->AddChildListData(Entry);
+					EntryLookup.Add(EntryData->DataId, Entry);
+				}
+
+				Tab->AddChildListData(Cat);
+			}
 		}
 
 		// Wire edit dependencies + auto-create EditConditions
@@ -211,6 +232,14 @@ void UMultiplayerDataRegistry::InitHardcodedFallback()
 	UListDataObject_Collection* JoinGameTab = CreateCollection(TabId_JoinGame, TXT_MP_TAB_JOIN_GAME());
 
 	UListDataObject_Collection* JoinCat = CreateCollection(FName(TEXT("Cat-Join")), TXT_MP_TAB_JOIN_GAME());
+
+	{
+		UListDataObject_HeaderRow* Header = NewObject<UListDataObject_HeaderRow>();
+		Header->SetHeaderConfig(
+			{FText::FromString(TEXT("ServerName")), FText::FromString(TEXT("Players")), FText::FromString(TEXT("Ping")), FText::FromString(TEXT("Status"))},
+			40.f, 20.f, 10.f);
+		JoinCat->AddChildListData(Header);
+	}
 
 	UListDataObject_Collection* ServerListEntry = NewObject<UListDataObject_Collection>();
 	ServerListEntry->SetDataId(FName(TEXT("ServerList")));

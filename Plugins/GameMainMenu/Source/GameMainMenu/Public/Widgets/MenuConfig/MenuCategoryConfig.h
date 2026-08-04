@@ -25,4 +25,17 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TArray<UMenuEntryConfig*> Entries;
+
+	/** Multi-column header labels. When non-empty, a header row is prepended to this category in the list. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FText> HeaderColumns;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HeaderColumnGap = 40.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HeaderEdgePadding = 20.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HeaderVerticalPadding = 10.f;
 };
