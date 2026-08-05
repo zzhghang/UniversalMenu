@@ -148,6 +148,7 @@ void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 		{
 			RemoveActionBinding(RefreshActionHandle);
 		}
+		OnHandleCreateGameTabSelected();
 	}
 	else if (TabId == JoinGameTabId)
 	{
@@ -163,6 +164,7 @@ void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 		{
 			AddActionBinding(RefreshActionHandle);
 		}
+		OnHandleJoinGameTabSelected();
 	}
 }
 

@@ -48,6 +48,12 @@ protected:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
 	void OnRefreshActionTriggered();
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
+	void OnHandleCreateGameTabSelected();
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
+	void OnHandleJoinGameTabSelected();
 
 	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
 	void SaveSessionData();
