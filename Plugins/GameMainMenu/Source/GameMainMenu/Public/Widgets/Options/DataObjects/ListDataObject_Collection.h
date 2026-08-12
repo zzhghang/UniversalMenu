@@ -22,6 +22,9 @@ public:
 	/** Add a child data object (entry or sub-category) to this collection. */
 	void AddChildListData(UListDataObject_Base* InChildListData);
 
+	/** Remove a child data object from this collection. */
+	void RemoveChildListData(UListDataObject_Base* InChildListData);
+
 	// ~Begin UListDataObject_Base Interface
 	virtual TArray<UListDataObject_Base*> GetAllChildListData() const override;
 	virtual bool HasAnyChildListData() const override;

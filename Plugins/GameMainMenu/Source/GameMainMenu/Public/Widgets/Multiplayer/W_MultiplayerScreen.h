@@ -64,6 +64,9 @@ protected:
 	UFUNCTION(BlueprintPure, Category = "Multiplayer Screen")
 	UMenuSessionData* GetCachedSessionData() const { return CachedSessionData; }
 
+	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
+	void PopulateSessionList(const TArray<struct FSessionListItem>& Sessions);
+
 private:
 
 	void OnBackBoundActionTriggered();
@@ -101,6 +104,8 @@ private:
 	FUIActionBindingHandle RefreshActionHandle;
 
 	FUIActionBindingHandle BackActionHandle;
+
+	FName CurrentTabId;
 
 	UPROPERTY(Transient)
 	UMultiplayerDataRegistry* CreatedDataRegistry;

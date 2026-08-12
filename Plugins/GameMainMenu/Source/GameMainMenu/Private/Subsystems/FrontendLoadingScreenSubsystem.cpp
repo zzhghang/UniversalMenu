@@ -129,6 +129,13 @@ void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
 
 		HoldLoadingScreenStartUpTime = -1.0;
 
+		// 客户端 PC 复制到达晚于地图加载完成,PC 未全部就绪前保持 tick,
+		// 否则 deactivated 错过一次后停 tick,客户端主菜单永远无法创建
+		if (!AllLocalPlayersHaveControllers())
+		{
+			return;
+		}
+
 		NotifyLoadingScreenVisibilityChanged(false);
 
 		SetTickableTickType(ETickableTickType::Never);
@@ -250,6 +257,22 @@ void UFrontendLoadingScreenSubsystem::TryRemoveLoadingScreen()
 	}
 
 	CachedLoadingScreenWidget.Reset();
+}
+
+bool UFrontendLoadingScreenSubsystem::AllLocalPlayersHaveControllers() const
+{
+	UGameInstance* GameInstance = GetGameInstance();
+	if (!GameInstance) return false;
+
+	for (ULocalPlayer* LocalPlayer : GameInstance->GetLocalPlayers())
+	{
+		if (!LocalPlayer || !LocalPlayer->GetPlayerController(GameInstance->GetWorld()))
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
 void UFrontendLoadingScreenSubsystem::NotifyLoadingScreenVisibilityChanged(bool bIsVisible)

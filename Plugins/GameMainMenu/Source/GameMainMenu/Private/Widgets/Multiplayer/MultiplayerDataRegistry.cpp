@@ -7,6 +7,7 @@
 #include "Widgets/MenuConfig/MenuConfigData.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_HeaderRow.h"
+#include "Widgets/Multiplayer/DataObjects/ListDataObject_Session.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 
@@ -236,7 +237,7 @@ void UMultiplayerDataRegistry::InitHardcodedFallback()
 	{
 		UListDataObject_HeaderRow* Header = NewObject<UListDataObject_HeaderRow>();
 		Header->SetHeaderConfig(
-			{FText::FromString(TEXT("ServerName")), FText::FromString(TEXT("Players")), FText::FromString(TEXT("Ping")), FText::FromString(TEXT("Status"))},
+			{FText::FromString(TEXT("ServerName")), FText::FromString(TEXT("Map")), FText::FromString(TEXT("Players")), FText::FromString(TEXT("Private")), FText::FromString(TEXT("Ping"))},
 			40.f, 20.f, 10.f);
 		JoinCat->AddChildListData(Header);
 	}
@@ -289,4 +290,39 @@ UListDataObject_Collection* UMultiplayerDataRegistry::CreateCollection(const FNa
 	Col->SetDataId(Id);
 	Col->SetDataDisplayName(DisplayName);
 	return Col;
+}
+
+void UMultiplayerDataRegistry::RebuildSessionList(const TArray<FSessionListItem>& Sessions)
+{
+	for (UListDataObject_Collection* Tab : RegisteredTabs)
+	{
+		if (!Tab || Tab->GetDataId() != TabId_JoinGame) continue;
+
+		for (UListDataObject_Base* Child : Tab->GetAllChildListData())
+		{
+			UListDataObject_Collection* JoinCat = Cast<UListDataObject_Collection>(Child);
+			if (!JoinCat) continue;
+
+			TArray<UListDataObject_Base*> ToRemove;
+			for (UListDataObject_Base* CatChild : JoinCat->GetAllChildListData())
+			{
+				if (Cast<UListDataObject_Session>(CatChild) || CatChild->GetDataId() == FName(TEXT("ServerList")))
+				{
+					ToRemove.Add(CatChild);
+				}
+			}
+			for (UListDataObject_Base* Rem : ToRemove)
+			{
+				JoinCat->RemoveChildListData(Rem);
+			}
+
+			for (const FSessionListItem& Session : Sessions)
+			{
+				UListDataObject_Session* SessionObj = NewObject<UListDataObject_Session>();
+				SessionObj->SetSessionData(Session);
+				JoinCat->AddChildListData(SessionObj);
+			}
+		}
+		break;
+	}
 }

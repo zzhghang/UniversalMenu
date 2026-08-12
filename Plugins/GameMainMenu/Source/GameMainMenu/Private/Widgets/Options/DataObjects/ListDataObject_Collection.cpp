@@ -17,6 +17,11 @@ TArray<UListDataObject_Base*> UListDataObject_Collection::GetAllChildListData() 
 	return ChildListDataArray;
 }
 
+void UListDataObject_Collection::RemoveChildListData(UListDataObject_Base* InChildListData)
+{
+	ChildListDataArray.Remove(InChildListData);
+}
+
 bool UListDataObject_Collection::HasAnyChildListData() const
 {
 	return !ChildListDataArray.IsEmpty();

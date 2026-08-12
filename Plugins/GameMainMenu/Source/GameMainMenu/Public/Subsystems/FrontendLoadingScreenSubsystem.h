@@ -70,6 +70,8 @@ private:
 
 	void NotifyLoadingScreenVisibilityChanged(bool bIsVisible);
 
+	bool AllLocalPlayersHaveControllers() const;
+
 	bool bIsCurrentlyLoadingMap = false;
 
 	double HoldLoadingScreenStartUpTime = -1.0;

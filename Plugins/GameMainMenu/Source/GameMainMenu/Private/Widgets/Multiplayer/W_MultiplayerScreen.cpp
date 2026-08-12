@@ -10,6 +10,7 @@
 #include "ICommonInputModule.h"
 #include "Kismet/GameplayStatics.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
+#include "Widgets/Multiplayer/DataObjects/ListDataObject_Session.h"
 #include "Widgets/Multiplayer/MenuSessionData.h"
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
@@ -118,6 +119,8 @@ void UW_MultiplayerScreen::OnBackBoundActionTriggered()
 
 void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 {
+	CurrentTabId = TabId;
+
 	DetailsView_ListEntryInfo->ClearDetailsViewInfo();
 
 	const TArray<UListDataObject_Base*> ListItems = GetOrCreateDataRegistry()->GetListItemsForTab(TabId);
@@ -268,7 +271,7 @@ void UW_MultiplayerScreen::SaveSessionData()
 void UW_MultiplayerScreen::LoadSessionData()
 {
 	CachedSessionData = Cast<UMenuSessionData>(
-		UGameplayStatics::LoadGameFromSlot(TEXT("MenuSession"), 0));
+		UGameplayStatics::LoadGameFromSlot(TEXT("MenuSession"), 0)); 
 	if (!CachedSessionData) return;
 
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
@@ -292,6 +295,20 @@ void UW_MultiplayerScreen::LoadSessionData()
 			}
 		}
 	}
+}
 
-	Debug::Print(TEXT("MultiplayerScreen - Session data loaded from MenuSession slot"));
+void UW_MultiplayerScreen::PopulateSessionList(const TArray<FSessionListItem>& Sessions)
+{
+	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
+	if (!Registry) return;
+
+	Registry->RebuildSessionList(Sessions);
+
+	static const FName JoinGameTabId(TEXT("JoinGame"));
+	if (CurrentTabId == JoinGameTabId)
+	{
+		const TArray<UListDataObject_Base*> ListItems = Registry->GetListItemsForTab(JoinGameTabId);
+		CommonListView_MultiplayerList->SetListItems(ListItems);
+		CommonListView_MultiplayerList->RequestRefresh();
+	}
 }

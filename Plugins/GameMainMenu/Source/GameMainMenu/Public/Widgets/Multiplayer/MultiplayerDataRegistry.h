@@ -36,6 +36,9 @@ public:
 	/** Returns all flattened list items for a given tab. */
 	TArray<UListDataObject_Base*> GetListItemsForTab(const FName& TabId) const;
 
+	/** Remove existing session entries from JoinGame tab and create new ones. */
+	void RebuildSessionList(const TArray<struct FSessionListItem>& Sessions);
+
 private:
 
 	void InitFromConfig();
