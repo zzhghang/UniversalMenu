@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FindSessionsCallbackProxy.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Base.h"
 #include "ListDataObject_Session.generated.h"
 
@@ -31,6 +32,9 @@ struct GAMEMAINMENU_API FSessionListItem
 
 	UPROPERTY(BlueprintReadWrite)
 	int32 Ping = 0;
+
+	UPROPERTY(BlueprintReadWrite)
+	FBlueprintSessionResult SessionResult;
 };
 
 UCLASS()

@@ -26,6 +26,17 @@ void UMultiplayerDataRegistry::InitRegistry()
 	{
 		InitHardcodedFallback();
 	}
+
+	// ponytail: test entries, replaced by real search results on refresh
+	TArray<FSessionListItem> TestSessions;
+	TestSessions.SetNum(5);
+	for (int32 i = 0; i < TestSessions.Num(); ++i)
+	{
+		TestSessions[i].SessionIndex = i;
+		TestSessions[i].ServerName = FText::FromString(FString::Printf(TEXT("Test Server %d"), i + 1));
+		TestSessions[i].MapName = FText::FromString(FString::Printf(TEXT("Map_0%d"), i + 1));
+	}
+	RebuildSessionList(TestSessions);
 }
 
 void UMultiplayerDataRegistry::InitFromConfig()

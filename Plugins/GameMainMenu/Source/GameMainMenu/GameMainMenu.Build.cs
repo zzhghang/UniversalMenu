@@ -29,6 +29,8 @@ public class GameMainMenu : ModuleRules
 				"GameplayTags",
 				"UMG",
 				"CommonUI",
+				"OnlineSubsystem",
+				"OnlineSubsystemUtils",
 				"DeveloperSettings",
 				"InputCore",
 				"CommonInput",

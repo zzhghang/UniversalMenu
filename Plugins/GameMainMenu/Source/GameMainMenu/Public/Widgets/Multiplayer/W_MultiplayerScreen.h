@@ -56,7 +56,7 @@ protected:
 	void OnHandleJoinGameTabSelected();
 
 	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
-	void SaveSessionData();
+	UMenuSessionData* SaveSessionData();
 
 	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
 	void LoadSessionData();

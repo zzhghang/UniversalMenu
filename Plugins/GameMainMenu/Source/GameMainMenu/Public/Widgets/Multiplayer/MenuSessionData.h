@@ -40,6 +40,13 @@ public:
 		return Found ? Found->Equals(TEXT("true"), ESearchCase::IgnoreCase) : bDefault;
 	}
 
+	UFUNCTION(BlueprintPure, Category = "MenuSession")
+	int32 GetSavedValueAsInt(const FName& DataId, int32 Default = 0) const
+	{
+		const FString* Found = SavedValues.Find(DataId);
+		return Found ? FCString::Atoi(**Found) : Default;
+	}
+
 	UPROPERTY(SaveGame)
 	TMap<FName, FString> SavedValues;
 };

@@ -233,14 +233,14 @@ FString UW_MultiplayerScreen::TryGetEntryWidgetClassName(const UObject* InListIt
 	return TEXT("Entry Widget Not Valid");
 }
 
-void UW_MultiplayerScreen::SaveSessionData()
+UMenuSessionData* UW_MultiplayerScreen::SaveSessionData()
 {
 	if (!CachedSessionData)
 	{
 		CachedSessionData = Cast<UMenuSessionData>(
 			UGameplayStatics::CreateSaveGameObject(UMenuSessionData::StaticClass()));
 	}
-	if (!CachedSessionData) return;
+	if (!CachedSessionData) return nullptr;
 
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
@@ -266,6 +266,7 @@ void UW_MultiplayerScreen::SaveSessionData()
 	}
 
 	UGameplayStatics::SaveGameToSlot(CachedSessionData, TEXT("MenuSession"), 0);
+	return CachedSessionData;
 }
 
 void UW_MultiplayerScreen::LoadSessionData()

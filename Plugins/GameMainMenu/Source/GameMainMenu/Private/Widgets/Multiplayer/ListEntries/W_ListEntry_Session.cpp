@@ -12,6 +12,8 @@ void UW_ListEntry_Session::OnOwningListDataObjectSet(UListDataObject_Base* InOwn
 	UListDataObject_Session* SessionData = CastChecked<UListDataObject_Session>(InOwningListDataObject);
 	const FSessionListItem& Data = SessionData->GetSessionData();
 
+	CachedSessionResult = Data.SessionResult;
+
 	Tb_ServerName->SetText(Data.ServerName);
 	Tb_MapName->SetText(Data.MapName);
 	Tb_Players->SetText(FText::Format(
