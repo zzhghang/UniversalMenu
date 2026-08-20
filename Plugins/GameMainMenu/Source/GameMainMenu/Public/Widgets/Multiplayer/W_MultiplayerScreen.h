@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FindSessionsCallbackProxy.h"
 #include "Widgets/W_ActivatableBase.h"
 #include "W_MultiplayerScreen.generated.h"
 
@@ -13,6 +14,7 @@ class UListDataObject_Base;
 class UMenuSessionData;
 class UMultiplayerDataRegistry;
 class UMenuConfigData;
+class UFrontendGameInstance;
 
 /**
  * Multiplayer screen with two tabs: Create Game and Join Game.
@@ -62,10 +64,14 @@ protected:
 	void LoadSessionData();
 
 	UFUNCTION(BlueprintPure, Category = "Multiplayer Screen")
-	UMenuSessionData* GetCachedSessionData() const { return CachedSessionData; }
+	UMenuSessionData* GetCachedSessionData() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
 	void PopulateSessionList(const TArray<struct FSessionListItem>& Sessions);
+
+	/** Returns the session result of the currently selected list item; invalid result when nothing selected. */
+	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
+	FBlueprintSessionResult GetSelectedSessionResult() const;
 
 private:
 
@@ -109,9 +115,6 @@ private:
 
 	UPROPERTY(Transient)
 	UMultiplayerDataRegistry* CreatedDataRegistry;
-
-	UPROPERTY(Transient)
-	UMenuSessionData* CachedSessionData;
 
 	/***** Bind Widget *****/
 	UPROPERTY(meta = (BindWidget))

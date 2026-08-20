@@ -6,9 +6,9 @@
 #include "Components/FrontendCommonListView.h"
 #include "Components/FrontendCommonTabListWidgetBase.h"
 #include "FrontendDebugHelper.h"
+#include "FrontendGameInstance.h"
 #include "Input/CommonUIInputTypes.h"
 #include "ICommonInputModule.h"
-#include "Kismet/GameplayStatics.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Session.h"
 #include "Widgets/Multiplayer/MenuSessionData.h"
@@ -235,12 +235,11 @@ FString UW_MultiplayerScreen::TryGetEntryWidgetClassName(const UObject* InListIt
 
 UMenuSessionData* UW_MultiplayerScreen::SaveSessionData()
 {
-	if (!CachedSessionData)
-	{
-		CachedSessionData = Cast<UMenuSessionData>(
-			UGameplayStatics::CreateSaveGameObject(UMenuSessionData::StaticClass()));
-	}
-	if (!CachedSessionData) return nullptr;
+	UFrontendGameInstance* GameInstance = Cast<UFrontendGameInstance>(GetGameInstance());
+	if (!GameInstance) return nullptr;
+
+	UMenuSessionData* SessionData = GameInstance->GetOrCreateMenuSessionData();
+	if (!SessionData) return nullptr;
 
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
@@ -255,25 +254,27 @@ UMenuSessionData* UW_MultiplayerScreen::SaveSessionData()
 				const FString Value = EditItem->GetText().ToString();
 				if (!Value.IsEmpty())
 				{
-					CachedSessionData->SetSavedValue(Item->GetDataId(), Value);
+					SessionData->SetSavedValue(Item->GetDataId(), Value);
 				}
 			}
 			else if (UListDataObject_String* StrItem = Cast<UListDataObject_String>(Item))
 			{
-				CachedSessionData->SetSavedValue(Item->GetDataId(), StrItem->GetCurrentStringValue());
+				SessionData->SetSavedValue(Item->GetDataId(), StrItem->GetCurrentStringValue());
 			}
 		}
 	}
 
-	UGameplayStatics::SaveGameToSlot(CachedSessionData, TEXT("MenuSession"), 0);
-	return CachedSessionData;
+	GameInstance->SaveMenuSessionData();
+	return SessionData;
 }
 
 void UW_MultiplayerScreen::LoadSessionData()
 {
-	CachedSessionData = Cast<UMenuSessionData>(
-		UGameplayStatics::LoadGameFromSlot(TEXT("MenuSession"), 0)); 
-	if (!CachedSessionData) return;
+	UFrontendGameInstance* GameInstance = Cast<UFrontendGameInstance>(GetGameInstance());
+	if (!GameInstance) return;
+
+	UMenuSessionData* SessionData = GameInstance->LoadMenuSessionData();
+	if (!SessionData) return;
 
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
@@ -283,7 +284,7 @@ void UW_MultiplayerScreen::LoadSessionData()
 		{
 			if (!Item) continue;
 
-			const FString SavedValue = CachedSessionData->GetSavedValue(Item->GetDataId());
+			const FString SavedValue = SessionData->GetSavedValue(Item->GetDataId());
 			if (SavedValue.IsEmpty()) continue;
 
 			if (UListDataObject_Editable* EditItem = Cast<UListDataObject_Editable>(Item))
@@ -296,6 +297,21 @@ void UW_MultiplayerScreen::LoadSessionData()
 			}
 		}
 	}
+}
+
+UMenuSessionData* UW_MultiplayerScreen::GetCachedSessionData() const
+{
+	const UFrontendGameInstance* GameInstance = Cast<UFrontendGameInstance>(GetGameInstance());
+	return GameInstance ? GameInstance->GetMenuSessionData() : nullptr;
+}
+
+FBlueprintSessionResult UW_MultiplayerScreen::GetSelectedSessionResult() const
+{
+	if (UListDataObject_Session* SelectedSession = CommonListView_MultiplayerList->GetSelectedItem<UListDataObject_Session>())
+	{
+		return SelectedSession->GetSessionData().SessionResult;
+	}
+	return FBlueprintSessionResult();
 }
 
 void UW_MultiplayerScreen::PopulateSessionList(const TArray<FSessionListItem>& Sessions)
