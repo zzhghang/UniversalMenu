@@ -13,9 +13,7 @@ class UMenuConfigData;
 /**
  * Builds and owns the multiplayer data hierarchy (tabs -> categories -> entries).
  *
- * Supports two initialization paths:
- * - DataAsset-driven via UMenuConfigData
- * - Hardcoded fallback when no DataAsset is assigned (mirrors UOptionsDataRegistry)
+ * DataAsset-driven via UMenuConfigData (InitFromConfig).
  */
 UCLASS()
 class GAMEMAINMENU_API UMultiplayerDataRegistry : public UObject
@@ -24,7 +22,7 @@ class GAMEMAINMENU_API UMultiplayerDataRegistry : public UObject
 
 public:
 
-	/** Initialize all tabs, either from DataAsset or hardcoded fallback. */
+	/** Initialize all tabs from the assigned DataAsset. */
 	void InitRegistry();
 
 	/** Assign a DataAsset config. Must be called before InitRegistry. */
@@ -42,9 +40,6 @@ public:
 private:
 
 	void InitFromConfig();
-
-	/** Fallback used when no config DataAsset is assigned. */
-	void InitHardcodedFallback();
 
 	void FindChildListDataRecursively(const UListDataObject_Base* InParentData, TArray<UListDataObject_Base*>& OutFoundChildListData) const;
 
