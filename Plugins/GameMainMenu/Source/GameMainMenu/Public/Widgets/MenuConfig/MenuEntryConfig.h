@@ -70,16 +70,20 @@ public:
 	ECommonNumericType NumericType = ECommonNumericType::Percentage;
 
 	// ---- String fields ----
+	/** Empty means no explicit default. FullscreenMode uses Fullscreen, WindowedFullscreen or Windowed. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (EditCondition = "ValueType == EMenuEntryValueType::String", EditConditionHides))
 	FString DefaultStringValue;
 
+	/** FullscreenMode keys are enum names; an empty map uses the built-in window modes. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (EditCondition = "ValueType == EMenuEntryValueType::String", EditConditionHides))
 	TMap<FString, FText> AvailableOptions;
 
 	// ---- Integer fields ----
+	/** Always used as the default, including 0. FullscreenMode: 0 = fullscreen, 1 = borderless, 2 = windowed. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (EditCondition = "ValueType == EMenuEntryValueType::Integer", EditConditionHides))
 	int32 DefaultIntValue = 0;
 
+	/** Configured options and localized labels. For FullscreenMode, an empty map uses the built-in window modes. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (EditCondition = "ValueType == EMenuEntryValueType::Integer", EditConditionHides))
 	TMap<int32, FText> AvailableIntegerOptions;
 

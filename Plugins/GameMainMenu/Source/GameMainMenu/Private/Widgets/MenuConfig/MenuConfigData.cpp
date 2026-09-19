@@ -4,6 +4,7 @@
 #include "Widgets/MenuConfig/MenuConfigData.h"
 
 #include "GameFramework/GameUserSettings.h"
+#include "LocalizationKeys.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Scalar.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
@@ -15,6 +16,14 @@ static bool IsQualityBindingKey(const FName& Key)
 {
 	const FString S = Key.ToString();
 	return S.Contains(TEXT("Quality")) || S.Contains(TEXT("Scalability"));
+}
+
+static void AddDefaultWindowModeOptions(UListDataObject_StringEnum* Entry)
+{
+	// Existing window-mode assets have no options. Use built-ins only for an empty list.
+	Entry->AddEnumOption(EWindowMode::Fullscreen, TXT_VAL_WINDOW_FULLSCREEN());
+	Entry->AddEnumOption(EWindowMode::WindowedFullscreen, TXT_VAL_WINDOW_BORDERLESS());
+	Entry->AddEnumOption(EWindowMode::Windowed, TXT_VAL_WINDOW_WINDOWED());
 }
 
 static void ApplyCommonConfig(UListDataObject_Base* Entry, const UMenuEntryConfig* Data)
@@ -76,29 +85,35 @@ UListDataObject_Base* CreateEntryFromConfig(const UMenuEntryConfig* Data)
 				TypedEntry->SetDataId(Data->DataId);
 				TypedEntry->SetDataDisplayName(Data->DisplayName);
 				TypedEntry->SetDescriptionRichText(Data->Description);
-				// ponytail: window mode options hardcoded — same 3 modes every platform uses
-				TypedEntry->AddEnumOption(EWindowMode::Fullscreen, FText::FromString(TEXT("Fullscreen")));
-				TypedEntry->AddEnumOption(EWindowMode::WindowedFullscreen, FText::FromString(TEXT("Windowed Fullscreen")));
-				TypedEntry->AddEnumOption(EWindowMode::Windowed, FText::FromString(TEXT("Windowed")));
-				TypedEntry->SetDefaultValueFromEnumOption(EWindowMode::WindowedFullscreen);
+				if (Data->AvailableOptions.IsEmpty())
+				{
+					AddDefaultWindowModeOptions(TypedEntry);
+				}
+				else
+				{
+					for (const auto& Pair : Data->AvailableOptions)
+					{
+						TypedEntry->AddDynamicString(Pair.Key, Pair.Value);
+					}
+				}
+				if (!Data->DefaultStringValue.IsEmpty())
+					TypedEntry->SetDefaultValueFromString(Data->DefaultStringValue);
 				TypedEntry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
 				Entry = TypedEntry;
 			}
 			else if (IsQualityBindingKey(Data->BindingKey))
 			{
+				// Keep dependency refresh and Custom display for legacy String quality entries.
 				UListDataObject_StringInteger* TypedEntry = NewObject<UListDataObject_StringInteger>();
 				TypedEntry->SetDataId(Data->DataId);
 				TypedEntry->SetDataDisplayName(Data->DisplayName);
 				TypedEntry->SetDescriptionRichText(Data->Description);
-				TypedEntry->AddIntegerOption(0, FText::FromString(TEXT("Low")));
-				TypedEntry->AddIntegerOption(1, FText::FromString(TEXT("Medium")));
-				TypedEntry->AddIntegerOption(2, FText::FromString(TEXT("High")));
-				TypedEntry->AddIntegerOption(3, FText::FromString(TEXT("Epic")));
-				TypedEntry->AddIntegerOption(4, FText::FromString(TEXT("Cinematic")));
+				for (const auto& Pair : Data->AvailableOptions)
+				{
+					TypedEntry->AddDynamicString(Pair.Key, Pair.Value);
+				}
 				if (!Data->DefaultStringValue.IsEmpty())
 					TypedEntry->SetDefaultValueFromString(Data->DefaultStringValue);
-				else
-					TypedEntry->SetDefaultValueFromString(TEXT("3"));
 				TypedEntry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
 				Entry = TypedEntry;
 			}
@@ -127,27 +142,19 @@ UListDataObject_Base* CreateEntryFromConfig(const UMenuEntryConfig* Data)
 				TypedEntry->SetDataId(Data->DataId);
 				TypedEntry->SetDataDisplayName(Data->DisplayName);
 				TypedEntry->SetDescriptionRichText(Data->Description);
-				TypedEntry->AddEnumOption(EWindowMode::Fullscreen, FText::FromString(TEXT("Fullscreen")));
-				TypedEntry->AddEnumOption(EWindowMode::WindowedFullscreen, FText::FromString(TEXT("Windowed Fullscreen")));
-				TypedEntry->AddEnumOption(EWindowMode::Windowed, FText::FromString(TEXT("Windowed")));
-				TypedEntry->SetDefaultValueFromEnumOption(EWindowMode::WindowedFullscreen);
-				TypedEntry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
-				Entry = TypedEntry;
-			}
-			else if (IsQualityBindingKey(Data->BindingKey))
-			{
-				UListDataObject_StringInteger* TypedEntry = NewObject<UListDataObject_StringInteger>();
-				TypedEntry->SetDataId(Data->DataId);
-				TypedEntry->SetDataDisplayName(Data->DisplayName);
-				TypedEntry->SetDescriptionRichText(Data->Description);
-				// ponytail: quality levels hardcoded — same 5 levels every preset uses
-				TypedEntry->AddIntegerOption(0, FText::FromString(TEXT("Low")));
-				TypedEntry->AddIntegerOption(1, FText::FromString(TEXT("Medium")));
-				TypedEntry->AddIntegerOption(2, FText::FromString(TEXT("High")));
-				TypedEntry->AddIntegerOption(3, FText::FromString(TEXT("Epic")));
-				TypedEntry->AddIntegerOption(4, FText::FromString(TEXT("Cinematic")));
-				const int32 DefaultVal = Data->DefaultIntValue != 0 ? Data->DefaultIntValue : 3;
-				TypedEntry->SetDefaultValueFromString(LexToString(DefaultVal));
+				if (Data->AvailableIntegerOptions.IsEmpty())
+				{
+					AddDefaultWindowModeOptions(TypedEntry);
+				}
+				else
+				{
+					for (const auto& Pair : Data->AvailableIntegerOptions)
+					{
+						// The settings binding uses enum names internally, not numeric strings.
+						TypedEntry->AddEnumOption(static_cast<EWindowMode::Type>(Pair.Key), Pair.Value);
+					}
+				}
+				TypedEntry->SetDefaultValueFromEnumOption(static_cast<EWindowMode::Type>(Data->DefaultIntValue));
 				TypedEntry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
 				Entry = TypedEntry;
 			}
@@ -161,10 +168,7 @@ UListDataObject_Base* CreateEntryFromConfig(const UMenuEntryConfig* Data)
 				{
 					TypedEntry->AddIntegerOption(Pair.Key, Pair.Value);
 				}
-				if (Data->DefaultIntValue != 0 || !Data->AvailableIntegerOptions.IsEmpty())
-				{
-					TypedEntry->SetDefaultValueFromString(LexToString(Data->DefaultIntValue));
-				}
+				TypedEntry->SetDefaultValueFromString(LexToString(Data->DefaultIntValue));
 				TypedEntry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
 				Entry = TypedEntry;
 			}
