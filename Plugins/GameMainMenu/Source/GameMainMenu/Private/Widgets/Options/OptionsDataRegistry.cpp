@@ -340,9 +340,6 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
 				if (!Entry) continue;
 
-				Cat->AddChildListData(Entry);
-				EntryLookup.Add(EntryData->DataId, Entry);
-
 				// Wire BindingKey → getter/setter for Options entries
 				if (!EntryData->BindingKey.IsNone())
 				{
@@ -355,6 +352,10 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 						}
 					}
 				}
+
+				// Adding a child initializes it, so bind before it reads the current settings.
+				Cat->AddChildListData(Entry);
+				EntryLookup.Add(EntryData->DataId, Entry);
 			}
 
 			Tab->AddChildListData(Cat);

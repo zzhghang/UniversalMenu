@@ -29,6 +29,8 @@ void UListDataObject_StringResolution::InitResolutionValues()
 
 void UListDataObject_StringResolution::OnDataObjectInitialized()
 {
+	Super::OnDataObjectInitialized();
+
 	if (!TrySetDisplayTextFromStringValue(CurrentStringValue))
 	{
 		CurrentTextValue = ResolutionToDisplayText(UFrontendGameUserSettings::Get()->GetScreenResolution());
