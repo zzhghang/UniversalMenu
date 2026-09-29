@@ -31,9 +31,9 @@ void UListDataObject_String::GotoPreOption()
 
 	TrySetDisplayTextFromStringValue(CurrentStringValue);
 
-	if (DataDynamicSetter)
+	if (Binding)
 	{
-		DataDynamicSetter->SetValueFromString(CurrentStringValue);
+		Binding->SetValueFromString(CurrentStringValue);
 	}
 
 	NotifyListDataModified(this);
@@ -57,9 +57,9 @@ void UListDataObject_String::GotoNextOption()
 
 	TrySetDisplayTextFromStringValue(CurrentStringValue);
 
-	if (DataDynamicSetter)
+	if (Binding)
 	{
-		DataDynamicSetter->SetValueFromString(CurrentStringValue);
+		Binding->SetValueFromString(CurrentStringValue);
 	}
 
 	NotifyListDataModified(this);
@@ -79,9 +79,9 @@ void UListDataObject_String::OnRotatorInitiatedValueChanged(const FText& InNewSe
 		CurrentTextValue = InNewSelectedText;
 		CurrentStringValue = StringArray[FoundIndex];
 
-		if (DataDynamicSetter)
+		if (Binding)
 		{
-			DataDynamicSetter->SetValueFromString(CurrentStringValue);
+			Binding->SetValueFromString(CurrentStringValue);
 		}
 
 		NotifyListDataModified(this);
@@ -97,11 +97,11 @@ void UListDataObject_String::OnDataObjectInitialized()
 		CurrentStringValue = GetDefaultStringValue();
 	}
 
-	if (DataDynamicGetter)
+	if (Binding)
 	{
-		if (!DataDynamicGetter->GetValueAsString().IsEmpty())
+		if (!Binding->GetValueAsString().IsEmpty())
 		{
-			CurrentStringValue = DataDynamicGetter->GetValueAsString();
+			CurrentStringValue = Binding->GetValueAsString();
 		}
 	}
 
@@ -121,9 +121,9 @@ bool UListDataObject_String::TryResetBackToDefaultValue()
 
 		TrySetDisplayTextFromStringValue(CurrentStringValue);
 
-		if (DataDynamicSetter)
+		if (Binding)
 		{
-			DataDynamicSetter->SetValueFromString(CurrentStringValue);
+			Binding->SetValueFromString(CurrentStringValue);
 
 			NotifyListDataModified(this,EOptionsListDataModifyReason::ResetToDefault);
 
@@ -144,9 +144,9 @@ void UListDataObject_String::OnSetForcedStringValue(const FString& InForcedStrin
 	CurrentStringValue = InForcedStringValue;
 	TrySetDisplayTextFromStringValue(CurrentStringValue);
 
-	if (DataDynamicSetter)
+	if (Binding)
 	{
-		DataDynamicSetter->SetValueFromString(CurrentStringValue);
+		Binding->SetValueFromString(CurrentStringValue);
 
 		NotifyListDataModified(this,EOptionsListDataModifyReason::DependencyModified);
 	}
@@ -224,11 +224,11 @@ void UListDataObject_StringInteger::OnDataObjectInitialized()
 void UListDataObject_StringInteger::OnEditDependencyDataModified(UListDataObject_Base* ModifyDependencyData,
 	EOptionsListDataModifyReason ModifyReason)
 {
-	if (DataDynamicGetter)
+	if (Binding)
 	{
-		if (CurrentStringValue == DataDynamicGetter->GetValueAsString()) return;
+		if (CurrentStringValue == Binding->GetValueAsString()) return;
 
-		CurrentStringValue = DataDynamicGetter->GetValueAsString();
+		CurrentStringValue = Binding->GetValueAsString();
 
 		if (!TrySetDisplayTextFromStringValue(CurrentStringValue)) CurrentTextValue = TXT_VAL_CUSTOM();
 

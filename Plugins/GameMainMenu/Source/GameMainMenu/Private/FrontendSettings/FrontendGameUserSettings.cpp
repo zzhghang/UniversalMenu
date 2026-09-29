@@ -48,7 +48,6 @@ UFrontendGameUserSettings::UFrontendGameUserSettings()
 	, bDialogueBoost(true)
 	, CurrentCulture(TEXT("en"))
 {
-
 }
 
 UFrontendGameUserSettings* UFrontendGameUserSettings::Get()
@@ -58,193 +57,128 @@ UFrontendGameUserSettings* UFrontendGameUserSettings::Get()
 	return nullptr;
 }
 
-void UFrontendGameUserSettings::SetOverallVolume(const float InValue)
+void UFrontendGameUserSettings::ApplyNonResolutionSettings()
 {
-	OverallVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
+	Super::ApplyNonResolutionSettings();
+	if (GEngine) GEngine->DisplayGamma = DisplayGamma;
+	FInternationalization::Get().SetCurrentCulture(CurrentCulture);
 
 	UWorld* World = GetGameWorld();
 	if (!World) return;
+	USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix();
+	if (!SoundMix) return;
 
-	if (USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix())
+	const auto ApplyVolume = [World, SoundMix](const FGameplayTag& Tag, float Volume)
 	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FrontendGameplayTags::Frontend_Audio_Volume_Overall))
+		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(Tag))
 		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, OverallVolume);
+			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, Volume);
 		}
-	}
+	};
+	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Overall, OverallVolume);
+	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Music, MusicVolume);
+	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_SFX, SFXVolume);
+	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Voice, VoiceVolume);
+	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Ambient, AmbientVolume);
+	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_UI, UIVolume);
+}
 
+void UFrontendGameUserSettings::SetOverallVolume(const float InValue)
+{
+	OverallVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
 }
 
 void UFrontendGameUserSettings::SetMusicVolume(const float InValue)
 {
 	MusicVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
-
-	UWorld* World = GetGameWorld();
-	if (!World) return;
-
-	if (USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix())
-	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FrontendGameplayTags::Frontend_Audio_Volume_Music))
-		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, MusicVolume);
-		}
-	}
-
 }
 
 void UFrontendGameUserSettings::SetSFXVolume(const float InValue)
 {
 	SFXVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
-
-	UWorld* World = GetGameWorld();
-	if (!World) return;
-
-	if (USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix())
-	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FrontendGameplayTags::Frontend_Audio_Volume_SFX))
-		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, SFXVolume);
-		}
-	}
-
 }
 
 void UFrontendGameUserSettings::SetVoiceVolume(const float InValue)
 {
 	VoiceVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
-
-	UWorld* World = GetGameWorld();
-	if (!World) return;
-
-	if (USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix())
-	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FrontendGameplayTags::Frontend_Audio_Volume_Voice))
-		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, VoiceVolume);
-		}
-	}
-
 }
 
 void UFrontendGameUserSettings::SetAmbientVolume(const float InValue)
 {
 	AmbientVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
-
-	UWorld* World = GetGameWorld();
-	if (!World) return;
-
-	if (USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix())
-	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FrontendGameplayTags::Frontend_Audio_Volume_Ambient))
-		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, AmbientVolume);
-		}
-	}
-
 }
 
 void UFrontendGameUserSettings::SetUIVolume(const float InValue)
 {
 	UIVolume = FMath::Clamp(InValue, 0.0f, 2.0f);
-
-	UWorld* World = GetGameWorld();
-	if (!World) return;
-
-	if (USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix())
-	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FrontendGameplayTags::Frontend_Audio_Volume_UI))
-		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, UIVolume);
-		}
-	}
-
 }
 
 void UFrontendGameUserSettings::SetCurrentCulture(const FString& InCulture)
 {
 	CurrentCulture = InCulture;
-
-	FInternationalization::Get().SetCurrentCulture(InCulture);
-
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetAllowBackgroundSound(const bool InValue)
 {
 	bAllowBackgroundSound = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetSubtitlesEnabled(const bool InValue)
 {
 	bSubtitlesEnabled = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetHRTFEnabled(const bool InValue)
 {
 	bHRTFEnabled = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetMonoOutput(const bool InValue)
 {
 	bMonoOutput = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetDynamicRangeCompression(const bool InValue)
 {
 	bDynamicRangeCompression = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetDialogueBoost(const bool InValue)
 {
 	bDialogueBoost = InValue;
-	SaveSettings();
 }
 
 float UFrontendGameUserSettings::GetCurrentDisplayGamma() const
 {
-	if (GEngine) return GEngine->GetDisplayGamma();
-
-	return 2.2f;
+	return DisplayGamma;
 }
 
 void UFrontendGameUserSettings::SetCurrentDisplayGamma(const float InValue)
 {
-	if (GEngine) GEngine->DisplayGamma = InValue;
-
-	SaveSettings();
+	DisplayGamma = InValue;
 }
 
 void UFrontendGameUserSettings::SetShowHealthBar(const bool InValue)
 {
 	bShowHealthBar = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetShowDamageNumbers(const bool InValue)
 {
 	bShowDamageNumbers = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetHighlightInteraction(const bool InValue)
 {
 	bHighlightInteraction = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetShowSubtitles(const bool InValue)
 {
 	bShowSubtitles = InValue;
-	SaveSettings();
 }
 
 void UFrontendGameUserSettings::SetAutoSave(const bool InValue)
 {
 	bAutoSave = InValue;
-	SaveSettings();
 }

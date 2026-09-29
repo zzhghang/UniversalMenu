@@ -3,7 +3,6 @@
 
 #include "Widgets/Options/ListEntries/W_ListEntry_Scalar.h"
 
-#include "FrontendSettings/FrontendGameUserSettings.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Scalar.h"
 #include "AnalogSlider.h"
 
@@ -13,8 +12,6 @@ void UW_ListEntry_Scalar::NativeOnInitialized()
 	
 	As_Slider->OnValueChanged.AddUniqueDynamic(this,&ThisClass::OnSliderValueChanged);
 	As_Slider->OnMouseCaptureBegin.AddUniqueDynamic(this,&ThisClass::OnMouseCaptureBegin);
-	As_Slider->OnMouseCaptureEnd.AddUniqueDynamic(this,&ThisClass::OnMouseCaptureEnd);
-	As_Slider->OnControllerCaptureEnd.AddUniqueDynamic(this,&ThisClass::OnControllerCaptureEnd);
 }
 
 void UW_ListEntry_Scalar::OnOwningListDataObjectSet(UListDataObject_Base* InOwningListDataObject)
@@ -54,20 +51,4 @@ void UW_ListEntry_Scalar::OnSliderValueChanged(float NewValue)
 void UW_ListEntry_Scalar::OnMouseCaptureBegin()
 {
 	SelectedThisEntryWidget();
-}
-
-void UW_ListEntry_Scalar::OnMouseCaptureEnd()
-{
-	if (UFrontendGameUserSettings* Settings = UFrontendGameUserSettings::Get())
-	{
-		Settings->SaveSettings();
-	}
-}
-
-void UW_ListEntry_Scalar::OnControllerCaptureEnd()
-{
-	if (UFrontendGameUserSettings* Settings = UFrontendGameUserSettings::Get())
-	{
-		Settings->SaveSettings();
-	}
 }

@@ -22,15 +22,7 @@ FKey UUListDataObject_KeyBinding::GetCurrentKeyForSlot(int32 SlotIndex) const
 		return EKeys::Invalid;
 	}
 
-	UEnhancedInputUserSettings* Settings = GetUserSettings();
-	if (!Settings)
-	{
-		return EKeys::Invalid;
-	}
-
-	const FPlayerKeyMapping* Mapping = Settings->FindCurrentMappingForSlot(
-		KeyBindingSlots[SlotIndex].PlayerMappableName,
-		static_cast<EPlayerMappableKeySlot>(KeyBindingSlots[SlotIndex].MappableSlot));
+	const FPlayerKeyMapping* Mapping = FindMappingForSlot(SlotIndex);
 
 	if (Mapping)
 	{
@@ -47,20 +39,13 @@ void UUListDataObject_KeyBinding::SetKeyForSlot(int32 SlotIndex, const FKey& New
 		return;
 	}
 
-	UEnhancedInputUserSettings* Settings = GetUserSettings();
-	if (!Settings)
+	FPlayerKeyMapping* Mapping = FindMappingForSlot(SlotIndex);
+	if (!Mapping)
 	{
 		return;
 	}
 
-	FMapPlayerKeyArgs Args;
-	Args.MappingName = KeyBindingSlots[SlotIndex].PlayerMappableName;
-	Args.NewKey = NewKey;
-	Args.Slot = static_cast<EPlayerMappableKeySlot>(KeyBindingSlots[SlotIndex].MappableSlot);
-
-	FGameplayTagContainer FailureReason;
-	Settings->MapPlayerKey(Args, FailureReason);
-	Settings->SaveSettings();
+	Mapping->SetCurrentKey(NewKey);
 
 	NotifyListDataModified(this, EOptionsListDataModifyReason::DirectlyModified);
 }
@@ -72,19 +57,13 @@ void UUListDataObject_KeyBinding::ResetSlotToDefault(int32 SlotIndex)
 		return;
 	}
 
-	UEnhancedInputUserSettings* Settings = GetUserSettings();
-	if (!Settings)
+	FPlayerKeyMapping* Mapping = FindMappingForSlot(SlotIndex);
+	if (!Mapping)
 	{
 		return;
 	}
 
-	FMapPlayerKeyArgs Args;
-	Args.MappingName = KeyBindingSlots[SlotIndex].PlayerMappableName;
-	Args.Slot = static_cast<EPlayerMappableKeySlot>(KeyBindingSlots[SlotIndex].MappableSlot);
-
-	FGameplayTagContainer FailureReason;
-	Settings->ResetAllPlayerKeysInRow(Args, FailureReason);
-	Settings->SaveSettings();
+	Mapping->ResetToDefault();
 
 	NotifyListDataModified(this, EOptionsListDataModifyReason::ResetToDefault);
 }
@@ -201,13 +180,7 @@ bool UUListDataObject_KeyBinding::FindConflictingAction(const FKey& NewKey, FNam
 		return false;
 	}
 
-	UEnhancedInputUserSettings* Settings = GetUserSettings();
-	if (!Settings)
-	{
-		return false;
-	}
-
-	UEnhancedPlayerMappableKeyProfile* Profile = Settings->GetActiveKeyProfile();
+	UEnhancedPlayerMappableKeyProfile* Profile = KeyProfile;
 	if (!Profile)
 	{
 		return false;
@@ -246,17 +219,14 @@ bool UUListDataObject_KeyBinding::FindConflictingAction(const FKey& NewKey, FNam
 
 bool UUListDataObject_KeyBinding::HasDefaultValue() const
 {
-	UEnhancedInputUserSettings* Settings = GetUserSettings();
-	if (!Settings)
+	if (!KeyProfile)
 	{
 		return true;
 	}
 
-	for (const FKeyBindingSlotDescriptor& BindSlot : KeyBindingSlots)
+	for (int32 SlotIndex = 0; SlotIndex < KeyBindingSlots.Num(); ++SlotIndex)
 	{
-		const FPlayerKeyMapping* Mapping = Settings->FindCurrentMappingForSlot(
-			BindSlot.PlayerMappableName,
-			static_cast<EPlayerMappableKeySlot>(BindSlot.MappableSlot));
+		const FPlayerKeyMapping* Mapping = FindMappingForSlot(SlotIndex);
 
 		if (Mapping && Mapping->IsCustomized())
 		{
@@ -273,23 +243,15 @@ bool UUListDataObject_KeyBinding::CanResetBackToDefaultValue() const
 
 bool UUListDataObject_KeyBinding::TryResetBackToDefaultValue()
 {
-	UEnhancedInputUserSettings* Settings = GetUserSettings();
-	if (!Settings)
+	if (!KeyProfile)
 	{
 		return false;
 	}
 
-	for (const FKeyBindingSlotDescriptor& BindSlot : KeyBindingSlots)
+	for (int32 SlotIndex = 0; SlotIndex < KeyBindingSlots.Num(); ++SlotIndex)
 	{
-		FMapPlayerKeyArgs Args;
-		Args.MappingName = BindSlot.PlayerMappableName;
-		Args.Slot = static_cast<EPlayerMappableKeySlot>(BindSlot.MappableSlot);
-
-		FGameplayTagContainer FailureReason;
-		Settings->ResetAllPlayerKeysInRow(Args, FailureReason);
+		if (FPlayerKeyMapping* Mapping = FindMappingForSlot(SlotIndex)) Mapping->ResetToDefault();
 	}
-
-	Settings->SaveSettings();
 
 	NotifyListDataModified(this, EOptionsListDataModifyReason::ResetToDefault);
 	return true;
@@ -302,18 +264,20 @@ void UUListDataObject_KeyBinding::OnDataObjectInitialized()
 	bHasDataBeenInitialized = true;
 }
 
-UEnhancedInputUserSettings* UUListDataObject_KeyBinding::GetUserSettings() const
+FPlayerKeyMapping* UUListDataObject_KeyBinding::FindMappingForSlot(int32 SlotIndex) const
 {
-	if (!CachedOwningLocalPlayer.IsValid())
+	if (!KeyProfile || !KeyBindingSlots.IsValidIndex(SlotIndex))
 	{
 		return nullptr;
 	}
 
-	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(CachedOwningLocalPlayer.Get());
-	if (!Subsystem)
+	const FKeyBindingSlotDescriptor& Slot = KeyBindingSlots[SlotIndex];
+	if (FKeyMappingRow* Row = KeyProfile->FindKeyMappingRowMutable(Slot.PlayerMappableName))
 	{
-		return nullptr;
+		for (FPlayerKeyMapping& Mapping : Row->Mappings)
+		{
+			if (Mapping.GetSlot() == static_cast<EPlayerMappableKeySlot>(Slot.MappableSlot)) return &Mapping;
+		}
 	}
-
-	return Subsystem->GetUserSettings();
+	return nullptr;
 }

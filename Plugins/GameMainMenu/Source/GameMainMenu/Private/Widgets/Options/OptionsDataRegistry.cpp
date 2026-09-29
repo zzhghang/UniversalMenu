@@ -5,6 +5,7 @@
 
 #include "FrontendSettings/FrontendGameUserSettings.h"
 #include "Widgets/Options/OptionsDataInteractionHelper.h"
+#include "Widgets/Options/OptionsKeyBindingProfile.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 #include "Widgets/Options/DataObjects/ListDataObject_StringResolution.h"
@@ -33,113 +34,57 @@ void UOptionsDataRegistry::InitBindingMap()
 {
 	using FSettings = UFrontendGameUserSettings;
 
+	BindingMap.Reset();
+	SettingCommitters.Reset();
+	const TWeakObjectPtr<UFrontendGameUserSettings> Draft = PendingSettings;
+	const auto Bind = [this, Draft](FName Key, auto Getter, auto Setter)
+	{
+		BindingMap.Add(Key, FOptionsDataInteractionHelper::Create([Draft]() { return Draft.Get(); }, Getter, Setter));
+		SettingCommitters.Add([Draft, Getter, Setter](FSettings* Target)
+		{
+			if (Draft.IsValid()) (Target->*Setter)((Draft.Get()->*Getter)());
+		});
+	};
+
 	// ---- Gameplay ----
-	BindingMap.Add("Difficulty", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return FSettings::Get()->GetDifficulty(); },
-		[](const FString& V) { FSettings::Get()->SetDifficulty(V); }));
-	BindingMap.Add("ShowHealthBar", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetShowHealthBar()); },
-		[](const FString& V) { FSettings::Get()->SetShowHealthBar(V.ToBool()); }));
-	BindingMap.Add("ShowDamageNumbers", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetShowDamageNumbers()); },
-		[](const FString& V) { FSettings::Get()->SetShowDamageNumbers(V.ToBool()); }));
-	BindingMap.Add("HighlightInteraction", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetHighlightInteraction()); },
-		[](const FString& V) { FSettings::Get()->SetHighlightInteraction(V.ToBool()); }));
-	BindingMap.Add("ShowSubtitles", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetShowSubtitles()); },
-		[](const FString& V) { FSettings::Get()->SetShowSubtitles(V.ToBool()); }));
-	BindingMap.Add("AutoSave", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetAutoSave()); },
-		[](const FString& V) { FSettings::Get()->SetAutoSave(V.ToBool()); }));
-	BindingMap.Add("CurrentCulture", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return FSettings::Get()->GetCurrentCulture(); },
-		[](const FString& V) { FSettings::Get()->SetCurrentCulture(V); }));
+	Bind(TEXT("Difficulty"), &FSettings::GetDifficulty, &FSettings::SetDifficulty);
+	Bind(TEXT("ShowHealthBar"), &FSettings::GetShowHealthBar, &FSettings::SetShowHealthBar);
+	Bind(TEXT("ShowDamageNumbers"), &FSettings::GetShowDamageNumbers, &FSettings::SetShowDamageNumbers);
+	Bind(TEXT("HighlightInteraction"), &FSettings::GetHighlightInteraction, &FSettings::SetHighlightInteraction);
+	Bind(TEXT("ShowSubtitles"), &FSettings::GetShowSubtitles, &FSettings::SetShowSubtitles);
+	Bind(TEXT("AutoSave"), &FSettings::GetAutoSave, &FSettings::SetAutoSave);
+	Bind(TEXT("CurrentCulture"), &FSettings::GetCurrentCulture, &FSettings::SetCurrentCulture);
 
 	// ---- Audio ----
-	BindingMap.Add("OverallVolume", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetOverallVolume()); },
-		[](const FString& V) { FSettings::Get()->SetOverallVolume(FCString::Atof(*V)); }));
-	BindingMap.Add("MusicVolume", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetMusicVolume()); },
-		[](const FString& V) { FSettings::Get()->SetMusicVolume(FCString::Atof(*V)); }));
-	BindingMap.Add("SFXVolume", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetSFXVolume()); },
-		[](const FString& V) { FSettings::Get()->SetSFXVolume(FCString::Atof(*V)); }));
-	BindingMap.Add("VoiceVolume", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetVoiceVolume()); },
-		[](const FString& V) { FSettings::Get()->SetVoiceVolume(FCString::Atof(*V)); }));
-	BindingMap.Add("AmbientVolume", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetAmbientVolume()); },
-		[](const FString& V) { FSettings::Get()->SetAmbientVolume(FCString::Atof(*V)); }));
-	BindingMap.Add("UIVolume", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetUIVolume()); },
-		[](const FString& V) { FSettings::Get()->SetUIVolume(FCString::Atof(*V)); }));
-	BindingMap.Add("AllowBackgroundSound", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetAllowBackgroundSound()); },
-		[](const FString& V) { FSettings::Get()->SetAllowBackgroundSound(V.ToBool()); }));
-	BindingMap.Add("SubtitlesEnabled", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetSubtitlesEnabled()); },
-		[](const FString& V) { FSettings::Get()->SetSubtitlesEnabled(V.ToBool()); }));
-	BindingMap.Add("HRTFEnabled", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetHRTFEnabled()); },
-		[](const FString& V) { FSettings::Get()->SetHRTFEnabled(V.ToBool()); }));
-	BindingMap.Add("MonoOutput", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetMonoOutput()); },
-		[](const FString& V) { FSettings::Get()->SetMonoOutput(V.ToBool()); }));
-	BindingMap.Add("DynamicRangeCompression", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetDynamicRangeCompression()); },
-		[](const FString& V) { FSettings::Get()->SetDynamicRangeCompression(V.ToBool()); }));
-	BindingMap.Add("DialogueBoost", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetDialogueBoost()); },
-		[](const FString& V) { FSettings::Get()->SetDialogueBoost(V.ToBool()); }));
+	Bind(TEXT("OverallVolume"), &FSettings::GetOverallVolume, &FSettings::SetOverallVolume);
+	Bind(TEXT("MusicVolume"), &FSettings::GetMusicVolume, &FSettings::SetMusicVolume);
+	Bind(TEXT("SFXVolume"), &FSettings::GetSFXVolume, &FSettings::SetSFXVolume);
+	Bind(TEXT("VoiceVolume"), &FSettings::GetVoiceVolume, &FSettings::SetVoiceVolume);
+	Bind(TEXT("AmbientVolume"), &FSettings::GetAmbientVolume, &FSettings::SetAmbientVolume);
+	Bind(TEXT("UIVolume"), &FSettings::GetUIVolume, &FSettings::SetUIVolume);
+	Bind(TEXT("AllowBackgroundSound"), &FSettings::GetAllowBackgroundSound, &FSettings::SetAllowBackgroundSound);
+	Bind(TEXT("SubtitlesEnabled"), &FSettings::GetSubtitlesEnabled, &FSettings::SetSubtitlesEnabled);
+	Bind(TEXT("HRTFEnabled"), &FSettings::GetHRTFEnabled, &FSettings::SetHRTFEnabled);
+	Bind(TEXT("MonoOutput"), &FSettings::GetMonoOutput, &FSettings::SetMonoOutput);
+	Bind(TEXT("DynamicRangeCompression"), &FSettings::GetDynamicRangeCompression, &FSettings::SetDynamicRangeCompression);
+	Bind(TEXT("DialogueBoost"), &FSettings::GetDialogueBoost, &FSettings::SetDialogueBoost);
 
 	// ---- Video ----
-	BindingMap.Add("FullscreenMode", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { const UEnum* E = StaticEnum<EWindowMode::Type>(); return E->GetNameStringByValue(static_cast<int64>(FSettings::Get()->GetFullscreenMode())); },
-		[](const FString& V) { const UEnum* E = StaticEnum<EWindowMode::Type>(); const int64 Val = E->GetValueByNameString(V); if (Val != INDEX_NONE) FSettings::Get()->SetFullscreenMode(static_cast<EWindowMode::Type>(Val)); }));
-	BindingMap.Add("Resolution", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { const FIntPoint R = FSettings::Get()->GetScreenResolution(); return FString::Printf(TEXT("(X=%d,Y=%d)"), R.X, R.Y); },
-		[](const FString& V) { FIntPoint R(0, 0); sscanf_s(TCHAR_TO_ANSI(*V), "(X=%d,Y=%d)", &R.X, &R.Y); if (R.X > 0 && R.Y > 0) FSettings::Get()->SetScreenResolution(R); }));
-	BindingMap.Add("DisplayGamma", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetCurrentDisplayGamma()); },
-		[](const FString& V) { FSettings::Get()->SetCurrentDisplayGamma(FCString::Atof(*V)); }));
-	BindingMap.Add("OverallScalabilityLevel", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetOverallScalabilityLevel()); },
-		[](const FString& V) { FSettings::Get()->SetOverallScalabilityLevel(FCString::Atoi(*V)); }));
-	BindingMap.Add("ResolutionScaleNormalized", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetResolutionScaleNormalized()); },
-		[](const FString& V) { FSettings::Get()->SetResolutionScaleNormalized(FCString::Atof(*V)); }));
-	BindingMap.Add("GlobalIlluminationQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetGlobalIlluminationQuality()); },
-		[](const FString& V) { FSettings::Get()->SetGlobalIlluminationQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("ShadowQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetShadowQuality()); },
-		[](const FString& V) { FSettings::Get()->SetShadowQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("AntiAliasingQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetAntiAliasingQuality()); },
-		[](const FString& V) { FSettings::Get()->SetAntiAliasingQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("ViewDistanceQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetViewDistanceQuality()); },
-		[](const FString& V) { FSettings::Get()->SetViewDistanceQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("TextureQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetTextureQuality()); },
-		[](const FString& V) { FSettings::Get()->SetTextureQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("VisualEffectQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetVisualEffectQuality()); },
-		[](const FString& V) { FSettings::Get()->SetVisualEffectQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("ReflectionQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetReflectionQuality()); },
-		[](const FString& V) { FSettings::Get()->SetReflectionQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("PostProcessingQuality", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetPostProcessingQuality()); },
-		[](const FString& V) { FSettings::Get()->SetPostProcessingQuality(FCString::Atoi(*V)); }));
-	BindingMap.Add("VSync", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->IsVSyncEnabled()); },
-		[](const FString& V) { FSettings::Get()->SetVSyncEnabled(V.ToBool()); }));
-	BindingMap.Add("FrameRateLimit", MakeShared<FOptionsDataInteractionHelper>(
-		[]() { return LexToString(FSettings::Get()->GetFrameRateLimit()); },
-		[](const FString& V) { FSettings::Get()->SetFrameRateLimit(FCString::Atof(*V)); }));
+	Bind(TEXT("FullscreenMode"), &FSettings::GetFullscreenMode, &FSettings::SetFullscreenMode);
+	Bind(TEXT("Resolution"), &FSettings::GetScreenResolution, &FSettings::SetScreenResolution);
+	Bind(TEXT("DisplayGamma"), &FSettings::GetCurrentDisplayGamma, &FSettings::SetCurrentDisplayGamma);
+	Bind(TEXT("OverallScalabilityLevel"), &FSettings::GetOverallScalabilityLevel, &FSettings::SetOverallScalabilityLevel);
+	Bind(TEXT("ResolutionScaleNormalized"), &FSettings::GetResolutionScaleNormalized, &FSettings::SetResolutionScaleNormalized);
+	Bind(TEXT("GlobalIlluminationQuality"), &FSettings::GetGlobalIlluminationQuality, &FSettings::SetGlobalIlluminationQuality);
+	Bind(TEXT("ShadowQuality"), &FSettings::GetShadowQuality, &FSettings::SetShadowQuality);
+	Bind(TEXT("AntiAliasingQuality"), &FSettings::GetAntiAliasingQuality, &FSettings::SetAntiAliasingQuality);
+	Bind(TEXT("ViewDistanceQuality"), &FSettings::GetViewDistanceQuality, &FSettings::SetViewDistanceQuality);
+	Bind(TEXT("TextureQuality"), &FSettings::GetTextureQuality, &FSettings::SetTextureQuality);
+	Bind(TEXT("VisualEffectQuality"), &FSettings::GetVisualEffectQuality, &FSettings::SetVisualEffectQuality);
+	Bind(TEXT("ReflectionQuality"), &FSettings::GetReflectionQuality, &FSettings::SetReflectionQuality);
+	Bind(TEXT("PostProcessingQuality"), &FSettings::GetPostProcessingQuality, &FSettings::SetPostProcessingQuality);
+	Bind(TEXT("VSync"), &FSettings::IsVSyncEnabled, &FSettings::SetVSyncEnabled);
+	Bind(TEXT("FrameRateLimit"), &FSettings::GetFrameRateLimit, &FSettings::SetFrameRateLimit);
 }
 
 TSharedPtr<FOptionsDataInteractionHelper> UOptionsDataRegistry::ResolveBinding(const FName& BindingKey) const
@@ -157,6 +102,11 @@ TSharedPtr<FOptionsDataInteractionHelper> UOptionsDataRegistry::ResolveBinding(c
 
 void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer)
 {
+	UFrontendGameUserSettings* Settings = UFrontendGameUserSettings::Get();
+	if (!ensure(Settings)) return;
+	PendingSettings = DuplicateObject<UFrontendGameUserSettings>(Settings, this);
+	// ScalabilityQuality is not a UPROPERTY, so UObject duplication does not copy it.
+	PendingSettings->ScalabilityQuality = Settings->ScalabilityQuality;
 	InitBindingMap();
 
 	if (!ensureMsgf(OptionsConfig, TEXT("OptionsDataRegistry requires an OptionsConfig DataAsset.")))
@@ -165,6 +115,35 @@ void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPl
 	}
 
 	InitFromDataAsset(InOwningLocalPlayer);
+}
+
+void UOptionsDataRegistry::CommitPendingSettings(UFrontendGameUserSettings* TargetSettings)
+{
+	if (!TargetSettings || !PendingSettings) return;
+	for (const auto& Commit : SettingCommitters) Commit(TargetSettings);
+	// Preserve the complete custom quality state, including foliage/shading and resolution scale.
+	TargetSettings->ScalabilityQuality = PendingSettings->ScalabilityQuality;
+
+	UEnhancedInputUserSettings* InputSettings = InputUserSettings.Get();
+	if (InputSettings && PendingKeyProfile)
+	{
+		for (const auto& Row : PendingKeyProfile->GetPlayerMappingRows())
+		{
+			for (const FPlayerKeyMapping& Mapping : Row.Value.Mappings)
+			{
+				FMapPlayerKeyArgs Args;
+				Args.ProfileIdString = PendingKeyProfile->GetProfileIdString();
+				Args.MappingName = Mapping.GetMappingName();
+				Args.Slot = Mapping.GetSlot();
+				Args.HardwareDeviceId = Mapping.GetHardwareDeviceId().HardwareDeviceIdentifier;
+				Args.NewKey = Mapping.GetCurrentKey();
+				FGameplayTagContainer FailureReason;
+				InputSettings->MapPlayerKey(Args, FailureReason);
+			}
+		}
+		InputSettings->ApplySettings();
+		InputSettings->SaveSettings();
+	}
 }
 
 TArray<UListDataObject_Base*> UOptionsDataRegistry::GetListSourceItemBySelectedTabId(const FName& InSelectedTabId) const
@@ -231,8 +210,12 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 
 	RegisteredOptionsCollectionTabs.Add(Tab);
 	if (!ActiveProfile) { return; }
+	InputUserSettings = UserSettings;
+	UOptionsKeyBindingProfile* DraftProfile = NewObject<UOptionsKeyBindingProfile>(this);
+	DraftProfile->InitializeFromProfile(*ActiveProfile);
+	PendingKeyProfile = DraftProfile;
 
-	const TMap<FName, FKeyMappingRow>& MappingRows = ActiveProfile->GetPlayerMappingRows();
+	const TMap<FName, FKeyMappingRow>& MappingRows = PendingKeyProfile->GetPlayerMappingRows();
 
 	// Group mappings by UInputAction
 	TMap<const UObject*, TArray<const FPlayerKeyMapping*>> GroupedByAction;
@@ -271,6 +254,7 @@ void UOptionsDataRegistry::InitControlCollectionTab(ULocalPlayer* InOwningLocalP
 
 		UUListDataObject_KeyBinding* KeyBindingEntry = NewObject<UUListDataObject_KeyBinding>();
 		KeyBindingEntry->SetOwningLocalPlayer(InOwningLocalPlayer);
+		KeyBindingEntry->SetKeyProfile(PendingKeyProfile);
 		KeyBindingEntry->SetDataId(ActionMappingName);
 		KeyBindingEntry->SetDataDisplayName(ActionDisplayName);
 
@@ -339,6 +323,8 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 			{
 				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
 				if (!Entry) continue;
+				// Options are committed on Back, even for legacy assets marked immediate.
+				Entry->SetShouldApplyChangeImmediately(false);
 
 				// Wire BindingKey → getter/setter for Options entries
 				if (!EntryData->BindingKey.IsNone())
@@ -347,8 +333,7 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 					{
 						if (UListDataObject_Value* ValueEntry = Cast<UListDataObject_Value>(Entry))
 						{
-							ValueEntry->SetDataDynamicGetter(Helper);
-							ValueEntry->SetDataDynamicSetter(Helper);
+							ValueEntry->SetBinding(Helper);
 						}
 					}
 				}

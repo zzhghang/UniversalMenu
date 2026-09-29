@@ -35,12 +35,6 @@ private:
 	UFUNCTION()
 	void OnMouseCaptureBegin();
 
-	UFUNCTION()
-	void OnMouseCaptureEnd();
-
-	UFUNCTION()
-	void OnControllerCaptureEnd();
-
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
 	UCommonNumericTextBlock* Cnb_Value;
 

@@ -25,13 +25,16 @@ public:
 	/** Returns the singleton instance via GEngine->GetGameUserSettings(). */
 	static UFrontendGameUserSettings* Get();
 
+	/** Setters only update stored values; runtime effects are applied together. */
+	virtual void ApplyNonResolutionSettings() override;
+
 	// ---- Gameplay ----
 	/**@{*/
 	UFUNCTION()
 	FString GetDifficulty() const {return Difficulty;}
 
 	UFUNCTION()
-	void SetDifficulty(const FString& InStringValue){ Difficulty = InStringValue; SaveSettings();}
+	void SetDifficulty(const FString& InStringValue){ Difficulty = InStringValue; }
 
 	UFUNCTION()
 	bool GetShowHealthBar() const {return bShowHealthBar;}
@@ -225,6 +228,8 @@ private:
 	// ---- Video ----
 
 	// (Video properties are inherited from UGameUserSettings)
+	UPROPERTY(Config)
+	float DisplayGamma = 2.2f;
 
 
 	// ---- Language ----

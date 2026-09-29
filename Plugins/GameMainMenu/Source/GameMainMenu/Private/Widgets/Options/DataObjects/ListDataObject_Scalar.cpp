@@ -23,12 +23,12 @@ FCommonNumberFormattingOptions UListDataObject_Scalar::WithDecimal(int32 NumFrac
 
 float UListDataObject_Scalar::GetCurrentValue() const
 {
-	if (DataDynamicGetter)
+	if (Binding)
 	{
 		return FMath::GetMappedRangeValueClamped(
 			OutValueRange,
 			DisplayValueRange,
-			StringToFloat(DataDynamicGetter->GetValueAsString())
+			StringToFloat(Binding->GetValueAsString())
 		);
 	}
 
@@ -37,14 +37,14 @@ float UListDataObject_Scalar::GetCurrentValue() const
 
 void UListDataObject_Scalar::SetCurrentValue(float NewValue)
 {
-	if (DataDynamicGetter)
+	if (Binding)
 	{
 		const float ClampValue = FMath::GetMappedRangeValueClamped(
 				DisplayValueRange,
 				OutValueRange,
 				NewValue
 		);
-		DataDynamicSetter->SetValueFromString(LexToString(ClampValue));
+		Binding->SetValueFromString(LexToString(ClampValue));
 
 		NotifyListDataModified(this);
 	}
@@ -52,10 +52,10 @@ void UListDataObject_Scalar::SetCurrentValue(float NewValue)
 
 bool UListDataObject_Scalar::CanResetBackToDefaultValue() const
 {
-	if (HasDefaultValue() && DataDynamicGetter)
+	if (HasDefaultValue() && Binding)
 	{
 		const float DefaultValue = StringToFloat(GetDefaultStringValue());
-		const float CurrentValue = StringToFloat(DataDynamicGetter->GetValueAsString());
+		const float CurrentValue = StringToFloat(Binding->GetValueAsString());
 
 		return !FMath::IsNearlyEqual(DefaultValue,CurrentValue,0.01f);
 	}
@@ -67,9 +67,9 @@ bool UListDataObject_Scalar::TryResetBackToDefaultValue()
 {
 	if (CanResetBackToDefaultValue())
 	{
-		if (DataDynamicGetter)
+		if (Binding)
 		{
-			DataDynamicSetter->SetValueFromString(GetDefaultStringValue());
+			Binding->SetValueFromString(GetDefaultStringValue());
 
 			NotifyListDataModified(this,EOptionsListDataModifyReason::ResetToDefault);
 			

@@ -7,13 +7,14 @@
 #include "FrontendTypes/FrontendStructTypes.h"
 #include "UListDataObject_KeyBinding.generated.h"
 
-class UEnhancedInputUserSettings;
+class UEnhancedPlayerMappableKeyProfile;
+struct FPlayerKeyMapping;
 
 /**
  * Data object for a key binding entry in the options control tab.
  *
  * Wraps one or more FKeyBindingSlotDescriptor (e.g. keyboard + gamepad slots)
- * and delegates to UEnhancedInputUserSettings for key mapping operations.
+ * and edits a shared draft profile, committed by the options registry on Back.
  */
 UCLASS()
 class GAMEMAINMENU_API UUListDataObject_KeyBinding : public UListDataObject_Base
@@ -48,6 +49,8 @@ public:
 	FKey GetGamepadKey() const;
 
 	void SetOwningLocalPlayer(ULocalPlayer* InLocalPlayer);
+	/** Shared draft profile; editing it never changes the active input mappings. */
+	void SetKeyProfile(UEnhancedPlayerMappableKeyProfile* InProfile) { KeyProfile = InProfile; }
 
 	/** Bind NewKey to the first compatible slot (gamepad or keyboard). */
 	void BindNewInputKey(const FKey& NewKey);
@@ -69,7 +72,10 @@ protected:
 
 private:
 
-	UEnhancedInputUserSettings* GetUserSettings() const;
+	FPlayerKeyMapping* FindMappingForSlot(int32 SlotIndex) const;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UEnhancedPlayerMappableKeyProfile> KeyProfile;
 
 	UPROPERTY(Transient)
 	TArray<FKeyBindingSlotDescriptor> KeyBindingSlots;

@@ -14,6 +14,9 @@ class FOptionsDataInteractionHelper;
 class UMenuConfigData;
 class UMenuTabConfig;
 class UMenuEntryConfig;
+class UFrontendGameUserSettings;
+class UEnhancedInputUserSettings;
+class UEnhancedPlayerMappableKeyProfile;
 
 /**
  * Builds and owns the options data hierarchy (tabs -> categories -> entries).
@@ -30,6 +33,9 @@ public:
 
 	/** Initialize all option tabs from the assigned DataAsset. */
 	void InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer);
+
+	/** Transfer the edited values to live settings when leaving the options screen. */
+	void CommitPendingSettings(UFrontendGameUserSettings* TargetSettings);
 
 	/** Assign a DataAsset config. Must be called before InitOptionsDataRegistry. */
 	void SetOptionsConfig(UMenuConfigData* InConfig) { OptionsConfig = InConfig; }
@@ -68,4 +74,13 @@ private:
 	TArray<UListDataObject_Collection*> RegisteredOptionsCollectionTabs;
 
 	TMap<FName, TSharedPtr<FOptionsDataInteractionHelper>> BindingMap;
+	TArray<TFunction<void(UFrontendGameUserSettings*)>> SettingCommitters;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UFrontendGameUserSettings> PendingSettings;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UEnhancedPlayerMappableKeyProfile> PendingKeyProfile;
+
+	TWeakObjectPtr<UEnhancedInputUserSettings> InputUserSettings;
 };

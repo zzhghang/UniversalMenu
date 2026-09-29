@@ -10,7 +10,7 @@
 class FOptionsDataInteractionHelper;
 
 /**
- * Abstract base for data objects that hold a config value with getter/setter helpers.
+ * Abstract base for data objects that hold a config value with a read/write binding.
  *
  * Uses FOptionsDataInteractionHelper which dispatches to UFrontendGameUserSettings
  * UFUNCTIONs via TFunction — getter returns FString, setter accepts FString.
@@ -22,11 +22,8 @@ class GAMEMAINMENU_API UListDataObject_Value : public UListDataObject_Base
 
 public:
 
-	/** Set the getter helper used to read from UFrontendGameUserSettings. */
-	void SetDataDynamicGetter(const TSharedPtr<FOptionsDataInteractionHelper>& InDynamicGetter);
-
-	/** Set the setter helper used to write to UFrontendGameUserSettings. */
-	void SetDataDynamicSetter(const TSharedPtr<FOptionsDataInteractionHelper>& InDynamicSetter);
+	/** Set the binding used to read and write the setting. */
+	void SetBinding(const TSharedPtr<FOptionsDataInteractionHelper>& InBinding);
 
 	void SetDefaultValueFromString(const FString& InStringValue) { DefaultStringValue = InStringValue;}
 
@@ -38,11 +35,8 @@ protected:
 
 	FString GetDefaultStringValue() const { return DefaultStringValue.GetValue();}
 
-	/** Helper for reading the current config value via TFunction dispatch. */
-	TSharedPtr<FOptionsDataInteractionHelper> DataDynamicGetter;
-
-	/** Helper for writing the config value via TFunction dispatch. */
-	TSharedPtr<FOptionsDataInteractionHelper> DataDynamicSetter;
+	/** Shared read/write access to the current config value. */
+	TSharedPtr<FOptionsDataInteractionHelper> Binding;
 
 private:
 

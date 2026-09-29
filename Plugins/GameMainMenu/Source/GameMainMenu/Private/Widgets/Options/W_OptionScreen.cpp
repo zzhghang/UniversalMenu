@@ -80,13 +80,8 @@ void UW_OptionScreen::NativeOnActivated()
 
 		TabListWidget_OptionTabs->RequestRegisterTab(TabId, CollectionTab->GetDataDisplayName());
 	}
-}
-
-void UW_OptionScreen::NativeOnDeactivated()
-{
-	Super::NativeOnDeactivated();
-	
-	UFrontendGameUserSettings::Get()->ApplySettings(true);
+	const FName SelectedTabId = TabListWidget_OptionTabs->GetSelectedTabId();
+	if (!SelectedTabId.IsNone()) OnOptionsTabSelected(SelectedTabId);
 }
 
 UWidget* UW_OptionScreen::NativeGetDesiredFocusTarget() const
@@ -168,7 +163,17 @@ void UW_OptionScreen::OnResetAllBoundActionTriggered()
 
 void UW_OptionScreen::OnBackBoundActionTriggered()
 {
+	if (CreatedDataRegistry)
+	{
+		if (UFrontendGameUserSettings* Settings = UFrontendGameUserSettings::Get())
+		{
+			CreatedDataRegistry->CommitPendingSettings(Settings);
+			Settings->ApplySettings(true);
+		}
+	}
 	DeactivateWidget();
+	// Reopening starts a fresh draft from the applied settings.
+	CreatedDataRegistry = nullptr;
 }
 
 void UW_OptionScreen::OnListViewItemHovered(UObject* InHoveredItem, bool bWasHovered)
@@ -314,7 +319,7 @@ UOptionsDataRegistry* UW_OptionScreen::GetOrCreateDataRegistry()
 {
 	if (!CreatedDataRegistry)
 	{
-		CreatedDataRegistry = NewObject<UOptionsDataRegistry>();
+		CreatedDataRegistry = NewObject<UOptionsDataRegistry>(this);
 		CreatedDataRegistry->SetOptionsConfig(OptionsConfig);
 		CreatedDataRegistry->InitOptionsDataRegistry(GetOwningLocalPlayer());
 	}

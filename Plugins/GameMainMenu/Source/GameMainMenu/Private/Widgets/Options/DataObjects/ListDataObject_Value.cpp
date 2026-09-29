@@ -3,12 +3,7 @@
 
 #include "Widgets/Options/DataObjects/ListDataObject_Value.h"
 
-void UListDataObject_Value::SetDataDynamicGetter(const TSharedPtr<FOptionsDataInteractionHelper>& InDynamicGetter)
+void UListDataObject_Value::SetBinding(const TSharedPtr<FOptionsDataInteractionHelper>& InBinding)
 {
-	DataDynamicGetter = InDynamicGetter;
-}
-
-void UListDataObject_Value::SetDataDynamicSetter(const TSharedPtr<FOptionsDataInteractionHelper>& InDynamicSetter)
-{
-	DataDynamicSetter = InDynamicSetter;
+	Binding = InBinding;
 }

@@ -35,7 +35,7 @@ public:
 	FName BindingKey;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	bool bApplyImmediately = true;
+	bool bApplyImmediately = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool bPackagedBuildOnly = false;
