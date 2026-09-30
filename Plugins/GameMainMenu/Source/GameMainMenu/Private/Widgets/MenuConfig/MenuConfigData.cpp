@@ -28,6 +28,14 @@ static void AddDefaultWindowModeOptions(UListDataObject_StringEnum* Entry)
 
 static void ApplyCommonConfig(UListDataObject_Base* Entry, const UMenuEntryConfig* Data)
 {
+	if (Data->BindingKey == TEXT("FrameRateLimit"))
+	{
+		if (UListDataObject_String* StringEntry = Cast<UListDataObject_String>(Entry))
+		{
+			// Existing assets use keys such as "60", while the float getter returns "60.000000".
+			StringEntry->SetUseNumericOptionMatching(true);
+		}
+	}
 	Entry->SetDynamicDetailsRichText(Data->DynamicDetails);
 	if (!Data->DisableRichReason.IsEmpty())
 		Entry->SetDisableRichText(Data->DisableRichReason);

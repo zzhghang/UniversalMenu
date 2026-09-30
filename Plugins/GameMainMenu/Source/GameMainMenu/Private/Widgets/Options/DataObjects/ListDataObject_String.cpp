@@ -6,6 +6,7 @@
 #include "FrontendDebugHelper.h"
 #include "Widgets/Options/OptionsDataInteractionHelper.h"
 #include "LocalizationKeys.h"
+#include "Misc/DefaultValueHelper.h"
 
 void UListDataObject_String::AddDynamicString(const FString& InString, const FText& InText)
 {
@@ -13,11 +14,36 @@ void UListDataObject_String::AddDynamicString(const FString& InString, const FTe
 	TextArray.Add(InText);
 }
 
+bool UListDataObject_String::AreOptionValuesEqual(const FString& Left, const FString& Right) const
+{
+	if (Left == Right) return true;
+	if (!bUseNumericOptionMatching) return false;
+
+	// Compare in the float domain used by the settings binding. Do not round distinct frame rates.
+	float LeftValue = 0.f;
+	float RightValue = 0.f;
+	return FDefaultValueHelper::ParseFloat(Left, LeftValue) && FMath::IsFinite(LeftValue) &&
+		FDefaultValueHelper::ParseFloat(Right, RightValue) && FMath::IsFinite(RightValue) &&
+		LeftValue == RightValue;
+}
+
+int32 UListDataObject_String::FindOptionIndex(const FString& InValue) const
+{
+	// Prefer the exact key if an asset contains more than one representation of a number.
+	const int32 ExactIndex = StringArray.IndexOfByKey(InValue);
+	if (ExactIndex != INDEX_NONE || !bUseNumericOptionMatching) return ExactIndex;
+
+	return StringArray.IndexOfByPredicate([this, &InValue](const FString& Option)
+	{
+		return AreOptionValuesEqual(Option, InValue);
+	});
+}
+
 void UListDataObject_String::GotoPreOption()
 {
 	if (StringArray.IsEmpty() || TextArray.IsEmpty()) return;
 
-	const int32 CurrentDisplayIndex = StringArray.IndexOfByKey(CurrentStringValue);
+	const int32 CurrentDisplayIndex = FindOptionIndex(CurrentStringValue);
 	const int32 PreviousDisplayIndex = CurrentDisplayIndex - 1;
 
 	if (const bool bIsPreviousIndexValid = StringArray.IsValidIndex(PreviousDisplayIndex))
@@ -43,7 +69,7 @@ void UListDataObject_String::GotoNextOption()
 {
 	if (StringArray.IsEmpty() || TextArray.IsEmpty()) return;
 
-	const int32 CurrentDisplayIndex = StringArray.IndexOfByKey(CurrentStringValue);
+	const int32 CurrentDisplayIndex = FindOptionIndex(CurrentStringValue);
 	const int32 NextDisplayIndex = CurrentDisplayIndex + 1;
 
 	if (const bool bIsNextIndexValid = StringArray.IsValidIndex(NextDisplayIndex))
@@ -110,7 +136,7 @@ void UListDataObject_String::OnDataObjectInitialized()
 
 bool UListDataObject_String::CanResetBackToDefaultValue() const
 {
-	return HasDefaultValue() && CurrentStringValue != GetDefaultStringValue();
+	return HasDefaultValue() && !AreOptionValuesEqual(CurrentStringValue, GetDefaultStringValue());
 }
 
 bool UListDataObject_String::TryResetBackToDefaultValue()
@@ -136,7 +162,7 @@ bool UListDataObject_String::TryResetBackToDefaultValue()
 
 bool UListDataObject_String::CanSetToForcedStringValue(const FString& InForcedStringValue) const
 {
-	return CurrentStringValue != InForcedStringValue;
+	return !AreOptionValuesEqual(CurrentStringValue, InForcedStringValue);
 }
 
 void UListDataObject_String::OnSetForcedStringValue(const FString& InForcedStringValue)
@@ -154,7 +180,7 @@ void UListDataObject_String::OnSetForcedStringValue(const FString& InForcedStrin
 
 bool UListDataObject_String::TrySetDisplayTextFromStringValue(const FString& InStringValue)
 {
-	if (const int32 CurrentFoundIndex = StringArray.IndexOfByKey(InStringValue); TextArray.IsValidIndex(CurrentFoundIndex))
+	if (const int32 CurrentFoundIndex = FindOptionIndex(InStringValue); TextArray.IsValidIndex(CurrentFoundIndex))
 	{
 		CurrentTextValue = TextArray[CurrentFoundIndex];
 		return true;

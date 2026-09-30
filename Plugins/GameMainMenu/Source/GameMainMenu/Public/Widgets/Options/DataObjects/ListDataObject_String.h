@@ -18,6 +18,9 @@ public:
 
 	void AddDynamicString(const FString& InString, const FText& InText);
 
+	/** Opt in for numeric settings represented by string options (for example, frame rate limits). */
+	void SetUseNumericOptionMatching(bool bEnabled) { bUseNumericOptionMatching = bEnabled; }
+
 	void GotoPreOption();
 	
 	void GotoNextOption();
@@ -60,6 +63,11 @@ protected:
 	TArray<FString> StringArray;
 	/** Display texts shown in UI (localized). */
 	TArray<FText> TextArray;
+
+private:
+	int32 FindOptionIndex(const FString& InValue) const;
+	bool AreOptionValuesEqual(const FString& Left, const FString& Right) const;
+	bool bUseNumericOptionMatching = false;
 	
 };
 
