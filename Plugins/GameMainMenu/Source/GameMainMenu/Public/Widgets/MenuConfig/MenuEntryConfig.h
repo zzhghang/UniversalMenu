@@ -6,6 +6,7 @@
 #include "Engine/DataAsset.h"
 #include "CommonNumericTextBlock.h"
 #include "Widgets/MenuConfig/MenuConfigTypes.h"
+#include "Widgets/MenuConfig/MenuEntryValueConfig.h"
 #include "MenuEntryConfig.generated.h"
 
 // ============================================================================
@@ -18,6 +19,25 @@ class GAMEMAINMENU_API UMenuEntryConfig : public UDataAsset
 	GENERATED_BODY()
 
 public:
+	/** Select a type and edit its parameters inline. Existing assets are upgraded on load. */
+	UPROPERTY(EditAnywhere, Instanced, BlueprintReadOnly, NoClear, Category = "Value")
+	TObjectPtr<UMenuEntryValueConfig> ValueConfig;
+
+	UFUNCTION(BlueprintPure, Category = "Menu Config")
+	EMenuEntryValueType GetEffectiveValueType() const;
+
+	/** Compatibility for old assets and C++ callers which still populate the original fields. */
+	UMenuEntryValueConfig* CreateLegacyValueConfig(UObject* Outer) const;
+	void UpgradeLegacyValueConfig();
+	void SynchronizeLegacyFields();
+
+	virtual void PostLoad() override;
+	virtual void PreSave(FObjectPreSaveContext SaveContext) override;
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+	virtual void PostEditUndo() override;
+#endif
+
 	// ---- Identity and description ----
 	/** Entry identifier. Must be unique within its tab; dependencies reference this ID. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entry", meta = (DisplayPriority = "0"))
@@ -29,8 +49,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entry", meta = (DisplayPriority = "2", MultiLine = "true"))
 	FText Description;
 
-	/** Selects the entry control and the type-specific fields shown below. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "0"))
+	/** Legacy mirror for existing Blueprint readers. New code should use GetEffectiveValueType(). */
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	EMenuEntryValueType ValueType = EMenuEntryValueType::Bool;
 
 	// ---- Settings binding ----
@@ -51,67 +71,70 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Conditions", meta = (DisplayPriority = "1"))
 	TArray<FName> EditDependencyIds;
 
+	// Serialized compatibility fields. Kept under their original names for existing assets and
+	// Blueprint getter nodes, but hidden from Details. ValueConfig is authoritative once present.
+	// Do not mark these DeprecatedProperty: old asset values must still deserialize.
 	// ---- Bool fields ----
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "1", EditCondition = "ValueType == EMenuEntryValueType::Bool", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	bool bDefaultBool = false;
 
 	// ---- Scalar fields ----
 	/** Default value in the output range, stored as a numeric string. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "1", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	FString DefaultValue;
 
 	/** Minimum value displayed by the slider. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "2", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	float ScalarMin = 0.f;
 
 	/** Maximum value displayed by the slider. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "3", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	float ScalarMax = 1.f;
 
 	/** Minimum underlying value sent to the settings binding. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "4", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	float ScalarOutMin = 0.f;
 
 	/** Maximum underlying value sent to the settings binding. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "5", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	float ScalarOutMax = 2.f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "6", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	float StepSize = 0.01f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "7", EditCondition = "ValueType == EMenuEntryValueType::Scalar", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	ECommonNumericType NumericType = ECommonNumericType::Percentage;
 
 	// ---- String fields ----
 	/** Empty means no explicit default. FullscreenMode uses enum names; Culture uses a culture code; Resolution uses a resolution string. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "1", EditCondition = "ValueType == EMenuEntryValueType::String || ValueType == EMenuEntryValueType::Culture || ValueType == EMenuEntryValueType::Resolution", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	FString DefaultStringValue;
 
 	/** FullscreenMode keys are enum names; an empty map uses the built-in window modes. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "2", EditCondition = "ValueType == EMenuEntryValueType::String", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	TMap<FString, FText> AvailableOptions;
 
 	// ---- Integer fields ----
 	/** Always used as the default, including 0. FullscreenMode: 0 = fullscreen, 1 = borderless, 2 = windowed. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "1", EditCondition = "ValueType == EMenuEntryValueType::Integer", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	int32 DefaultIntValue = 0;
 
 	/** Configured options and localized labels. For FullscreenMode, an empty map uses the built-in window modes. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "2", EditCondition = "ValueType == EMenuEntryValueType::Integer", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	TMap<int32, FText> AvailableIntegerOptions;
 
 	// ---- Editable fields ----
 	/** Maximum input length. Zero means no explicit limit. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "2", EditCondition = "ValueType == EMenuEntryValueType::Editable", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	int32 MaxCharCount = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "3", EditCondition = "ValueType == EMenuEntryValueType::Editable", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	bool bIsPassword = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "1", EditCondition = "ValueType == EMenuEntryValueType::Editable", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	FText HintText;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (DisplayPriority = "4", EditCondition = "ValueType == EMenuEntryValueType::Editable", EditConditionHides))
+	UPROPERTY(BlueprintReadOnly, Category = "Legacy")
 	EEditableCharFilter CharFilter = EEditableCharFilter::All;
 
 	/** Rich-text reason for disabled editing. Also used by Multiplayer's Bool dependency condition. */

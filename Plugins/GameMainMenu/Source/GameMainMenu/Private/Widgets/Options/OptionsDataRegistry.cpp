@@ -53,7 +53,15 @@ void UOptionsDataRegistry::InitBindingMap()
 	Bind(TEXT("HighlightInteraction"), &FSettings::GetHighlightInteraction, &FSettings::SetHighlightInteraction);
 	Bind(TEXT("ShowSubtitles"), &FSettings::GetShowSubtitles, &FSettings::SetShowSubtitles);
 	Bind(TEXT("AutoSave"), &FSettings::GetAutoSave, &FSettings::SetAutoSave);
+	Bind(TEXT("AutoPickup"), &FSettings::GetAutoPickup, &FSettings::SetAutoPickup);
+	Bind(TEXT("SprintMode"), &FSettings::GetSprintMode, &FSettings::SetSprintMode);
+	Bind(TEXT("CrouchMode"), &FSettings::GetCrouchMode, &FSettings::SetCrouchMode);
 	Bind(TEXT("CurrentCulture"), &FSettings::GetCurrentCulture, &FSettings::SetCurrentCulture);
+
+	// ---- HUD ----
+	Bind(TEXT("ShowMinimap"), &FSettings::GetShowMinimap, &FSettings::SetShowMinimap);
+	Bind(TEXT("ShowAmmoCount"), &FSettings::GetShowAmmoCount, &FSettings::SetShowAmmoCount);
+	Bind(TEXT("CrosshairSize"), &FSettings::GetCrosshairSize, &FSettings::SetCrosshairSize);
 
 	// ---- Audio ----
 	Bind(TEXT("OverallVolume"), &FSettings::GetOverallVolume, &FSettings::SetOverallVolume);

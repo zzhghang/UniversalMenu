@@ -34,6 +34,12 @@ UFrontendGameUserSettings::UFrontendGameUserSettings()
 	, bHighlightInteraction(true)
 	, bShowSubtitles(true)
 	, bAutoSave(true)
+	, AutoPickup(TEXT("Off"))
+	, SprintMode(TEXT("Hold"))
+	, CrouchMode(TEXT("Hold"))
+	, bShowMinimap(true)
+	, bShowAmmoCount(true)
+	, CrosshairSize(1.f)
 	, OverallVolume(1.f)
 	, MusicVolume(1.f)
 	, SFXVolume(1.f)
@@ -181,4 +187,34 @@ void UFrontendGameUserSettings::SetShowSubtitles(const bool InValue)
 void UFrontendGameUserSettings::SetAutoSave(const bool InValue)
 {
 	bAutoSave = InValue;
+}
+
+void UFrontendGameUserSettings::SetAutoPickup(const FString& InValue)
+{
+	AutoPickup = InValue;
+}
+
+void UFrontendGameUserSettings::SetSprintMode(const FString& InValue)
+{
+	SprintMode = InValue;
+}
+
+void UFrontendGameUserSettings::SetCrouchMode(const FString& InValue)
+{
+	CrouchMode = InValue;
+}
+
+void UFrontendGameUserSettings::SetShowMinimap(bool InValue)
+{
+	bShowMinimap = InValue;
+}
+
+void UFrontendGameUserSettings::SetShowAmmoCount(bool InValue)
+{
+	bShowAmmoCount = InValue;
+}
+
+void UFrontendGameUserSettings::SetCrosshairSize(float InValue)
+{
+	CrosshairSize = FMath::IsFinite(InValue) ? FMath::Clamp(InValue, 0.5f, 2.f) : 1.f;
 }

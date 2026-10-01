@@ -30,6 +30,12 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 	const float OriginalVolume = Live->GetOverallVolume();
 	const int32 OriginalShadow = Live->GetShadowQuality();
 	const FString OriginalDifficulty = Live->GetDifficulty();
+	const FString OriginalAutoPickup = Live->GetAutoPickup();
+	const FString OriginalSprintMode = Live->GetSprintMode();
+	const FString OriginalCrouchMode = Live->GetCrouchMode();
+	const bool OriginalMinimap = Live->GetShowMinimap();
+	const bool OriginalAmmoCount = Live->GetShowAmmoCount();
+	const float OriginalCrosshairSize = Live->GetCrosshairSize();
 	const FString OriginalCulture = FInternationalization::Get().GetCurrentCulture()->GetName();
 	const float OriginalGamma = GEngine->GetDisplayGamma();
 
@@ -56,6 +62,36 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 	VolumeConfig->DefaultValue = TEXT("1.0");
 	UMenuEntryConfig* DifficultyConfig = AddEntry(TEXT("Difficulty"), EMenuEntryValueType::String, TEXT("Difficulty"));
 	DifficultyConfig->DefaultStringValue = TEXT("Normal");
+	UMenuEntryConfig* AutoPickupConfig = AddEntry(TEXT("AutoPickup"), EMenuEntryValueType::String, TEXT("AutoPickup"));
+	auto* AutoPickupValue = NewObject<UMenuStringValueConfig>(AutoPickupConfig);
+	AutoPickupConfig->ValueConfig = AutoPickupValue;
+	AutoPickupValue->DefaultValue = TEXT("Off");
+	for (const TCHAR* Mode : { TEXT("Off"), TEXT("MaterialsOnly"), TEXT("AllItems") })
+	{
+		AutoPickupValue->AvailableOptions.Add(Mode, FText::FromString(Mode));
+	}
+	for (const TCHAR* Key : { TEXT("SprintMode"), TEXT("CrouchMode") })
+	{
+		UMenuEntryConfig* InputConfig = AddEntry(Key, EMenuEntryValueType::String, Key);
+		auto* InputValue = NewObject<UMenuStringValueConfig>(InputConfig);
+		InputConfig->ValueConfig = InputValue;
+		InputValue->DefaultValue = TEXT("Hold");
+		InputValue->AvailableOptions.Add(TEXT("Hold"), FText::FromString(TEXT("Hold")));
+		InputValue->AvailableOptions.Add(TEXT("Toggle"), FText::FromString(TEXT("Toggle")));
+	}
+	for (const TCHAR* Key : { TEXT("ShowMinimap"), TEXT("ShowAmmoCount") })
+	{
+		UMenuEntryConfig* HudConfig = AddEntry(Key, EMenuEntryValueType::Bool, Key);
+		auto* BoolValue = NewObject<UMenuBoolValueConfig>(HudConfig);
+		HudConfig->ValueConfig = BoolValue;
+		BoolValue->bDefaultValue = true;
+	}
+	UMenuEntryConfig* CrosshairConfig = AddEntry(TEXT("CrosshairSize"), EMenuEntryValueType::Scalar, TEXT("CrosshairSize"));
+	auto* CrosshairValue = NewObject<UMenuScalarValueConfig>(CrosshairConfig);
+	CrosshairConfig->ValueConfig = CrosshairValue;
+	CrosshairValue->ScalarMin = CrosshairValue->ScalarOutMin = 0.5f;
+	CrosshairValue->ScalarMax = CrosshairValue->ScalarOutMax = 2.f;
+	CrosshairValue->DefaultValue = TEXT("1.0");
 	UMenuEntryConfig* OverallConfig = AddEntry(TEXT("OverallQuality"), EMenuEntryValueType::Integer, TEXT("OverallScalabilityLevel"));
 	UMenuEntryConfig* ShadowConfig = AddEntry(TEXT("Shadow"), EMenuEntryValueType::Integer, TEXT("ShadowQuality"));
 	ShadowConfig->EditDependencyIds.Add(TEXT("OverallQuality"));
@@ -75,12 +111,35 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 	for (UListDataObject_Base* Item : Registry->GetListSourceItemBySelectedTabId(Tab->TabId)) Items.Add(Item->GetDataId(), Item);
 	auto* Volume = CastChecked<UListDataObject_Scalar>(Items.FindChecked(TEXT("Volume")));
 	auto* Difficulty = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("Difficulty")));
+	auto* AutoPickup = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("AutoPickup")));
+	auto* SprintMode = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("SprintMode")));
+	auto* CrouchMode = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("CrouchMode")));
+	auto* Minimap = CastChecked<UListDataObject_StringBool>(Items.FindChecked(TEXT("ShowMinimap")));
+	auto* AmmoCount = CastChecked<UListDataObject_StringBool>(Items.FindChecked(TEXT("ShowAmmoCount")));
+	auto* Crosshair = CastChecked<UListDataObject_Scalar>(Items.FindChecked(TEXT("CrosshairSize")));
 	auto* Overall = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("OverallQuality")));
 	auto* Shadow = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("Shadow")));
 	auto* Culture = CastChecked<UListDataObject_String>(Items.FindChecked(TEXT("Culture")));
 	auto* Gamma = CastChecked<UListDataObject_Scalar>(Items.FindChecked(TEXT("Gamma")));
 
 	Volume->SetCurrentValue(1.75f);
+	TestEqual(TEXT("Minimap reads saved setting"), Minimap->GetCurrentStringValue(), FString(OriginalMinimap ? TEXT("true") : TEXT("false")));
+	TestEqual(TEXT("Ammo count reads saved setting"), AmmoCount->GetCurrentStringValue(), FString(OriginalAmmoCount ? TEXT("true") : TEXT("false")));
+	TestEqual(TEXT("Crosshair reads saved scale"), Crosshair->GetCurrentValue(), OriginalCrosshairSize);
+	Minimap->SetValueFromString(TEXT("false"));
+	AmmoCount->SetValueFromString(TEXT("true"));
+	Crosshair->SetCurrentValue(1.5f);
+	TestEqual(TEXT("Minimap edit stays in draft"), Live->GetShowMinimap(), OriginalMinimap);
+	TestEqual(TEXT("Ammo count edit stays in draft"), Live->GetShowAmmoCount(), OriginalAmmoCount);
+	TestEqual(TEXT("Crosshair edit stays in draft"), Live->GetCrosshairSize(), OriginalCrosshairSize);
+	TestEqual(TEXT("Auto pickup reads the saved setting"), AutoPickup->GetCurrentStringValue(), OriginalAutoPickup);
+	const FString EditedAutoPickup = OriginalAutoPickup == TEXT("AllItems") ? TEXT("MaterialsOnly") : TEXT("AllItems");
+	AutoPickup->SetValueFromString(EditedAutoPickup);
+	TestEqual(TEXT("Sprint mode reads the saved setting"), SprintMode->GetCurrentStringValue(), OriginalSprintMode);
+	TestEqual(TEXT("Crouch mode reads the saved setting"), CrouchMode->GetCurrentStringValue(), OriginalCrouchMode);
+	SprintMode->OnRotatorInitiatedValueChanged(FText::FromString(TEXT("Toggle")));
+	TestEqual(TEXT("Changing sprint preserves crouch mode"), CrouchMode->GetCurrentStringValue(), OriginalCrouchMode);
+	CrouchMode->OnRotatorInitiatedValueChanged(FText::FromString(TEXT("Hold")));
 	Difficulty->SetValueFromString(TEXT("Hard"));
 	Culture->SetValueFromString(OriginalCulture == TEXT("en") ? TEXT("fr") : TEXT("en"));
 	Gamma->SetCurrentValue(3.f);
@@ -90,6 +149,9 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 	TestEqual(TEXT("Individual edit makes the draft preset custom"), Overall->GetCurrentStringValue(), FString(TEXT("-1")));
 	TestEqual(TEXT("Live volume is unchanged"), Live->GetOverallVolume(), OriginalVolume);
 	TestEqual(TEXT("Live gameplay setting is unchanged"), Live->GetDifficulty(), OriginalDifficulty);
+	TestEqual(TEXT("Auto pickup stays in the draft before commit"), Live->GetAutoPickup(), OriginalAutoPickup);
+	TestEqual(TEXT("Sprint mode stays in the draft before commit"), Live->GetSprintMode(), OriginalSprintMode);
+	TestEqual(TEXT("Crouch mode stays in the draft before commit"), Live->GetCrouchMode(), OriginalCrouchMode);
 	TestEqual(TEXT("Live quality is unchanged"), Live->GetShadowQuality(), OriginalShadow);
 	TestEqual(TEXT("Runtime language is unchanged"), FInternationalization::Get().GetCurrentCulture()->GetName(), OriginalCulture);
 	TestEqual(TEXT("Runtime gamma is unchanged"), GEngine->GetDisplayGamma(), OriginalGamma);
@@ -97,8 +159,32 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 	// Commit to a disposable settings object, without applying or saving the user's settings.
 	UFrontendGameUserSettings* Target = NewObject<UFrontendGameUserSettings>();
 	Registry->CommitPendingSettings(Target);
+	TestFalse(TEXT("Commit hides minimap"), Target->GetShowMinimap());
+	TestTrue(TEXT("Ammo visibility is independent of minimap"), Target->GetShowAmmoCount());
+	TestEqual(TEXT("Commit transfers crosshair scale"), Target->GetCrosshairSize(), 1.5f);
+	AmmoCount->SetValueFromString(TEXT("false"));
+	Registry->CommitPendingSettings(Target);
+	TestFalse(TEXT("Commit hides ammo count"), Target->GetShowAmmoCount());
+	for (const TCHAR* Key : { TEXT("ShowMinimap"), TEXT("ShowAmmoCount"), TEXT("CrosshairSize") })
+	{
+		TestTrue(FString(Key) + TEXT(" resets in draft"), Items.FindChecked(Key)->TryResetBackToDefaultValue());
+	}
+	Registry->CommitPendingSettings(Target);
+	TestTrue(TEXT("Reset shows minimap"), Target->GetShowMinimap());
+	TestTrue(TEXT("Reset shows ammo count"), Target->GetShowAmmoCount());
+	TestEqual(TEXT("Reset restores original crosshair size"), Target->GetCrosshairSize(), 1.f);
+	TestEqual(TEXT("HUD reset preserves live minimap"), Live->GetShowMinimap(), OriginalMinimap);
+	TestEqual(TEXT("HUD reset preserves live ammo count"), Live->GetShowAmmoCount(), OriginalAmmoCount);
+	TestEqual(TEXT("HUD reset preserves live crosshair"), Live->GetCrosshairSize(), OriginalCrosshairSize);
+	Target->SetCrosshairSize(-1.f);
+	TestEqual(TEXT("Crosshair size has a lower bound"), Target->GetCrosshairSize(), 0.5f);
+	Target->SetCrosshairSize(10.f);
+	TestEqual(TEXT("Crosshair size has an upper bound"), Target->GetCrosshairSize(), 2.f);
 	TestEqual(TEXT("Commit transfers pending volume"), Target->GetOverallVolume(), 1.75f);
 	TestEqual(TEXT("Commit transfers pending difficulty"), Target->GetDifficulty(), FString(TEXT("Hard")));
+	TestEqual(TEXT("Commit transfers pending auto pickup mode"), Target->GetAutoPickup(), EditedAutoPickup);
+	TestEqual(TEXT("Commit transfers sprint Toggle"), Target->GetSprintMode(), FString(TEXT("Toggle")));
+	TestEqual(TEXT("Commit transfers independent crouch Hold"), Target->GetCrouchMode(), FString(TEXT("Hold")));
 	TestEqual(TEXT("Commit transfers pending gamma"), Target->GetCurrentDisplayGamma(), 3.f);
 	TestEqual(TEXT("Commit preserves custom shadow quality"), Target->GetShadowQuality(), 1);
 	TestEqual(TEXT("Commit preserves other preset qualities"), Target->GetTextureQuality(), 2);
@@ -112,6 +198,23 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 	TestEqual(TEXT("Reset does not change live volume"), Live->GetOverallVolume(), OriginalVolume);
 	Registry->CommitPendingSettings(Target);
 	TestEqual(TEXT("Reset value is transferred on commit"), Target->GetOverallVolume(), 1.f);
+	TestTrue(TEXT("Auto pickup can reset to Off"), Items.FindChecked(TEXT("AutoPickup"))->TryResetBackToDefaultValue());
+	TestEqual(TEXT("Auto pickup reset updates the displayed value"), AutoPickup->GetCurrentStringValue(), FString(TEXT("Off")));
+	TestEqual(TEXT("Auto pickup reset does not alter live settings"), Live->GetAutoPickup(), OriginalAutoPickup);
+	Registry->CommitPendingSettings(Target);
+	TestEqual(TEXT("Auto pickup reset is transferred on commit"), Target->GetAutoPickup(), FString(TEXT("Off")));
+	CrouchMode->OnRotatorInitiatedValueChanged(FText::FromString(TEXT("Toggle")));
+	Registry->CommitPendingSettings(Target);
+	TestEqual(TEXT("Crouch also supports Toggle"), Target->GetCrouchMode(), FString(TEXT("Toggle")));
+	for (const TCHAR* Key : { TEXT("SprintMode"), TEXT("CrouchMode") })
+	{
+		TestTrue(FString(Key) + TEXT(" resets to Hold"), Items.FindChecked(Key)->TryResetBackToDefaultValue());
+	}
+	Registry->CommitPendingSettings(Target);
+	TestEqual(TEXT("Sprint reset commits Hold"), Target->GetSprintMode(), FString(TEXT("Hold")));
+	TestEqual(TEXT("Crouch reset commits Hold"), Target->GetCrouchMode(), FString(TEXT("Hold")));
+	TestEqual(TEXT("Sprint reset preserves live settings"), Live->GetSprintMode(), OriginalSprintMode);
+	TestEqual(TEXT("Crouch reset preserves live settings"), Live->GetCrouchMode(), OriginalCrouchMode);
 	return true;
 }
 

@@ -65,7 +65,51 @@ public:
 
 	UFUNCTION()
 	void SetAutoSave(const bool InValue);
+
+	/** Automatic pickup mode: Off, MaterialsOnly, or AllItems. */
+	UFUNCTION(BlueprintPure, Category = "Settings|Gameplay")
+	FString GetAutoPickup() const { return AutoPickup; }
+
+	/** Updates the stored mode; Options commits its draft on Back. */
+	UFUNCTION(BlueprintCallable, Category = "Settings|Gameplay")
+	void SetAutoPickup(const FString& InValue);
+
+	/** Sprint input mode: Hold or Toggle. */
+	UFUNCTION(BlueprintPure, Category = "Settings|Gameplay")
+	FString GetSprintMode() const { return SprintMode; }
+
+	/** Updates the stored mode; Options commits its draft on Back. */
+	UFUNCTION(BlueprintCallable, Category = "Settings|Gameplay")
+	void SetSprintMode(const FString& InValue);
+
+	/** Crouch input mode: Hold or Toggle. */
+	UFUNCTION(BlueprintPure, Category = "Settings|Gameplay")
+	FString GetCrouchMode() const { return CrouchMode; }
+
+	/** Updates the stored mode; Options commits its draft on Back. */
+	UFUNCTION(BlueprintCallable, Category = "Settings|Gameplay")
+	void SetCrouchMode(const FString& InValue);
 	/**@}*/
+
+	// ---- HUD ----
+	UFUNCTION(BlueprintPure, Category = "Settings|HUD")
+	bool GetShowMinimap() const { return bShowMinimap; }
+
+	UFUNCTION(BlueprintCallable, Category = "Settings|HUD")
+	void SetShowMinimap(bool InValue);
+
+	UFUNCTION(BlueprintPure, Category = "Settings|HUD")
+	bool GetShowAmmoCount() const { return bShowAmmoCount; }
+
+	UFUNCTION(BlueprintCallable, Category = "Settings|HUD")
+	void SetShowAmmoCount(bool InValue);
+
+	/** Crosshair scale multiplier; 1.0 is the original size. */
+	UFUNCTION(BlueprintPure, Category = "Settings|HUD")
+	float GetCrosshairSize() const { return CrosshairSize; }
+
+	UFUNCTION(BlueprintCallable, Category = "Settings|HUD")
+	void SetCrosshairSize(float InValue);
 
 	// ---- Audio ----
 	/**@{*/
@@ -186,6 +230,24 @@ private:
 	UPROPERTY(Config)
 	bool bAutoSave;
 
+	UPROPERTY(Config)
+	FString AutoPickup;
+
+	UPROPERTY(Config)
+	FString SprintMode;
+
+	UPROPERTY(Config)
+	FString CrouchMode;
+
+	// ---- HUD ----
+	UPROPERTY(Config)
+	bool bShowMinimap;
+
+	UPROPERTY(Config)
+	bool bShowAmmoCount;
+
+	UPROPERTY(Config)
+	float CrosshairSize;
 
 	// ---- Audio ----
 
