@@ -35,6 +35,8 @@ public:
 
 	/** Programmatically set the value from a saved string. */
 	void SetValueFromString(const FString& InValue) { OnSetForcedStringValue(InValue); }
+	virtual bool TryGetValueAsString(FString& OutValue) const override { OutValue = CurrentStringValue; return true; }
+	virtual bool TrySetValueFromString(const FString& Value) override;
 	
 protected:
 	

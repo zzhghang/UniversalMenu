@@ -9,6 +9,8 @@
 class UListDataObject_Base;
 class UListDataObject_Collection;
 class UMenuConfigData;
+class UMenuEntryConfig;
+class UMenuSessionData;
 
 /**
  * Builds and owns the multiplayer data hierarchy (tabs -> categories -> entries).
@@ -36,10 +38,28 @@ public:
 
 	/** Remove existing session entries from JoinGame tab and create new ones. */
 	void RebuildSessionList(const TArray<struct FSessionListItem>& Sessions);
+	UListDataObject_Base* FindEntry(FName TabId, FName DataId) const;
+	bool SaveFormValues(UMenuSessionData* Data) const;
+	void LoadFormValues(const UMenuSessionData* Data);
+	bool HasConfigurationErrors() const { return bConfigurationErrors; }
 
 private:
 
 	void InitFromConfig();
+	void WireConditions();
+	bool CanMigrateLegacyKey(const UMenuEntryConfig* Entry) const;
+	struct FFormEntry
+	{
+		FName TabId;
+		TWeakObjectPtr<UMenuEntryConfig> Config;
+		TWeakObjectPtr<UListDataObject_Base> Item;
+		FString InitialValue;
+	};
+	TArray<FFormEntry> FormEntries;
+	bool bConfigurationErrors = false;
+
+	UPROPERTY(Transient)
+	UListDataObject_Collection* SessionListParent = nullptr;
 
 	void FindChildListDataRecursively(const UListDataObject_Base* InParentData, TArray<UListDataObject_Base*>& OutFoundChildListData) const;
 

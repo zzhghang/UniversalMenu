@@ -19,6 +19,11 @@ public:
 	void SetText(const FText& InText);
 
 	const FText& GetText() const { return CurrentText; }
+	virtual bool TryGetValueAsString(FString& OutValue) const override { OutValue = CurrentText.ToString(); return true; }
+	virtual bool TrySetValueFromString(const FString& Value) override;
+	virtual bool HasDefaultValue() const override { return true; }
+	virtual bool CanResetBackToDefaultValue() const override { return !CurrentText.IsEmpty(); }
+	virtual bool TryResetBackToDefaultValue() override;
 
 	/** Check whether InText passes MaxCharCount and CharFilter rules. Sets OutReason if invalid. */
 	bool ValidateText(const FText& InText, FText& OutReason) const;

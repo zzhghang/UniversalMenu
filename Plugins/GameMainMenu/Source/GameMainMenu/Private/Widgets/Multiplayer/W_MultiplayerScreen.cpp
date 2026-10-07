@@ -13,6 +13,7 @@
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Session.h"
 #include "Widgets/Multiplayer/MenuSessionData.h"
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
+#include "Widgets/MenuConfig/MenuConfigData.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 #include "Widgets/Options/ListEntries/W_ListEntry_Base.h"
@@ -86,9 +87,12 @@ void UW_MultiplayerScreen::NativeOnActivated()
 		TabListWidget_MultiplayerTabs->RequestRegisterTab(TabId, CollectionTab->GetDataDisplayName());
 	}
 
-	TabListWidget_MultiplayerTabs->SelectTabByID(FName(TEXT("CreateGame")));
-
 	LoadSessionData();
+	const FName DesiredTab = CurrentTabId.IsNone() && MultiplayerConfig ? MultiplayerConfig->CreateGameTabId : CurrentTabId;
+	if (TabListWidget_MultiplayerTabs->GetTabButtonBaseByID(DesiredTab))
+		TabListWidget_MultiplayerTabs->SelectTabByID(DesiredTab);
+	else if (!Registry->GetRegisteredTabs().IsEmpty())
+		TabListWidget_MultiplayerTabs->SelectTabByID(Registry->GetRegisteredTabs()[0]->GetDataId());
 }
 
 void UW_MultiplayerScreen::NativeOnDeactivated()
@@ -113,6 +117,7 @@ UWidget* UW_MultiplayerScreen::NativeGetDesiredFocusTarget() const
 
 void UW_MultiplayerScreen::OnBackBoundActionTriggered()
 {
+	SaveSessionData();
 	DeactivateWidget();
 }
 
@@ -134,8 +139,8 @@ void UW_MultiplayerScreen::OnMultiplayerTabSelected(const FName TabId)
 		CommonListView_MultiplayerList->SetSelectedIndex(0);
 	}
 
-	static const FName CreateGameTabId(TEXT("CreateGame"));
-	static const FName JoinGameTabId(TEXT("JoinGame"));
+	const FName CreateGameTabId = MultiplayerConfig ? MultiplayerConfig->CreateGameTabId : FName(TEXT("CreateGame"));
+	const FName JoinGameTabId = MultiplayerConfig ? MultiplayerConfig->JoinGameTabId : FName(TEXT("JoinGame"));
 
 	if (TabId == CreateGameTabId)
 	{
@@ -213,7 +218,7 @@ UMultiplayerDataRegistry* UW_MultiplayerScreen::GetOrCreateDataRegistry()
 {
 	if (!CreatedDataRegistry)
 	{
-		CreatedDataRegistry = NewObject<UMultiplayerDataRegistry>();
+		CreatedDataRegistry = NewObject<UMultiplayerDataRegistry>(this);
 		CreatedDataRegistry->SetConfig(MultiplayerConfig);
 		CreatedDataRegistry->InitRegistry();
 	}
@@ -235,36 +240,19 @@ FString UW_MultiplayerScreen::TryGetEntryWidgetClassName(const UObject* InListIt
 
 UMenuSessionData* UW_MultiplayerScreen::SaveSessionData()
 {
+	bLastSessionSaveSucceeded = false;
 	UFrontendGameInstance* GameInstance = Cast<UFrontendGameInstance>(GetGameInstance());
-	if (!GameInstance) return nullptr;
-
+	if (!GameInstance) { OnSessionSaveCompleted(false); return nullptr; }
 	UMenuSessionData* SessionData = GameInstance->GetOrCreateMenuSessionData();
-	if (!SessionData) return nullptr;
-
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
-	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
+	if (!Registry || !Registry->SaveFormValues(SessionData))
 	{
-		const TArray<UListDataObject_Base*> AllItems = Registry->GetListItemsForTab(Tab->GetDataId());
-		for (UListDataObject_Base* Item : AllItems)
-		{
-			if (!Item) continue;
-
-			if (UListDataObject_Editable* EditItem = Cast<UListDataObject_Editable>(Item))
-			{
-				const FString Value = EditItem->GetText().ToString();
-				if (!Value.IsEmpty())
-				{
-					SessionData->SetSavedValue(Item->GetDataId(), Value);
-				}
-			}
-			else if (UListDataObject_String* StrItem = Cast<UListDataObject_String>(Item))
-			{
-				SessionData->SetSavedValue(Item->GetDataId(), StrItem->GetCurrentStringValue());
-			}
-		}
+		UE_LOG(LogTemp, Warning, TEXT("Multiplayer form was not saved: invalid configuration."));
+		OnSessionSaveCompleted(false);
+		return nullptr;
 	}
-
-	GameInstance->SaveMenuSessionData();
+	bLastSessionSaveSucceeded = GameInstance->TrySaveMenuSessionData();
+	OnSessionSaveCompleted(bLastSessionSaveSucceeded);
 	return SessionData;
 }
 
@@ -272,33 +260,9 @@ void UW_MultiplayerScreen::LoadSessionData()
 {
 	UFrontendGameInstance* GameInstance = Cast<UFrontendGameInstance>(GetGameInstance());
 	if (!GameInstance) return;
-
-	UMenuSessionData* SessionData = GameInstance->LoadMenuSessionData();
-	if (!SessionData) return;
-
-	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
-	for (const UListDataObject_Collection* Tab : Registry->GetRegisteredTabs())
-	{
-		const TArray<UListDataObject_Base*> AllItems = Registry->GetListItemsForTab(Tab->GetDataId());
-		for (UListDataObject_Base* Item : AllItems)
-		{
-			if (!Item) continue;
-
-			const FString SavedValue = SessionData->GetSavedValue(Item->GetDataId());
-			if (SavedValue.IsEmpty()) continue;
-
-			if (UListDataObject_Editable* EditItem = Cast<UListDataObject_Editable>(Item))
-			{
-				EditItem->SetText(FText::FromString(SavedValue));
-			}
-			else if (UListDataObject_String* StrItem = Cast<UListDataObject_String>(Item))
-			{
-				StrItem->SetValueFromString(SavedValue);
-			}
-		}
-	}
+	if (UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry())
+		Registry->LoadFormValues(GameInstance->LoadMenuSessionData());
 }
-
 UMenuSessionData* UW_MultiplayerScreen::GetCachedSessionData() const
 {
 	const UFrontendGameInstance* GameInstance = Cast<UFrontendGameInstance>(GetGameInstance());
@@ -319,13 +283,30 @@ void UW_MultiplayerScreen::PopulateSessionList(const TArray<FSessionListItem>& S
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	if (!Registry) return;
 
+	FString SelectedSessionId;
+	if (const auto* Selected = CommonListView_MultiplayerList->GetSelectedItem<UListDataObject_Session>(); Selected && Selected->GetSessionData().SessionResult.OnlineResult.IsValid())
+		SelectedSessionId = Selected->GetSessionData().SessionResult.OnlineResult.GetSessionIdStr();
 	Registry->RebuildSessionList(Sessions);
 
-	static const FName JoinGameTabId(TEXT("JoinGame"));
+	const FName JoinGameTabId = MultiplayerConfig ? MultiplayerConfig->JoinGameTabId : FName(TEXT("JoinGame"));
 	if (CurrentTabId == JoinGameTabId)
 	{
 		const TArray<UListDataObject_Base*> ListItems = Registry->GetListItemsForTab(JoinGameTabId);
+		CommonListView_MultiplayerList->ClearSelection();
 		CommonListView_MultiplayerList->SetListItems(ListItems);
 		CommonListView_MultiplayerList->RequestRefresh();
+		DetailsView_ListEntryInfo->ClearDetailsViewInfo();
+		if (!SelectedSessionId.IsEmpty())
+		{
+			for (UListDataObject_Base* Item : ListItems)
+			{
+				const auto* Session = Cast<UListDataObject_Session>(Item);
+				if (Session && Session->GetSessionData().SessionResult.OnlineResult.IsValid() && Session->GetSessionData().SessionResult.OnlineResult.GetSessionIdStr() == SelectedSessionId)
+				{
+					CommonListView_MultiplayerList->SetSelectedItem(Item);
+					break;
+				}
+			}
+		}
 	}
 }

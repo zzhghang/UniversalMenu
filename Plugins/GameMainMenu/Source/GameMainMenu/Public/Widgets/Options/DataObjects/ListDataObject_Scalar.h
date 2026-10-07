@@ -38,17 +38,21 @@ public:
 	float GetCurrentValue() const;
 	/** Write value to UFrontendGameUserSettings via the setter helper. */
 	void SetCurrentValue(float NewValue);
+	virtual bool TryGetValueAsString(FString& OutValue) const override;
+	virtual bool TrySetValueFromString(const FString& Value) override;
 	
 	
 private:
 
 	// ~Begin UListDataObject_Base Interface
 	virtual bool CanResetBackToDefaultValue() const override;
+	virtual void OnDataObjectInitialized() override;
 	virtual bool TryResetBackToDefaultValue() override;
 	virtual void OnEditDependencyDataModified(UListDataObject_Base* ModifyDependencyData, EOptionsListDataModifyReason ModifyReason) override;
 	// ~End UListDataObject_Base Interface
 
 	float StringToFloat(const FString& InString) const;
+	float LocalValue = 0.f;
 
 	TRange<float> DisplayValueRange = TRange<float>(0.f,1.f);
 	TRange<float> OutValueRange = TRange<float>(0.f,1.f);

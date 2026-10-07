@@ -150,11 +150,9 @@ bool UListDataObject_String::TryResetBackToDefaultValue()
 		if (Binding)
 		{
 			Binding->SetValueFromString(CurrentStringValue);
-
-			NotifyListDataModified(this,EOptionsListDataModifyReason::ResetToDefault);
-
-			return true;
 		}
+		NotifyListDataModified(this,EOptionsListDataModifyReason::ResetToDefault);
+		return true;
 	}
 
 	return false;
@@ -173,9 +171,16 @@ void UListDataObject_String::OnSetForcedStringValue(const FString& InForcedStrin
 	if (Binding)
 	{
 		Binding->SetValueFromString(CurrentStringValue);
-
-		NotifyListDataModified(this,EOptionsListDataModifyReason::DependencyModified);
 	}
+	NotifyListDataModified(this,EOptionsListDataModifyReason::DependencyModified);
+}
+
+bool UListDataObject_String::TrySetValueFromString(const FString& Value)
+{
+	const int32 Index = FindOptionIndex(Value);
+	if (Index == INDEX_NONE) return false;
+	OnSetForcedStringValue(StringArray[Index]);
+	return true;
 }
 
 bool UListDataObject_String::TrySetDisplayTextFromStringValue(const FString& InStringValue)

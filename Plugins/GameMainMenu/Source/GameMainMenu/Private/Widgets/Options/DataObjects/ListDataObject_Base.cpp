@@ -3,8 +3,6 @@
 
 #include "Widgets/Options/DataObjects/ListDataObject_Base.h"
 
-#include "FrontendSettings/FrontendGameUserSettings.h"
-
 void UListDataObject_Base::InitializeDataObject()
 {
 	OnDataObjectInitialized();
@@ -66,7 +64,9 @@ void UListDataObject_Base::NotifyListDataModified(UListDataObject_Base* ModifyDa
 {
 	OnListDataModified.Broadcast(ModifyData,ModifyReason);
 	
-	if (bShouldApplyChangeImmediately) UFrontendGameUserSettings::Get()->ApplySettings(true);
+	// Dependency notifications refresh the UI; they must not commit another entry's draft.
+	if (bShouldApplyChangeImmediately && ModifyReason != EOptionsListDataModifyReason::DependencyModified && ImmediateApplyHandler)
+		ImmediateApplyHandler();
 
 }
 

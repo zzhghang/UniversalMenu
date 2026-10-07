@@ -2,6 +2,7 @@
 
 
 #include "FrontendSettings/FrontendGameUserSettings.h"
+#include "FrontendSettings/FrontendResolution.h"
 
 #include "FrontendGameplayTags.h"
 #include "FunctionLibrary/FrontendFunctionLibrary.h"
@@ -61,6 +62,46 @@ UFrontendGameUserSettings* UFrontendGameUserSettings::Get()
 	if (GEngine) return CastChecked<UFrontendGameUserSettings>(GEngine->GetGameUserSettings());
 
 	return nullptr;
+}
+
+void UFrontendGameUserSettings::LoadSettings(bool bForceReload)
+{
+	Super::LoadSettings(bForceReload);
+	RepairResolutionSettings();
+}
+
+void UFrontendGameUserSettings::ValidateSettings()
+{
+	RepairResolutionSettings();
+	Super::ValidateSettings();
+	RepairResolutionSettings();
+}
+
+void UFrontendGameUserSettings::RepairResolutionSettings()
+{
+	FIntPoint Size = GetScreenResolution();
+	if (!FrontendResolution::IsUsable(Size))
+	{
+		Size = GetLastConfirmedScreenResolution();
+		if (!FrontendResolution::IsUsable(Size)) Size = GetDesktopResolution();
+		if (!FrontendResolution::IsUsable(Size)) Size = FIntPoint(1920, 1080);
+		SetScreenResolution(Size);
+	}
+	if (!FrontendResolution::IsUsable(GetLastConfirmedScreenResolution()))
+	{
+		LastUserConfirmedResolutionSizeX = Size.X;
+		LastUserConfirmedResolutionSizeY = Size.Y;
+	}
+	if (!FrontendResolution::IsUsable(FIntPoint(DesiredScreenWidth, DesiredScreenHeight)))
+	{
+		DesiredScreenWidth = Size.X;
+		DesiredScreenHeight = Size.Y;
+	}
+	if (!FrontendResolution::IsUsable(FIntPoint(LastUserConfirmedDesiredScreenWidth, LastUserConfirmedDesiredScreenHeight)))
+	{
+		LastUserConfirmedDesiredScreenWidth = DesiredScreenWidth;
+		LastUserConfirmedDesiredScreenHeight = DesiredScreenHeight;
+	}
 }
 
 void UFrontendGameUserSettings::ApplyNonResolutionSettings()

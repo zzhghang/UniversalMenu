@@ -52,11 +52,16 @@ public:
 	void InitializeDataObject();
 	
 	void SetShouldApplyChangeImmediately(const bool bShouldApplyRightAway) {bShouldApplyChangeImmediately = bShouldApplyRightAway;}
+	void SetImmediateApplyHandler(TFunction<void()> Handler) { ImmediateApplyHandler = MoveTemp(Handler); }
 	
 	/** Override in subclasses to support reset-to-default behavior. */
 	virtual bool HasDefaultValue() const {return false;};
 	virtual bool CanResetBackToDefaultValue() const { return false; };
 	virtual bool TryResetBackToDefaultValue() { return false; };
+
+	/** Form serialization uses stored keys/values, never localized display labels. */
+	virtual bool TryGetValueAsString(FString& OutValue) const { return false; }
+	virtual bool TrySetValueFromString(const FString& Value) { return false; }
 
 	void AddEditConditionDescriptor(const FOptionsDataEditConditionDescriptor& InEditConditionDesc);
 	void AddEditDependencyData(UListDataObject_Base* InDependencyDataObject);
@@ -91,7 +96,8 @@ private:
 	UPROPERTY(Transient)
 	UListDataObject_Base* ParentData;
 
-	bool bShouldApplyChangeImmediately = false; 
+	bool bShouldApplyChangeImmediately = false;
+	TFunction<void()> ImmediateApplyHandler;
 	
 	UPROPERTY(Transient)
 	TArray<FOptionsDataEditConditionDescriptor> EditConditionDescArray;

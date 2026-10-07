@@ -26,6 +26,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "MenuSession")
 	void SaveMenuSessionData();
 
+	UFUNCTION(BlueprintCallable, Category = "MenuSession")
+	bool TrySaveMenuSessionData();
+
 private:
 	UPROPERTY(Transient)
 	UMenuSessionData* CachedMenuSessionData = nullptr;

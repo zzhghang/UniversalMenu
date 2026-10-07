@@ -36,14 +36,17 @@ void UOptionsDataRegistry::InitBindingMap()
 
 	BindingMap.Reset();
 	SettingCommitters.Reset();
+	SettingCommittersByKey.Reset();
 	const TWeakObjectPtr<UFrontendGameUserSettings> Draft = PendingSettings;
 	const auto Bind = [this, Draft](FName Key, auto Getter, auto Setter)
 	{
 		BindingMap.Add(Key, FOptionsDataInteractionHelper::Create([Draft]() { return Draft.Get(); }, Getter, Setter));
-		SettingCommitters.Add([Draft, Getter, Setter](FSettings* Target)
+		auto Commit = [Draft, Getter, Setter](FSettings* Target)
 		{
 			if (Draft.IsValid()) (Target->*Setter)((Draft.Get()->*Getter)());
-		});
+		};
+		SettingCommitters.Add(Commit);
+		SettingCommittersByKey.Add(Key, MoveTemp(Commit));
 	};
 
 	// ---- Gameplay ----
@@ -108,13 +111,15 @@ TSharedPtr<FOptionsDataInteractionHelper> UOptionsDataRegistry::ResolveBinding(c
 // Public interface
 // ============================================================================
 
-void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer)
+void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer, UFrontendGameUserSettings* InSettings)
 {
-	UFrontendGameUserSettings* Settings = UFrontendGameUserSettings::Get();
+	UFrontendGameUserSettings* Settings = InSettings ? InSettings : UFrontendGameUserSettings::Get();
 	if (!ensure(Settings)) return;
+	LiveSettings = Settings;
 	PendingSettings = DuplicateObject<UFrontendGameUserSettings>(Settings, this);
 	// ScalabilityQuality is not a UPROPERTY, so UObject duplication does not copy it.
 	PendingSettings->ScalabilityQuality = Settings->ScalabilityQuality;
+	PendingSettings->RepairResolutionSettings();
 	InitBindingMap();
 
 	if (!ensureMsgf(OptionsConfig, TEXT("OptionsDataRegistry requires an OptionsConfig DataAsset.")))
@@ -123,6 +128,19 @@ void UOptionsDataRegistry::InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPl
 	}
 
 	InitFromDataAsset(InOwningLocalPlayer);
+}
+
+void UOptionsDataRegistry::ApplyPendingSettingImmediately(FName BindingKey)
+{
+	UFrontendGameUserSettings* Target = LiveSettings.Get();
+	const auto* Commit = SettingCommittersByKey.Find(BindingKey);
+	if (!Target || !Commit) return;
+	// Transfer only the edited setting. Other draft fields remain deferred until Back.
+	(*Commit)(Target);
+	if (BindingKey == TEXT("Resolution") || BindingKey == TEXT("FullscreenMode"))
+		Target->ApplyResolutionSettings(true);
+	Target->ApplyNonResolutionSettings();
+	// ApplySettings also saves to disk; saving remains the Back action's responsibility.
 }
 
 void UOptionsDataRegistry::CommitPendingSettings(UFrontendGameUserSettings* TargetSettings)
@@ -331,8 +349,7 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 			{
 				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
 				if (!Entry) continue;
-				// Options are committed on Back, even for legacy assets marked immediate.
-				Entry->SetShouldApplyChangeImmediately(false);
+				Entry->SetShouldApplyChangeImmediately(EntryData->bApplyImmediately);
 
 				// Wire BindingKey → getter/setter for Options entries
 				if (!EntryData->BindingKey.IsNone())
@@ -342,6 +359,15 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 						if (UListDataObject_Value* ValueEntry = Cast<UListDataObject_Value>(Entry))
 						{
 							ValueEntry->SetBinding(Helper);
+							if (EntryData->bApplyImmediately)
+							{
+								const TWeakObjectPtr<UOptionsDataRegistry> WeakRegistry(this);
+								const FName Key = EntryData->BindingKey;
+								Entry->SetImmediateApplyHandler([WeakRegistry, Key]()
+								{
+									if (WeakRegistry.IsValid()) WeakRegistry->ApplyPendingSettingImmediately(Key);
+								});
+							}
 						}
 					}
 				}

@@ -21,7 +21,7 @@ class UFrontendGameInstance;
  *
  * Mirrors UW_OptionScreen architecture:
  *   MultiplayerConfigData (DataAsset) → MultiplayerDataRegistry → Screen
- * Fallback hardcoded tabs when no DataAsset is assigned.
+ * Requires an assigned menu config; player values are stored separately.
  */
 UCLASS(Abstract, BlueprintType, meta=(DisableNativeTick))
 class GAMEMAINMENU_API UW_MultiplayerScreen : public UW_ActivatableBase
@@ -60,6 +60,12 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
 	UMenuSessionData* SaveSessionData();
 
+	UPROPERTY(BlueprintReadOnly, Category = "Multiplayer Screen")
+	bool bLastSessionSaveSucceeded = false;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Multiplayer Screen")
+	void OnSessionSaveCompleted(bool bSuccess);
+
 	UFUNCTION(BlueprintCallable, Category = "Multiplayer Screen")
 	void LoadSessionData();
 
@@ -84,13 +90,13 @@ private:
 
 	void OnListViewItemSelected(UObject* InSelectedItem);
 
-	/** Lazy-creates the data registry and initializes from config or fallback. */
+	/** Lazy-creates the data registry from the assigned config. */
 	UMultiplayerDataRegistry* GetOrCreateDataRegistry();
 
 	/** Returns the widget class name for the entry representing an item (for debug display). */
 	FString TryGetEntryWidgetClassName(const UObject* InListItem) const;
 
-	/** Optional DataAsset for designer-configurable tabs. Falls back to hardcoded when null. */
+	/** Required DataAsset for designer-configurable tabs. */
 	UPROPERTY(EditDefaultsOnly, Category = "Multiplayer Screen")
 	UMenuConfigData* MultiplayerConfig;
 

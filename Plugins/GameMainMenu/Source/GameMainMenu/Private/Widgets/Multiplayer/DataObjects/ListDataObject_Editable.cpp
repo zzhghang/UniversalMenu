@@ -33,8 +33,23 @@ void UListDataObject_Editable::SetText(const FText& InText)
 		}
 	}
 
-	CurrentText = FText::FromString(Filtered.Left(MaxCharCount));
+	CurrentText = FText::FromString(MaxCharCount > 0 ? Filtered.Left(MaxCharCount) : Filtered);
 	NotifyListDataModified(this);
+}
+
+bool UListDataObject_Editable::TrySetValueFromString(const FString& Value)
+{
+	FText Reason;
+	if (!ValidateText(FText::FromString(Value), Reason)) return false;
+	SetText(FText::FromString(Value));
+	return true;
+}
+
+bool UListDataObject_Editable::TryResetBackToDefaultValue()
+{
+	if (!CanResetBackToDefaultValue()) return false;
+	SetText(FText::GetEmpty());
+	return true;
 }
 
 bool UListDataObject_Editable::ValidateText(const FText& InText, FText& OutReason) const

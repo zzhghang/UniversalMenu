@@ -7,6 +7,7 @@
 #include "CommonNumericTextBlock.h"
 #include "Widgets/MenuConfig/MenuConfigTypes.h"
 #include "Widgets/MenuConfig/MenuEntryValueConfig.h"
+#include "Widgets/MenuConfig/MenuFormTypes.h"
 #include "MenuEntryConfig.generated.h"
 
 // ============================================================================
@@ -58,7 +59,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Binding")
 	FName BindingKey;
 
-	/** Requests immediate settings application for supported value entries. Options overrides this to false and commits on Back. */
+	/** Options: apply this bound setting on user edits and resets; otherwise defer until Back. Both modes save on Back. Multiplayer form values do not apply game settings. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "Binding")
 	bool bApplyImmediately = false;
 
@@ -70,6 +71,21 @@ public:
 	/** IDs in the same tab to observe for changes. Multiplayer also requires all referenced Bool entries to be true; Options uses separate edit conditions. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Conditions", meta = (DisplayPriority = "1"))
 	TArray<FName> EditDependencyIds;
+
+	/** Multiplayer: when populated, replaces the legacy Bool dependency gate. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Conditions|Multiplayer")
+	TArray<FMenuEntryCondition> EditConditions;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Conditions|Multiplayer")
+	EMenuConditionMatch ConditionMatch = EMenuConditionMatch::All;
+
+	/** Multiplayer form persistence. Options continues to use its settings binding. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Persistence")
+	EMenuPersistence Persistence = EMenuPersistence::Persistent;
+
+	/** Empty uses DataId, preserving existing saves and Blueprint lookups. Must be unique across the form. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Persistence")
+	FName SaveKey;
 
 	// Serialized compatibility fields. Kept under their original names for existing assets and
 	// Blueprint getter nodes, but hidden from Details. ValueConfig is authoritative once present.

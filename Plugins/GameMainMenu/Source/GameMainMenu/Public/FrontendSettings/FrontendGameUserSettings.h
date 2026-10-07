@@ -27,6 +27,10 @@ public:
 
 	/** Setters only update stored values; runtime effects are applied together. */
 	virtual void ApplyNonResolutionSettings() override;
+	virtual void LoadSettings(bool bForceReload = false) override;
+	virtual void ValidateSettings() override;
+	/** Repairs corrupt dimensions without applying or saving settings. */
+	void RepairResolutionSettings();
 
 	// ---- Gameplay ----
 	/**@{*/

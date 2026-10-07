@@ -17,8 +17,9 @@ class GAMEMAINMENU_API UListDataObject_StringResolution : public UListDataObject
 public:
 
 	void InitResolutionValues();
+	void InitResolutionValues(const TArray<FIntPoint>& Resolutions, FIntPoint FallbackResolution);
 
-	FORCEINLINE FString GetMaxAllowedResolution() { return FString("MaxAllowedResolution"); }
+	const FString& GetMaxAllowedResolution() const { return MaxAllowedResolution; }
 
 protected:
 

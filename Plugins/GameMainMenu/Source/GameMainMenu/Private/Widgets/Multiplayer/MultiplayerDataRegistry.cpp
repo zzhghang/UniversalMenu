@@ -1,212 +1,301 @@
 // HangHang All Rights Reserved
-
-
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
-
 #include "Widgets/MenuConfig/MenuConfigData.h"
+#include "Widgets/Multiplayer/MenuSessionData.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_HeaderRow.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Session.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 
-static const FName TabId_JoinGame(TEXT("JoinGame"));
-
 void UMultiplayerDataRegistry::InitRegistry()
 {
-	RegisteredTabs.Empty();
-
+	RegisteredTabs.Reset();
+	FormEntries.Reset();
+	SessionListParent = nullptr;
+	bConfigurationErrors = false;
 	if (!ensureMsgf(Config, TEXT("MultiplayerDataRegistry requires a Config DataAsset.")))
 	{
+		bConfigurationErrors = true;
 		return;
 	}
-
 	InitFromConfig();
-
-	// ponytail: test entries, replaced by real search results on refresh
-	/*TArray<FSessionListItem> TestSessions;
-	TestSessions.SetNum(5);
-	for (int32 i = 0; i < TestSessions.Num(); ++i)
+	WireConditions();
+#if WITH_EDITOR
+	// Keep designer preview data out of packaged games.
+	if (Config->bPreviewSessionsInEditor)
 	{
-		TestSessions[i].SessionIndex = i;
-		TestSessions[i].ServerName = FText::FromString(FString::Printf(TEXT("Test Server %d"), i + 1));
-		TestSessions[i].MapName = FText::FromString(FString::Printf(TEXT("Map_0%d"), i + 1));
+		TArray<FSessionListItem> TestSessions;
+		TestSessions.SetNum(5);
+		for (int32 i = 0; i < TestSessions.Num(); ++i)
+		{
+			TestSessions[i].SessionIndex = i;
+			TestSessions[i].ServerName = FText::FromString(FString::Printf(TEXT("Test Server %d"), i + 1));
+			TestSessions[i].MapName = FText::FromString(FString::Printf(TEXT("Map_0%d"), i + 1));
+		}
+		RebuildSessionList(TestSessions);
 	}
-	RebuildSessionList(TestSessions);*/
+#endif
 }
 
 void UMultiplayerDataRegistry::InitFromConfig()
 {
+	TSet<FName> TabIds;
+	TSet<FName> SaveKeys;
+	bool bExplicitSessionParent = false;
 	for (UMenuTabConfig* TabData : Config->Tabs)
 	{
 		if (!TabData) continue;
-
+		if (TabData->TabId.IsNone() || TabIds.Contains(TabData->TabId))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: empty or duplicate TabId %s"), *TabData->TabId.ToString());
+			bConfigurationErrors = true;
+			continue;
+		}
+		TabIds.Add(TabData->TabId);
 		UListDataObject_Collection* Tab = CreateCollection(TabData->TabId, TabData->TabName);
-		TMap<FName, UListDataObject_Base*> EntryLookup;
-
+		RegisteredTabs.Add(Tab);
 		for (UMenuCategoryConfig* CatData : TabData->Categories)
 		{
 			if (!CatData) continue;
-
-			if (!CatData->HeaderColumns.IsEmpty())
+			UListDataObject_Collection* Parent = Tab;
+			if (CatData->HeaderColumns.IsEmpty())
 			{
-				UListDataObject_HeaderRow* HeaderRow = NewObject<UListDataObject_HeaderRow>();
-				HeaderRow->SetHeaderConfig(CatData->HeaderColumns, CatData->HeaderColumnGap, CatData->HeaderEdgePadding, CatData->HeaderVerticalPadding);
-				Tab->AddChildListData(HeaderRow);
-
-				for (UMenuEntryConfig* EntryData : CatData->Entries)
-				{
-					if (!EntryData) continue;
-
-					UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
-					if (!Entry) continue;
-
-					Tab->AddChildListData(Entry);
-					EntryLookup.Add(EntryData->DataId, Entry);
-				}
+				Parent = CreateCollection(CatData->CategoryId, CatData->CategoryName);
+				Tab->AddChildListData(Parent);
 			}
 			else
 			{
-				UListDataObject_Collection* Cat = CreateCollection(CatData->CategoryId, CatData->CategoryName);
-
-				for (UMenuEntryConfig* EntryData : CatData->Entries)
-				{
-					if (!EntryData) continue;
-
-					UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
-					if (!Entry) continue;
-
-					Cat->AddChildListData(Entry);
-					EntryLookup.Add(EntryData->DataId, Entry);
-				}
-
-				Tab->AddChildListData(Cat);
+				auto* Header = NewObject<UListDataObject_HeaderRow>(this);
+				Header->SetHeaderConfig(CatData->HeaderColumns, CatData->HeaderColumnGap, CatData->HeaderEdgePadding, CatData->HeaderVerticalPadding);
+				Parent->AddChildListData(Header);
 			}
-		}
-
-		// Wire edit dependencies + auto-create EditConditions
-		for (UMenuCategoryConfig* CatData : TabData->Categories)
-		{
-			if (!CatData) continue;
-
+			const bool bLegacyList = CatData->Entries.ContainsByPredicate([](const UMenuEntryConfig* Entry)
+			{
+				return Entry && Entry->DataId == TEXT("ServerList");
+			});
+			if (TabData->TabId == Config->JoinGameTabId)
+			{
+				if (!SessionListParent) SessionListParent = Parent;
+				if (CatData->bSessionList || bLegacyList)
+				{
+					if (bExplicitSessionParent)
+					{
+						UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: multiple session list categories"));
+						bConfigurationErrors = true;
+					}
+					else SessionListParent = Parent;
+					bExplicitSessionParent = true;
+				}
+			}
 			for (UMenuEntryConfig* EntryData : CatData->Entries)
 			{
-				if (!EntryData || EntryData->EditDependencyIds.IsEmpty()) continue;
-
-				UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
-				if (!EntryPtr || !*EntryPtr) continue;
-
-				TArray<UListDataObject_StringBool*> BoolDeps;
-
-				for (const FName& DepId : EntryData->EditDependencyIds)
+				if (!EntryData) continue;
+				// Legacy marker selects the list container; it is not a text input or a saved field.
+				if (TabData->TabId == Config->JoinGameTabId && EntryData->DataId == TEXT("ServerList")) continue;
+				if (EntryData->DataId.IsNone() || FindEntry(TabData->TabId, EntryData->DataId))
 				{
-					UListDataObject_Base* const* DepPtr = EntryLookup.Find(DepId);
-					if (DepPtr && *DepPtr)
+					UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: empty or duplicate DataId %s in %s"), *EntryData->DataId.ToString(), *TabData->TabId.ToString());
+					bConfigurationErrors = true;
+					continue;
+				}
+				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
+				if (!Entry) continue;
+				Entry->SetShouldApplyChangeImmediately(false);
+				Parent->AddChildListData(Entry);
+				if (auto* Choice = Cast<UListDataObject_String>(Entry))
+				{
+					if (!Choice->TrySetValueFromString(Choice->GetCurrentStringValue()) && !Choice->GetOptionsTextArray().IsEmpty())
 					{
-						(*EntryPtr)->AddEditDependencyData(*DepPtr);
-						if (UListDataObject_StringBool* BoolDep = Cast<UListDataObject_StringBool>(*DepPtr))
-						{
-							BoolDeps.Add(BoolDep);
-						}
+						Choice->GotoNextOption();
+						Choice->SetDefaultValueFromString(Choice->GetCurrentStringValue());
 					}
 				}
-
-				if (BoolDeps.IsEmpty()) continue;
-
-				FOptionsDataEditConditionDescriptor Condition;
-				Condition.SetEditConditionFunction(
-					[BoolDeps]() -> bool
-					{
-						for (const UListDataObject_StringBool* Dep : BoolDeps)
-						{
-							if (Dep->GetCurrentStringValue() != TEXT("true")) return false;
-						}
-						return true;
-					});
-
-				if (!EntryData->DisableRichReason.IsEmpty())
+				FormEntries.Add({TabData->TabId, EntryData, Entry});
+				Entry->TryGetValueAsString(FormEntries.Last().InitialValue);
+				const FName Key = EntryData->SaveKey.IsNone() ? EntryData->DataId : EntryData->SaveKey;
 				{
-					Condition.SetDisableRichReason(EntryData->DisableRichReason.ToString());
+					if (SaveKeys.Contains(Key))
+					{
+						UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: duplicate SaveKey %s"), *Key.ToString());
+						bConfigurationErrors = true;
+					}
+					SaveKeys.Add(Key);
 				}
-
-				(*EntryPtr)->AddEditConditionDescriptor(Condition);
 			}
 		}
+		if (TabData->TabId == Config->JoinGameTabId && !SessionListParent) SessionListParent = Tab;
+	}
+}
 
-		RegisteredTabs.Add(Tab);
+UListDataObject_Base* UMultiplayerDataRegistry::FindEntry(FName TabId, FName DataId) const
+{
+	for (const FFormEntry& Entry : FormEntries)
+		if (Entry.TabId == TabId && Entry.Item.IsValid() && Entry.Item->GetDataId() == DataId) return Entry.Item.Get();
+	return nullptr;
+}
+
+void UMultiplayerDataRegistry::WireConditions()
+{
+	for (const FFormEntry& Entry : FormEntries)
+	{
+		UMenuEntryConfig* EntryConfig = Entry.Config.Get();
+		UListDataObject_Base* Target = Entry.Item.Get();
+		if (!EntryConfig || !Target) continue;
+		TArray<FMenuEntryCondition> Rules = EntryConfig->EditConditions;
+		const bool bLegacy = Rules.IsEmpty();
+		TSet<UListDataObject_Base*> Sources;
+		for (FName Id : EntryConfig->EditDependencyIds)
+		{
+			UListDataObject_Base* Source = FindEntry(Entry.TabId, Id);
+			if (Source) Sources.Add(Source);
+			if (!Source || (bLegacy && Source->IsA<UListDataObject_StringBool>()))
+			{
+				FMenuEntryCondition Rule;
+				Rule.SourceDataId = Id;
+				Rule.Comparison = EMenuComparison::IsTrue;
+				Rules.Add(Rule);
+			}
+		}
+		for (const FMenuEntryCondition& Rule : Rules)
+		{
+			UListDataObject_Base* Source = FindEntry(Rule.SourceTabId.IsNone() ? Entry.TabId : Rule.SourceTabId, Rule.SourceDataId);
+			if (Source) Sources.Add(Source);
+			else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: missing condition source %s for %s"), *Rule.SourceDataId.ToString(), *EntryConfig->DataId.ToString());
+				bConfigurationErrors = true;
+			}
+		}
+		for (UListDataObject_Base* Source : Sources)
+		{
+			const TWeakObjectPtr<UListDataObject_Base> WeakTarget(Target);
+			// Only refresh editability, do not rebroadcast a value edit (cycles remain bounded).
+			Source->OnListDataModified.AddWeakLambda(Target, [WeakTarget](UListDataObject_Base* Changed, EOptionsListDataModifyReason Reason)
+			{
+				if (WeakTarget.IsValid()) WeakTarget->OnDependencyDataModified.Broadcast(Changed, Reason);
+			});
+		}
+		if (Rules.IsEmpty()) continue;
+		const TWeakObjectPtr<UMultiplayerDataRegistry> WeakRegistry(this);
+		const FName TabId = Entry.TabId;
+		const EMenuConditionMatch Match = bLegacy ? EMenuConditionMatch::All : EntryConfig->ConditionMatch;
+		FOptionsDataEditConditionDescriptor Condition;
+		Condition.SetDisableRichReason(EntryConfig->DisableRichReason.ToString());
+		Condition.SetEditConditionFunction([WeakRegistry, Rules, TabId, Match]()
+		{
+			if (!WeakRegistry.IsValid()) return false;
+			bool bResult = Match == EMenuConditionMatch::All;
+			for (const FMenuEntryCondition& Rule : Rules)
+			{
+				UListDataObject_Base* Source = WeakRegistry->FindEntry(Rule.SourceTabId.IsNone() ? TabId : Rule.SourceTabId, Rule.SourceDataId);
+				FString Value;
+				if (!Source || !Source->TryGetValueAsString(Value)) return false;
+				const bool bMatches = Rule.Matches(Value);
+				bResult = Match == EMenuConditionMatch::All ? bResult && bMatches : bResult || bMatches;
+			}
+			return bResult;
+		});
+		Target->AddEditConditionDescriptor(Condition);
+	}
+}
+
+bool UMultiplayerDataRegistry::CanMigrateLegacyKey(const UMenuEntryConfig* Entry) const
+{
+	if (Entry->SaveKey.IsNone() || Entry->SaveKey == Entry->DataId) return false;
+	for (const FFormEntry& Other : FormEntries)
+	{
+		const UMenuEntryConfig* OtherConfig = Other.Config.Get();
+		if (!OtherConfig || OtherConfig == Entry) continue;
+		const FName OtherKey = OtherConfig->SaveKey.IsNone() ? OtherConfig->DataId : OtherConfig->SaveKey;
+		if (OtherConfig->DataId == Entry->DataId || OtherKey == Entry->DataId) return false;
+	}
+	return true;
+}
+
+bool UMultiplayerDataRegistry::SaveFormValues(UMenuSessionData* Data) const
+{
+	if (!Data || bConfigurationErrors) return false;
+	for (const FFormEntry& Entry : FormEntries)
+	{
+		const UMenuEntryConfig* EntryConfig = Entry.Config.Get();
+		if (!EntryConfig || !Entry.Item.IsValid()) continue;
+		const FName Key = EntryConfig->SaveKey.IsNone() ? EntryConfig->DataId : EntryConfig->SaveKey;
+		if (CanMigrateLegacyKey(EntryConfig)) Data->RemoveSavedValue(EntryConfig->DataId);
+		FString Value;
+		if (EntryConfig->Persistence == EMenuPersistence::None) Data->RemoveSavedValue(Key);
+		else if (Entry.Item->TryGetValueAsString(Value))
+		{
+			if (EntryConfig->Persistence == EMenuPersistence::SessionOnly) Data->SetSessionValue(Key, Value);
+			else Data->SetSavedValue(Key, Value);
+		}
+	}
+	return true;
+}
+
+void UMultiplayerDataRegistry::LoadFormValues(const UMenuSessionData* Data)
+{
+	if (!Data || bConfigurationErrors) return;
+	for (const FFormEntry& Entry : FormEntries)
+	{
+		const UMenuEntryConfig* EntryConfig = Entry.Config.Get();
+		if (!EntryConfig || !Entry.Item.IsValid()) continue;
+		if (EntryConfig->Persistence == EMenuPersistence::None)
+		{
+			Entry.Item->TrySetValueFromString(Entry.InitialValue);
+			continue;
+		}
+		const FName Key = EntryConfig->SaveKey.IsNone() ? EntryConfig->DataId : EntryConfig->SaveKey;
+		FString Value;
+		bool bFound = false;
+		if (EntryConfig->Persistence == EMenuPersistence::SessionOnly)
+		{
+			if (const FString* Found = Data->SessionValues.Find(Key)) { Value = *Found; bFound = true; }
+		}
+		else
+		{
+			bFound = Data->TryGetSavedValue(Key, Value);
+			if (!bFound && CanMigrateLegacyKey(EntryConfig)) bFound = Data->TryGetSavedValue(EntryConfig->DataId, Value);
+		}
+		if (!bFound || !Entry.Item->TrySetValueFromString(Value)) Entry.Item->TrySetValueFromString(Entry.InitialValue);
 	}
 }
 
 TArray<UListDataObject_Base*> UMultiplayerDataRegistry::GetListItemsForTab(const FName& TabId) const
 {
+	TArray<UListDataObject_Base*> Result;
 	for (const UListDataObject_Collection* Tab : RegisteredTabs)
-	{
-		if (Tab && Tab->GetDataId() == TabId)
-		{
-			TArray<UListDataObject_Base*> FlatList;
-			FindChildListDataRecursively(Tab, FlatList);
-			return FlatList;
-		}
-	}
-	return TArray<UListDataObject_Base*>();
+		if (Tab && Tab->GetDataId() == TabId) { FindChildListDataRecursively(Tab, Result); break; }
+	return Result;
 }
 
-void UMultiplayerDataRegistry::FindChildListDataRecursively(const UListDataObject_Base* InParentData,
-                                                            TArray<UListDataObject_Base*>& OutFoundChildListData) const
+void UMultiplayerDataRegistry::FindChildListDataRecursively(const UListDataObject_Base* Parent, TArray<UListDataObject_Base*>& Result) const
 {
-	if (!InParentData || !InParentData->HasAnyChildListData()) return;
-
-	for (UListDataObject_Base* SubChildListData : InParentData->GetAllChildListData())
+	if (!Parent) return;
+	for (UListDataObject_Base* Child : Parent->GetAllChildListData())
 	{
-		if (!SubChildListData) continue;
-
-		OutFoundChildListData.Add(SubChildListData);
-
-		if (SubChildListData->HasAnyChildListData())
-		{
-			FindChildListDataRecursively(SubChildListData, OutFoundChildListData);
-		}
+		if (!Child) continue;
+		Result.Add(Child);
+		FindChildListDataRecursively(Child, Result);
 	}
 }
 
 UListDataObject_Collection* UMultiplayerDataRegistry::CreateCollection(const FName& Id, const FText& DisplayName) const
 {
-	UListDataObject_Collection* Col = NewObject<UListDataObject_Collection>();
-	Col->SetDataId(Id);
-	Col->SetDataDisplayName(DisplayName);
-	return Col;
+	auto* Collection = NewObject<UListDataObject_Collection>();
+	Collection->SetDataId(Id);
+	Collection->SetDataDisplayName(DisplayName);
+	return Collection;
 }
 
 void UMultiplayerDataRegistry::RebuildSessionList(const TArray<FSessionListItem>& Sessions)
 {
-	for (UListDataObject_Collection* Tab : RegisteredTabs)
+	if (!SessionListParent) return;
+	for (UListDataObject_Base* Child : SessionListParent->GetAllChildListData())
+		if (Child && Child->IsA<UListDataObject_Session>()) SessionListParent->RemoveChildListData(Child);
+	for (const FSessionListItem& Session : Sessions)
 	{
-		if (!Tab || Tab->GetDataId() != TabId_JoinGame) continue;
-
-		for (UListDataObject_Base* Child : Tab->GetAllChildListData())
-		{
-			UListDataObject_Collection* JoinCat = Cast<UListDataObject_Collection>(Child);
-			if (!JoinCat) continue;
-
-			TArray<UListDataObject_Base*> ToRemove;
-			for (UListDataObject_Base* CatChild : JoinCat->GetAllChildListData())
-			{
-				if (Cast<UListDataObject_Session>(CatChild) || CatChild->GetDataId() == FName(TEXT("ServerList")))
-				{
-					ToRemove.Add(CatChild);
-				}
-			}
-			for (UListDataObject_Base* Rem : ToRemove)
-			{
-				JoinCat->RemoveChildListData(Rem);
-			}
-
-			for (const FSessionListItem& Session : Sessions)
-			{
-				UListDataObject_Session* SessionObj = NewObject<UListDataObject_Session>();
-				SessionObj->SetSessionData(Session);
-				JoinCat->AddChildListData(SessionObj);
-			}
-		}
-		break;
+		auto* Item = NewObject<UListDataObject_Session>(this);
+		Item->SetSessionData(Session);
+		SessionListParent->AddChildListData(Item);
 	}
 }

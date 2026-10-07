@@ -22,6 +22,16 @@ class GAMEMAINMENU_API UMenuConfigData : public UDataAsset
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TArray<UMenuTabConfig*> Tabs;
+
+	/** Multiplayer preview only; ignored in packaged builds. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Multiplayer|Preview")
+	bool bPreviewSessionsInEditor = true;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Multiplayer")
+	FName CreateGameTabId = TEXT("CreateGame");
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Multiplayer")
+	FName JoinGameTabId = TEXT("JoinGame");
 };
 
 // ============================================================================

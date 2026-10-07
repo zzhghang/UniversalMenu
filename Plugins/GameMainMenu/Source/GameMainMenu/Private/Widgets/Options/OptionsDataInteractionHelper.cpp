@@ -3,6 +3,7 @@
 #include "Widgets/Options/OptionsDataInteractionHelper.h"
 
 #include "GameFramework/GameUserSettings.h"
+#include "FrontendSettings/FrontendResolution.h"
 #include "Misc/DefaultValueHelper.h"
 
 FString FOptionsDataInteractionHelper::ValueToString(EWindowMode::Type Value)
@@ -60,22 +61,5 @@ bool FOptionsDataInteractionHelper::TryParseValue(const FString& InValue, EWindo
 
 bool FOptionsDataInteractionHelper::TryParseValue(const FString& InValue, FIntPoint& OutValue)
 {
-	// Preserve the value format used by resolution entries and existing DataAssets.
-	FString Coordinates = InValue;
-	if (!Coordinates.RemoveFromStart(TEXT("(X=")) || !Coordinates.RemoveFromEnd(TEXT(")")))
-	{
-		return false;
-	}
-
-	FString Width;
-	FString Height;
-	FIntPoint Resolution = FIntPoint::ZeroValue;
-	if (!Coordinates.Split(TEXT(",Y="), &Width, &Height) ||
-		!TryParseValue(Width, Resolution.X) || !TryParseValue(Height, Resolution.Y) ||
-		Resolution.X <= 0 || Resolution.Y <= 0)
-	{
-		return false;
-	}
-	OutValue = Resolution;
-	return true;
+	return FrontendResolution::Parse(InValue, OutValue);
 }

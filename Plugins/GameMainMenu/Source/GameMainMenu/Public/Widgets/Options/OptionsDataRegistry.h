@@ -32,7 +32,7 @@ class GAMEMAINMENU_API UOptionsDataRegistry : public UObject
 public:
 
 	/** Initialize all option tabs from the assigned DataAsset. */
-	void InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer);
+	void InitOptionsDataRegistry(ULocalPlayer* InOwningLocalPlayer, UFrontendGameUserSettings* InSettings = nullptr);
 
 	/** Transfer the edited values to live settings when leaving the options screen. */
 	void CommitPendingSettings(UFrontendGameUserSettings* TargetSettings);
@@ -51,6 +51,7 @@ private:
 	void FindChildListDataRecursively(UListDataObject_Base* InParentData, TArray<UListDataObject_Base*>& OutFoundChildListData) const;
 
 	void InitBindingMap();
+	void ApplyPendingSettingImmediately(FName BindingKey);
 
 	void InitControlCollectionTab(ULocalPlayer* InOwningLocalPlayer);
 
@@ -75,6 +76,8 @@ private:
 
 	TMap<FName, TSharedPtr<FOptionsDataInteractionHelper>> BindingMap;
 	TArray<TFunction<void(UFrontendGameUserSettings*)>> SettingCommitters;
+	TMap<FName, TFunction<void(UFrontendGameUserSettings*)>> SettingCommittersByKey;
+	TWeakObjectPtr<UFrontendGameUserSettings> LiveSettings;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UFrontendGameUserSettings> PendingSettings;

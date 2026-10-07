@@ -52,7 +52,7 @@ bool FOptionsDeferredSettingsTest::RunTest(const FString& Parameters)
 		Entry->DataId = Id;
 		Entry->BindingKey = Key;
 		Entry->ValueType = Type;
-		Entry->bApplyImmediately = true; // Legacy assets must still defer all changes.
+		// The default false flag keeps changes in the draft until Back.
 		Category->Entries.Add(Entry);
 		return Entry;
 	};

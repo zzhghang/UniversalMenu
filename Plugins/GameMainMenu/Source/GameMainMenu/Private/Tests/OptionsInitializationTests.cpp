@@ -115,4 +115,59 @@ bool FResolutionInitialSettingsTest::RunTest(const FString& Parameters)
 	return true;
 }
 
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FResolutionFallbackTest,
+	"GameMainMenu.Options.Initialization.ResolutionFallbacks",
+	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+bool FResolutionFallbackTest::RunTest(const FString& Parameters)
+{
+	auto* Resolution = NewObject<UListDataObject_StringResolution>();
+	Resolution->InitResolutionValues({}, FIntPoint(2560, 1440));
+	Resolution->InitializeDataObject();
+	TestEqual(TEXT("Empty enumeration uses desktop fallback"), Resolution->GetCurrentTextValue().ToString(), FString(TEXT("2560 x 1440")));
+	TestEqual(TEXT("Maximum getter returns a value, not a field name"), Resolution->GetMaxAllowedResolution(), FString(TEXT("(X=2560,Y=1440)")));
+	Resolution->InitResolutionValues({}, FIntPoint::ZeroValue);
+	Resolution->InitializeDataObject();
+	TestEqual(TEXT("Headless fallback is usable"), Resolution->GetCurrentTextValue().ToString(), FString(TEXT("1920 x 1080")));
+	Resolution->InitResolutionValues({FIntPoint(1920,1080), FIntPoint(1280,720), FIntPoint(1920,1080), FIntPoint(622989440,407), FIntPoint(0,0)}, FIntPoint::ZeroValue);
+	TestEqual(TEXT("Invalid and duplicate modes removed"), Resolution->GetOptionsTextArray().Num(), 2);
+	TestEqual(TEXT("Maximum is selected from actual modes"), Resolution->GetMaxAllowedResolution(), FString(TEXT("(X=1920,Y=1080)")));
+	Resolution->SetDefaultValueFromString(TEXT("MaxAllowedResolution"));
+	int32 SetterCalls = 0;
+	FString BoundValue = TEXT("(X=622989440,Y=407)");
+	Resolution->SetBinding(MakeShared<FOptionsDataInteractionHelper>([&BoundValue]() { return BoundValue; }, [&SetterCalls](const FString&) { ++SetterCalls; }));
+	Resolution->InitializeDataObject();
+	TestEqual(TEXT("Corrupt resolution cannot become a display label"), Resolution->GetCurrentTextValue().ToString(), FString(TEXT("1920 x 1080")));
+	TestEqual(TEXT("Displaying fallback never writes settings"), SetterCalls, 0);
+	BoundValue = TEXT("(X=1537,Y=911)");
+	Resolution->InitializeDataObject();
+	TestEqual(TEXT("Custom editor window reads draft, not global settings"), Resolution->GetCurrentTextValue().ToString(), FString(TEXT("1537 x 911")));
+	Resolution->GotoNextOption();
+	Resolution->GotoPreOption();
+	TestEqual(TEXT("Custom window size participates in navigation"), Resolution->GetCurrentStringValue(), BoundValue);
+	return true;
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FResolutionRepairTest,
+	"GameMainMenu.Options.Initialization.CorruptResolutionRepair",
+	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+bool FResolutionRepairTest::RunTest(const FString& Parameters)
+{
+	auto* Settings = NewObject<UFrontendGameUserSettings>();
+	Settings->SetScreenResolution(FIntPoint(2560,1440));
+	Settings->ConfirmVideoMode();
+	Settings->SetScreenResolution(FIntPoint(622989440,407));
+	Settings->RepairResolutionSettings();
+	TestEqual(TEXT("Corrupt persisted dimensions use last confirmed resolution"), Settings->GetScreenResolution(), FIntPoint(2560,1440));
+	Settings->SetScreenResolution(FIntPoint(1537,911));
+	Settings->RepairResolutionSettings();
+	TestEqual(TEXT("Valid custom window size is preserved"), Settings->GetScreenResolution(), FIntPoint(1537,911));
+	const auto Binding = FOptionsDataInteractionHelper::Create([Settings]() { return Settings; }, &UFrontendGameUserSettings::GetScreenResolution, &UFrontendGameUserSettings::SetScreenResolution);
+	for (const TCHAR* Invalid : {TEXT("MaxAllowedResolution"), TEXT("(X=622989440,Y=407)"), TEXT("(X=0,Y=1080)"), TEXT("(X=1920,Y=-1)"), TEXT("(X=2147483648,Y=1080)")})
+		Binding->SetValueFromString(Invalid);
+	TestEqual(TEXT("Binding refuses malformed and corrupt dimensions"), Settings->GetScreenResolution(), FIntPoint(1537,911));
+	Binding->SetValueFromString(TEXT("(X=1920,Y=1080)"));
+	TestEqual(TEXT("Binding still accepts valid dimensions"), Settings->GetScreenResolution(), FIntPoint(1920,1080));
+	return true;
+}
+
 #endif // WITH_DEV_AUTOMATION_TESTS
