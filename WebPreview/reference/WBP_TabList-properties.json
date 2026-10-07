@@ -1,0 +1,1577 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\Options\\WBP_TabList.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList",
+  "objects": [
+    {
+      "index": 1,
+      "name": "CAW_Next_Icon",
+      "class": "Object:/Script/CommonUI.CommonActionWidget",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.CAW_Next_Icon",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_3",
+        "DisplayLabel": "CAW_Next_Icon"
+      }
+    },
+    {
+      "index": 2,
+      "name": "CAW_Pre_Icon",
+      "class": "Object:/Script/CommonUI.CommonActionWidget",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.CAW_Pre_Icon",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_0",
+        "DisplayLabel": "CAW_Pre_Icon"
+      }
+    },
+    {
+      "index": 3,
+      "name": "CAW_Next_Icon",
+      "class": "Object:/Script/CommonUI.CommonActionWidget",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.CAW_Next_Icon",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_3",
+        "DisplayLabel": "CAW_Next_Icon"
+      }
+    },
+    {
+      "index": 4,
+      "name": "CAW_Pre_Icon",
+      "class": "Object:/Script/CommonUI.CommonActionWidget",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.CAW_Pre_Icon",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_0",
+        "DisplayLabel": "CAW_Pre_Icon"
+      }
+    },
+    {
+      "index": 5,
+      "name": "AddTabToHB",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB",
+      "properties": {
+        "Schema": "WidgetGraphSchema",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_IfThenElse_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CreateWidget_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_MacroInstance_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_6"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "49052b0650c18f4f9c7087af7daeda5a"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "Debug",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug",
+      "properties": {
+        "Schema": "WidgetGraphSchema",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_IfThenElse_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_VariableGet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_CallFunction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_MacroInstance_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_VariableGet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_CallFunction_3"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "2c473d75daace341a1c2e2f2f8cb020a"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_IfThenElse_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_3"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "f1151cb6c79a0f448d7fe3b329a4d3e9"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "name": "IsValid",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_VariableGet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_PromotableOperator_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_CommutativeAssociativeBinaryOperator_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "c34792fb3a3a954c9fd8921455bc2e86"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "name": "AddTabToHB",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:AddTabToHB",
+      "properties": {}
+    },
+    {
+      "index": 10,
+      "name": "Debug",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:Debug",
+      "properties": {}
+    },
+    {
+      "index": 11,
+      "name": "ExecuteUbergraph_WBP_TabList",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:ExecuteUbergraph_WBP_TabList",
+      "properties": {}
+    },
+    {
+      "index": 12,
+      "name": "HandleTabCreation",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:HandleTabCreation",
+      "properties": {}
+    },
+    {
+      "index": 13,
+      "name": "IsValid",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:IsValid",
+      "properties": {}
+    },
+    {
+      "index": 14,
+      "name": "PreConstruct",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:PreConstruct",
+      "properties": {}
+    },
+    {
+      "index": 15,
+      "name": "HB_Tabs",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HB_Tabs",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_1",
+        "bIsVariable": true,
+        "DisplayLabel": "HB_Tabs"
+      }
+    },
+    {
+      "index": 16,
+      "name": "HorizontalBox_33",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_3"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 17,
+      "name": "HB_Tabs",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HB_Tabs",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_1",
+        "bIsVariable": true,
+        "DisplayLabel": "HB_Tabs"
+      }
+    },
+    {
+      "index": 18,
+      "name": "HorizontalBox_33",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_3"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 19,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.CAW_Pre_Icon"
+      }
+    },
+    {
+      "index": 20,
+      "name": "HorizontalBoxSlot_1",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_1",
+      "properties": {
+        "Padding": {
+          "Left": 10.0,
+          "Right": 10.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HB_Tabs"
+      }
+    },
+    {
+      "index": 21,
+      "name": "HorizontalBoxSlot_3",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_3",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.CAW_Next_Icon"
+      }
+    },
+    {
+      "index": 22,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.CAW_Pre_Icon"
+      }
+    },
+    {
+      "index": 23,
+      "name": "HorizontalBoxSlot_1",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_1",
+      "properties": {
+        "Padding": {
+          "Left": 10.0,
+          "Right": 10.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HB_Tabs"
+      }
+    },
+    {
+      "index": 24,
+      "name": "HorizontalBoxSlot_3",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33.HorizontalBoxSlot_3",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.CAW_Next_Icon"
+      }
+    },
+    {
+      "index": 25,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_0",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetSystemLibrary",
+          "MemberName": "IsValidClass"
+        },
+        "NodePosX": 176,
+        "NodePosY": 127,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4a2e09ba7dc06e439fbf8e1c2ebd0a92"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetOwningPlayer",
+          "bSelfContext": true
+        },
+        "NodePosX": 416,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ff05e728503c61429b15c8193ff00574"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_2",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "HorizontalBox",
+          "MemberName": "AddChildToHorizontalBox"
+        },
+        "NodePosX": 1280,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c4057a8c085f384c96fba9e170866c68"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_3",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "HorizontalBox",
+          "MemberName": "AddChildToHorizontalBox"
+        },
+        "NodePosX": 256,
+        "NodePosY": -224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b8f317262fb46743abd45431ca57fd19"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "name": "K2Node_CallFunction_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_4",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "HorizontalBoxSlot",
+          "MemberName": "SetPadding"
+        },
+        "NodePosX": 1632,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2544d13702561e4ebc62403e25b5675d"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "name": "K2Node_CallFunction_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_5",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "HorizontalBoxSlot",
+          "MemberName": "SetPadding"
+        },
+        "NodePosX": 592,
+        "NodePosY": -224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0a519f62cf5752479c789e35ded9cd27"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "name": "K2Node_CallFunction_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CallFunction_6",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonButtonBase",
+          "MemberName": "SetIsFocusable"
+        },
+        "NodePosX": -16,
+        "NodePosY": -224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "103bb5e74750914aa728a13e132f4483"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "IsValid",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "c34792fb3a3a954c9fd8921455bc2e86"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 144,
+        "NodePosY": 144,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "45a2463a1665b7438288a480dc845f04"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_CallFunction_2",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "PanelWidget",
+          "MemberName": "ClearChildren"
+        },
+        "NodePosX": 352,
+        "NodePosY": 24,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "34e23fd9846136428d8f5b137475115a"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_CallFunction_3",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "AddTabToHB",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "49052b0650c18f4f9c7087af7daeda5a"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 896,
+        "NodePosY": 23,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a9049023e387a44fabac8ffc6fab4d7f"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "Debug",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "2c473d75daace341a1c2e2f2f8cb020a"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 416,
+        "NodePosY": -112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8ef6293ef35ef543b55dffc763277b59"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_1",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "AddTabToHB",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "49052b0650c18f4f9c7087af7daeda5a"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 256,
+        "NodePosY": 336,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "26d9f5c2db3acf4c8a1abe241fe7703a"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_2",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonActionWidget",
+          "MemberName": "SetInputAction"
+        },
+        "NodePosX": 464,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "66bfe64976193547b64530e4009f7668"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_CallFunction_3",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonActionWidget",
+          "MemberName": "SetInputAction"
+        },
+        "NodePosX": 880,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "16958b0e10561245913c3f308d62f505"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_CallFunction_0",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetSystemLibrary",
+          "MemberName": "IsValidClass"
+        },
+        "NodePosX": 112,
+        "NodePosY": 272,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bcf32e2b4d666e49b0a8d1d1667b7372"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "name": "K2Node_CommutativeAssociativeBinaryOperator_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_CommutativeAssociativeBinaryOperator_0",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetMathLibrary",
+          "MemberName": "BooleanAND"
+        },
+        "NodePosX": 400,
+        "NodePosY": 208,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eb6a1b622c1aa64e88b85e01e5b79629"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "name": "K2Node_CreateWidget_1",
+      "class": "Object:/Script/UMGEditor.K2Node_CreateWidget",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_CreateWidget_1",
+      "properties": {
+        "NodePosX": 672,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "fc9a0ae334d31f4eb8504ce36493d514"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": -1,
+        "bCommentBubblePinned": true,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c54d17d679151749ac4960e4cd50fbdb"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "CommonTabListWidgetBase",
+          "MemberName": "HandleTabCreation"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 353,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cb3a3de25e6ea24cbbca7654f695acde"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 201457664,
+        "FunctionReference": {
+          "MemberName": "AddTabToHB"
+        },
+        "bIsEditable": true,
+        "NodePosX": -560,
+        "NodePosY": -16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "65b8d134b3ba904aa669a28672b08283"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 201457664,
+        "FunctionReference": {
+          "MemberName": "Debug"
+        },
+        "bIsEditable": true,
+        "NodePosY": 40,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ef84705c2dbe044c910e6a9b9278bde3"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 469893120,
+        "FunctionReference": {
+          "MemberName": "IsValid"
+        },
+        "bIsEditable": true,
+        "NodePosX": -192,
+        "NodePosY": 240,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "088a208d648c844bb6437e4e7fab34bd"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "IsValid"
+        },
+        "bIsEditable": true,
+        "NodePosX": 688,
+        "NodePosY": 240,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7eb14f0c11f3ea458ab22fd98dd20744"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "name": "K2Node_IfThenElse_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_IfThenElse",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_IfThenElse_0",
+      "properties": {
+        "NodePosX": 192,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "474df5f501177c4db16b8f8675d8b163"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "name": "K2Node_IfThenElse_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_IfThenElse",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_IfThenElse_0",
+      "properties": {
+        "NodePosX": 120,
+        "NodePosY": 40,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0007f262fafc4c44af8e6cda44364b91"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "name": "K2Node_IfThenElse_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_IfThenElse",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_IfThenElse_0",
+      "properties": {
+        "NodePosX": 208,
+        "NodePosY": -1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b7d0e8522487214e859b53f92dfb3abc"
+        }
+      }
+    },
+    {
+      "index": 51,
+      "name": "K2Node_MacroInstance_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_MacroInstance",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_MacroInstance_0",
+      "properties": {
+        "MacroGraphReference": {
+          "MacroGraph": "IsValid",
+          "GraphBlueprint": "StandardMacros",
+          "GraphGuid": {
+            "struct": "Guid",
+            "raw": "cd2b4264ff030743b7a8ae5c65aa329a"
+          }
+        },
+        "NodePosX": -336,
+        "NodePosY": -16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "44fa6c0e6587184e9020b9a75aab1dfc"
+        }
+      }
+    },
+    {
+      "index": 52,
+      "name": "K2Node_MacroInstance_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_MacroInstance",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_MacroInstance_0",
+      "properties": {
+        "MacroGraphReference": {
+          "MacroGraph": "ForLoop",
+          "GraphBlueprint": "StandardMacros",
+          "GraphGuid": {
+            "struct": "Guid",
+            "raw": "af04c95517fe454ba855fb6101b89fdb"
+          }
+        },
+        "NodePosX": 592,
+        "NodePosY": 40,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bc35f645a88bfc48bf682d53c5a7defe"
+        }
+      }
+    },
+    {
+      "index": 53,
+      "name": "K2Node_PromotableOperator_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_PromotableOperator",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_PromotableOperator_0",
+      "properties": {
+        "OperationName": "Greater",
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetMathLibrary",
+          "MemberName": "Greater_IntInt"
+        },
+        "NodePosX": 208,
+        "NodePosY": 192,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e63a0363282aaf45a6d51a4c1efa2b64"
+        }
+      }
+    },
+    {
+      "index": 54,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "TabButtonEntryWidgetClass",
+          "bSelfContext": true
+        },
+        "NodePosX": 432,
+        "NodePosY": 71,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "404bbccd4994b745b21e37d00ebf7e47"
+        }
+      }
+    },
+    {
+      "index": 55,
+      "name": "K2Node_VariableGet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "TabButtonEntryWidgetClass",
+          "bSelfContext": true
+        },
+        "NodePosX": 176,
+        "NodePosY": 198,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2f58b762626d8940b30d08ccbc2b0912"
+        }
+      }
+    },
+    {
+      "index": 56,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "HB_Tabs",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "0ba55b44b0e01e4991f9e30495085ad6"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 272,
+        "NodePosY": -48,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "82d7411cceebde41b88ea338626cf403"
+        }
+      }
+    },
+    {
+      "index": 57,
+      "name": "K2Node_VariableGet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "TabPadding",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "fc9bb5c73af8724f95f41d7b3bcd1155"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 1664,
+        "NodePosY": 144,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ca4fed58295f594bb3cdc5658386f0d6"
+        }
+      }
+    },
+    {
+      "index": 58,
+      "name": "K2Node_VariableGet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "AddTabToHB",
+          "MemberName": "InTabButton"
+        },
+        "NodePosX": 32,
+        "NodePosY": -80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a78255d34f8b6a4194a391b8e1070aa3"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "name": "K2Node_VariableGet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "HB_Tabs",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "0ba55b44b0e01e4991f9e30495085ad6"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 1360,
+        "NodePosY": 144,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "90ee90da28b5bc4a834229c948077e79"
+        }
+      }
+    },
+    {
+      "index": 60,
+      "name": "K2Node_VariableGet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "TabPadding",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "fc9bb5c73af8724f95f41d7b3bcd1155"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 640,
+        "NodePosY": -80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "d413089fa971ce4fa75a41a5bd5b48ed"
+        }
+      }
+    },
+    {
+      "index": 61,
+      "name": "K2Node_VariableGet_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB.K2Node_VariableGet_7",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "AddTabToHB",
+          "MemberName": "InTabButton"
+        },
+        "NodePosX": 272,
+        "NodePosY": -80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c9849d07fd7eb846b9bca77ba4a90abf"
+        }
+      }
+    },
+    {
+      "index": 62,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "HB_Tabs",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "0ba55b44b0e01e4991f9e30495085ad6"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 384,
+        "NodePosY": 128,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "64d1f80741917f499426e0d80f12d118"
+        }
+      }
+    },
+    {
+      "index": 63,
+      "name": "K2Node_VariableGet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug.K2Node_VariableGet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "DebugEditorPreviewTabCount",
+          "bSelfContext": true
+        },
+        "NodePosX": 592,
+        "NodePosY": 176,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "6f4a002c26920b49b2c7f57ef71f8ceb"
+        }
+      }
+    },
+    {
+      "index": 64,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "CAW_Pre_Icon",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "be5711c4dc958a4e9dc4f1daa4082a2d"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 320,
+        "NodePosY": 144,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1fc562a3cbe8094d8cb4a5236b61ce0a"
+        }
+      }
+    },
+    {
+      "index": 65,
+      "name": "K2Node_VariableGet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "PreviousTabInputActionData",
+          "bSelfContext": true
+        },
+        "NodePosX": 464,
+        "NodePosY": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e0e41134e2f0fc41bc2ebca1442d3a97"
+        }
+      }
+    },
+    {
+      "index": 66,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "CAW_Next_Icon",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "ea3aab378a921445a0ceb8826f4b72a5"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 720,
+        "NodePosY": 160,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4bf49f0a5a8e45489da19116501c3df9"
+        }
+      }
+    },
+    {
+      "index": 67,
+      "name": "K2Node_VariableGet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_VariableGet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "NextTabInputActionData",
+          "bSelfContext": true
+        },
+        "NodePosX": 896,
+        "NodePosY": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "381f923b5fd1d94e80c080cff8970291"
+        }
+      }
+    },
+    {
+      "index": 68,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "DebugEditorPreviewTabCount",
+          "bSelfContext": true
+        },
+        "NodePosX": -32,
+        "NodePosY": 192,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4702d80f1bbab94cadef82c1bef24bbc"
+        }
+      }
+    },
+    {
+      "index": 69,
+      "name": "K2Node_VariableGet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid.K2Node_VariableGet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "TabButtonEntryWidgetClass",
+          "bSelfContext": true
+        },
+        "NodePosX": 96,
+        "NodePosY": 336,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "00409681d4d88a4eb4fa02f1d92b1027"
+        }
+      }
+    },
+    {
+      "index": 70,
+      "name": "Default__WBP_TabList_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.Default__WBP_TabList_C",
+      "properties": {
+        "UberGraphFrame": {},
+        "TabPadding": {
+          "Left": 5.0,
+          "Top": 0.0,
+          "Right": 5.0,
+          "Bottom": 0.0
+        },
+        "TabButtonEntryWidgetClass": "WBP_Button_Default_C",
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 71,
+      "name": "WBP_TabList",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "000000000400000074000000220000009a7aa1ff499f5d42963a888e10c007243b00000000000000be5711c4dc958a4e9dc4f1daa4082a2d72000000000000000ba55b44b0e01e4991f9e30495085ad63a00000000000000ea3aab378a921445a0ceb8826f4b72a5"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree",
+        "ParentClass": "FrontendCommonTabListWidgetBase",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph"
+        ],
+        "FunctionGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:IsValid",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB"
+        ],
+        "NewVariables": [
+          {
+            "VarName": "TabPadding",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "fc9bb5c73af8724f95f41d7b3bcd1155"
+            },
+            "VarType": {
+              "raw": "bc000000000000009c00000000000000b5ffffff000000000000000000000000009c0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Tab Padding",
+            "Category": {
+              "namespace": "",
+              "key": "D09894344359A8B489F3BA8D2C590F03",
+              "source": "Frontend Tab List Settings"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          }
+        ],
+        "GeneratedVariables": [
+          {
+            "VarName": "HB_Tabs",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "0ba55b44b0e01e4991f9e30495085ad6"
+            },
+            "VarType": {
+              "raw": "9d000000000000009c00000000000000e6ffffff000000000000000000000000009c0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "HB_Tabs",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_TabList"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "CAW_Pre_Icon",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "be5711c4dc958a4e9dc4f1daa4082a2d"
+            },
+            "VarType": {
+              "raw": "9d000000000000009c00000000000000f2ffffff000000000000000000000000009c0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "CAW_Pre_Icon",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_TabList"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "CAW_Next_Icon",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "ea3aab378a921445a0ceb8826f4b72a5"
+            },
+            "VarType": {
+              "raw": "9d000000000000009c00000000000000f2ffffff000000000000000000000000009c0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "CAW_Next_Icon",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_TabList"
+              }
+            ],
+            "DefaultValue": ""
+          }
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "WBP Tab List",
+          "None",
+          "Frontend Tab List Settings"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "7a90acc2a671edc3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1028878214"
+            },
+            "SavedZoomAmount": 0.875
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "01000000"
+            },
+            "SavedViewOffset": {
+              "raw": "8a3222c3c8f3cdc3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1021169014"
+            },
+            "SavedZoomAmount": 0.875
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "02000000"
+            },
+            "SavedViewOffset": {
+              "raw": "aa4206c4d03be8c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1006222678"
+            },
+            "SavedZoomAmount": 1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "b277fde3b1740c45b01d9269e4f2519b"
+        }
+      }
+    },
+    {
+      "index": 72,
+      "name": "WBP_TabList_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree",
+        "UberGraphFunction": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:ExecuteUbergraph_WBP_TabList",
+        "PropertyGuids": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "0000000004000000c200000000000000fc9bb5c73af8724f95f41d7b3bcd11553a00000000000000ea3aab378a921445a0ceb8826f4b72a53b00000000000000be5711c4dc958a4e9dc4f1daa4082a2d72000000000000000ba55b44b0e01e4991f9e30495085ad6"
+        }
+      }
+    },
+    {
+      "index": 73,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HorizontalBox_33",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.CAW_Pre_Icon",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.HB_Tabs",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:WidgetTree.CAW_Next_Icon"
+        ]
+      }
+    },
+    {
+      "index": 74,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HorizontalBox_33",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.CAW_Pre_Icon",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.HB_Tabs",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:WidgetTree.CAW_Next_Icon"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:Debug",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:AddTabToHB",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.SKEL_WBP_TabList_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.SKEL_WBP_TabList_C:HandleTabCreation",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:TempGraph.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList:NewFunction.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C:HandleTabCreation",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.SKEL_WBP_TabList_C:PreConstruct"
+  ],
+  "text": []
+}

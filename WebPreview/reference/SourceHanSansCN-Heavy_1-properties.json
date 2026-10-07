@@ -1,0 +1,17 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\Assets\\Font\\ShiYuan\\SourceHanSansCN-Heavy_1.uasset",
+  "package": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy_1",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SourceHanSansCN-Heavy_1",
+      "class": "Object:/Script/Engine.FontFace",
+      "path": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy_1.SourceHanSansCN-Heavy_1",
+      "properties": {
+        "SourceFilename": "D:\\Fonts\\思源黑体 简体中文 行高修正版（建议先保存，再下载）\\SourceHanSansCN-Heavy#1.otf"
+      }
+    }
+  ],
+  "softReferences": [],
+  "text": []
+}

@@ -1,0 +1,417 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:oct5B7eblGxaUhz0hSN0kvX8ul4="
+		},
+		"TotalHeaderSize": 5339,
+		"CustomVersions": [
+			{
+				"Key": "375EC13C06E448FBB50084F0262A717E",
+				"Version": 4
+			},
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "B0D832E41F894F0DACCF7EB736FD4AA2",
+				"Version": 10
+			},
+			{
+				"Key": "CFFC743F43B04480939114DF171D2073",
+				"Version": 37
+			},
+			{
+				"Key": "D89B5E4224BD4D468412ACA8DF641779",
+				"Version": 61
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header",
+		"PackageFlags": 0,
+		"NameCount": 56,
+		"NameOffset": 532,
+		"SoftObjectPathsCount": 2,
+		"SoftObjectPathsOffset": 1881,
+		"LocalizationId": "362A2EB4C762931843240E508A225DE3",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 1921,
+		"ExportCount": 4,
+		"ExportOffset": 2544,
+		"ImportCount": 13,
+		"ImportOffset": 2024,
+		"CellExportCount": 0,
+		"CellExportOffset": 2992,
+		"CellImportCount": 0,
+		"CellImportOffset": 2992,
+		"MetaDataOffset": 1921,
+		"DependsOffset": 2992,
+		"SoftPackageReferencesCount": 1,
+		"SoftPackageReferencesOffset": 3008,
+		"SearchableNamesOffset": 3016,
+		"ThumbnailTableOffset": 3044,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "14D187D64F733B5B425F1CB6FC07E83F",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 4,
+				"NameCount": 56
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 2929442084,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 3154,
+		"BulkDataStartOffset": 6193,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 5339,
+		"NamesReferencedFromExportDataCount": 39,
+		"PayloadTocOffset": 6197,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header",
+		"/Script/CoreUObject",
+		"/Script/SlateCore",
+		"ArrayProperty",
+		"bAllowDeletion",
+		"bLegacyNeedToPurgeSkelRefs",
+		"BlueprintGuid",
+		"BlueprintSystemVersion",
+		"BlueprintType",
+		"BoolProperty",
+		"Color",
+		"Engine",
+		"FloatProperty",
+		"Font",
+		"FontObject",
+		"FontOutlineSettings",
+		"GeneratedClass",
+		"GraphGuid",
+		"Guid",
+		"IntProperty",
+		"LinearColor",
+		"NameProperty",
+		"None",
+		"Normal",
+		"ObjectProperty",
+		"OutlineColor",
+		"OutlineSettings",
+		"OutlineSize",
+		"PackageLocalizationNamespace",
+		"ParentClass",
+		"Schema",
+		"Size",
+		"SKEL_SText_ListEntry_Header_C",
+		"SkewAmount",
+		"SlateFontInfo",
+		"SText_ListEntry_Header_C",
+		"StructProperty",
+		"TypefaceFontName",
+		"UbergraphPages",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+		"/Script/BlueprintGraph",
+		"/Script/CommonUI",
+		"/Script/Engine",
+		"Blueprint",
+		"BlueprintGeneratedClass",
+		"Class",
+		"CommonTextStyle",
+		"Default__CommonTextStyle",
+		"Default__SText_ListEntry_Header_C",
+		"EdGraph",
+		"EdGraphSchema_K2",
+		"EventGraph",
+		"Object",
+		"Package",
+		"SourceHanSansCN",
+		"SText_ListEntry_Header"
+	],
+	"SoftObjectPaths": [
+		"Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SKEL_SText_ListEntry_Header_C",
+		"Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header_C"
+	],
+	"Imports": [
+		{
+			"ObjectName": "EdGraphSchema_K2",
+			"PathName": "Object:/Script/BlueprintGraph.EdGraphSchema_K2",
+			"OuterIndex": -10,
+			"Outer": "Object:/Script/BlueprintGraph",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "CommonTextStyle",
+			"PathName": "Object:/Script/CommonUI.CommonTextStyle",
+			"OuterIndex": -11,
+			"Outer": "Object:/Script/CommonUI",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Object",
+			"PathName": "Object:/Script/CoreUObject.Object",
+			"OuterIndex": -12,
+			"Outer": "Object:/Script/CoreUObject",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Blueprint",
+			"PathName": "Object:/Script/Engine.Blueprint",
+			"OuterIndex": -13,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "BlueprintGeneratedClass",
+			"PathName": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"OuterIndex": -13,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraph",
+			"PathName": "Object:/Script/Engine.EdGraph",
+			"OuterIndex": -13,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Default__CommonTextStyle",
+			"PathName": "Object:/Script/CommonUI.Default__CommonTextStyle",
+			"OuterIndex": -11,
+			"Outer": "Object:/Script/CommonUI",
+			"ClassPath": "Object:/Script/CommonUI.CommonTextStyle",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN.SourceHanSansCN",
+			"OuterIndex": -9,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+			"ClassPath": "Object:/Script/Engine.Font",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/BlueprintGraph",
+			"PathName": "Object:/Script/BlueprintGraph",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CommonUI",
+			"PathName": "Object:/Script/CommonUI",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CoreUObject",
+			"PathName": "Object:/Script/CoreUObject",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "SText_ListEntry_Header",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header",
+			"ClassIndex": -4,
+			"Class": "Object:/Script/Engine.Blueprint",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 235,
+			"SerialOffset": 5339,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 231,
+			"bForcedExport": 0,
+			"bNotForClient": 1,
+			"bNotForServer": 1,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "SText_ListEntry_Header_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header_C",
+			"ClassIndex": -5,
+			"Class": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"SuperIndex": -2,
+			"Super": "Object:/Script/CommonUI.CommonTextStyle",
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional",
+			"HashNext": -1,
+			"SerialSize": 81,
+			"SerialOffset": 5574,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "EventGraph",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header:EventGraph",
+			"ClassIndex": -6,
+			"Class": "Object:/Script/Engine.EdGraph",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 132,
+			"SerialOffset": 5655,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 128,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Default__SText_ListEntry_Header_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.Default__SText_ListEntry_Header_C",
+			"ClassIndex": 2,
+			"Class": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | ClassDefaultObject | ArchetypeObject",
+			"HashNext": -1,
+			"SerialSize": 406,
+			"SerialOffset": 5787,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 402,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [
+		"/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header"
+	],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "Blueprint /GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header",
+			"FileOffset": 3020
+		},
+		{
+			"ObjectFullName": "BlueprintGeneratedClass /GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header_C",
+			"FileOffset": 3032
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header",
+			"PackagePath": "/GameMainMenu/BP/UI/Styles/Text",
+			"AssetName": "SText_ListEntry_Header",
+			"AssetClassPath": "Object:/Script/Engine.Blueprint",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"GeneratedClass": "/Script/Engine.BlueprintGeneratedClass'/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header.SText_ListEntry_Header_C'",
+				"ParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonTextStyle'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonTextStyle'",
+				"ClassFlags": "4458496",
+				"BlueprintType": "BPTYPE_Normal",
+				"IsDataOnly": "True",
+				"FiBData": "\u0004\u0001\u0001\u0001\u00ad\u0002\u0001\u0001\b\u0001\u0001\u0001\u0001\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\u0002\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0003\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0004\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001LjtnfuTdifnb\u0001\u001d\u0001\u0001\u0001HsbqiEjtqmbzObnf`FwfouHsbqi\u0001\f\u0001\u0001\u0001FwfouHsbqi\u0001\u0005\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\u0006\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000b\u0001\u0001\u0001Cmvfqsjou\u0001\u0010\u0001\u0001\u0001OpHsbqiUppmujq\u0001\b\u0001\u0001\u0001)Opof*\u0001\u0007\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0007\u0001\u0001\u0001Opeft\u0001\u0007\u0001\u0001\u0001Opeft\u0001{\"0\":[],\"1\":[{\"2\":\"3\",\"4\":\"5\",\"6\":[],\"0\":[]}]}",
+				"NumReplicatedProperties": "0",
+				"NativeComponents": "0",
+				"BlueprintComponents": "0",
+				"BlueprintPath": "SText_ListEntry_Header",
+				"ImportedNamespaces": "()"
+			},
+			"TaggedAssetBundles": {}
+		},
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_Header",
+			"PackagePath": "/GameMainMenu/BP/UI/Styles/Text",
+			"AssetName": "SText_ListEntry_Header_C",
+			"AssetClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"ParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonTextStyle'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonTextStyle'",
+				"ClassFlags": "4458496",
+				"BlueprintType": "BPTYPE_Normal",
+				"NumReplicatedProperties": "0",
+				"ModuleName": "SText_ListEntry_Header"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

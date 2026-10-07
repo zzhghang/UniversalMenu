@@ -1,0 +1,591 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\WBP_ConfirmScreen.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen",
+  "objects": [
+    {
+      "index": 1,
+      "name": "BackgroundBlur_117",
+      "class": "Object:/Script/UMG.BackgroundBlur",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.BackgroundBlur_117",
+      "properties": {
+        "BlurStrength": 5.0,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_7"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Border_123",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Border_123",
+      "properties": {
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_6",
+        "Visibility": "ESlateVisibility::Hidden"
+      }
+    },
+    {
+      "index": 3,
+      "name": "Cli_Icon",
+      "class": "Object:/Script/CommonUI.CommonLazyImage",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Cli_Icon",
+      "properties": {
+        "Brush": {
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "raw": "0000104200000042",
+            "type": {
+              "name": "StructProperty",
+              "params": [
+                {
+                  "name": "DeprecateSlateVector2D",
+                  "params": [
+                    {
+                      "name": "/Script/SlateCore",
+                      "params": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "error": "invalid name 1108344832"
+          },
+          "ResourceObject": "T_Caution"
+        },
+        "ColorAndOpacity": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 0.6000000238418579
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "Cli_Icon"
+      }
+    },
+    {
+      "index": 4,
+      "name": "Ctb_Message",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Ctb_Message",
+      "properties": {
+        "Style": "SText_Confirm_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[E1BF7D07120C9066FFBE0CB82CA1F286]",
+          "key": "09F6A05A4B14331FE7BEB0B53128C68A",
+          "source": "要退出游戏吗?"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_2",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_Message"
+      }
+    },
+    {
+      "index": 5,
+      "name": "Ctb_Title",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Ctb_Title",
+      "properties": {
+        "Style": "SText_Confirm_HightLight_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "UMG",
+          "key": "TextBlockDefaultValue",
+          "source": "Text Block"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_1",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_Title"
+      }
+    },
+    {
+      "index": 6,
+      "name": "DynamicEntryBox_Buttons",
+      "class": "Object:/Script/UMG.DynamicEntryBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.DynamicEntryBox_Buttons",
+      "properties": {
+        "NumDesignerPreviewEntries": 2,
+        "EntryWidgetClass": "WBP_Button_Confirm_C",
+        "EntrySpacing": {
+          "x": 0.0,
+          "y": 25.0
+        },
+        "EntryBoxType": "EDynamicBoxType::Vertical",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_3",
+        "DisplayLabel": "DynamicEntryBox_Buttons"
+      }
+    },
+    {
+      "index": 7,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "6f33e7c2a3ba5b438ca61db888549cb9"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a7bc22ca6175a440983da458b535fd16"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cc6e6a7ad950a04bab0a43d0ef6be6ae"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "738f86d1754a89428e579e104ea2c544"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "name": "Overlay_21",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_5"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 12,
+      "name": "OverlaySlot_5",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_5",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54"
+      }
+    },
+    {
+      "index": 13,
+      "name": "OverlaySlot_6",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_6",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Border_123"
+      }
+    },
+    {
+      "index": 14,
+      "name": "OverlaySlot_7",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_7",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.BackgroundBlur_117"
+      }
+    },
+    {
+      "index": 15,
+      "name": "Spacer",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer",
+      "properties": {
+        "Size": {
+          "x": 1.0,
+          "y": 10.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_5"
+      }
+    },
+    {
+      "index": 16,
+      "name": "Spacer_1",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer_1",
+      "properties": {
+        "Size": {
+          "x": 1.0,
+          "y": 25.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_6"
+      }
+    },
+    {
+      "index": 17,
+      "name": "Spacer_82",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer_82",
+      "properties": {
+        "Size": {
+          "x": 1.0,
+          "y": 20.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_4"
+      }
+    },
+    {
+      "index": 18,
+      "name": "VerticalBox_54",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_3"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21.OverlaySlot_5",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 19,
+      "name": "VerticalBoxSlot_0",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Cli_Icon"
+      }
+    },
+    {
+      "index": 20,
+      "name": "VerticalBoxSlot_1",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Ctb_Title"
+      }
+    },
+    {
+      "index": 21,
+      "name": "VerticalBoxSlot_2",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_2",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Ctb_Message"
+      }
+    },
+    {
+      "index": 22,
+      "name": "VerticalBoxSlot_3",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_3",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.DynamicEntryBox_Buttons"
+      }
+    },
+    {
+      "index": 23,
+      "name": "VerticalBoxSlot_4",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_4",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer_82"
+      }
+    },
+    {
+      "index": 24,
+      "name": "VerticalBoxSlot_5",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_5",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer"
+      }
+    },
+    {
+      "index": 25,
+      "name": "VerticalBoxSlot_6",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54.VerticalBoxSlot_6",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer_1"
+      }
+    },
+    {
+      "index": 26,
+      "name": "Default__WBP_ConfirmScreen_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.Default__WBP_ConfirmScreen_C",
+      "properties": {
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false,
+        "Visibility": "ESlateVisibility::Visible"
+      }
+    },
+    {
+      "index": 27,
+      "name": "WBP_ConfirmScreen",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "000000000b0000006a00000016000000b26a1cc38284c5418603c56ee90a6f05270000000000000071f291de50dc4e4c816a020716c1cee926000000000000006ea011d2a9dcd04eab1fd1af8c62a10c2c00000000000000a9f8ab936053e547be36ac40af1f1d6321000000000000001f06f5f840e99347a9692e9f12bccdb7920000003700000030ac26e2a53ae24ba890206fd3857d8981000000530000005c99466aed22304f99ca5c0b2b2da25081000000000000006b904d649d1b3d4ca9dc07b6efb9435d81000000020000000010cea2330699458bb9c7392d549678190000007c0000000c2fcce44e4830428dda823552b859950900000076000000286c6bbf492e5b4a8925d0d41fd5c5ee"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree",
+        "ParentClass": "W_ConfirmScreen",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph"
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "W Confirm Screen",
+          "Input",
+          "Events",
+          "Activatable Widget",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "d837d6edf2b923418cb968eb5c007c06"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "name": "WBP_ConfirmScreen_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen_C:WidgetTree"
+      }
+    },
+    {
+      "index": 29,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Overlay_21",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Border_123",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.BackgroundBlur_117",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.VerticalBox_54",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Cli_Icon",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer_82",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Ctb_Title",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Ctb_Message",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.Spacer_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:WidgetTree.DynamicEntryBox_Buttons"
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen_C:WidgetTree",
+      "properties": {
+        "RootWidget": null,
+        "AllWidgets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.SKEL_WBP_ConfirmScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.WBP_ConfirmScreen:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.SKEL_WBP_ConfirmScreen_C:Tick",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.SKEL_WBP_ConfirmScreen_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_ConfirmScreen.SKEL_WBP_ConfirmScreen_C:PreConstruct"
+  ],
+  "text": []
+}

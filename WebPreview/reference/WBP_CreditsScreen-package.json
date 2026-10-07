@@ -1,0 +1,1742 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:UyqV91Cxb7lCpoMsd60D5KWCvaE="
+		},
+		"TotalHeaderSize": 25819,
+		"CustomVersions": [
+			{
+				"Key": "375EC13C06E448FBB50084F0262A717E",
+				"Version": 4
+			},
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "9C54D522A8264FBE9421074661B482D0",
+				"Version": 44
+			},
+			{
+				"Key": "B0D832E41F894F0DACCF7EB736FD4AA2",
+				"Version": 10
+			},
+			{
+				"Key": "CFFC743F43B04480939114DF171D2073",
+				"Version": 37
+			},
+			{
+				"Key": "D89B5E4224BD4D468412ACA8DF641779",
+				"Version": 61
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen",
+		"PackageFlags": 0,
+		"NameCount": 180,
+		"NameOffset": 543,
+		"SoftObjectPathsCount": 9,
+		"SoftObjectPathsOffset": 4768,
+		"LocalizationId": "15A6EB422893D6E880A99BE06099473D",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 0,
+		"ExportCount": 33,
+		"ExportOffset": 9462,
+		"ImportCount": 40,
+		"ImportOffset": 7862,
+		"CellExportCount": 0,
+		"CellExportOffset": 13158,
+		"CellImportCount": 0,
+		"CellImportOffset": 13158,
+		"MetaDataOffset": 5058,
+		"DependsOffset": 13158,
+		"SoftPackageReferencesCount": 1,
+		"SoftPackageReferencesOffset": 13514,
+		"SearchableNamesOffset": 13522,
+		"ThumbnailTableOffset": 16712,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "0036D4ED4018C3FB60BEE5AB08D9DAED",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 33,
+				"NameCount": 180
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 1833571374,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 16824,
+		"BulkDataStartOffset": 34911,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 25819,
+		"NamesReferencedFromExportDataCount": 141,
+		"PayloadTocOffset": 34915,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen",
+		"/Script/CoreUObject",
+		"/Script/Engine",
+		"/Script/SlateCore",
+		"/Script/UMG",
+		"ActionButtonClass",
+		"Activatable Widget",
+		"AllWidgets",
+		"Appearance",
+		"ArrayProperty",
+		"bAllowDeletion",
+		"bAutoReturnOnFinish",
+		"bCommentBubblePinned",
+		"bCommentBubbleVisible",
+		"Behavior",
+		"bExpandedInDesigner",
+		"bHasScriptImplementedPaint",
+		"bHasScriptImplementedTick",
+		"bIsBackActionDisplayedInActionBar",
+		"bIsBackHandler",
+		"bIsVariable",
+		"bLegacyNeedToPurgeSkelRefs",
+		"BlueprintGuid",
+		"BlueprintSystemVersion",
+		"BlueprintType",
+		"bool",
+		"BoolProperty",
+		"Border",
+		"bOverrideFunction",
+		"Brush",
+		"BrushColor",
+		"ByteProperty",
+		"Category",
+		"CategorySorting",
+		"Comment",
+		"CommonBoundActionBar",
+		"Construct",
+		"Content",
+		"CreditsContentBox",
+		"CreditsData",
+		"CreditsScrollBox",
+		"CreditsTextStyle",
+		"DefaultGraphNode",
+		"delegate",
+		"DeprecateSlateVector2D",
+		"DisplayLabel",
+		"EditedDocumentInfo",
+		"EditedObjectPath",
+		"EHorizontalAlignment",
+		"EnabledState",
+		"Engine",
+		"ENodeEnabledState",
+		"ENodeEnabledState::Disabled",
+		"EnumProperty",
+		"ESlateBrushImageType",
+		"ESlateBrushImageType::FullColor",
+		"ESlateVisibility",
+		"ESlateVisibility::Hidden",
+		"Event Graph",
+		"EventReference",
+		"Events",
+		"EVerticalAlignment",
+		"exec",
+		"float",
+		"FloatProperty",
+		"GeneratedClass",
+		"GraphGuid",
+		"Guid",
+		"HAlign_Center",
+		"HAlign_Fill",
+		"HorizontalAlignment",
+		"ImageSize",
+		"ImageType",
+		"InDeltaTime",
+		"Input",
+		"Interaction",
+		"IntProperty",
+		"IsDesignTime",
+		"Keywords",
+		"LastEditedDocuments",
+		"Layout",
+		"LinearColor",
+		"Localization",
+		"MapProperty",
+		"Margin",
+		"MemberName",
+		"MemberParent",
+		"MemberReference",
+		"ModuleRelativePath",
+		"MyGeometry",
+		"Name",
+		"NamedSlotBinding",
+		"NamedSlotBindings",
+		"NameProperty",
+		"Navigation",
+		"NodeComment",
+		"NodeGuid",
+		"NodePosY",
+		"Nodes",
+		"None",
+		"ObjectProperty",
+		"OutputDelegate",
+		"Overlay",
+		"PackageLocalizationNamespace",
+		"Padding",
+		"Parent",
+		"ParentClass",
+		"Performance",
+		"PreConstruct",
+		"real",
+		"Render Transform",
+		"Rendering",
+		"ResourceObject",
+		"RightBottom_ExtentPoint",
+		"RootWidget",
+		"SavedViewOffset",
+		"SavedZoomAmount",
+		"Schema",
+		"ScrollBarVisibility",
+		"SKEL_WBP_CreditsScreen_C",
+		"SlateBrush",
+		"Slot",
+		"Slots",
+		"SoftObjectPath",
+		"StrProperty",
+		"struct",
+		"StructProperty",
+		"then",
+		"Tick",
+		"ToolTip",
+		"Top",
+		"UbergraphPages",
+		"UELogoImage",
+		"VAlign_Center",
+		"VAlign_Fill",
+		"VerticalAlignment",
+		"WBP_CreditsScreen",
+		"WBP_CreditsScreen_C",
+		"WBP_TemplateLayout",
+		"WidgetTree",
+		"WidgetVariableNameToGuidMap",
+		"/GameMainMenu/Assets/Others/T_UE-logo_W",
+		"/GameMainMenu/BP/DataAsset/DA_Credits",
+		"/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction",
+		"/GameMainMenu/BP/UI/Styles/Text/SText_CreditsScreen",
+		"/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout",
+		"/Script/BlueprintGraph",
+		"/Script/CommonUI",
+		"/Script/GameMainMenu",
+		"/Script/UMGEditor",
+		"BlueprintGeneratedClass",
+		"BorderSlot",
+		"Class",
+		"CommonLazyImage",
+		"CreditsDataAsset",
+		"DA_Credits",
+		"Default__W_CreditsScreen",
+		"Default__WBP_CreditsScreen_C",
+		"Default__WidgetBlueprint",
+		"EdGraph",
+		"EdGraphSchema_K2",
+		"EventGraph",
+		"Geometry",
+		"K2Node_Event",
+		"Object",
+		"OverlaySlot",
+		"Package",
+		"ScriptStruct",
+		"ScrollBox",
+		"ScrollBoxSlot",
+		"SText_CreditsScreen_C",
+		"T_UE-logo_W",
+		"Texture2D",
+		"UserWidget",
+		"VerticalBox",
+		"W_CreditsScreen",
+		"WBP_Button_BoundAction_C",
+		"WBP_TemplateLayout_C",
+		"WidgetBlueprint",
+		"WidgetBlueprintGeneratedClass"
+	],
+	"SoftObjectPaths": [
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C:PreConstruct",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C:Construct",
+		"Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C:Tick"
+	],
+	"Imports": [
+		{
+			"ObjectName": "SText_CreditsScreen_C",
+			"PathName": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_CreditsScreen.SText_CreditsScreen_C",
+			"OuterIndex": -24,
+			"Outer": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_CreditsScreen",
+			"ClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraphSchema_K2",
+			"PathName": "Object:/Script/BlueprintGraph.EdGraphSchema_K2",
+			"OuterIndex": -26,
+			"Outer": "Object:/Script/BlueprintGraph",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "K2Node_Event",
+			"PathName": "Object:/Script/BlueprintGraph.K2Node_Event",
+			"OuterIndex": -26,
+			"Outer": "Object:/Script/BlueprintGraph",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "CommonBoundActionBar",
+			"PathName": "Object:/Script/CommonUI.CommonBoundActionBar",
+			"OuterIndex": -27,
+			"Outer": "Object:/Script/CommonUI",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "CommonLazyImage",
+			"PathName": "Object:/Script/CommonUI.CommonLazyImage",
+			"OuterIndex": -27,
+			"Outer": "Object:/Script/CommonUI",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Object",
+			"PathName": "Object:/Script/CoreUObject.Object",
+			"OuterIndex": -28,
+			"Outer": "Object:/Script/CoreUObject",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraph",
+			"PathName": "Object:/Script/Engine.EdGraph",
+			"OuterIndex": -29,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "W_CreditsScreen",
+			"PathName": "Object:/Script/GameMainMenu.W_CreditsScreen",
+			"OuterIndex": -30,
+			"Outer": "Object:/Script/GameMainMenu",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Border",
+			"PathName": "Object:/Script/UMG.Border",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "BorderSlot",
+			"PathName": "Object:/Script/UMG.BorderSlot",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Overlay",
+			"PathName": "Object:/Script/UMG.Overlay",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "OverlaySlot",
+			"PathName": "Object:/Script/UMG.OverlaySlot",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "ScrollBox",
+			"PathName": "Object:/Script/UMG.ScrollBox",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "ScrollBoxSlot",
+			"PathName": "Object:/Script/UMG.ScrollBoxSlot",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "UserWidget",
+			"PathName": "Object:/Script/UMG.UserWidget",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "VerticalBox",
+			"PathName": "Object:/Script/UMG.VerticalBox",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "WidgetBlueprintGeneratedClass",
+			"PathName": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "WidgetTree",
+			"PathName": "Object:/Script/UMG.WidgetTree",
+			"OuterIndex": -32,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "WidgetBlueprint",
+			"PathName": "Object:/Script/UMGEditor.WidgetBlueprint",
+			"OuterIndex": -33,
+			"Outer": "Object:/Script/UMGEditor",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "DA_Credits",
+			"PathName": "Object:/GameMainMenu/BP/DataAsset/DA_Credits.DA_Credits",
+			"OuterIndex": -22,
+			"Outer": "Object:/GameMainMenu/BP/DataAsset/DA_Credits",
+			"ClassPath": "Object:/Script/GameMainMenu.CreditsDataAsset",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Others/T_UE-logo_W",
+			"PathName": "Object:/GameMainMenu/Assets/Others/T_UE-logo_W",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/BP/DataAsset/DA_Credits",
+			"PathName": "Object:/GameMainMenu/BP/DataAsset/DA_Credits",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction",
+			"PathName": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/BP/UI/Styles/Text/SText_CreditsScreen",
+			"PathName": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_CreditsScreen",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout",
+			"PathName": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/BlueprintGraph",
+			"PathName": "Object:/Script/BlueprintGraph",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CommonUI",
+			"PathName": "Object:/Script/CommonUI",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CoreUObject",
+			"PathName": "Object:/Script/CoreUObject",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/GameMainMenu",
+			"PathName": "Object:/Script/GameMainMenu",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/SlateCore",
+			"PathName": "Object:/Script/SlateCore",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/UMG",
+			"PathName": "Object:/Script/UMG",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/UMGEditor",
+			"PathName": "Object:/Script/UMGEditor",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Geometry",
+			"PathName": "Object:/Script/SlateCore.Geometry",
+			"OuterIndex": -31,
+			"Outer": "Object:/Script/SlateCore",
+			"ClassPath": "Object:/Script/CoreUObject.ScriptStruct",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_UE-logo_W",
+			"PathName": "Object:/GameMainMenu/Assets/Others/T_UE-logo_W.T_UE-logo_W",
+			"OuterIndex": -21,
+			"Outer": "Object:/GameMainMenu/Assets/Others/T_UE-logo_W",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Default__W_CreditsScreen",
+			"PathName": "Object:/Script/GameMainMenu.Default__W_CreditsScreen",
+			"OuterIndex": -30,
+			"Outer": "Object:/Script/GameMainMenu",
+			"ClassPath": "Object:/Script/GameMainMenu.W_CreditsScreen",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Default__WidgetBlueprint",
+			"PathName": "Object:/Script/UMGEditor.Default__WidgetBlueprint",
+			"OuterIndex": -33,
+			"Outer": "Object:/Script/UMGEditor",
+			"ClassPath": "Object:/Script/UMGEditor.WidgetBlueprint",
+			"Optional": false
+		},
+		{
+			"ObjectName": "WBP_Button_BoundAction_C",
+			"PathName": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction.WBP_Button_BoundAction_C",
+			"OuterIndex": -23,
+			"Outer": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction",
+			"ClassPath": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+			"Optional": false
+		},
+		{
+			"ObjectName": "WBP_TemplateLayout_C",
+			"PathName": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+			"OuterIndex": -25,
+			"Outer": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout",
+			"ClassPath": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+			"Optional": false
+		},
+		{
+			"ObjectName": "WidgetTree",
+			"PathName": "Object:/Script/UMGEditor.Default__WidgetBlueprint:WidgetTree",
+			"OuterIndex": -37,
+			"Outer": "Object:/Script/UMGEditor.Default__WidgetBlueprint",
+			"ClassPath": "Object:/Script/UMG.WidgetTree",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "Border_39",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+			"ClassIndex": -9,
+			"Class": "Object:/Script/UMG.Border",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 177,
+			"SerialOffset": 25819,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 173,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Border_39",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39",
+			"ClassIndex": -9,
+			"Class": "Object:/Script/UMG.Border",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 177,
+			"SerialOffset": 25996,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 173,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "BorderSlot_0",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0",
+			"ClassIndex": -10,
+			"Class": "Object:/Script/UMG.BorderSlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 71,
+			"SerialOffset": 26173,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 67,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "BorderSlot_0",
+			"OuterIndex": 2,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0",
+			"ClassIndex": -10,
+			"Class": "Object:/Script/UMG.BorderSlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 71,
+			"SerialOffset": 26244,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 67,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CommonBoundActionBar_658",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658",
+			"ClassIndex": -4,
+			"Class": "Object:/Script/CommonUI.CommonBoundActionBar",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 67,
+			"SerialOffset": 26315,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 63,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CommonBoundActionBar_658",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CommonBoundActionBar_658",
+			"ClassIndex": -4,
+			"Class": "Object:/Script/CommonUI.CommonBoundActionBar",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 67,
+			"SerialOffset": 26382,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 63,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "UELogoImage",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage",
+			"ClassIndex": -5,
+			"Class": "Object:/Script/CommonUI.CommonLazyImage",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 283,
+			"SerialOffset": 26449,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 279,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "UELogoImage",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.UELogoImage",
+			"ClassIndex": -5,
+			"Class": "Object:/Script/CommonUI.CommonLazyImage",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 283,
+			"SerialOffset": 26732,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 279,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "EventGraph",
+			"OuterIndex": 30,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph",
+			"ClassIndex": -7,
+			"Class": "Object:/Script/Engine.EdGraph",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 27015,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "K2Node_Event_0",
+			"OuterIndex": 9,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+			"ClassIndex": -3,
+			"Class": "Object:/Script/BlueprintGraph.K2Node_Event",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 1085,
+			"SerialOffset": 27200,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 450,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "K2Node_Event_1",
+			"OuterIndex": 9,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+			"ClassIndex": -3,
+			"Class": "Object:/Script/BlueprintGraph.K2Node_Event",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 883,
+			"SerialOffset": 28285,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 479,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "K2Node_Event_2",
+			"OuterIndex": 9,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2",
+			"ClassIndex": -3,
+			"Class": "Object:/Script/BlueprintGraph.K2Node_Event",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 1423,
+			"SerialOffset": 29168,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 479,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Overlay_34",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+			"ClassIndex": -11,
+			"Class": "Object:/Script/UMG.Overlay",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 87,
+			"SerialOffset": 30591,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 83,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Overlay_34",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34",
+			"ClassIndex": -11,
+			"Class": "Object:/Script/UMG.Overlay",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 87,
+			"SerialOffset": 30678,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 83,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "OverlaySlot_0",
+			"OuterIndex": 13,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0",
+			"ClassIndex": -12,
+			"Class": "Object:/Script/UMG.OverlaySlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 30765,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "OverlaySlot_1",
+			"OuterIndex": 13,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1",
+			"ClassIndex": -12,
+			"Class": "Object:/Script/UMG.OverlaySlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 30950,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "OverlaySlot_0",
+			"OuterIndex": 14,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_0",
+			"ClassIndex": -12,
+			"Class": "Object:/Script/UMG.OverlaySlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 31135,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "OverlaySlot_1",
+			"OuterIndex": 14,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_1",
+			"ClassIndex": -12,
+			"Class": "Object:/Script/UMG.OverlaySlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 31320,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CreditsScrollBox",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+			"ClassIndex": -13,
+			"Class": "Object:/Script/UMG.ScrollBox",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 256,
+			"SerialOffset": 31505,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 252,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CreditsScrollBox",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+			"ClassIndex": -13,
+			"Class": "Object:/Script/UMG.ScrollBox",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 256,
+			"SerialOffset": 31761,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 252,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "ScrollBoxSlot_0",
+			"OuterIndex": 19,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+			"ClassIndex": -14,
+			"Class": "Object:/Script/UMG.ScrollBoxSlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 157,
+			"SerialOffset": 32017,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 153,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "ScrollBoxSlot_4",
+			"OuterIndex": 19,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+			"ClassIndex": -14,
+			"Class": "Object:/Script/UMG.ScrollBoxSlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 32174,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "ScrollBoxSlot_0",
+			"OuterIndex": 20,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+			"ClassIndex": -14,
+			"Class": "Object:/Script/UMG.ScrollBoxSlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 157,
+			"SerialOffset": 32359,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 153,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "ScrollBoxSlot_4",
+			"OuterIndex": 20,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+			"ClassIndex": -14,
+			"Class": "Object:/Script/UMG.ScrollBoxSlot",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 185,
+			"SerialOffset": 32516,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 181,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CreditsContentBox",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox",
+			"ClassIndex": -16,
+			"Class": "Object:/Script/UMG.VerticalBox",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 139,
+			"SerialOffset": 32701,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 135,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CreditsContentBox",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsContentBox",
+			"ClassIndex": -16,
+			"Class": "Object:/Script/UMG.VerticalBox",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 139,
+			"SerialOffset": 32840,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 135,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Default__WBP_CreditsScreen_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.Default__WBP_CreditsScreen_C",
+			"ClassIndex": 31,
+			"Class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | ClassDefaultObject | ArchetypeObject",
+			"HashNext": -1,
+			"SerialSize": 196,
+			"SerialOffset": 32979,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 192,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "WBP_TemplateLayout",
+			"OuterIndex": 32,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout",
+			"ClassIndex": -39,
+			"Class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 267,
+			"SerialOffset": 33175,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 263,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "WBP_TemplateLayout",
+			"OuterIndex": 33,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.WBP_TemplateLayout",
+			"ClassIndex": -39,
+			"Class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 267,
+			"SerialOffset": 33442,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 263,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "WBP_CreditsScreen",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen",
+			"ClassIndex": -19,
+			"Class": "Object:/Script/UMGEditor.WidgetBlueprint",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 870,
+			"SerialOffset": 33709,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 866,
+			"bForcedExport": 0,
+			"bNotForClient": 1,
+			"bNotForServer": 1,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "WBP_CreditsScreen_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+			"ClassIndex": -17,
+			"Class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+			"SuperIndex": -8,
+			"Super": "Object:/Script/GameMainMenu.W_CreditsScreen",
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional",
+			"HashNext": -1,
+			"SerialSize": 110,
+			"SerialOffset": 34579,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 38,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "WidgetTree",
+			"OuterIndex": 30,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree",
+			"ClassIndex": -18,
+			"Class": "Object:/Script/UMG.WidgetTree",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional | DefaultSubObject",
+			"HashNext": -1,
+			"SerialSize": 111,
+			"SerialOffset": 34689,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 107,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 1,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "WidgetTree",
+			"OuterIndex": 31,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree",
+			"ClassIndex": -18,
+			"Class": "Object:/Script/UMG.WidgetTree",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 111,
+			"SerialOffset": 34800,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 107,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_0",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction.WBP_Button_BoundAction_C",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CommonBoundActionBar_658": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_BoundAction.WBP_Button_BoundAction_C",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage": [
+			{
+				"Path": "Object:/GameMainMenu/Assets/Others/T_UE-logo_W.T_UE-logo_W",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.UELogoImage": [
+			{
+				"Path": "Object:/GameMainMenu/Assets/Others/T_UE-logo_W.T_UE-logo_W",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+				"Index": 1
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2",
+				"Index": 2
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+				"Index": 1
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0",
+				"Index": 2
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+				"Index": 1
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0",
+				"Index": 2
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsContentBox",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.UELogoImage",
+				"Index": 1
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsContentBox": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+				"Index": 0
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658",
+				"Index": 1
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1",
+				"Index": 2
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.WBP_TemplateLayout": [
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CommonBoundActionBar_658",
+				"Index": 1
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_1",
+				"Index": 2
+			}
+		],
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree": [
+			{
+				"Path": "Object:/Script/UMGEditor.Default__WidgetBlueprint:WidgetTree",
+				"Index": 0
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+				"Index": 1
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+				"Index": 2
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+				"Index": 3
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox",
+				"Index": 4
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage",
+				"Index": 5
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout",
+				"Index": 6
+			},
+			{
+				"Path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658",
+				"Index": 7
+			}
+		]
+	},
+	"SoftPackageReferences": [
+		"/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen"
+	],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "WidgetBlueprint /GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen",
+			"FileOffset": 13526
+		},
+		{
+			"ObjectFullName": "WidgetBlueprintGeneratedClass /GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+			"FileOffset": 16700
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen",
+			"PackagePath": "/GameMainMenu/BP/UI/Widgets",
+			"AssetName": "WBP_CreditsScreen",
+			"AssetClassPath": "Object:/Script/UMGEditor.WidgetBlueprint",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"GeneratedClass": "/Script/UMG.WidgetBlueprintGeneratedClass'/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C'",
+				"ParentClass": "/Script/CoreUObject.Class'/Script/GameMainMenu.W_CreditsScreen'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/GameMainMenu.W_CreditsScreen'",
+				"ClassFlags": "14948352",
+				"BlueprintType": "BPTYPE_Normal",
+				"IsDataOnly": "False",
+				"FiBData": "\u0004\u0001\u0001\u0001\u00aa\f\u0001\u00016\u0001\u0001\u0001\u0001\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\u0002\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0003\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0004\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001LjtnfuTdifnb\u0001\u001d\u0001\u0001\u0001HsbqiEjtqmbzObnf`FwfouHsbqi\u0001\f\u0001\u0001\u0001FwfouHsbqi\u0001\u0005\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\u0006\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000b\u0001\u0001\u0001Cmvfqsjou\u0001\u0010\u0001\u0001\u0001OpHsbqiUppmujq\u0001\b\u0001\u0001\u0001)Opof*\u0001\u0007\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0007\u0001\u0001\u0001Opeft\u0001\u0007\u0001\u0001\u0001Opeft\u0001\b\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002\t\u0001\u0001\u0001\u0001\b\u0001\u0001\u0001L3Opef\u0001\f\u0001\u0001\u0001Fwfou`Obnf\u0001\u0016\u0001\u0001\u0001Fwfou!|GvodujpoObnf~\u0001\u0002\u0001\u0001\u0001\u000e\u0001\u0001\u0001GvodujpoObnf\u0001\u0005\u0001\u0001\u0001\u0001\u0001\u0015\u0001\u0001\u0001VPckfduEjtqmbzObnft\u0001\u0019\u0001\u0001\u0001VtfsXjehfu;QsfDpotusvdu\u0001\u000f\u0001\u0001\u0001Qsf!Dpotusvdu\u0001\t\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u000b\u0001\u0001\u0001DmbttObnf\u0001\u000b\u0001\u0001\u0001DmbttObnf\u0001\n\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001L3Opef`Fwfou\u0001\u000b\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\n\u0001\u0001\u0001OpefHvje\u0001\n\u0001\u0001\u0001OpefHvje\u0001\f\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\"\u0001\u0001\u0001CGEC794156E96D169168C8B3D2DE9GD6\u0001\r\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001TdifnbObnf\u0001\f\u0001\u0001\u0001TdifnbObnf\u0001\u000e\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0012\u0001\u0001\u0001FeHsbqiTdifnb`L3\u0001\u000f\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0007\u0001\u0001\u0001Hmzqi\u0001\u0007\u0001\u0001\u0001Hmzqi\u0001\u0010\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0017\u0001\u0001\u0001HsbqiFejups/Fwfou`27y\u0001\u0011\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u000f\u0001\u0001\u0001HmzqiTuzmfTfu\u0001\u000f\u0001\u0001\u0001HmzqiTuzmfTfu\u0001\u0012\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\r\u0001\u0001\u0001FejupsTuzmf\u0001\u0013\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001HmzqiDpmps\u0001\f\u0001\u0001\u0001HmzqiDpmps\u0001\u0014\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001/\u0001\u0001\u0001)S>2/111111-H>2/111111-C>2/111111-B>2/111111*\u0001\u0015\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\t\u0001\u0001\u0001Dpnnfou\u0001\t\u0001\u0001\u0001Dpnnfou\u0001\u0016\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001U\u0001\u0001\u0001Uijt!opef!jt!ejtbcmfe!boe!xjmm!opu!cf!dbmmfe/\u000bEsbh!pgg!qjot!up!cvjme!gvodujpobmjuz/\u0001\u0017\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001ObujwfObnf\u0001\r\u0001\u0001\u0001Obujwf!Obnf\u0001\u0018\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001QsfDpotusvdu\u0001\u0019\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0011\u0001\u0001\u0001GvodPsjhjoDmbtt\u0001\u0011\u0001\u0001\u0001GvodPsjhjoDmbtt\u0001\u001a\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u00010Tdsjqu0VNH/VtfsXjehfu\u0001\u001b\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Qjot\u0001\u0006\u0001\u0001\u0001Qjot\u0001\u001c\u0001\u0001\u0001\u0003\u0001\u0001\u0001\u0100\u0002\u0001\u0001\u0001\u0011\u0001\u0001\u0001Pvuqvu!Efmfhbuf\u0001\u001d\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u000e\u0001\u0001\u0001EfgbvmuWbmvf\u0001\u000e\u0001\u0001\u0001EfgbvmuWbmvf\u0001\u001e\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0100\u0001\u0001\u0001\u0001\u001f\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001QjoDbufhpsz\u0001\r\u0001\u0001\u0001QjoDbufhpsz\u0001 \u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\n\u0001\u0001\u0001efmfhbuf\u0001!\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\t\u0001\u0001\u0001JtBssbz\u0001\t\u0001\u0001\u0001JtBssbz\u0001\"\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001JtSfgfsfodf\u0001\r\u0001\u0001\u0001JtSfgfsfodf\u0001#\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0006\u0001\u0001\u0001fyfd\u0001$\u0001\u0001\u0001\u0003\u0001\u0001\u0001\u0100\u0002\u0001\u0001\u0001\u0010\u0001\u0001\u0001Jt!Eftjho!Ujnf\u0001%\u0001\u0001\u0001\u0003\u0001\u0001\u0001\u0100\u0002\u0001\u0001\u0001\u0007\u0001\u0001\u0001gbmtf\u0001&\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0006\u0001\u0001\u0001cppm\u0001'\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002\t\u0001\u0001\u0001\u0001\b\u0001\u0001\u0001L3Opef\u0001\f\u0001\u0001\u0001Fwfou`Obnf\u0001\u0016\u0001\u0001\u0001Fwfou!|GvodujpoObnf~\u0001\u0002\u0001\u0001\u0001\u000e\u0001\u0001\u0001GvodujpoObnf\u0001\u0005\u0001\u0001\u0001\u0001\u0001\u0015\u0001\u0001\u0001VPckfduEjtqmbzObnft\u0001\u0016\u0001\u0001\u0001VtfsXjehfu;Dpotusvdu\u0001\u000b\u0001\u0001\u0001Dpotusvdu\u0001(\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\"\u0001\u0001\u00012G611C6F5EDE71682865819E51EE5GC5\u0001)\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u000b\u0001\u0001\u0001Dpotusvdu\u0001*\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002\t\u0001\u0001\u0001\u0001\b\u0001\u0001\u0001L3Opef\u0001\f\u0001\u0001\u0001Fwfou`Obnf\u0001\u0016\u0001\u0001\u0001Fwfou!|GvodujpoObnf~\u0001\u0002\u0001\u0001\u0001\u000e\u0001\u0001\u0001GvodujpoObnf\u0001\u0005\u0001\u0001\u0001\u0001\u0001\u0015\u0001\u0001\u0001VPckfduEjtqmbzObnft\u0001\u0011\u0001\u0001\u0001VtfsXjehfu;Ujdl\u0001\u0006\u0001\u0001\u0001Ujdl\u0001+\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\"\u0001\u0001\u000195GB4CB1594E49E9492:B8CE:728C231\u0001,\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0006\u0001\u0001\u0001Ujdl\u0001-\u0001\u0001\u0001\u0003\u0001\u0001\u0001\u0100\u0002\u0001\u0001\u0001\r\u0001\u0001\u0001Nz!Hfpnfusz\u0001.\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\b\u0001\u0001\u0001tusvdu\u0001/\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001PckfduDmbtt\u0001\r\u0001\u0001\u0001PckfduDmbtt\u00010\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u001c\u0001\u0001\u00010Tdsjqu0TmbufDpsf/Hfpnfusz\u00011\u0001\u0001\u0001\u0003\u0001\u0001\u0001\u0100\u0002\u0001\u0001\u0001\u000f\u0001\u0001\u0001Jo!Efmub!Ujnf\u00012\u0001\u0001\u0001\u0003\u0001\u0001\u0001\u0100\u0002\u0001\u0001\u0001\u0005\u0001\u0001\u00011/1\u00013\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0006\u0001\u0001\u0001sfbm\u00014\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001TvcDbufhpsz\u0001\r\u0001\u0001\u0001TvcDbufhpsz\u00015\u0001\u0001\u0001\u0011\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0002\u0001\u0001\u0001\u0001\u0007\u0001\u0001\u0001gmpbu\u0001{\"0\":[],\"1\":[{\"2\":\"3\",\"4\":\"5\",\"6\":[{\"2\":\"7\",\"8\":\"9\",\"10\":\"11\",\"12\":\"13\",\"14\":\"15\",\"16\":\"17\",\"18\":\"19\",\"20\":\"21\",\"22\":\"23\",\"24\":\"25\",\"26\":[{\"2\":\"27\",\"28\":\"29\",\"30\":\"31\",\"32\":false,\"33\":0},{\"2\":\"29\",\"28\":\"29\",\"30\":\"34\",\"32\":false,\"33\":0},{\"2\":\"35\",\"28\":\"36\",\"30\":\"37\",\"32\":false,\"33\":0}]},{\"2\":\"38\",\"8\":\"9\",\"10\":\"39\",\"12\":\"13\",\"14\":\"15\",\"16\":\"17\",\"18\":\"19\",\"20\":\"21\",\"22\":\"40\",\"24\":\"25\",\"26\":[{\"2\":\"27\",\"28\":\"29\",\"30\":\"31\",\"32\":false,\"33\":0},{\"2\":\"29\",\"28\":\"29\",\"30\":\"34\",\"32\":false,\"33\":0}]},{\"2\":\"41\",\"8\":\"9\",\"10\":\"42\",\"12\":\"13\",\"14\":\"15\",\"16\":\"17\",\"18\":\"19\",\"20\":\"21\",\"22\":\"43\",\"24\":\"25\",\"26\":[{\"2\":\"27\",\"28\":\"29\",\"30\":\"31\",\"32\":false,\"33\":0},{\"2\":\"29\",\"28\":\"29\",\"30\":\"34\",\"32\":false,\"33\":0},{\"2\":\"44\",\"28\":\"29\",\"30\":\"45\",\"46\":\"47\",\"32\":false,\"33\":0},{\"2\":\"48\",\"28\":\"49\",\"30\":\"50\",\"51\":\"52\",\"32\":false,\"33\":0}]}],\"0\":[]}]}",
+				"NumReplicatedProperties": "0",
+				"BlueprintPath": "WBP_CreditsScreen",
+				"ImportedNamespaces": "()",
+				"PropertyBindings": "0",
+				"TickFrequency": "Auto",
+				"TickPrediction": "WontTick"
+			},
+			"TaggedAssetBundles": {}
+		},
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen",
+			"PackagePath": "/GameMainMenu/BP/UI/Widgets",
+			"AssetName": "WBP_CreditsScreen_C",
+			"AssetClassPath": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"ParentClass": "/Script/CoreUObject.Class'/Script/GameMainMenu.W_CreditsScreen'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/GameMainMenu.W_CreditsScreen'",
+				"ClassFlags": "14948352",
+				"BlueprintType": "BPTYPE_Normal",
+				"NumReplicatedProperties": "0",
+				"ModuleName": "WBP_CreditsScreen"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

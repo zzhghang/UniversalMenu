@@ -1,0 +1,614 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\WBP_CreditsScreen.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen",
+  "objects": [
+    {
+      "index": 1,
+      "name": "Border_39",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+      "properties": {
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 2,
+      "name": "Border_39",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39",
+      "properties": {
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 3,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox"
+      }
+    },
+    {
+      "index": 4,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox"
+      }
+    },
+    {
+      "index": 5,
+      "name": "CommonBoundActionBar_658",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 6,
+      "name": "CommonBoundActionBar_658",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CommonBoundActionBar_658",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 7,
+      "name": "UELogoImage",
+      "class": "Object:/Script/CommonUI.CommonLazyImage",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage",
+      "properties": {
+        "Brush": {
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "raw": "0080b9430000e143",
+            "type": {
+              "name": "StructProperty",
+              "params": [
+                {
+                  "name": "DeprecateSlateVector2D",
+                  "params": [
+                    {
+                      "name": "/Script/SlateCore",
+                      "params": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "error": "invalid name 1136230400"
+          },
+          "ResourceObject": "T_UE-logo_W"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+        "DisplayLabel": "UELogoImage"
+      }
+    },
+    {
+      "index": 8,
+      "name": "UELogoImage",
+      "class": "Object:/Script/CommonUI.CommonLazyImage",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.UELogoImage",
+      "properties": {
+        "Brush": {
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "raw": "0080b9430000e143",
+            "type": {
+              "name": "StructProperty",
+              "params": [
+                {
+                  "name": "DeprecateSlateVector2D",
+                  "params": [
+                    {
+                      "name": "/Script/SlateCore",
+                      "params": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "error": "invalid name 1136230400"
+          },
+          "ResourceObject": "T_UE-logo_W"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+        "DisplayLabel": "UELogoImage"
+      }
+    },
+    {
+      "index": 9,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "0ed3807de81a7742b719f63e8c9a2b6c"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3068dbbf055cd845a2b75780c58fcdc1"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5e0b501f5760cd4d8d705417b44fdd40"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a03bfa84d8383d48bda7193820b11796"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "name": "Overlay_34",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 14,
+      "name": "Overlay_34",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_1"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 15,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39"
+      }
+    },
+    {
+      "index": 16,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 17,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39"
+      }
+    },
+    {
+      "index": 18,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 19,
+      "name": "CreditsScrollBox",
+      "class": "Object:/Script/UMG.ScrollBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+      "properties": {
+        "ScrollBarVisibility": "ESlateVisibility::Hidden",
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39.BorderSlot_0",
+        "bIsVariable": true,
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "CreditsScrollBox"
+      }
+    },
+    {
+      "index": 20,
+      "name": "CreditsScrollBox",
+      "class": "Object:/Script/UMG.ScrollBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+      "properties": {
+        "ScrollBarVisibility": "ESlateVisibility::Hidden",
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39.BorderSlot_0",
+        "bIsVariable": true,
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "CreditsScrollBox"
+      }
+    },
+    {
+      "index": 21,
+      "name": "ScrollBoxSlot_0",
+      "class": "Object:/Script/UMG.ScrollBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+      "properties": {
+        "Padding": {
+          "Top": 200.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox"
+      }
+    },
+    {
+      "index": 22,
+      "name": "ScrollBoxSlot_4",
+      "class": "Object:/Script/UMG.ScrollBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage"
+      }
+    },
+    {
+      "index": 23,
+      "name": "ScrollBoxSlot_0",
+      "class": "Object:/Script/UMG.ScrollBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+      "properties": {
+        "Padding": {
+          "Top": 200.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsContentBox"
+      }
+    },
+    {
+      "index": 24,
+      "name": "ScrollBoxSlot_4",
+      "class": "Object:/Script/UMG.ScrollBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_4",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.UELogoImage"
+      }
+    },
+    {
+      "index": 25,
+      "name": "CreditsContentBox",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+        "bIsVariable": true,
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "CreditsContentBox"
+      }
+    },
+    {
+      "index": 26,
+      "name": "CreditsContentBox",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsContentBox",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox.ScrollBoxSlot_0",
+        "bIsVariable": true,
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "CreditsContentBox"
+      }
+    },
+    {
+      "index": 27,
+      "name": "Default__WBP_CreditsScreen_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.Default__WBP_CreditsScreen_C",
+      "properties": {
+        "CreditsData": "DA_Credits",
+        "CreditsTextStyle": "SText_CreditsScreen_C",
+        "bAutoReturnOnFinish": false,
+        "bIsBackHandler": true,
+        "bIsBackActionDisplayedInActionBar": true,
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 28,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658"
+          }
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34.OverlaySlot_1",
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 29,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CommonBoundActionBar_658"
+          }
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34.OverlaySlot_1",
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 30,
+      "name": "WBP_CreditsScreen",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000070000006600000023000000193d179c9faf7b41b484bf0c227bc7ab1b00000028000000a2f671f9847c9e4ba87c4aad6ea8bb3128000000000000006db1a245f26e5e41822d2d8dbcbf88b026000000000000003cfc9b764e1dc24aac64649267f95eaf8a000000000000003d0eb55a0ae5804b81540a64df520d4d230000009302000025c1dc061fca964397d38d6770d6739684000000000000008623211b912ad948b831bcc24b7b39a7"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree",
+        "ParentClass": "W_CreditsScreen",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph"
+        ],
+        "CategorySorting": [
+          "Input",
+          "Events",
+          "Activatable Widget",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "Event Graph"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "2263a037dd8f8445818dc2bfbad0d9ff"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "name": "WBP_CreditsScreen_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree"
+      }
+    },
+    {
+      "index": 32,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Overlay_34",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.Border_39",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsScrollBox",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CreditsContentBox",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.UELogoImage",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:WidgetTree.CommonBoundActionBar_658"
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Overlay_34",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.Border_39",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsScrollBox",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CreditsContentBox",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.UELogoImage",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C:WidgetTree.CommonBoundActionBar_658"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.WBP_CreditsScreen:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_CreditsScreen.SKEL_WBP_CreditsScreen_C:Tick"
+  ],
+  "text": []
+}

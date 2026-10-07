@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>UniversalMenu · Project preview</title>
+  <link rel="stylesheet" href="app.css">
+  <script defer src="data.js"></script>
+  <script defer src="asset-map.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main id="viewport" aria-label="UniversalMenu project preview">
+    <div id="stage">
+      <section id="screen"></section>
+      <div id="overlay"></div>
+      <div id="cursor-glow" aria-hidden="true"></div>
+    </div>
+  </main>
+  <aside id="preview-tools" aria-label="网页预览工具">
+    <button id="tools-toggle" aria-expanded="false" title="页面导航与复刻说明 (F1)">预览导航 <span>F1</span></button>
+    <div id="tools-panel" hidden>
+      <div class="tools-heading">UNIVERSAL MENU <small>项目网页映射</small></div>
+      <label for="page-select">查看页面 / 状态</label>
+      <select id="page-select">
+        <option value="main">主菜单 · Main menu</option>
+        <option value="options/gameplay">设置 · Gameplay</option>
+        <option value="options/audio">设置 · Audio</option>
+        <option value="options/video">设置 · Video</option>
+        <option value="options/control">设置 · Control</option>
+        <option value="multiplayer/create">多人游戏 · CreateGame</option>
+        <option value="multiplayer/join">多人游戏 · JoinGame</option>
+        <option value="credits">制作人员 · Credits</option>
+        <option value="press-any-key">启动页 · Press any key</option>
+        <option value="startup">启动视频 · UELogoAnim</option>
+        <option value="loading">加载页 · Loading</option>
+        <option value="confirm">确认弹窗 · Yes / No</option>
+        <option value="confirm-ok">提示弹窗 · OK</option>
+        <option value="confirm-cancel">确认弹窗 · OK / Cancel</option>
+        <option value="remap">按键重绑定 · Key remap</option>
+      </select>
+      <div class="tools-links"><button id="fullscreen">全屏预览</button><a href="review.html">配置优化评审 ↗</a></div>
+      <p>界面文本、字体、图标和设置项来自当前 UE 项目。设置保存在本浏览器；Steam 联机与关卡加载为流程演示。</p>
+      <p>Q / E 切换标签，方向键选择与调整，Backspace 返回，Esc 关闭弹窗。F1 收起导航。</p>
+      <details><summary>复刻范围与差异</summary><p>覆盖项目中已注册的菜单屏幕和弹窗。页面结构按当前蓝图和 DataAsset，尺寸按实际运行画面校对。原项目尚无中文译文，因此界面保留英文。浏览器字体光栅化、材质光标和虚幻渲染存在细微差异。</p><p>JoinGame 当前配置引用 DA_Empty，默认保留空列表。可用下方按钮查看 SessionRow 的独立样例；样例并非真实服务器。</p><button id="sample-session">查看 SessionRow 样例</button></details>
+    </div>
+  </aside>
+  <div id="notice" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,2679 @@
+{
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/IMC_Default.uasset": {
+    "properties": [
+      {
+        "DefaultKeyMappings": {
+          "Mappings": [
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Combat/IA_Aim.IA_Aim",
+              "Key": {
+                "KeyName": "RightMouseButton"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch.IA_Crouch",
+              "Key": {
+                "KeyName": "C"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.IA_Interact",
+              "Key": {
+                "KeyName": "E"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_Jump.IA_Jump",
+              "Key": {
+                "KeyName": "SpaceBar"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map.IA_Map",
+              "Key": {
+                "KeyName": "M"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Menu/IA_Pause.IA_Pause",
+              "Key": {
+                "KeyName": "P"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Combat/IA_Aim.IA_Aim",
+              "Key": {
+                "KeyName": "Gamepad_LeftTriggerAxis"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch.IA_Crouch",
+              "Key": {
+                "KeyName": "Gamepad_RightShoulder"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.IA_Interact",
+              "Key": {
+                "KeyName": "Gamepad_LeftShoulder"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_Jump.IA_Jump",
+              "Key": {
+                "KeyName": "Gamepad_LeftTriggerAxis"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map.IA_Map",
+              "Key": {
+                "KeyName": "Gamepad_Special_Right"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Menu/IA_Pause.IA_Pause",
+              "Key": {
+                "KeyName": "Gamepad_Special_Left"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Combat/IA_Attack.IA_Attack",
+              "Key": {
+                "KeyName": "LeftMouseButton"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.IA_Drop",
+              "Key": {
+                "KeyName": "G"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight.IA_Flashlight",
+              "Key": {
+                "KeyName": "F"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory.IA_Inventory",
+              "Key": {
+                "KeyName": "Tab"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn.IA_QuickTurn",
+              "Key": {
+                "KeyName": "Q"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Combat/IA_Reload.IA_Reload",
+              "Key": {
+                "KeyName": "R"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint.IA_Sprint",
+              "Key": {
+                "KeyName": "LeftShift"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat.IA_VoiceChat",
+              "Key": {
+                "KeyName": "V"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Combat/IA_Attack.IA_Attack",
+              "Key": {
+                "KeyName": "Gamepad_RightTriggerAxis"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.IA_Drop",
+              "Key": {
+                "KeyName": "Gamepad_FaceButton_Right"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight.IA_Flashlight",
+              "Key": {
+                "KeyName": "Gamepad_DPad_Up"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat.IA_VoiceChat",
+              "Key": {
+                "KeyName": "Gamepad_DPad_Left"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory.IA_Inventory",
+              "Key": {
+                "KeyName": "Gamepad_Special_Right"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn.IA_QuickTurn",
+              "Key": {
+                "KeyName": "Gamepad_RightThumbstick"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Combat/IA_Reload.IA_Reload",
+              "Key": {
+                "KeyName": "Gamepad_FaceButton_Left"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            },
+            {
+              "Triggers": [],
+              "Modifiers": [],
+              "Action": "/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint.IA_Sprint",
+              "Key": {
+                "KeyName": "Gamepad_LeftThumbstick"
+              },
+              "SettingBehavior": "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+              "PlayerMappableKeySettings": null
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/Script/EnhancedInput",
+        "/Script/InputCore",
+        "Action",
+        "ArrayProperty",
+        "ByteProperty",
+        "C",
+        "DefaultKeyMappings",
+        "E",
+        "EnhancedActionKeyMapping",
+        "EnumProperty",
+        "EPlayerMappableKeySettingBehaviors",
+        "EPlayerMappableKeySettingBehaviors::InheritSettingsFromAction",
+        "F",
+        "G",
+        "Gamepad_DPad_Left",
+        "Gamepad_DPad_Up",
+        "Gamepad_FaceButton_Left",
+        "Gamepad_FaceButton_Right",
+        "Gamepad_LeftShoulder",
+        "Gamepad_LeftThumbstick",
+        "Gamepad_LeftTriggerAxis",
+        "Gamepad_RightShoulder",
+        "Gamepad_RightThumbstick",
+        "Gamepad_RightTriggerAxis",
+        "Gamepad_Special_Left",
+        "Gamepad_Special_Right",
+        "InputMappingContextMappingData",
+        "Key",
+        "KeyName",
+        "LeftMouseButton",
+        "LeftShift",
+        "M",
+        "Mappings",
+        "Modifiers",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "P",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "Q",
+        "R",
+        "RightMouseButton",
+        "SettingBehavior",
+        "SpaceBar",
+        "StructProperty",
+        "Tab",
+        "Triggers",
+        "V",
+        "/GameMainMenu/BP/InputData/Input/Combat/IA_Aim",
+        "/GameMainMenu/BP/InputData/Input/Combat/IA_Attack",
+        "/GameMainMenu/BP/InputData/Input/Combat/IA_Reload",
+        "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop",
+        "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact",
+        "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map",
+        "/GameMainMenu/BP/InputData/Input/IMC_Default",
+        "/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory",
+        "/GameMainMenu/BP/InputData/Input/Menu/IA_Pause",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_Jump",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint",
+        "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight",
+        "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat",
+        "/Script/CoreUObject",
+        "Class",
+        "IA_Aim",
+        "IA_Attack",
+        "IA_Crouch",
+        "IA_Drop",
+        "IA_Flashlight",
+        "IA_Interact",
+        "IA_Inventory",
+        "IA_Jump",
+        "IA_Map",
+        "IA_Pause",
+        "IA_QuickTurn",
+        "IA_Reload",
+        "IA_Sprint",
+        "IA_VoiceChat",
+        "IMC_Default",
+        "InputAction",
+        "InputMappingContext",
+        "Package"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputMappingContext",
+          "PathName": "Object:/Script/EnhancedInput.InputMappingContext",
+          "OuterIndex": -30,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Aim",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Aim.IA_Aim",
+          "OuterIndex": -16,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Aim",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Attack",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Attack.IA_Attack",
+          "OuterIndex": -17,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Attack",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Reload",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Reload.IA_Reload",
+          "OuterIndex": -18,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Reload",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Drop",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.IA_Drop",
+          "OuterIndex": -19,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Interact",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.IA_Interact",
+          "OuterIndex": -20,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Map",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map.IA_Map",
+          "OuterIndex": -21,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Inventory",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory.IA_Inventory",
+          "OuterIndex": -22,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Pause",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Pause.IA_Pause",
+          "OuterIndex": -23,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Pause",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Crouch",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch.IA_Crouch",
+          "OuterIndex": -24,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Jump",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Jump.IA_Jump",
+          "OuterIndex": -25,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Jump",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_QuickTurn",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn.IA_QuickTurn",
+          "OuterIndex": -26,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Sprint",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint.IA_Sprint",
+          "OuterIndex": -27,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_Flashlight",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight.IA_Flashlight",
+          "OuterIndex": -28,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "IA_VoiceChat",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat.IA_VoiceChat",
+          "OuterIndex": -29,
+          "Outer": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat",
+          "ClassPath": "Object:/Script/EnhancedInput.InputAction",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Combat/IA_Aim",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Aim",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Combat/IA_Attack",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Attack",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Combat/IA_Reload",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Reload",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Menu/IA_Pause",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Pause",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Movement/IA_Jump",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Jump",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat",
+          "PathName": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IMC_Default",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/IMC_Default.IMC_Default",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputMappingContext",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 8731,
+          "SerialOffset": 4510,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 8727,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Combat/IA_Aim.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Aim_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Combat/IA_Aim.IA_Aim:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Aim",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Aim"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Combat"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Aim",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Combat/IA_Aim",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Aim",
+        "Action_Aim_desc",
+        "Category_Combat",
+        "Class",
+        "IA_Aim",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Aim",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Aim.IA_Aim",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 100,
+          "SerialOffset": 1897,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 96,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Aim.IA_Aim:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 157,
+          "SerialOffset": 1997,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 153,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Combat/IA_Attack.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Attack_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Combat/IA_Attack.IA_Attack:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Attack",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Attack"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Combat"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Attack",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Combat/IA_Attack",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Attack",
+        "Action_Attack_desc",
+        "Category_Combat",
+        "Class",
+        "IA_Attack",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Attack",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Attack.IA_Attack",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 103,
+          "SerialOffset": 1921,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 99,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Attack.IA_Attack:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 160,
+          "SerialOffset": 2024,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 156,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Combat/IA_Reload.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Reload_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Combat/IA_Reload.IA_Reload:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Reload",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Reload"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Combat"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Reload",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Combat/IA_Reload",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Reload",
+        "Action_Reload_desc",
+        "Category_Combat",
+        "Class",
+        "IA_Reload",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Reload",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Reload.IA_Reload",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 103,
+          "SerialOffset": 1921,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 99,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Combat/IA_Reload.IA_Reload:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 160,
+          "SerialOffset": 2024,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 156,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Drop_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.IA_Drop:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Drop",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Drop"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Environmental_Interaction"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Drop",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Drop",
+        "Action_Drop_desc",
+        "Category_Environmental_Interaction",
+        "Class",
+        "IA_Drop",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Drop",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.IA_Drop",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 101,
+          "SerialOffset": 1960,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 97,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Drop.IA_Drop:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 177,
+          "SerialOffset": 2061,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 173,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Interact_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.IA_Interact:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Interact",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Interact"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Environmental_Interaction"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Interact",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Interact",
+        "Action_Interact_desc",
+        "Category_Environmental_Interaction",
+        "Class",
+        "IA_Interact",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Interact",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.IA_Interact",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 105,
+          "SerialOffset": 1992,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 101,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Interact.IA_Interact:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 181,
+          "SerialOffset": 2097,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 177,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/EnvironmentalInteraction/IA_Map.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Map_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map.IA_Map:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Map",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Map"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Environmental_Interaction"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Map",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Map",
+        "Action_Map_desc",
+        "Category_Environmental_Interaction",
+        "Class",
+        "IA_Map",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Map",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map.IA_Map",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 100,
+          "SerialOffset": 1952,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 96,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/EnvironmentalInteraction/IA_Map.IA_Map:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 176,
+          "SerialOffset": 2052,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 172,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Menu/IA_Inventory.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Inventory_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory.IA_Inventory:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Inventory",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Inventory"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Menu"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Inventory",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Inventory",
+        "Action_Inventory_desc",
+        "Category_Menu",
+        "Class",
+        "IA_Inventory",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Inventory",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory.IA_Inventory",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 106,
+          "SerialOffset": 1939,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 102,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Inventory.IA_Inventory:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 161,
+          "SerialOffset": 2045,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 157,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Menu/IA_Pause.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Pause_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Menu/IA_Pause.IA_Pause:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Pause",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Pause"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Menu"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Pause",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Menu/IA_Pause",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Pause",
+        "Action_Pause_desc",
+        "Category_Menu",
+        "Class",
+        "IA_Pause",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Pause",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Pause.IA_Pause",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 102,
+          "SerialOffset": 1907,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 98,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Menu/IA_Pause.IA_Pause:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 157,
+          "SerialOffset": 2009,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 153,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Movement/IA_Crouch.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Crouch_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch.IA_Crouch:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Crouch",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Crouch"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Movement"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Crouch",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Crouch",
+        "Action_Crouch_desc",
+        "Category_Movement",
+        "Class",
+        "IA_Crouch",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Crouch",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch.IA_Crouch",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 103,
+          "SerialOffset": 1927,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 99,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Crouch.IA_Crouch:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 162,
+          "SerialOffset": 2030,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 158,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Movement/IA_Jump.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Jump_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Movement/IA_Jump.IA_Jump:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Jump",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Jump"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Movement"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Jump",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_Jump",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Jump",
+        "Action_Jump_desc",
+        "Category_Movement",
+        "Class",
+        "IA_Jump",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Jump",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Jump.IA_Jump",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 101,
+          "SerialOffset": 1911,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 97,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Jump.IA_Jump:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 160,
+          "SerialOffset": 2012,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 156,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Movement/IA_QuickTurn.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_QuickTurn_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn.IA_QuickTurn:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_QuickTurn",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_QuickTurn"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Movement"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_QuickTurn",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_QuickTurn",
+        "Action_QuickTurn_desc",
+        "Category_Movement",
+        "Class",
+        "IA_QuickTurn",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_QuickTurn",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn.IA_QuickTurn",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 106,
+          "SerialOffset": 1951,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 102,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_QuickTurn.IA_QuickTurn:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 165,
+          "SerialOffset": 2057,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 161,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/Movement/IA_Sprint.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Sprint_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint.IA_Sprint:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Sprint",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Sprint"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_Movement"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Sprint",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Sprint",
+        "Action_Sprint_desc",
+        "Category_Movement",
+        "Class",
+        "IA_Sprint",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Sprint",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint.IA_Sprint",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 103,
+          "SerialOffset": 1927,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 99,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/Movement/IA_Sprint.IA_Sprint:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 162,
+          "SerialOffset": 2030,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 158,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/SurvivalTools/IA_Flashlight.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Flashlight_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight.IA_Flashlight:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_Flashlight",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_Flashlight"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_SurvivalTools"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_Flashlight",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_Flashlight",
+        "Action_Flashlight_desc",
+        "Category_SurvivalTools",
+        "Class",
+        "IA_Flashlight",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_Flashlight",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight.IA_Flashlight",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 107,
+          "SerialOffset": 1974,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 103,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_Flashlight.IA_Flashlight:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 171,
+          "SerialOffset": 2081,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 167,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/InputData/Input/SurvivalTools/IA_VoiceChat.uasset": {
+    "properties": [
+      {
+        "ActionDescription": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_VoiceChat_desc"
+        },
+        "PlayerMappableKeySettings": "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat.IA_VoiceChat:PlayerMappableKeySettings_0"
+      },
+      {
+        "Name": "ID_VoiceChat",
+        "DisplayName": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Action_VoiceChat"
+        },
+        "DisplayCategory": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "key": "Category_SurvivalTools"
+        }
+      }
+    ],
+    "metadata": {
+      "Names": [
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+        "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+        "ActionDescription",
+        "DisplayCategory",
+        "DisplayName",
+        "ID_VoiceChat",
+        "Name",
+        "NameProperty",
+        "None",
+        "ObjectProperty",
+        "PackageLocalizationNamespace",
+        "PlayerMappableKeySettings",
+        "ST_OptionsScreen",
+        "TextProperty",
+        "/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat",
+        "/Script/CoreUObject",
+        "/Script/Engine",
+        "/Script/EnhancedInput",
+        "Action_VoiceChat",
+        "Action_VoiceChat_desc",
+        "Category_SurvivalTools",
+        "Class",
+        "IA_VoiceChat",
+        "InputAction",
+        "Package",
+        "StringTable"
+      ],
+      "Imports": [
+        {
+          "ObjectName": "InputAction",
+          "PathName": "Object:/Script/EnhancedInput.InputAction",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings",
+          "PathName": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "OuterIndex": -4,
+          "Outer": "Object:/Script/EnhancedInput",
+          "ClassPath": "Object:/Script/CoreUObject.Class",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "/Script/EnhancedInput",
+          "PathName": "Object:/Script/EnhancedInput",
+          "OuterIndex": 0,
+          "Outer": null,
+          "ClassPath": "Object:/Script/CoreUObject.Package",
+          "Optional": false
+        },
+        {
+          "ObjectName": "ST_OptionsScreen",
+          "PathName": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+          "OuterIndex": -3,
+          "Outer": "Object:/GameMainMenu/BP/StringTable/ST_OptionsScreen",
+          "ClassPath": "Object:/Script/Engine.StringTable",
+          "Optional": false
+        }
+      ],
+      "Exports": [
+        {
+          "ObjectName": "IA_VoiceChat",
+          "OuterIndex": 0,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat.IA_VoiceChat",
+          "ClassIndex": -1,
+          "Class": "Object:/Script/EnhancedInput.InputAction",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Standalone | Transactional",
+          "HashNext": -1,
+          "SerialSize": 106,
+          "SerialOffset": 1966,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 102,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 1,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        },
+        {
+          "ObjectName": "PlayerMappableKeySettings_0",
+          "OuterIndex": 1,
+          "Path": "Object:/GameMainMenu/BP/InputData/Input/SurvivalTools/IA_VoiceChat.IA_VoiceChat:PlayerMappableKeySettings_0",
+          "ClassIndex": -2,
+          "Class": "Object:/Script/EnhancedInput.PlayerMappableKeySettings",
+          "SuperIndex": 0,
+          "Super": null,
+          "TemplateIndex": 0,
+          "Template": null,
+          "ObjectFlags": "Public | Transactional",
+          "HashNext": -1,
+          "SerialSize": 170,
+          "SerialOffset": 2072,
+          "ScriptSerializationStartOffset": 0,
+          "ScriptSerializationEndOffset": 166,
+          "bForcedExport": 0,
+          "bNotForClient": 0,
+          "bNotForServer": 0,
+          "bNotAlwaysLoadedForEditorGame": 1,
+          "bIsAsset": 0,
+          "bIsInheritedInstance": 0,
+          "bGeneratePublicHash": 0
+        }
+      ],
+      "GatherableTextMap": []
+    }
+  }
+}

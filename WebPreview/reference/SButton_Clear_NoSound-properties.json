@@ -1,0 +1,80 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Styles\\Button\\SButton_Clear_NoSound.uasset",
+  "package": "/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SButton_Clear_NoSound",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound",
+      "properties": {
+        "ParentClass": "CommonButtonStyle",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound:EventGraph"
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "8c425351d3bfb3449cf5c21e388e87ae"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SButton_Clear_NoSound_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "09c6ce69a889914ba025122adc607acb"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SButton_Clear_NoSound_C",
+      "class": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound_C",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.Default__SButton_Clear_NoSound_C",
+      "properties": {
+        "NormalBase": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalHovered": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPressed": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "SelectedBase": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "SelectedHovered": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "SelectedPressed": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SButton_Clear_NoSound_C",
+    "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_NoSound.SKEL_SButton_Clear_NoSound_C"
+  ],
+  "text": []
+}

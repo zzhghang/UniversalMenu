@@ -1,0 +1,91 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\ListEntries\\SizeBox_ListEntry.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SizeBox_ListEntry",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry",
+      "properties": {
+        "ParentClass": "SizeBox",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry:EventGraph"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": 1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "4c794bb315f383458987c7035c594dd8"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SizeBox_ListEntry_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "7df47390ba086e4a92a61964cb822364"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SizeBox_ListEntry_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.Default__SizeBox_ListEntry_C",
+      "properties": {
+        "WidthOverride": 768.0,
+        "HeightOverride": 64.0,
+        "bOverride_WidthOverride": true,
+        "bOverride_HeightOverride": true
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SKEL_SizeBox_ListEntry_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C"
+  ],
+  "text": []
+}

@@ -1,0 +1,5113 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\InputData\\CData_MouseKeyboard.uasset",
+  "package": "/GameMainMenu/BP/InputData/CData_MouseKeyboard",
+  "objects": [
+    {
+      "index": 1,
+      "name": "CData_MouseKeyboard",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard",
+      "properties": {
+        "ParentClass": "CommonInputBaseControllerData",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard:EventGraph"
+        ],
+        "ThumbnailInfo": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard:SceneThumbnailInfo_0",
+        "GeneratedClass": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "10fd9bdafef8884c8acef76cbb8b23c8"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "CData_MouseKeyboard_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "Default__CData_MouseKeyboard_C",
+      "class": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.Default__CData_MouseKeyboard_C",
+      "properties": {
+        "InputBrushDataMap": [
+          {
+            "Key": {
+              "KeyName": "LeftMouseButton"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Mouse_Key_1_Left",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "RightMouseButton"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Mouse_Key_2_Right",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "MiddleMouseButton"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Mouse_Key_3",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "ThumbMouseButton"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Mouse_Key_5",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "ThumbMouseButton2"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Mouse_Key_4",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Tab"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "00005a4300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1129971712"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Tab",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Enter"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Enter",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "SpaceBar"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000804300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1132462080"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Space",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "BackSpace"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_BackSpace",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Delete"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Delete",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Zero"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_0",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "One"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_1",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Two"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_2",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Three"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_3",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Four"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_4",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Five"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_5",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Six"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_6",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Seven"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_7",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Eight"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_8",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Nine"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_9",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "A"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_A",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "B"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_B",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "C"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_C",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "D"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_D",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "E"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_E",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "F"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_F",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "G"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_G",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "H"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_H",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "I"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_I",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "J"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_J",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "K"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_K",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "L"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_L",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "M"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_M",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "N"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_N",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "O"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_O",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "P"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_P",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Q"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Q",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "R"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_R",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "S"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_S",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "T"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_T",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "U"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_U",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "V"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_V",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "W"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_W",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "X"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_X",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Y"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Y",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Z"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Z",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "LeftShift"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "00003c4300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1128005632"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Shift_L",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "LeftControl"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "00003c4300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1128005632"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Ctrl_L",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "RightControl"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "00003c4300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1128005632"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Ctrl_R",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "LeftAlt"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "00003c4300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1128005632"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Alt_L",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "RightAlt"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "00003c4300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1128005632"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Alt_R",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "LeftCommand"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Keyboard_Win",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "86794d5e485c6f449fb7be909652228f"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "SceneThumbnailInfo_0",
+      "class": "Object:/Script/UnrealEd.SceneThumbnailInfo",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard:SceneThumbnailInfo_0",
+      "properties": {}
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.SKEL_CData_MouseKeyboard_C",
+    "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C"
+  ],
+  "text": []
+}

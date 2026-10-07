@@ -1,0 +1,690 @@
+[
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_Caution.uasset",
+    "output": "WebPreview\\assets\\T_Caution.png",
+    "width": 36,
+    "height": 32,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_HorizontalArrow.uasset",
+    "output": "WebPreview\\assets\\T_HorizontalArrow.png",
+    "width": 64,
+    "height": 64,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_SliderHandle.uasset",
+    "output": "WebPreview\\assets\\T_SliderHandle.png",
+    "width": 36,
+    "height": 36,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_UE-logo_W.uasset",
+    "output": "WebPreview\\assets\\T_UE-logo_W.png",
+    "width": 2372,
+    "height": 2880,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_UE_Logo.uasset",
+    "output": "WebPreview\\assets\\T_UE_Logo.png",
+    "width": 2372,
+    "height": 2880,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_A.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_A.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Alt_L.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Alt_L.png",
+    "width": 188,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Alt_R.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Alt_R.png",
+    "width": 188,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_B.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_B.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_BackSpace.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_BackSpace.png",
+    "width": 138,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_C.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_C.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Ctrl_L.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Ctrl_L.png",
+    "width": 188,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Ctrl_R.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Ctrl_R.png",
+    "width": 188,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_D.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_D.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Delete.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Delete.png",
+    "width": 138,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_E.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_E.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Enter.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Enter.png",
+    "width": 256,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_F.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_F.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_G.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_G.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_H.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_H.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_I.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_I.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_J.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_J.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_K.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_K.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_L.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_L.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_M.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_M.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_N.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_N.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_O.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_O.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_P.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_P.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Q.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Q.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_R.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_R.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_S.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_S.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Shift_L.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Shift_L.png",
+    "width": 188,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Space.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Space.png",
+    "width": 256,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_T.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_T.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Tab.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Tab.png",
+    "width": 218,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_U.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_U.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_V.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_V.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_W.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_W.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Win.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Win.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_X.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_X.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Y.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Y.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Z.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Z.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_1_Left.uasset",
+    "output": "WebPreview\\assets\\T_Mouse_Key_1_Left.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_2_Right.uasset",
+    "output": "WebPreview\\assets\\T_Mouse_Key_2_Right.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_A.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Button_A.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_B.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Button_B.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_Menu.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Button_Menu.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_View.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Button_View.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_X.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Button_X.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_Y.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Button_Y.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Round_Down.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_D-Pad_Round_Down.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Round_Left.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_D-Pad_Round_Left.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Round_Right.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_D-Pad_Round_Right.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Up.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_D-Pad_Up.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_L.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Stick_L.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_L_Horizontal.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Stick_L_Horizontal.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_L_Vertical.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Stick_L_Vertical.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_R.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Stick_R.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_R_Horizontal.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Stick_R_Horizontal.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_R_Vertical.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_Stick_R_Vertical.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Paddle_Bottom_Left.uasset",
+    "output": "WebPreview\\assets\\T_XboxElite_Paddle_Bottom_Left.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Paddle_Bottom_Right.uasset",
+    "output": "WebPreview\\assets\\T_XboxElite_Paddle_Bottom_Right.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Top_Bottom_Left.uasset",
+    "output": "WebPreview\\assets\\T_XboxElite_Top_Bottom_Left.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Top_Bottom_Right.uasset",
+    "output": "WebPreview\\assets\\T_XboxElite_Top_Bottom_Right.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Esc.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Esc.png",
+    "width": 138,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Up.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Arrow_Up.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Down.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Arrow_Down.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Left.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Arrow_Left.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Right.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_Arrow_Right.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_LT.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_LT.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_RT.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_RT.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_LB.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_LB.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_RB.uasset",
+    "output": "WebPreview\\assets\\T_Xbox_RB.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_3.uasset",
+    "output": "WebPreview\\assets\\T_Mouse_Key_3.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_5.uasset",
+    "output": "WebPreview\\assets\\T_Mouse_Key_5.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_4.uasset",
+    "output": "WebPreview\\assets\\T_Mouse_Key_4.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_0.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_0.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_1.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_1.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_2.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_2.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_3.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_3.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_4.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_4.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_5.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_5.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_6.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_6.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_7.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_7.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_8.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_8.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  },
+  {
+    "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_9.uasset",
+    "output": "WebPreview\\assets\\T_Keyboard_9.png",
+    "width": 128,
+    "height": 128,
+    "format": "TSF_BGRA8",
+    "lossless": true
+  }
+]

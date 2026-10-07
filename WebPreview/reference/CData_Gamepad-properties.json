@@ -1,0 +1,2011 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\InputData\\CData_Gamepad.uasset",
+  "package": "/GameMainMenu/BP/InputData/CData_Gamepad",
+  "objects": [
+    {
+      "index": 1,
+      "name": "CData_Gamepad",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad",
+      "properties": {
+        "ParentClass": "CommonInputBaseControllerData",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad:EventGraph"
+        ],
+        "ThumbnailInfo": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad:SceneThumbnailInfo_0",
+        "GeneratedClass": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "019e858fa976a04ea7834e4459de0aa0"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "CData_Gamepad_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "Default__CData_Gamepad_C",
+      "class": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad_C",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.Default__CData_Gamepad_C",
+      "properties": {
+        "InputType": "ECommonInputType::Gamepad",
+        "GamepadName": "Generic",
+        "InputBrushDataMap": [
+          {
+            "Key": {
+              "KeyName": "Gamepad_LeftX"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Stick_L_Horizontal",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_LeftY"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Stick_L_Vertical",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_RightX"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Stick_R_Horizontal",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_RightY"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Stick_R_Vertical",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_DPad_Up"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_D-Pad_Up",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_DPad_Down"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_D-Pad_Round_Down",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_DPad_Right"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_D-Pad_Round_Right",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_DPad_Left"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_D-Pad_Round_Left",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_Special_Left"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Button_View",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_Special_Right"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Button_Menu",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_FaceButton_Bottom"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Button_A",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_FaceButton_Right"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Button_B",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_FaceButton_Left"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Button_X",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_FaceButton_Top"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Button_Y",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_LeftTriggerAxis"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_XboxElite_Paddle_Bottom_Left",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_RightTriggerAxis"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_XboxElite_Paddle_Bottom_Right",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_LeftShoulder"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_XboxElite_Top_Bottom_Left",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_RightShoulder"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004200000042",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1107296256"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_XboxElite_Top_Bottom_Right",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_LeftThumbstick"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Stick_L",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          },
+          {
+            "Key": {
+              "KeyName": "Gamepad_RightThumbstick"
+            },
+            "KeyBrush": {
+              "TintColor": {
+                "SpecifiedColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::FullColor",
+              "ImageSize": {
+                "raw": "0000004300000043",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "DeprecateSlateVector2D",
+                      "params": [
+                        {
+                          "name": "/Script/SlateCore",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "invalid name 1124073472"
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "ResourceObject": "T_Xbox_Stick_R",
+              "OutlineSettings": {
+                "CornerRadii": {
+                  "raw": "0000000000000000000000000000000000000000000000000000000000000000",
+                  "type": {
+                    "name": "StructProperty",
+                    "params": [
+                      {
+                        "name": "Vector4",
+                        "params": [
+                          {
+                            "name": "/Script/CoreUObject",
+                            "params": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+                },
+                "Color": {
+                  "SpecifiedColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                  },
+                  "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+                },
+                "Width": 0.0,
+                "RoundingType": "ESlateBrushRoundingType::HalfHeightRadius",
+                "bUseBrushTransparency": false
+              },
+              "UVRegion": {
+                "raw": "0000000000000000000000000000000000",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "Box2f",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 20 bytes for unpacking 4 bytes at offset 16 (actual buffer size is 17)"
+              },
+              "bIsDynamicallyLoaded": false,
+              "ResourceName": "None"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "1bbb41dfdf126446aaaf854c7a567adc"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "SceneThumbnailInfo_0",
+      "class": "Object:/Script/UnrealEd.SceneThumbnailInfo",
+      "path": "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad:SceneThumbnailInfo_0",
+      "properties": {}
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/InputData/CData_Gamepad.SKEL_CData_Gamepad_C",
+    "Object:/GameMainMenu/BP/InputData/CData_Gamepad.CData_Gamepad_C"
+  ],
+  "text": []
+}

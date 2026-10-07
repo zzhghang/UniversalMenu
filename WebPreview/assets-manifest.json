@@ -1,0 +1,1130 @@
+{
+  "pathBase": "WebPreview/",
+  "provenance": "Fonts and textures extracted from project .uasset source data; startup movie copied byte-for-byte.",
+  "fonts": {
+    "Regular": {
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "bytes": 8344732
+    },
+    "Normal": {
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "bytes": 8339300
+    },
+    "Light": {
+      "file": "assets/SourceHanSansCN-Light.otf",
+      "bytes": 8312540
+    }
+  },
+  "fontDefaultFace": "Regular",
+  "fontStyles": {
+    "SText__ButtonBoundAction": {
+      "face": "Light",
+      "file": "assets/SourceHanSansCN-Light.otf",
+      "storedPoints": 15.0,
+      "cssPixelsAtScale1": 20.0,
+      "linearColor": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_Button_Desc": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 15.0,
+      "cssPixelsAtScale1": 20.0,
+      "linearColor": {
+        "r": 0.6000000238418579,
+        "g": 0.6000000238418579,
+        "b": 0.6000000238418579,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_Confirm": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 21.0,
+      "cssPixelsAtScale1": 28.0,
+      "linearColor": {
+        "r": 0.30000001192092896,
+        "g": 0.30000001192092896,
+        "b": 0.30000001192092896,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_Confirm_HightLight": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 21.0,
+      "cssPixelsAtScale1": 28.0,
+      "linearColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_CopyRight": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 11.25,
+      "cssPixelsAtScale1": 15.0,
+      "linearColor": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_CreditsScreen": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 26.25,
+      "cssPixelsAtScale1": 35.0,
+      "linearColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_Default": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 26.25,
+      "cssPixelsAtScale1": 35.0,
+      "linearColor": {
+        "r": 0.30000001192092896,
+        "g": 0.30000001192092896,
+        "b": 0.30000001192092896,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_Default_HighLight": {
+      "face": "Regular",
+      "file": "assets/SourceHanSansCN-Regular.otf",
+      "storedPoints": 26.25,
+      "cssPixelsAtScale1": 35.0,
+      "linearColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_ListEntry": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 18.75,
+      "cssPixelsAtScale1": 25.0,
+      "linearColor": {
+        "r": 0.30000001192092896,
+        "g": 0.30000001192092896,
+        "b": 0.30000001192092896,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_ListEntry_Header": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 22.5,
+      "cssPixelsAtScale1": 30.0,
+      "linearColor": {
+        "r": 0.800000011920929,
+        "g": 0.800000011920929,
+        "b": 0.800000011920929,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0.30000001192092896
+    },
+    "SText_ListEntry_HeaderRow": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 22.5,
+      "cssPixelsAtScale1": 30.0,
+      "linearColor": {
+        "r": 0.800000011920929,
+        "g": 0.800000011920929,
+        "b": 0.800000011920929,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_ListEntry_HighLight": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 18.75,
+      "cssPixelsAtScale1": 25.0,
+      "linearColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_ListEntry_Session": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 21.0,
+      "cssPixelsAtScale1": 28.0,
+      "linearColor": {
+        "r": 0.30000001192092896,
+        "g": 0.30000001192092896,
+        "b": 0.30000001192092896,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_ListEntry_Session_HighLight": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 21.0,
+      "cssPixelsAtScale1": 28.0,
+      "linearColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    },
+    "SText_OptionDetailViewTtile": {
+      "face": "Normal",
+      "file": "assets/SourceHanSansCN-Normal.otf",
+      "storedPoints": 30.0,
+      "cssPixelsAtScale1": 40.0,
+      "linearColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "outline": {
+        "OutlineSize": 1,
+        "OutlineColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.5
+        }
+      },
+      "skewAmount": 0
+    }
+  },
+  "textures": {
+    "T_Caution": {
+      "file": "assets/T_Caution.png",
+      "width": 36,
+      "height": 32,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_Caution.uasset",
+      "lossless": true
+    },
+    "T_HorizontalArrow": {
+      "file": "assets/T_HorizontalArrow.png",
+      "width": 64,
+      "height": 64,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_HorizontalArrow.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_0": {
+      "file": "assets/T_Keyboard_0.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_0.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_1": {
+      "file": "assets/T_Keyboard_1.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_1.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_2": {
+      "file": "assets/T_Keyboard_2.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_2.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_3": {
+      "file": "assets/T_Keyboard_3.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_3.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_4": {
+      "file": "assets/T_Keyboard_4.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_4.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_5": {
+      "file": "assets/T_Keyboard_5.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_5.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_6": {
+      "file": "assets/T_Keyboard_6.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_6.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_7": {
+      "file": "assets/T_Keyboard_7.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_7.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_8": {
+      "file": "assets/T_Keyboard_8.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_8.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_9": {
+      "file": "assets/T_Keyboard_9.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_9.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_A": {
+      "file": "assets/T_Keyboard_A.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_A.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Alt_L": {
+      "file": "assets/T_Keyboard_Alt_L.png",
+      "width": 188,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Alt_L.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Alt_R": {
+      "file": "assets/T_Keyboard_Alt_R.png",
+      "width": 188,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Alt_R.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Arrow_Down": {
+      "file": "assets/T_Keyboard_Arrow_Down.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Down.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Arrow_Left": {
+      "file": "assets/T_Keyboard_Arrow_Left.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Left.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Arrow_Right": {
+      "file": "assets/T_Keyboard_Arrow_Right.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Right.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Arrow_Up": {
+      "file": "assets/T_Keyboard_Arrow_Up.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Arrow_Up.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_B": {
+      "file": "assets/T_Keyboard_B.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_B.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_BackSpace": {
+      "file": "assets/T_Keyboard_BackSpace.png",
+      "width": 138,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_BackSpace.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_C": {
+      "file": "assets/T_Keyboard_C.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_C.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Ctrl_L": {
+      "file": "assets/T_Keyboard_Ctrl_L.png",
+      "width": 188,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Ctrl_L.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Ctrl_R": {
+      "file": "assets/T_Keyboard_Ctrl_R.png",
+      "width": 188,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Ctrl_R.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_D": {
+      "file": "assets/T_Keyboard_D.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_D.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Delete": {
+      "file": "assets/T_Keyboard_Delete.png",
+      "width": 138,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Delete.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_E": {
+      "file": "assets/T_Keyboard_E.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_E.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Enter": {
+      "file": "assets/T_Keyboard_Enter.png",
+      "width": 256,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Enter.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Esc": {
+      "file": "assets/T_Keyboard_Esc.png",
+      "width": 138,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Esc.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_F": {
+      "file": "assets/T_Keyboard_F.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_F.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_G": {
+      "file": "assets/T_Keyboard_G.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_G.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_H": {
+      "file": "assets/T_Keyboard_H.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_H.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_I": {
+      "file": "assets/T_Keyboard_I.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_I.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_J": {
+      "file": "assets/T_Keyboard_J.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_J.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_K": {
+      "file": "assets/T_Keyboard_K.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_K.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_L": {
+      "file": "assets/T_Keyboard_L.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_L.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_M": {
+      "file": "assets/T_Keyboard_M.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_M.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_N": {
+      "file": "assets/T_Keyboard_N.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_N.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_O": {
+      "file": "assets/T_Keyboard_O.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_O.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_P": {
+      "file": "assets/T_Keyboard_P.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_P.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Q": {
+      "file": "assets/T_Keyboard_Q.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Q.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_R": {
+      "file": "assets/T_Keyboard_R.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_R.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_S": {
+      "file": "assets/T_Keyboard_S.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_S.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Shift_L": {
+      "file": "assets/T_Keyboard_Shift_L.png",
+      "width": 188,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Shift_L.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Space": {
+      "file": "assets/T_Keyboard_Space.png",
+      "width": 256,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Space.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_T": {
+      "file": "assets/T_Keyboard_T.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_T.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Tab": {
+      "file": "assets/T_Keyboard_Tab.png",
+      "width": 218,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Tab.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_U": {
+      "file": "assets/T_Keyboard_U.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_U.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_V": {
+      "file": "assets/T_Keyboard_V.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_V.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_W": {
+      "file": "assets/T_Keyboard_W.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_W.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Win": {
+      "file": "assets/T_Keyboard_Win.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Win.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_X": {
+      "file": "assets/T_Keyboard_X.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_X.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Y": {
+      "file": "assets/T_Keyboard_Y.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Y.uasset",
+      "lossless": true
+    },
+    "T_Keyboard_Z": {
+      "file": "assets/T_Keyboard_Z.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Keyboard_Z.uasset",
+      "lossless": true
+    },
+    "T_Mouse_Key_1_Left": {
+      "file": "assets/T_Mouse_Key_1_Left.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_1_Left.uasset",
+      "lossless": true
+    },
+    "T_Mouse_Key_2_Right": {
+      "file": "assets/T_Mouse_Key_2_Right.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_2_Right.uasset",
+      "lossless": true
+    },
+    "T_Mouse_Key_3": {
+      "file": "assets/T_Mouse_Key_3.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_3.uasset",
+      "lossless": true
+    },
+    "T_Mouse_Key_4": {
+      "file": "assets/T_Mouse_Key_4.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_4.uasset",
+      "lossless": true
+    },
+    "T_Mouse_Key_5": {
+      "file": "assets/T_Mouse_Key_5.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Keyboard-Mouse_Icons\\T_Mouse_Key_5.uasset",
+      "lossless": true
+    },
+    "T_SliderHandle": {
+      "file": "assets/T_SliderHandle.png",
+      "width": 36,
+      "height": 36,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_SliderHandle.uasset",
+      "lossless": true
+    },
+    "T_UE-logo_W": {
+      "file": "assets/T_UE-logo_W.png",
+      "width": 2372,
+      "height": 2880,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_UE-logo_W.uasset",
+      "lossless": true
+    },
+    "T_UE_Logo": {
+      "file": "assets/T_UE_Logo.png",
+      "width": 2372,
+      "height": 2880,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_UE_Logo.uasset",
+      "lossless": true
+    },
+    "T_XboxElite_Paddle_Bottom_Left": {
+      "file": "assets/T_XboxElite_Paddle_Bottom_Left.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Paddle_Bottom_Left.uasset",
+      "lossless": true
+    },
+    "T_XboxElite_Paddle_Bottom_Right": {
+      "file": "assets/T_XboxElite_Paddle_Bottom_Right.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Paddle_Bottom_Right.uasset",
+      "lossless": true
+    },
+    "T_XboxElite_Top_Bottom_Left": {
+      "file": "assets/T_XboxElite_Top_Bottom_Left.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Top_Bottom_Left.uasset",
+      "lossless": true
+    },
+    "T_XboxElite_Top_Bottom_Right": {
+      "file": "assets/T_XboxElite_Top_Bottom_Right.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_XboxElite_Top_Bottom_Right.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Button_A": {
+      "file": "assets/T_Xbox_Button_A.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_A.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Button_B": {
+      "file": "assets/T_Xbox_Button_B.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_B.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Button_Menu": {
+      "file": "assets/T_Xbox_Button_Menu.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_Menu.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Button_View": {
+      "file": "assets/T_Xbox_Button_View.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_View.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Button_X": {
+      "file": "assets/T_Xbox_Button_X.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_X.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Button_Y": {
+      "file": "assets/T_Xbox_Button_Y.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Button_Y.uasset",
+      "lossless": true
+    },
+    "T_Xbox_D-Pad_Round_Down": {
+      "file": "assets/T_Xbox_D-Pad_Round_Down.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Round_Down.uasset",
+      "lossless": true
+    },
+    "T_Xbox_D-Pad_Round_Left": {
+      "file": "assets/T_Xbox_D-Pad_Round_Left.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Round_Left.uasset",
+      "lossless": true
+    },
+    "T_Xbox_D-Pad_Round_Right": {
+      "file": "assets/T_Xbox_D-Pad_Round_Right.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Round_Right.uasset",
+      "lossless": true
+    },
+    "T_Xbox_D-Pad_Up": {
+      "file": "assets/T_Xbox_D-Pad_Up.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_D-Pad_Up.uasset",
+      "lossless": true
+    },
+    "T_Xbox_LB": {
+      "file": "assets/T_Xbox_LB.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_LB.uasset",
+      "lossless": true
+    },
+    "T_Xbox_LT": {
+      "file": "assets/T_Xbox_LT.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_LT.uasset",
+      "lossless": true
+    },
+    "T_Xbox_RB": {
+      "file": "assets/T_Xbox_RB.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_RB.uasset",
+      "lossless": true
+    },
+    "T_Xbox_RT": {
+      "file": "assets/T_Xbox_RT.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_RT.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Stick_L": {
+      "file": "assets/T_Xbox_Stick_L.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_L.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Stick_L_Horizontal": {
+      "file": "assets/T_Xbox_Stick_L_Horizontal.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_L_Horizontal.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Stick_L_Vertical": {
+      "file": "assets/T_Xbox_Stick_L_Vertical.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_L_Vertical.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Stick_R": {
+      "file": "assets/T_Xbox_Stick_R.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_R.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Stick_R_Horizontal": {
+      "file": "assets/T_Xbox_Stick_R_Horizontal.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_R_Horizontal.uasset",
+      "lossless": true
+    },
+    "T_Xbox_Stick_R_Vertical": {
+      "file": "assets/T_Xbox_Stick_R_Vertical.png",
+      "width": 128,
+      "height": 128,
+      "source": "Plugins\\GameMainMenu\\Content\\Assets\\MengGe_Game_UI_Icons\\Icons\\Textures\\Xbox_Series_Icons\\T_Xbox_Stick_R_Vertical.uasset",
+      "lossless": true
+    }
+  },
+  "configuredKeyToFile": {
+    "LeftMouseButton": "assets/T_Mouse_Key_1_Left.png",
+    "RightMouseButton": "assets/T_Mouse_Key_2_Right.png",
+    "MiddleMouseButton": "assets/T_Mouse_Key_3.png",
+    "ThumbMouseButton": "assets/T_Mouse_Key_5.png",
+    "ThumbMouseButton2": "assets/T_Mouse_Key_4.png",
+    "Tab": "assets/T_Keyboard_Tab.png",
+    "Enter": "assets/T_Keyboard_Enter.png",
+    "SpaceBar": "assets/T_Keyboard_Space.png",
+    "BackSpace": "assets/T_Keyboard_BackSpace.png",
+    "Delete": "assets/T_Keyboard_Delete.png",
+    "Zero": "assets/T_Keyboard_0.png",
+    "One": "assets/T_Keyboard_1.png",
+    "Two": "assets/T_Keyboard_2.png",
+    "Three": "assets/T_Keyboard_3.png",
+    "Four": "assets/T_Keyboard_4.png",
+    "Five": "assets/T_Keyboard_5.png",
+    "Six": "assets/T_Keyboard_6.png",
+    "Seven": "assets/T_Keyboard_7.png",
+    "Eight": "assets/T_Keyboard_8.png",
+    "Nine": "assets/T_Keyboard_9.png",
+    "A": "assets/T_Keyboard_A.png",
+    "B": "assets/T_Keyboard_B.png",
+    "C": "assets/T_Keyboard_C.png",
+    "D": "assets/T_Keyboard_D.png",
+    "E": "assets/T_Keyboard_E.png",
+    "F": "assets/T_Keyboard_F.png",
+    "G": "assets/T_Keyboard_G.png",
+    "H": "assets/T_Keyboard_H.png",
+    "I": "assets/T_Keyboard_I.png",
+    "J": "assets/T_Keyboard_J.png",
+    "K": "assets/T_Keyboard_K.png",
+    "L": "assets/T_Keyboard_L.png",
+    "M": "assets/T_Keyboard_M.png",
+    "N": "assets/T_Keyboard_N.png",
+    "O": "assets/T_Keyboard_O.png",
+    "P": "assets/T_Keyboard_P.png",
+    "Q": "assets/T_Keyboard_Q.png",
+    "R": "assets/T_Keyboard_R.png",
+    "S": "assets/T_Keyboard_S.png",
+    "T": "assets/T_Keyboard_T.png",
+    "U": "assets/T_Keyboard_U.png",
+    "V": "assets/T_Keyboard_V.png",
+    "W": "assets/T_Keyboard_W.png",
+    "X": "assets/T_Keyboard_X.png",
+    "Y": "assets/T_Keyboard_Y.png",
+    "Z": "assets/T_Keyboard_Z.png",
+    "LeftShift": "assets/T_Keyboard_Shift_L.png",
+    "LeftControl": "assets/T_Keyboard_Ctrl_L.png",
+    "RightControl": "assets/T_Keyboard_Ctrl_R.png",
+    "LeftAlt": "assets/T_Keyboard_Alt_L.png",
+    "RightAlt": "assets/T_Keyboard_Alt_R.png",
+    "LeftCommand": "assets/T_Keyboard_Win.png",
+    "Gamepad_LeftX": "assets/T_Xbox_Stick_L_Horizontal.png",
+    "Gamepad_LeftY": "assets/T_Xbox_Stick_L_Vertical.png",
+    "Gamepad_RightX": "assets/T_Xbox_Stick_R_Horizontal.png",
+    "Gamepad_RightY": "assets/T_Xbox_Stick_R_Vertical.png",
+    "Gamepad_DPad_Up": "assets/T_Xbox_D-Pad_Up.png",
+    "Gamepad_DPad_Down": "assets/T_Xbox_D-Pad_Round_Down.png",
+    "Gamepad_DPad_Right": "assets/T_Xbox_D-Pad_Round_Right.png",
+    "Gamepad_DPad_Left": "assets/T_Xbox_D-Pad_Round_Left.png",
+    "Gamepad_Special_Left": "assets/T_Xbox_Button_View.png",
+    "Gamepad_Special_Right": "assets/T_Xbox_Button_Menu.png",
+    "Gamepad_FaceButton_Bottom": "assets/T_Xbox_Button_A.png",
+    "Gamepad_FaceButton_Right": "assets/T_Xbox_Button_B.png",
+    "Gamepad_FaceButton_Left": "assets/T_Xbox_Button_X.png",
+    "Gamepad_FaceButton_Top": "assets/T_Xbox_Button_Y.png",
+    "Gamepad_LeftTriggerAxis": "assets/T_XboxElite_Paddle_Bottom_Left.png",
+    "Gamepad_RightTriggerAxis": "assets/T_XboxElite_Paddle_Bottom_Right.png",
+    "Gamepad_LeftShoulder": "assets/T_XboxElite_Top_Bottom_Left.png",
+    "Gamepad_RightShoulder": "assets/T_XboxElite_Top_Bottom_Right.png",
+    "Gamepad_LeftThumbstick": "assets/T_Xbox_Stick_L.png",
+    "Gamepad_RightThumbstick": "assets/T_Xbox_Stick_R.png"
+  },
+  "supplementalKeyToFile": {
+    "Escape": "assets/T_Keyboard_Esc.png",
+    "Up": "assets/T_Keyboard_Arrow_Up.png",
+    "Down": "assets/T_Keyboard_Arrow_Down.png",
+    "Left": "assets/T_Keyboard_Arrow_Left.png",
+    "Right": "assets/T_Keyboard_Arrow_Right.png"
+  },
+  "keyToFile": {
+    "LeftMouseButton": "assets/T_Mouse_Key_1_Left.png",
+    "RightMouseButton": "assets/T_Mouse_Key_2_Right.png",
+    "MiddleMouseButton": "assets/T_Mouse_Key_3.png",
+    "ThumbMouseButton": "assets/T_Mouse_Key_5.png",
+    "ThumbMouseButton2": "assets/T_Mouse_Key_4.png",
+    "Tab": "assets/T_Keyboard_Tab.png",
+    "Enter": "assets/T_Keyboard_Enter.png",
+    "SpaceBar": "assets/T_Keyboard_Space.png",
+    "BackSpace": "assets/T_Keyboard_BackSpace.png",
+    "Delete": "assets/T_Keyboard_Delete.png",
+    "Zero": "assets/T_Keyboard_0.png",
+    "One": "assets/T_Keyboard_1.png",
+    "Two": "assets/T_Keyboard_2.png",
+    "Three": "assets/T_Keyboard_3.png",
+    "Four": "assets/T_Keyboard_4.png",
+    "Five": "assets/T_Keyboard_5.png",
+    "Six": "assets/T_Keyboard_6.png",
+    "Seven": "assets/T_Keyboard_7.png",
+    "Eight": "assets/T_Keyboard_8.png",
+    "Nine": "assets/T_Keyboard_9.png",
+    "A": "assets/T_Keyboard_A.png",
+    "B": "assets/T_Keyboard_B.png",
+    "C": "assets/T_Keyboard_C.png",
+    "D": "assets/T_Keyboard_D.png",
+    "E": "assets/T_Keyboard_E.png",
+    "F": "assets/T_Keyboard_F.png",
+    "G": "assets/T_Keyboard_G.png",
+    "H": "assets/T_Keyboard_H.png",
+    "I": "assets/T_Keyboard_I.png",
+    "J": "assets/T_Keyboard_J.png",
+    "K": "assets/T_Keyboard_K.png",
+    "L": "assets/T_Keyboard_L.png",
+    "M": "assets/T_Keyboard_M.png",
+    "N": "assets/T_Keyboard_N.png",
+    "O": "assets/T_Keyboard_O.png",
+    "P": "assets/T_Keyboard_P.png",
+    "Q": "assets/T_Keyboard_Q.png",
+    "R": "assets/T_Keyboard_R.png",
+    "S": "assets/T_Keyboard_S.png",
+    "T": "assets/T_Keyboard_T.png",
+    "U": "assets/T_Keyboard_U.png",
+    "V": "assets/T_Keyboard_V.png",
+    "W": "assets/T_Keyboard_W.png",
+    "X": "assets/T_Keyboard_X.png",
+    "Y": "assets/T_Keyboard_Y.png",
+    "Z": "assets/T_Keyboard_Z.png",
+    "LeftShift": "assets/T_Keyboard_Shift_L.png",
+    "LeftControl": "assets/T_Keyboard_Ctrl_L.png",
+    "RightControl": "assets/T_Keyboard_Ctrl_R.png",
+    "LeftAlt": "assets/T_Keyboard_Alt_L.png",
+    "RightAlt": "assets/T_Keyboard_Alt_R.png",
+    "LeftCommand": "assets/T_Keyboard_Win.png",
+    "Gamepad_LeftX": "assets/T_Xbox_Stick_L_Horizontal.png",
+    "Gamepad_LeftY": "assets/T_Xbox_Stick_L_Vertical.png",
+    "Gamepad_RightX": "assets/T_Xbox_Stick_R_Horizontal.png",
+    "Gamepad_RightY": "assets/T_Xbox_Stick_R_Vertical.png",
+    "Gamepad_DPad_Up": "assets/T_Xbox_D-Pad_Up.png",
+    "Gamepad_DPad_Down": "assets/T_Xbox_D-Pad_Round_Down.png",
+    "Gamepad_DPad_Right": "assets/T_Xbox_D-Pad_Round_Right.png",
+    "Gamepad_DPad_Left": "assets/T_Xbox_D-Pad_Round_Left.png",
+    "Gamepad_Special_Left": "assets/T_Xbox_Button_View.png",
+    "Gamepad_Special_Right": "assets/T_Xbox_Button_Menu.png",
+    "Gamepad_FaceButton_Bottom": "assets/T_Xbox_Button_A.png",
+    "Gamepad_FaceButton_Right": "assets/T_Xbox_Button_B.png",
+    "Gamepad_FaceButton_Left": "assets/T_Xbox_Button_X.png",
+    "Gamepad_FaceButton_Top": "assets/T_Xbox_Button_Y.png",
+    "Gamepad_LeftTriggerAxis": "assets/T_XboxElite_Paddle_Bottom_Left.png",
+    "Gamepad_RightTriggerAxis": "assets/T_XboxElite_Paddle_Bottom_Right.png",
+    "Gamepad_LeftShoulder": "assets/T_XboxElite_Top_Bottom_Left.png",
+    "Gamepad_RightShoulder": "assets/T_XboxElite_Top_Bottom_Right.png",
+    "Gamepad_LeftThumbstick": "assets/T_Xbox_Stick_L.png",
+    "Gamepad_RightThumbstick": "assets/T_Xbox_Stick_R.png",
+    "Escape": "assets/T_Keyboard_Esc.png",
+    "Up": "assets/T_Keyboard_Arrow_Up.png",
+    "Down": "assets/T_Keyboard_Arrow_Down.png",
+    "Left": "assets/T_Keyboard_Arrow_Left.png",
+    "Right": "assets/T_Keyboard_Arrow_Right.png"
+  },
+  "alternateGamepadLabels": {
+    "LT": "assets/T_Xbox_LT.png",
+    "RT": "assets/T_Xbox_RT.png",
+    "LB": "assets/T_Xbox_LB.png",
+    "RB": "assets/T_Xbox_RB.png"
+  },
+  "gamepadNote": "Original CData_Gamepad maps trigger axes to XboxElite bottom paddles and shoulders to XboxElite top paddles. Alternate LT/RT/LB/RB files exist but are not the configured project brushes.",
+  "videos": {
+    "startup": {
+      "file": "assets/UELogoAnim.mp4",
+      "source": "Content/Movies/UELogoAnim.mp4",
+      "bytes": 3708811,
+      "sha256": "5921a72fe917558b0f6bf65337e2560e08d884dac5267ccd679f13b1a1c52d54"
+    }
+  }
+}

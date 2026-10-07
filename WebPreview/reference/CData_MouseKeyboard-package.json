@@ -1,0 +1,1450 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:0m0b5Wx98G5/oa7q0s1GJNt703s="
+		},
+		"TotalHeaderSize": 16379,
+		"CustomVersions": [
+			{
+				"Key": "29E575DDE0A346279D10D276232CDCEA",
+				"Version": 17
+			},
+			{
+				"Key": "375EC13C06E448FBB50084F0262A717E",
+				"Version": 4
+			},
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "B0D832E41F894F0DACCF7EB736FD4AA2",
+				"Version": 10
+			},
+			{
+				"Key": "CFFC743F43B04480939114DF171D2073",
+				"Version": 37
+			},
+			{
+				"Key": "D89B5E4224BD4D468412ACA8DF641779",
+				"Version": 61
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/BP/InputData/CData_MouseKeyboard",
+		"PackageFlags": 0,
+		"NameCount": 229,
+		"NameOffset": 544,
+		"SoftObjectPathsCount": 2,
+		"SoftObjectPathsOffset": 8594,
+		"LocalizationId": "3B43FAA017ED616D7539F2529BB12AB4",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 0,
+		"ExportCount": 5,
+		"ExportOffset": 13417,
+		"ImportCount": 117,
+		"ImportOffset": 8737,
+		"CellExportCount": 0,
+		"CellExportOffset": 13977,
+		"CellImportCount": 0,
+		"CellImportOffset": 13977,
+		"MetaDataOffset": 8634,
+		"DependsOffset": 13977,
+		"SoftPackageReferencesCount": 1,
+		"SoftPackageReferencesOffset": 13997,
+		"SearchableNamesOffset": 14005,
+		"ThumbnailTableOffset": 14033,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "FDC65C904AC728C7B3F563A2B66BF45E",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 5,
+				"NameCount": 229
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 4126793059,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 14137,
+		"BulkDataStartOffset": 89591,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 16379,
+		"NamesReferencedFromExportDataCount": 130,
+		"PayloadTocOffset": 89595,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/GameMainMenu/BP/InputData/CData_MouseKeyboard",
+		"/Script/CommonInput",
+		"/Script/CoreUObject",
+		"/Script/InputCore",
+		"/Script/SlateCore",
+		"A",
+		"ArrayProperty",
+		"B",
+		"BackSpace",
+		"bAllowDeletion",
+		"bIsDynamicallyLoaded",
+		"bLegacyNeedToPurgeSkelRefs",
+		"BlueprintGuid",
+		"BlueprintSystemVersion",
+		"BlueprintType",
+		"BoolProperty",
+		"Bottom",
+		"Box2f",
+		"bUseBrushTransparency",
+		"ByteProperty",
+		"C",
+		"CData_MouseKeyboard_C",
+		"Color",
+		"ColorUseRule",
+		"CommonInputKeyBrushConfiguration",
+		"CornerRadii",
+		"D",
+		"Delete",
+		"DeprecateSlateVector2D",
+		"DrawAs",
+		"E",
+		"Eight",
+		"Engine",
+		"Enter",
+		"EnumProperty",
+		"ESlateBrushDrawType",
+		"ESlateBrushDrawType::Image",
+		"ESlateBrushImageType",
+		"ESlateBrushImageType::FullColor",
+		"ESlateBrushMirrorType",
+		"ESlateBrushMirrorType::NoMirror",
+		"ESlateBrushRoundingType",
+		"ESlateBrushRoundingType::HalfHeightRadius",
+		"ESlateBrushTileType",
+		"ESlateBrushTileType::NoTile",
+		"ESlateColorStylingMode",
+		"ESlateColorStylingMode::UseColor_Specified",
+		"F",
+		"Five",
+		"FloatProperty",
+		"Four",
+		"G",
+		"GeneratedClass",
+		"GraphGuid",
+		"Guid",
+		"H",
+		"I",
+		"ImageSize",
+		"ImageType",
+		"InputBrushDataMap",
+		"IntProperty",
+		"J",
+		"K",
+		"Key",
+		"KeyBrush",
+		"KeyName",
+		"L",
+		"Left",
+		"LeftAlt",
+		"LeftCommand",
+		"LeftControl",
+		"LeftMouseButton",
+		"LeftShift",
+		"LinearColor",
+		"M",
+		"Margin",
+		"MiddleMouseButton",
+		"Mirroring",
+		"N",
+		"NameProperty",
+		"Nine",
+		"None",
+		"O",
+		"ObjectProperty",
+		"One",
+		"OutlineSettings",
+		"P",
+		"PackageLocalizationNamespace",
+		"ParentClass",
+		"Q",
+		"R",
+		"ResourceName",
+		"ResourceObject",
+		"Right",
+		"RightAlt",
+		"RightControl",
+		"RightMouseButton",
+		"RoundingType",
+		"S",
+		"Schema",
+		"Seven",
+		"Six",
+		"SKEL_CData_MouseKeyboard_C",
+		"SlateBrush",
+		"SlateBrushOutlineSettings",
+		"SlateColor",
+		"SpaceBar",
+		"SpecifiedColor",
+		"StructProperty",
+		"T",
+		"Tab",
+		"Three",
+		"ThumbMouseButton",
+		"ThumbMouseButton2",
+		"ThumbnailInfo",
+		"Tiling",
+		"TintColor",
+		"Top",
+		"Two",
+		"U",
+		"UbergraphPages",
+		"UVRegion",
+		"V",
+		"Vector4",
+		"W",
+		"Width",
+		"X",
+		"Y",
+		"Z",
+		"Zero",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_A",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_L",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_R",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_B",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_BackSpace",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_C",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_L",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_R",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_D",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Delete",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_E",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Enter",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_F",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_G",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_H",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_I",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_J",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_K",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_L",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_M",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_N",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_O",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_P",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Q",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_R",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_S",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Shift_L",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Space",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_T",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Tab",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_U",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_V",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_W",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Win",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_X",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Y",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Z",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_1_Left",
+		"/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_2_Right",
+		"/Script/BlueprintGraph",
+		"/Script/Engine",
+		"/Script/UnrealEd",
+		"Blueprint",
+		"BlueprintGeneratedClass",
+		"CData_MouseKeyboard",
+		"Class",
+		"CommonInputBaseControllerData",
+		"Default__CData_MouseKeyboard_C",
+		"Default__CommonInputBaseControllerData",
+		"EdGraph",
+		"EdGraphSchema_K2",
+		"EventGraph",
+		"Object",
+		"Package",
+		"SceneThumbnailInfo",
+		"T_Keyboard",
+		"T_Keyboard_A",
+		"T_Keyboard_Alt_L",
+		"T_Keyboard_Alt_R",
+		"T_Keyboard_B",
+		"T_Keyboard_BackSpace",
+		"T_Keyboard_C",
+		"T_Keyboard_Ctrl_L",
+		"T_Keyboard_Ctrl_R",
+		"T_Keyboard_D",
+		"T_Keyboard_Delete",
+		"T_Keyboard_E",
+		"T_Keyboard_Enter",
+		"T_Keyboard_F",
+		"T_Keyboard_G",
+		"T_Keyboard_H",
+		"T_Keyboard_I",
+		"T_Keyboard_J",
+		"T_Keyboard_K",
+		"T_Keyboard_L",
+		"T_Keyboard_M",
+		"T_Keyboard_N",
+		"T_Keyboard_O",
+		"T_Keyboard_P",
+		"T_Keyboard_Q",
+		"T_Keyboard_R",
+		"T_Keyboard_S",
+		"T_Keyboard_Shift_L",
+		"T_Keyboard_Space",
+		"T_Keyboard_T",
+		"T_Keyboard_Tab",
+		"T_Keyboard_U",
+		"T_Keyboard_V",
+		"T_Keyboard_W",
+		"T_Keyboard_Win",
+		"T_Keyboard_X",
+		"T_Keyboard_Y",
+		"T_Keyboard_Z",
+		"T_Mouse_Key",
+		"T_Mouse_Key_1_Left",
+		"T_Mouse_Key_2_Right",
+		"Texture2D"
+	],
+	"SoftObjectPaths": [
+		"Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.SKEL_CData_MouseKeyboard_C",
+		"Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C"
+	],
+	"Imports": [
+		{
+			"ObjectName": "EdGraphSchema_K2",
+			"PathName": "Object:/Script/BlueprintGraph.EdGraphSchema_K2",
+			"OuterIndex": -61,
+			"Outer": "Object:/Script/BlueprintGraph",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "CommonInputBaseControllerData",
+			"PathName": "Object:/Script/CommonInput.CommonInputBaseControllerData",
+			"OuterIndex": -62,
+			"Outer": "Object:/Script/CommonInput",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Object",
+			"PathName": "Object:/Script/CoreUObject.Object",
+			"OuterIndex": -63,
+			"Outer": "Object:/Script/CoreUObject",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Blueprint",
+			"PathName": "Object:/Script/Engine.Blueprint",
+			"OuterIndex": -64,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "BlueprintGeneratedClass",
+			"PathName": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"OuterIndex": -64,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraph",
+			"PathName": "Object:/Script/Engine.EdGraph",
+			"OuterIndex": -64,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SceneThumbnailInfo",
+			"PathName": "Object:/Script/UnrealEd.SceneThumbnailInfo",
+			"OuterIndex": -65,
+			"Outer": "Object:/Script/UnrealEd",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Default__CommonInputBaseControllerData",
+			"PathName": "Object:/Script/CommonInput.Default__CommonInputBaseControllerData",
+			"OuterIndex": -62,
+			"Outer": "Object:/Script/CommonInput",
+			"ClassPath": "Object:/Script/CommonInput.CommonInputBaseControllerData",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_0",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_0",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_1",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_2",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_2",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_3",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_3",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_4",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_4",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_5",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_5",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_6",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_6",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_7",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_7",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_8",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_8",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_9",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_9",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_A",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_A",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_L",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_R",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_R",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_B",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_B",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_BackSpace",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_BackSpace",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_C",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_C",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_L",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_R",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_R",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_D",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_D",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Delete",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Delete",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_E",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_E",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Enter",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Enter",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_F",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_F",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_G",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_G",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_H",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_H",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_I",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_I",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_J",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_J",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_K",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_K",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_L",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_M",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_M",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_N",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_N",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_O",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_O",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_P",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_P",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Q",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Q",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_R",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_R",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_S",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_S",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Shift_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Shift_L",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Space",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Space",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_T",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_T",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Tab",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Tab",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_U",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_U",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_V",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_V",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_W",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_W",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Win",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Win",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_X",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_X",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Y",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Y",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Z",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Z",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_1_Left",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_1_Left",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_2_Right",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_2_Right",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_3",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_3",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_4",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_4",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_5",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_5",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/BlueprintGraph",
+			"PathName": "Object:/Script/BlueprintGraph",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CommonInput",
+			"PathName": "Object:/Script/CommonInput",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CoreUObject",
+			"PathName": "Object:/Script/CoreUObject",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/UnrealEd",
+			"PathName": "Object:/Script/UnrealEd",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_0",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_0.T_Keyboard_0",
+			"OuterIndex": -9,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_0",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_1",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_1.T_Keyboard_1",
+			"OuterIndex": -10,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_1",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_2",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_2.T_Keyboard_2",
+			"OuterIndex": -11,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_2",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_3",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_3.T_Keyboard_3",
+			"OuterIndex": -12,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_3",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_4",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_4.T_Keyboard_4",
+			"OuterIndex": -13,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_4",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_5",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_5.T_Keyboard_5",
+			"OuterIndex": -14,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_5",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_6",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_6.T_Keyboard_6",
+			"OuterIndex": -15,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_6",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_7",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_7.T_Keyboard_7",
+			"OuterIndex": -16,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_7",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_8",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_8.T_Keyboard_8",
+			"OuterIndex": -17,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_8",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_9",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_9.T_Keyboard_9",
+			"OuterIndex": -18,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_9",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_A",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_A.T_Keyboard_A",
+			"OuterIndex": -19,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_A",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Alt_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_L.T_Keyboard_Alt_L",
+			"OuterIndex": -20,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_L",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Alt_R",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_R.T_Keyboard_Alt_R",
+			"OuterIndex": -21,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Alt_R",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_B",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_B.T_Keyboard_B",
+			"OuterIndex": -22,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_B",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_BackSpace",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_BackSpace.T_Keyboard_BackSpace",
+			"OuterIndex": -23,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_BackSpace",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_C",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_C.T_Keyboard_C",
+			"OuterIndex": -24,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_C",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Ctrl_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_L.T_Keyboard_Ctrl_L",
+			"OuterIndex": -25,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_L",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Ctrl_R",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_R.T_Keyboard_Ctrl_R",
+			"OuterIndex": -26,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Ctrl_R",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_D",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_D.T_Keyboard_D",
+			"OuterIndex": -27,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_D",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Delete",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Delete.T_Keyboard_Delete",
+			"OuterIndex": -28,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Delete",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_E",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_E.T_Keyboard_E",
+			"OuterIndex": -29,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_E",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Enter",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Enter.T_Keyboard_Enter",
+			"OuterIndex": -30,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Enter",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_F",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_F.T_Keyboard_F",
+			"OuterIndex": -31,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_F",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_G",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_G.T_Keyboard_G",
+			"OuterIndex": -32,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_G",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_H",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_H.T_Keyboard_H",
+			"OuterIndex": -33,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_H",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_I",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_I.T_Keyboard_I",
+			"OuterIndex": -34,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_I",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_J",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_J.T_Keyboard_J",
+			"OuterIndex": -35,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_J",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_K",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_K.T_Keyboard_K",
+			"OuterIndex": -36,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_K",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_L.T_Keyboard_L",
+			"OuterIndex": -37,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_L",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_M",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_M.T_Keyboard_M",
+			"OuterIndex": -38,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_M",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_N",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_N.T_Keyboard_N",
+			"OuterIndex": -39,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_N",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_O",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_O.T_Keyboard_O",
+			"OuterIndex": -40,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_O",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_P",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_P.T_Keyboard_P",
+			"OuterIndex": -41,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_P",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Q",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Q.T_Keyboard_Q",
+			"OuterIndex": -42,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Q",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_R",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_R.T_Keyboard_R",
+			"OuterIndex": -43,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_R",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_S",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_S.T_Keyboard_S",
+			"OuterIndex": -44,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_S",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Shift_L",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Shift_L.T_Keyboard_Shift_L",
+			"OuterIndex": -45,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Shift_L",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Space",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Space.T_Keyboard_Space",
+			"OuterIndex": -46,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Space",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_T",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_T.T_Keyboard_T",
+			"OuterIndex": -47,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_T",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Tab",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Tab.T_Keyboard_Tab",
+			"OuterIndex": -48,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Tab",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_U",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_U.T_Keyboard_U",
+			"OuterIndex": -49,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_U",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_V",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_V.T_Keyboard_V",
+			"OuterIndex": -50,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_V",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_W",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_W.T_Keyboard_W",
+			"OuterIndex": -51,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_W",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Win",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Win.T_Keyboard_Win",
+			"OuterIndex": -52,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Win",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_X",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_X.T_Keyboard_X",
+			"OuterIndex": -53,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_X",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Y",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Y.T_Keyboard_Y",
+			"OuterIndex": -54,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Y",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Keyboard_Z",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Z.T_Keyboard_Z",
+			"OuterIndex": -55,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_Z",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Mouse_Key_1_Left",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_1_Left.T_Mouse_Key_1_Left",
+			"OuterIndex": -56,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_1_Left",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Mouse_Key_2_Right",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_2_Right.T_Mouse_Key_2_Right",
+			"OuterIndex": -57,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_2_Right",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Mouse_Key_3",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_3.T_Mouse_Key_3",
+			"OuterIndex": -58,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_3",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Mouse_Key_4",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_4.T_Mouse_Key_4",
+			"OuterIndex": -59,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_4",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		},
+		{
+			"ObjectName": "T_Mouse_Key_5",
+			"PathName": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_5.T_Mouse_Key_5",
+			"OuterIndex": -60,
+			"Outer": "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Mouse_Key_5",
+			"ClassPath": "Object:/Script/Engine.Texture2D",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "CData_MouseKeyboard",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard",
+			"ClassIndex": -4,
+			"Class": "Object:/Script/Engine.Blueprint",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 264,
+			"SerialOffset": 16379,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 260,
+			"bForcedExport": 0,
+			"bNotForClient": 1,
+			"bNotForServer": 1,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "CData_MouseKeyboard_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C",
+			"ClassIndex": -5,
+			"Class": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"SuperIndex": -2,
+			"Super": "Object:/Script/CommonInput.CommonInputBaseControllerData",
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional",
+			"HashNext": -1,
+			"SerialSize": 81,
+			"SerialOffset": 16643,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Default__CData_MouseKeyboard_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.Default__CData_MouseKeyboard_C",
+			"ClassIndex": 2,
+			"Class": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | ClassDefaultObject | ArchetypeObject",
+			"HashNext": -1,
+			"SerialSize": 72722,
+			"SerialOffset": 16724,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 72718,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "EventGraph",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard:EventGraph",
+			"ClassIndex": -6,
+			"Class": "Object:/Script/Engine.EdGraph",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 132,
+			"SerialOffset": 89446,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 128,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "SceneThumbnailInfo_0",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard:SceneThumbnailInfo_0",
+			"ClassIndex": -7,
+			"Class": "Object:/Script/UnrealEd.SceneThumbnailInfo",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 13,
+			"SerialOffset": 89578,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [
+		"/GameMainMenu/BP/InputData/CData_MouseKeyboard"
+	],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "Blueprint /GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard",
+			"FileOffset": 14009
+		},
+		{
+			"ObjectFullName": "BlueprintGeneratedClass /GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C",
+			"FileOffset": 14021
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/BP/InputData/CData_MouseKeyboard",
+			"PackagePath": "/GameMainMenu/BP/InputData",
+			"AssetName": "CData_MouseKeyboard",
+			"AssetClassPath": "Object:/Script/Engine.Blueprint",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"GeneratedClass": "/Script/Engine.BlueprintGeneratedClass'/GameMainMenu/BP/InputData/CData_MouseKeyboard.CData_MouseKeyboard_C'",
+				"ParentClass": "/Script/CoreUObject.Class'/Script/CommonInput.CommonInputBaseControllerData'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/CommonInput.CommonInputBaseControllerData'",
+				"ClassFlags": "4458496",
+				"BlueprintType": "BPTYPE_Normal",
+				"IsDataOnly": "True",
+				"FiBData": "\u0004\u0001\u0001\u0001\u00ad\u0002\u0001\u0001\b\u0001\u0001\u0001\u0001\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\u0002\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0003\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0004\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001LjtnfuTdifnb\u0001\u001d\u0001\u0001\u0001HsbqiEjtqmbzObnf`FwfouHsbqi\u0001\f\u0001\u0001\u0001FwfouHsbqi\u0001\u0005\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\u0006\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000b\u0001\u0001\u0001Cmvfqsjou\u0001\u0010\u0001\u0001\u0001OpHsbqiUppmujq\u0001\b\u0001\u0001\u0001)Opof*\u0001\u0007\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0007\u0001\u0001\u0001Opeft\u0001\u0007\u0001\u0001\u0001Opeft\u0001{\"0\":[],\"1\":[{\"2\":\"3\",\"4\":\"5\",\"6\":[],\"0\":[]}]}",
+				"NumReplicatedProperties": "0",
+				"NativeComponents": "0",
+				"BlueprintComponents": "0",
+				"BlueprintPath": "CData_MouseKeyboard",
+				"ImportedNamespaces": "()"
+			},
+			"TaggedAssetBundles": {}
+		},
+		{
+			"PackageName": "/GameMainMenu/BP/InputData/CData_MouseKeyboard",
+			"PackagePath": "/GameMainMenu/BP/InputData",
+			"AssetName": "CData_MouseKeyboard_C",
+			"AssetClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"ParentClass": "/Script/CoreUObject.Class'/Script/CommonInput.CommonInputBaseControllerData'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/CommonInput.CommonInputBaseControllerData'",
+				"ClassFlags": "4458496",
+				"BlueprintType": "BPTYPE_Normal",
+				"NumReplicatedProperties": "0",
+				"ModuleName": "CData_MouseKeyboard"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

@@ -1,0 +1,397 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:CiE8mTN2gf+s3BouZeh80xxYRzs="
+		},
+		"TotalHeaderSize": 5108,
+		"CustomVersions": [
+			{
+				"Key": "375EC13C06E448FBB50084F0262A717E",
+				"Version": 4
+			},
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "B0D832E41F894F0DACCF7EB736FD4AA2",
+				"Version": 10
+			},
+			{
+				"Key": "CFFC743F43B04480939114DF171D2073",
+				"Version": 37
+			},
+			{
+				"Key": "D89B5E4224BD4D468412ACA8DF641779",
+				"Version": 61
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry",
+		"PackageFlags": 0,
+		"NameCount": 51,
+		"NameOffset": 535,
+		"SoftObjectPathsCount": 3,
+		"SoftObjectPathsOffset": 1782,
+		"LocalizationId": "2AAE183BB6702BC3B5F73571AB763AD1",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 0,
+		"ExportCount": 4,
+		"ExportOffset": 2395,
+		"ImportCount": 11,
+		"ImportOffset": 1955,
+		"CellExportCount": 0,
+		"CellExportOffset": 2843,
+		"CellImportCount": 0,
+		"CellImportOffset": 2843,
+		"MetaDataOffset": 1852,
+		"DependsOffset": 2843,
+		"SoftPackageReferencesCount": 1,
+		"SoftPackageReferencesOffset": 2859,
+		"SearchableNamesOffset": 2867,
+		"ThumbnailTableOffset": 2895,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "A426CF374A8AB29C213F09A9394188F0",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 4,
+				"NameCount": 51
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 2981003457,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 2995,
+		"BulkDataStartOffset": 5889,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 5108,
+		"NamesReferencedFromExportDataCount": 38,
+		"PayloadTocOffset": 5893,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry",
+		"/Script/CoreUObject",
+		"/Script/Engine",
+		"/Script/SlateCore",
+		"ArrayProperty",
+		"bAllowDeletion",
+		"bLegacyNeedToPurgeSkelRefs",
+		"BlueprintGuid",
+		"BlueprintSystemVersion",
+		"BlueprintType",
+		"BoolProperty",
+		"bOverride_HeightOverride",
+		"bOverride_WidthOverride",
+		"DeprecateSlateVector2D",
+		"EditedDocumentInfo",
+		"EditedObjectPath",
+		"Engine",
+		"FloatProperty",
+		"GeneratedClass",
+		"GraphGuid",
+		"Guid",
+		"HeightOverride",
+		"IntProperty",
+		"LastEditedDocuments",
+		"None",
+		"ObjectProperty",
+		"PackageLocalizationNamespace",
+		"ParentClass",
+		"SavedViewOffset",
+		"SavedZoomAmount",
+		"Schema",
+		"SizeBox_ListEntry",
+		"SizeBox_ListEntry_C",
+		"SKEL_SizeBox_ListEntry_C",
+		"SoftObjectPath",
+		"StructProperty",
+		"UbergraphPages",
+		"WidthOverride",
+		"/Script/BlueprintGraph",
+		"/Script/UMG",
+		"Blueprint",
+		"BlueprintGeneratedClass",
+		"Class",
+		"Default__SizeBox",
+		"Default__SizeBox_ListEntry_C",
+		"EdGraph",
+		"EdGraphSchema_K2",
+		"EventGraph",
+		"Object",
+		"Package",
+		"SizeBox"
+	],
+	"SoftObjectPaths": [
+		"Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry:EventGraph",
+		"Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SKEL_SizeBox_ListEntry_C",
+		"Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C"
+	],
+	"Imports": [
+		{
+			"ObjectName": "EdGraphSchema_K2",
+			"PathName": "Object:/Script/BlueprintGraph.EdGraphSchema_K2",
+			"OuterIndex": -7,
+			"Outer": "Object:/Script/BlueprintGraph",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Object",
+			"PathName": "Object:/Script/CoreUObject.Object",
+			"OuterIndex": -8,
+			"Outer": "Object:/Script/CoreUObject",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Blueprint",
+			"PathName": "Object:/Script/Engine.Blueprint",
+			"OuterIndex": -9,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "BlueprintGeneratedClass",
+			"PathName": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"OuterIndex": -9,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraph",
+			"PathName": "Object:/Script/Engine.EdGraph",
+			"OuterIndex": -9,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SizeBox",
+			"PathName": "Object:/Script/UMG.SizeBox",
+			"OuterIndex": -10,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/BlueprintGraph",
+			"PathName": "Object:/Script/BlueprintGraph",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CoreUObject",
+			"PathName": "Object:/Script/CoreUObject",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/UMG",
+			"PathName": "Object:/Script/UMG",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Default__SizeBox",
+			"PathName": "Object:/Script/UMG.Default__SizeBox",
+			"OuterIndex": -10,
+			"Outer": "Object:/Script/UMG",
+			"ClassPath": "Object:/Script/UMG.SizeBox",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "SizeBox_ListEntry",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry",
+			"ClassIndex": -3,
+			"Class": "Object:/Script/Engine.Blueprint",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 447,
+			"SerialOffset": 5108,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 443,
+			"bForcedExport": 0,
+			"bNotForClient": 1,
+			"bNotForServer": 1,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "SizeBox_ListEntry_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+			"ClassIndex": -4,
+			"Class": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"SuperIndex": -6,
+			"Super": "Object:/Script/UMG.SizeBox",
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional",
+			"HashNext": -1,
+			"SerialSize": 81,
+			"SerialOffset": 5555,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "EventGraph",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry:EventGraph",
+			"ClassIndex": -5,
+			"Class": "Object:/Script/Engine.EdGraph",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 132,
+			"SerialOffset": 5636,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 128,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Default__SizeBox_ListEntry_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.Default__SizeBox_ListEntry_C",
+			"ClassIndex": 2,
+			"Class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | ClassDefaultObject | ArchetypeObject",
+			"HashNext": -1,
+			"SerialSize": 121,
+			"SerialOffset": 5768,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 117,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [
+		"/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry"
+	],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "Blueprint /GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry",
+			"FileOffset": 2871
+		},
+		{
+			"ObjectFullName": "BlueprintGeneratedClass /GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+			"FileOffset": 2883
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry",
+			"PackagePath": "/GameMainMenu/BP/UI/Widgets/ListEntries",
+			"AssetName": "SizeBox_ListEntry",
+			"AssetClassPath": "Object:/Script/Engine.Blueprint",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"GeneratedClass": "/Script/Engine.BlueprintGeneratedClass'/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C'",
+				"ParentClass": "/Script/CoreUObject.Class'/Script/UMG.SizeBox'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/UMG.SizeBox'",
+				"ClassFlags": "14944256",
+				"BlueprintType": "BPTYPE_Normal",
+				"IsDataOnly": "True",
+				"FiBData": "\u0004\u0001\u0001\u0001\u00ad\u0002\u0001\u0001\b\u0001\u0001\u0001\u0001\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\u0002\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0003\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0004\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001LjtnfuTdifnb\u0001\u001d\u0001\u0001\u0001HsbqiEjtqmbzObnf`FwfouHsbqi\u0001\f\u0001\u0001\u0001FwfouHsbqi\u0001\u0005\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\u0006\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000b\u0001\u0001\u0001Cmvfqsjou\u0001\u0010\u0001\u0001\u0001OpHsbqiUppmujq\u0001\b\u0001\u0001\u0001)Opof*\u0001\u0007\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0007\u0001\u0001\u0001Opeft\u0001\u0007\u0001\u0001\u0001Opeft\u0001{\"0\":[],\"1\":[{\"2\":\"3\",\"4\":\"5\",\"6\":[],\"0\":[]}]}",
+				"NumReplicatedProperties": "0",
+				"NativeComponents": "0",
+				"BlueprintComponents": "0",
+				"BlueprintPath": "SizeBox_ListEntry",
+				"ImportedNamespaces": "()"
+			},
+			"TaggedAssetBundles": {}
+		},
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry",
+			"PackagePath": "/GameMainMenu/BP/UI/Widgets/ListEntries",
+			"AssetName": "SizeBox_ListEntry_C",
+			"AssetClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"ParentClass": "/Script/CoreUObject.Class'/Script/UMG.SizeBox'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/UMG.SizeBox'",
+				"ClassFlags": "14944256",
+				"BlueprintType": "BPTYPE_Normal",
+				"NumReplicatedProperties": "0",
+				"ModuleName": "SizeBox_ListEntry"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

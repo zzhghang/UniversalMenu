@@ -1,0 +1,322 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:6lYrukFEep2vOkhLOGdHVl3dyao="
+		},
+		"TotalHeaderSize": 6162,
+		"CustomVersions": [
+			{
+				"Key": "12F88B9F88754AFCA67CD90C383ABD29",
+				"Version": 49
+			},
+			{
+				"Key": "29E575DDE0A346279D10D276232CDCEA",
+				"Version": 17
+			},
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "9C54D522A8264FBE9421074661B482D0",
+				"Version": 44
+			},
+			{
+				"Key": "D89B5E4224BD4D468412ACA8DF641779",
+				"Version": 61
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/Assets/Others/MI_AnimatedThrobber",
+		"PackageFlags": 0,
+		"NameCount": 64,
+		"NameOffset": 525,
+		"SoftObjectPathsCount": 1,
+		"SoftObjectPathsOffset": 2164,
+		"LocalizationId": "2D1263B993D331A0492E8360F42F15CA",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 2184,
+		"ExportCount": 3,
+		"ExportOffset": 2517,
+		"ImportCount": 7,
+		"ImportOffset": 2237,
+		"CellExportCount": 0,
+		"CellExportOffset": 2853,
+		"CellImportCount": 0,
+		"CellImportOffset": 2853,
+		"MetaDataOffset": 2184,
+		"DependsOffset": 2853,
+		"SoftPackageReferencesCount": 0,
+		"SoftPackageReferencesOffset": 2865,
+		"SearchableNamesOffset": 2865,
+		"ThumbnailTableOffset": 5719,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "EF44D67143368880542A4BB64A07480A",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 3,
+				"NameCount": 64
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 2910962013,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 5780,
+		"BulkDataStartOffset": 8746,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 6162,
+		"NamesReferencedFromExportDataCount": 52,
+		"PayloadTocOffset": 8750,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/Script/CoreUObject",
+		"/Script/Engine",
+		"ArrayProperty",
+		"Association",
+		"Atlas",
+		"AtlasData",
+		"BasePropertyOverrides",
+		"bIsUsedAsAtlasPosition",
+		"BLEND_Translucent",
+		"BlendMode",
+		"BoolProperty",
+		"ByteProperty",
+		"Curve",
+		"EBlendMode",
+		"EditorOnlyData",
+		"EMaterialParameterAssociation",
+		"EMaterialShadingModel",
+		"ExpressionGUID",
+		"FloatProperty",
+		"GlobalParameter",
+		"Guid",
+		"Index",
+		"IntProperty",
+		"LightingGuid",
+		"LinearColor",
+		"MaterialInstanceBasePropertyOverrides",
+		"MaterialParameterInfo",
+		"MSM_Unlit",
+		"Name",
+		"NameProperty",
+		"None",
+		"ObjectProperty",
+		"OpacityMaskClipValue",
+		"PackageLocalizationNamespace",
+		"ParameterInfo",
+		"ParameterStateId",
+		"ParameterValue",
+		"Parent",
+		"RefractionDepthBias",
+		"ScalarParameterAtlasInstanceData",
+		"ScalarParameterValue",
+		"ScalarParameterValues",
+		"ShadingModel",
+		"SoftObjectProperty",
+		"StructProperty",
+		"ThrobberAnimatedSpeed",
+		"ThrobberColor",
+		"ThrobberSharpness",
+		"ThrobberThickness",
+		"ThumbnailInfo",
+		"VectorParameterValue",
+		"VectorParameterValues",
+		"/Game/Assets/Materials/M_CircularThrobber",
+		"/GameMainMenu/Assets/Others/MI_AnimatedThrobber",
+		"/Script/UnrealEd",
+		"Class",
+		"M_CircularThrobber",
+		"Material",
+		"MaterialInstanceConstant",
+		"MaterialInstanceEditorOnlyData",
+		"MI_AnimatedThrobber",
+		"MI_AnimatedThrobberEditorOnlyData",
+		"Package",
+		"SceneThumbnailInfoWithPrimitive"
+	],
+	"SoftObjectPaths": [
+		null
+	],
+	"Imports": [
+		{
+			"ObjectName": "MaterialInstanceConstant",
+			"PathName": "Object:/Script/Engine.MaterialInstanceConstant",
+			"OuterIndex": -6,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "MaterialInstanceEditorOnlyData",
+			"PathName": "Object:/Script/Engine.MaterialInstanceEditorOnlyData",
+			"OuterIndex": -6,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SceneThumbnailInfoWithPrimitive",
+			"PathName": "Object:/Script/UnrealEd.SceneThumbnailInfoWithPrimitive",
+			"OuterIndex": -7,
+			"Outer": "Object:/Script/UnrealEd",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "M_CircularThrobber",
+			"PathName": "Object:/Game/Assets/Materials/M_CircularThrobber.M_CircularThrobber",
+			"OuterIndex": -5,
+			"Outer": "Object:/Game/Assets/Materials/M_CircularThrobber",
+			"ClassPath": "Object:/Script/Engine.Material",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Game/Assets/Materials/M_CircularThrobber",
+			"PathName": "Object:/Game/Assets/Materials/M_CircularThrobber",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/UnrealEd",
+			"PathName": "Object:/Script/UnrealEd",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "MI_AnimatedThrobber",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber",
+			"ClassIndex": -1,
+			"Class": "Object:/Script/Engine.MaterialInstanceConstant",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 2554,
+			"SerialOffset": 6162,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 2542,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 1,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "MI_AnimatedThrobberEditorOnlyData",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber:MI_AnimatedThrobberEditorOnlyData",
+			"ClassIndex": -2,
+			"Class": "Object:/Script/Engine.MaterialInstanceEditorOnlyData",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional",
+			"HashNext": -1,
+			"SerialSize": 17,
+			"SerialOffset": 8716,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 1,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "SceneThumbnailInfoWithPrimitive_0",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber:SceneThumbnailInfoWithPrimitive_0",
+			"ClassIndex": -3,
+			"Class": "Object:/Script/UnrealEd.SceneThumbnailInfoWithPrimitive",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 13,
+			"SerialOffset": 8733,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 1,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "MaterialInstanceConstant /GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber",
+			"FileOffset": 2869
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/Assets/Others/MI_AnimatedThrobber",
+			"PackagePath": "/GameMainMenu/Assets/Others",
+			"AssetName": "MI_AnimatedThrobber",
+			"AssetClassPath": "Object:/Script/Engine.MaterialInstanceConstant",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"Parent": "/Script/Engine.Material'/Game/Assets/Materials/M_CircularThrobber.M_CircularThrobber'",
+				"HasPerInstanceCustomData": "False",
+				"HasPerInstanceRandom": "False",
+				"HasSceneColor": "False",
+				"HasStaticPermutationResource": "False",
+				"HasVertexInterpolator": "False"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

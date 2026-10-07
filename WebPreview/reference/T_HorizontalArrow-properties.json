@@ -1,0 +1,87 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_HorizontalArrow.uasset",
+  "package": "/GameMainMenu/Assets/Others/T_HorizontalArrow",
+  "objects": [
+    {
+      "index": 1,
+      "name": "InterchangeAssetImportData_0",
+      "class": "Object:/Script/InterchangeEngine.InterchangeAssetImportData",
+      "path": "Object:/GameMainMenu/Assets/Others/T_HorizontalArrow.T_HorizontalArrow:InterchangeAssetImportData_0",
+      "properties": {
+        "_error": "invalid name 1543503871",
+        "_raw": "4bffffff5b007b0020002200520065006c0061007400690076006500460069006c0065006e0061006d006500220020003a00200022002e002e002f002e002e002f002e002e002f002e002e002f002e002e002f002e002e002f00550073006500720073002f00620061007800690079002f0044006f0077006e006c006f006100640073002f00ad7b345920002800320029002e0070006e00670022002c0020002200540069006d0065007300740061006d007000220020003a0020002200310036003700390031003200300031003000390022002c0020002200460069006c0065004d0044003500220020003a00200022003200630063003600620063003600330031006400340039003900320063003300360065006300390063003300320031003100340030003800330039006200320022002c002000220044006900730070006c00610079004c006100620065006c004e0061006d006500220020003a0020002200220020007d005d000000001c000000000000002600000000000000000000005c00000000d4ffffff46006100630074006f00720079005f0043003a002f00550073006500720073002f00620061007800690079002f0044006f0077006e006c006f006100640073002f00ad7b345920002800320029002e0070006e00670000001d00000000000000"
+      }
+    },
+    {
+      "index": 2,
+      "name": "T_HorizontalArrow",
+      "class": "Object:/Script/Engine.Texture2D",
+      "path": "Object:/GameMainMenu/Assets/Others/T_HorizontalArrow.T_HorizontalArrow",
+      "properties": {
+        "ImportedSize": {
+          "raw": "4000000040000000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "IntPoint",
+                "params": [
+                  {
+                    "name": "/Script/CoreUObject",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "invalid name 64"
+        },
+        "Source": {
+          "Id": {
+            "struct": "Guid",
+            "raw": "b432f507f14e21bd32b605682cf54ac9"
+          },
+          "SizeX": 64,
+          "SizeY": 64,
+          "NumSlices": 1,
+          "NumMips": 1,
+          "CompressionFormat": "TSCF_UEDELTA",
+          "bGuidIsHash": true,
+          "LayerColorInfo_LockProtected": [
+            {
+              "ColorMin": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+              },
+              "ColorMax": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          ],
+          "Format": "TSF_BGRA8",
+          "LayerFormat": [
+            "TSF_BGRA8"
+          ],
+          "BlockDataOffsets": [
+            0
+          ]
+        },
+        "LightingGuid": {
+          "struct": "Guid",
+          "raw": "c7cf9436e5f7284b816d3804a0f256c0"
+        },
+        "AssetImportData": "Object:/GameMainMenu/Assets/Others/T_HorizontalArrow.T_HorizontalArrow:InterchangeAssetImportData_0",
+        "OodleTextureSdkVersion": "2.9.8",
+        "CompressionSettings": "TC_EditorIcon",
+        "LODGroup": "TEXTUREGROUP_UI"
+      }
+    }
+  ],
+  "softReferences": [],
+  "text": []
+}

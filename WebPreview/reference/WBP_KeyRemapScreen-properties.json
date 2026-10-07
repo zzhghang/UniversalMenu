@@ -1,0 +1,455 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\WBP_KeyRemapScreen.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen",
+  "objects": [
+    {
+      "index": 1,
+      "name": "BackgroundBlur_49",
+      "class": "Object:/Script/UMG.BackgroundBlur",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.BackgroundBlur_49",
+      "properties": {
+        "BlurStrength": 7.0,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 2,
+      "name": "BackgroundBlur_49",
+      "class": "Object:/Script/UMG.BackgroundBlur",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.BackgroundBlur_49",
+      "properties": {
+        "BlurStrength": 7.0,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 3,
+      "name": "Border_199",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Padding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.699999988079071
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199.BorderSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35.OverlaySlot_1",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 4,
+      "name": "Border_199",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Padding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.699999988079071
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199.BorderSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35.OverlaySlot_1",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 5,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199.BorderSlot_0",
+      "properties": {
+        "Padding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Ctb_RemapMessage"
+      }
+    },
+    {
+      "index": 6,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199.BorderSlot_0",
+      "properties": {
+        "Padding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Ctb_RemapMessage"
+      }
+    },
+    {
+      "index": 7,
+      "name": "Ctb_RemapMessage",
+      "class": "Object:/Script/CommonUI.CommonRichTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Ctb_RemapMessage",
+      "properties": {
+        "Text": {
+          "namespace": "[9FD45D8E9D006EA7BB813F6B96A9A67A]",
+          "key": "243FEEE54C929CE33FDDDF89C91297EA",
+          "source": "<KR_Default>这是测试用的信息</>"
+        },
+        "TextStyleSet": "DT_RichText_OptionDetailView",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199.BorderSlot_0",
+        "DisplayLabel": "Ctb_RemapMessage"
+      }
+    },
+    {
+      "index": 8,
+      "name": "Ctb_RemapMessage",
+      "class": "Object:/Script/CommonUI.CommonRichTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Ctb_RemapMessage",
+      "properties": {
+        "Text": {
+          "namespace": "[9FD45D8E9D006EA7BB813F6B96A9A67A]",
+          "key": "243FEEE54C929CE33FDDDF89C91297EA",
+          "source": "<KR_Default>这是测试用的信息</>"
+        },
+        "TextStyleSet": "DT_RichText_OptionDetailView",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199.BorderSlot_0",
+        "DisplayLabel": "Ctb_RemapMessage"
+      }
+    },
+    {
+      "index": 9,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "4b4d89d68237d94e97d3df59496f06ea"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2b8c40db5f53c148be6f9f220591252f"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0bd76648d3075a4aaa49a4a573ae647d"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "25fe2ef788c77f47ab6fef99998c3b06"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "name": "Overlay_35",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35.OverlaySlot_1"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 14,
+      "name": "Overlay_35",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35.OverlaySlot_1"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 15,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.BackgroundBlur_49"
+      }
+    },
+    {
+      "index": 16,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199"
+      }
+    },
+    {
+      "index": 17,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.BackgroundBlur_49"
+      }
+    },
+    {
+      "index": 18,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199"
+      }
+    },
+    {
+      "index": 19,
+      "name": "Default__WBP_KeyRemapScreen_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.Default__WBP_KeyRemapScreen_C",
+      "properties": {
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 20,
+      "name": "WBP_KeyRemapScreen",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "000000000400000056000000240000008465bd6b3dec474ba1756922784fc30f0800000032000000a9ca5f81f7ab6e408c5db52f26e70ad917000000c8000000514dcf14749c9f4b8ce01fb2f7166dfc210000000000000015fcfece50d77c4d84a5b4de6fbe572b"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree",
+        "ParentClass": "W_KeyRemapScreen",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph"
+        ],
+        "CategorySorting": [
+          "Input",
+          "Events",
+          "Activatable Widget",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "Event Graph"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "a2df866bb8113049aa61837dc2f18312"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "name": "WBP_KeyRemapScreen_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree"
+      }
+    },
+    {
+      "index": 22,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Overlay_35",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.BackgroundBlur_49",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Border_199",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:WidgetTree.Ctb_RemapMessage"
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Overlay_35",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.BackgroundBlur_49",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Border_199",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C:WidgetTree.Ctb_RemapMessage"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.SKEL_WBP_KeyRemapScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.WBP_KeyRemapScreen:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.SKEL_WBP_KeyRemapScreen_C:Tick",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.SKEL_WBP_KeyRemapScreen_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_KeyRemapScreen.SKEL_WBP_KeyRemapScreen_C:PreConstruct"
+  ],
+  "text": []
+}

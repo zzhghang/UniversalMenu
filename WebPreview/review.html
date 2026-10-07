@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>DataAsset 配置评审 · UniversalMenu</title>
+  <link rel="stylesheet" href="review.css">
+  <script src="review.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#findings">跳到问题清单</a>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">U</span><span>UNIVERSAL MENU<small>配置评审</small></span></a>
+    <a class="back-link" href="index.html"><span aria-hidden="true">←</span> 返回界面复刻</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="status-dot"></span> OPTIONS & MULTIPLAYER · SOURCE REVIEW</div>
+      <h1 id="page-title">保留数据驱动。<br><span>让配置真正成为唯一依据。</span></h1>
+      <p class="hero-copy">现有 DataAsset → Registry → Widget 的分层可以继续使用。初始化读取已修复，并通过构建、UE 自动化测试与首次打开页面验证；接下来处理默认值、依赖规则和资产层级。</p>
+      <div class="hero-meta"><span>基于项目 C++ 与资产引用</span><span>01 已修复 · 构建、自动化与界面验证通过</span><span>其余 5 项仍为待处理建议</span></div>
+      <div class="metric-grid">
+        <div><strong>58</strong><span>当前配置资产<small>Options 45 · Multiplayer 13</small></span></div>
+        <div><strong>4</strong><span>独立资产层级<small>Screen / Tab / Category / Entry</small></span></div>
+        <div><strong>6</strong><span>本次评审问题<small>1 项已修复 · 5 项待处理</small></span></div>
+      </div>
+    </section>
+
+    <section class="architecture" aria-labelledby="architecture-title">
+      <div class="section-heading"><div><span class="section-number">01 / STRUCTURE</span><h2 id="architecture-title">把编辑边界收拢到 Tab</h2></div><p>资产粒度应跟随复用和协作需求。</p></div>
+      <div class="diagram-card">
+        <div class="diagram-top"><div class="segmented" role="group" aria-label="选择结构图"><button type="button" data-view="current" aria-pressed="true">当前结构</button><button type="button" data-view="proposed" aria-pressed="false">建议结构</button></div><span class="diagram-hint">点击节点，查看职责</span></div>
+        <div id="current-diagram" class="diagram-panel">
+          <div class="flow-grid current-flow">
+            <button class="flow-node selected" type="button" data-node="screen" aria-pressed="true"><span class="node-type">DATA ASSET</span><strong>Screen Config</strong><small>UMenuConfigData</small><span class="node-count">2 个资产</span></button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button class="flow-node" type="button" data-node="tab" aria-pressed="false"><span class="node-type">DATA ASSET</span><strong>Tab</strong><small>UMenuTabConfig</small><span class="node-tag">Categories 指针数组</span></button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button class="flow-node" type="button" data-node="category" aria-pressed="false"><span class="node-type">DATA ASSET</span><strong>Category</strong><small>UMenuCategoryConfig</small><span class="node-tag">Entries 指针数组</span></button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button class="flow-node" type="button" data-node="entry" aria-pressed="false"><span class="node-type">DATA ASSET</span><strong>Entry</strong><small>UMenuEntryConfig</small><span class="node-tag">按 ValueType 切换字段</span></button>
+          </div>
+          <div class="runtime-flow"><span>运行时</span><strong>Registry</strong><span aria-hidden="true">→</span><strong>ListDataObject</strong><span aria-hidden="true">→</span><strong>CommonListView / Widget</strong></div>
+        </div>
+        <div id="proposed-diagram" class="diagram-panel" hidden>
+          <div class="proposed-flow">
+            <button class="flow-node" type="button" data-node="proposed-screen" aria-pressed="false"><span class="node-type">DATA ASSET</span><strong>Screen Config</strong><small>Tabs + 默认 Tab</small><span class="node-tag">界面组合与显示顺序</span></button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="tab-container"><span class="container-label">TAB DATA ASSET · 编辑与复用边界</span><button class="flow-node embedded" type="button" data-node="proposed-tab" aria-pressed="false"><strong>Tab</strong><small>TabId · TabName · 内容类型</small></button><div class="embedded-content"><button class="flow-node embedded" type="button" data-node="proposed-category" aria-pressed="false"><span class="node-type">内嵌结构</span><strong>Categories[]</strong><small>标题与布局</small></button><span class="flow-arrow" aria-hidden="true">→</span><button class="flow-node embedded" type="button" data-node="proposed-entry" aria-pressed="false"><span class="node-type">内嵌结构 / 实例</span><strong>Entries[]</strong><small>值、选项与显式规则</small></button></div></div>
+          </div>
+          <div class="runtime-flow"><span>运行时</span><strong>校验 → 创建 → 绑定 → 初始化</strong><span aria-hidden="true">→</span><strong>Registry / Widget 继续复用</strong></div>
+        </div>
+        <div class="node-detail" aria-live="polite"><span class="detail-label">节点说明</span><div><h3 id="node-title">Screen Config：保留界面组合入口</h3><p id="node-description">当前 Options 与 Multiplayer 都通过 UMenuConfigData 的 Tabs 数组引用 Tab 资产。这个入口清晰，可以保留。</p></div></div>
+      </div>
+      <div class="recommendation"><span class="small-icon" aria-hidden="true">↳</span><p><strong>推荐先采用“每个 Tab 一个资产”。</strong>Category 与 Entry 内嵌为 USTRUCT；如果未来不同条目的行为明显分化，再引入 Instanced UObject 或 FInstancedStruct。仅把确实跨 Tab 复用的选项集、样式拆为独立资产。当前规模无需为了层级整理强行接入 AssetManager。</p></div>
+    </section>
+
+    <section id="findings" aria-labelledby="findings-title">
+      <div class="section-heading"><div><span class="section-number">02 / FINDINGS</span><h2 id="findings-title">先处理影响行为的配置问题</h2></div><p>每项都有触发条件与代码依据。</p></div>
+      <div class="findings-toolbar"><div class="filter-group" role="group" aria-label="按优先级筛选"><button type="button" data-filter="all" aria-pressed="true">全部 <span>6</span></button><button type="button" data-filter="P1" aria-pressed="false">P1 高优先级 <span>3</span></button><button type="button" data-filter="P2" aria-pressed="false">P2 结构改善 <span>3</span></button></div><span id="result-count" aria-live="polite">显示 6 项 · 已修复 1 项</span></div>
+      <div class="findings-grid">
+        <article class="finding-card resolved" data-priority="P1" data-status="fixed">
+          <div class="card-meta"><span class="priority p1">P1</span><span>OPTIONS · 初始化读取</span><span class="finding-number">01</span></div>
+          <div class="resolution-status"><span aria-hidden="true">✓</span> 已修复·验证通过</div>
+          <h3>先绑定设置，再初始化条目</h3>
+          <p class="finding-summary">String 系列首次初始化现在读取已绑定的设置；分辨率条目也执行父类初始化。</p>
+          <dl><div><dt>原触发</dt><dd>已有设置值与资产默认值不同时，首次构建 String / Bool / Integer 条目，UI 当前值可能停留在默认值。</dd></div><div><dt>原原因</dt><dd><code>AddChildListData()</code> 会立即初始化，而旧 Registry 在它之后才绑定 getter / setter；分辨率子类还跳过了父类初始化。</dd></div><div><dt>已修复</dt><dd>将 <code>AddChildListData()</code> 移到绑定之后，并在分辨率的 <code>OnDataObjectInitialized()</code> 开头调用 <code>Super</code>。</dd></div><div><dt>验证</dt><dd>Rider 构建成功；<code>GameMainMenu.Options.Initialization</code> 两项自动化测试通过。新 UE 会话中 Play → 主菜单 → Options → Gameplay，首次打开显示保存的 <code>Difficulty = Hard</code>，资产默认值为 <code>Normal</code>。</dd></div></dl>
+          <details><summary>查看修后代码与测试依据 <span aria-hidden="true">+</span></summary><div class="evidence"><p><code>Private/Widgets/Options/OptionsDataRegistry.cpp:343–357</code></p><pre><code>// 有效绑定先配置 getter / setter
+if (!EntryData-&gt;BindingKey.IsNone())
+{
+    if (auto Helper = ResolveBinding(EntryData-&gt;BindingKey))
+    {
+        if (UListDataObject_Value* ValueEntry = Cast&lt;UListDataObject_Value&gt;(Entry))
+        {
+            ValueEntry-&gt;SetDataDynamicGetter(Helper);
+            ValueEntry-&gt;SetDataDynamicSetter(Helper);
+        }
+    }
+}
+Cat-&gt;AddChildListData(Entry); // 最后添加并初始化</code></pre><p><code>Private/Widgets/Options/DataObjects/ListDataObject_StringResolution.cpp:30–37</code></p><pre><code>void UListDataObject_StringResolution::OnDataObjectInitialized()
+{
+    Super::OnDataObjectInitialized();
+
+    if (!TrySetDisplayTextFromStringValue(CurrentStringValue))
+    {
+        CurrentTextValue = ResolutionToDisplayText(
+            UFrontendGameUserSettings::Get()-&gt;GetScreenResolution());
+    }
+}</code></pre><p><code>Private/Tests/OptionsInitializationTests.cpp:14, 94</code><br><strong>ReadsExistingSettings</strong>：覆盖 String、Bool、Integer、Culture 从已有设置读取，以及无绑定条目保留资产默认值。<br><strong>ResolutionReadsBinding</strong>：资产默认 1280 × 720、绑定值 1920 × 1080 时，当前值与显示文本均使用绑定值，初始化不调用 setter。</p><p><code>Saved/Logs/UniversalMenu.log:1510, 1516</code><br>2026.09.18-13.38.16：两项测试均记录 <code>Result={成功}</code>。日志时间保留原格式。</p><p>手动验证对照 <code>Saved/Config/WindowsEditor/GameUserSettings.ini</code>：保存值 Hard、资产默认 Normal、首次打开显示 Hard。<a href="reference/fix-01-verification.json">查看构建、自动化与界面验证记录 ↗</a></p><p>原缺陷针对 String 系列缓存值。Scalar 通过 getter 实时取值，不应一并归因。</p></div></details>
+        </article>
+
+        <article class="finding-card" data-priority="P1">
+          <div class="card-meta"><span class="priority p1">P1</span><span>FACTORY · 配置被代码覆盖</span><span class="finding-number">02</span></div>
+          <h3>“默认 0”变成 3，选项也会被替换</h3>
+          <p class="finding-summary">质量项与窗口模式由 BindingKey 特判，资产不是完整的事实来源。</p>
+          <dl><div><dt>触发</dt><dd>Integer 质量项配置 <code>DefaultIntValue = 0</code>，工厂会改为 3；修改质量选项或窗口模式默认值也会被固定分支绕过。</dd></div><div><dt>原因</dt><dd>名称包含 <code>Quality / Scalability</code> 就进入硬编码分支；0 被同时用于“合法值”和“未配置”。</dd></div><div><dt>修复</dt><dd>用显式 <code>OptionSource</code> 区分静态选项与动态提供器；使用 <code>bHasDefaultValue</code> 标识默认值存在性，保留合法的 0。</dd></div></dl>
+          <details><summary>查看代码依据 <span aria-hidden="true">+</span></summary><div class="evidence"><p><code>MenuConfigData.cpp:14–17, 73–103, 122–150</code></p><pre><code>return S.Contains(TEXT("Quality"))
+    || S.Contains(TEXT("Scalability"));
+
+const int32 DefaultVal =
+    Data-&gt;DefaultIntValue != 0
+        ? Data-&gt;DefaultIntValue : 3;</code></pre><p>窗口模式分支固定三项并选择 WindowedFullscreen。可保留引擎动态提供器，但必须让编辑器明确显示哪些字段生效。</p></div></details>
+        </article>
+
+        <article class="finding-card" data-priority="P2">
+          <div class="card-meta"><span class="priority p2">P2</span><span>SHARED CONFIG · 顺序契约缺失</span><span class="finding-number">03</span></div>
+          <h3>用 TMap 定义有序的 UI 选项</h3>
+          <p class="finding-summary">地图、人数和普通下拉项的排列直接取决于 Map 迭代顺序。</p>
+          <dl><div><dt>触发</dt><dd>增加、删除、重建选项后，期望的 <code>2 → 4 → 8 → 16</code> 或地图顺序没有稳定的配置契约。</dd></div><div><dt>原因</dt><dd><code>AvailableOptions</code> 与 <code>AvailableIntegerOptions</code> 都是 TMap，工厂直接遍历并追加到显示数组。</dd></div><div><dt>修复</dt><dd>改为 <code>TArray&lt;FMenuOption&gt;</code>，元素包含稳定 Value 和本地化 Label，以数组顺序显示，同时校验 Value 唯一。</dd></div></dl>
+          <details><summary>查看代码依据 <span aria-hidden="true">+</span></summary><div class="evidence"><p><code>MenuEntryConfig.h:76–84</code><br><code>MenuConfigData.cpp:111–114, 160–163</code></p><pre><code>for (const auto&amp; Pair : Data-&gt;AvailableOptions)
+{
+    TypedEntry-&gt;AddDynamicString(Pair.Key, Pair.Value);
+}</code></pre><p>这是容器选择与 UI 顺序的契约问题，并不表示每次运行都会随机重排。TMap 仍适合按 ID 查询。</p></div></details>
+        </article>
+
+        <article class="finding-card" data-priority="P2">
+          <div class="card-meta"><span class="priority p2">P2</span><span>REGISTRIES · 同字段不同语义</span><span class="finding-number">04</span></div>
+          <h3>EditDependencyIds 混合了刷新与禁用</h3>
+          <p class="finding-summary">同一个配置字段，在两个页面中承担不同规则。</p>
+          <dl><div><dt>触发</dt><dd>把依赖规则从 Multiplayer 迁到 Options，或需要“依赖为 false 时启用”“任意条件满足”时，仅填 IDs 不能表达目标行为。</dd></div><div><dt>原因</dt><dd>Options 主要注册变更通知，并特判视频项；Multiplayer 则把所有 Bool 依赖隐式转换为“全部为 true 才可编辑”。</dd></div><div><dt>修复</dt><dd>拆为 <code>RefreshDependencies</code> 与 <code>EditConditions</code>。条件包含 TargetId、比较符、期望值和禁用原因，明确 All / Any 组合。</dd></div></dl>
+          <details><summary>查看代码依据 <span aria-hidden="true">+</span></summary><div class="evidence"><p><code>OptionsDataRegistry.cpp:391–448</code><br><code>MultiplayerDataRegistry.cpp:86–131</code></p><pre><code>// Multiplayer：隐式 AND + true
+for (const UListDataObject_StringBool* Dep : BoolDeps)
+{
+    if (Dep-&gt;GetCurrentStringValue() != TEXT("true"))
+        return false;
+}</code></pre><p>现有 Password → HasPassword 关系适合这一特例；问题在于通用字段没有把规则语义表达出来。</p></div></details>
+        </article>
+
+        <article class="finding-card" data-priority="P2">
+          <div class="card-meta"><span class="priority p2">P2</span><span>MULTIPLAYER · 结构扩展风险</span><span class="finding-number">05</span></div>
+          <h3>Session 列表缺少明确的目标容器</h3>
+          <p class="finding-summary">表头配置改变了树结构，搜索结果却依赖固定的 Collection 层级。</p>
+          <dl><div><dt>触发</dt><dd>给 JoinGame 的类别填入 HeaderColumns 后，它不再生成 Collection，动态 Session 无处插入；若加多个 Collection，则每个都会收到同一批结果。</dd></div><div><dt>原因</dt><dd>建树逻辑把带表头的条目直接挂到 Tab；刷新逻辑却向 JoinGame 下所有 Collection 添加 Sessions。</dd></div><div><dt>修复</dt><dd>使用显式 <code>SessionList</code> 内容类型或 <code>SessionContainerId</code>，稳定保留容器；表头只影响显示，不改变树结构。</dd></div></dl>
+          <details><summary>查看代码与资产依据 <span aria-hidden="true">+</span></summary><div class="evidence"><p><code>MultiplayerDataRegistry.cpp:50–65, 179–208</code></p><pre><code>// 非空表头：Entry 直接成为 Tab 子项
+Tab-&gt;AddChildListData(Entry);
+
+// 刷新：只处理 Collection，且遍历所有类别
+auto* JoinCat = Cast&lt;UListDataObject_Collection&gt;(Child);
+if (!JoinCat) continue;</code></pre><p>当前 DA_JoinGame 引用 DA_Empty；DA_SessionRow 未在其他插件资产中找到引用。WBP_MultiplayerScreen 引用了静态 WBP_SessionHeader。建议清理这条旧配置路径，而非直接把旧表头重新接回去。</p></div></details>
+        </article>
+
+        <article class="finding-card" data-priority="P1">
+          <div class="card-meta"><span class="priority p1">P1</span><span>AUTHORING · 缺少配置防护</span><span class="finding-number">06</span></div>
+          <h3>错误配置只能在运行时暴露</h3>
+          <p class="finding-summary">空引用可能被解引用，重复 ID、未知 BindingKey 和依赖拼写则会静默失效。</p>
+          <dl><div><dt>触发</dt><dd>在 Options 的 Tabs / Categories 中新增一个未赋值元素，构建时直接解引用；重复 DataId 会覆盖查找表，未知绑定返回空指针后被跳过。</dd></div><div><dt>原因</dt><dd>当前配置类没有 <code>IsDataValid</code>；Options 建树和规则遍历的空值处理不完整，未统一验证 ID 与值域。</dd></div><div><dt>修复</dt><dd>增加编辑器 Data Validation 和运行时保护：必填引用、唯一 ID、有效绑定/依赖、默认值属于选项、范围与步长。发布前执行资产校验。</dd></div></dl>
+          <details><summary>查看代码依据 <span aria-hidden="true">+</span></summary><div class="evidence"><p><code>OptionsDataRegistry.cpp:145–151, 329–354, 378–396</code><br><code>MenuConfigData.h / MenuTabConfig.h / MenuCategoryConfig.h / MenuEntryConfig.h</code></p><pre><code>for (UMenuTabConfig* TabData : OptionsConfig-&gt;Tabs)
+{
+    // 当前没有先验证 TabData 非空
+    auto* Tab = CreateCollection(TabData-&gt;TabId,
+                                 TabData-&gt;TabName);
+}</code></pre><p>依赖检查应按规则类型区分：可以允许“刷新通知”的双向关联；可编辑条件和强制赋值规则要检测会造成递归的环路。</p></div></details>
+        </article>
+      </div>
+    </section>
+
+    <section class="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-heading"><div><span class="section-number">03 / NEXT STEPS</span><h2 id="roadmap-title">按这个顺序改，回归范围更小</h2></div></div>
+      <ol class="steps"><li><span class="step-number">1</span><div><h3>继续修正默认值与配置防护</h3><p>初始化读取已修复并通过两项自动化测试。接下来保留默认 0、增加空引用保护；补充“修改设置 → 重启 → 再打开页面”以及“恢复默认”的界面验收。</p></div><span class="step-badge">行为正确</span></li><li><span class="step-number">2</span><div><h3>统一配置规则</h3><p>有序选项、显式依赖与 Session 容器；补齐编辑器校验。先迁移一个 Options Tab 与 CreateGame 做对照。</p></div><span class="step-badge">配置可靠</span></li><li><span class="step-number">3</span><div><h3>收拢资产，再整理公共构建器</h3><p>逐 Tab 将 Category / Entry 内嵌，复用现有 DataObject 与 Widget。两套 Registry 共享建树逻辑，保留各自的设置绑定和 Session 数据来源。</p></div><span class="step-badge">维护简单</span></li></ol>
+      <div class="tradeoff"><strong>为什么没有直接推荐 DataTable？</strong><p>这里同时包含布尔、范围值、下拉、文本、动态分辨率和会话列表。异构配置与条件关系更适合结构化资产；DataTable 可用于地图目录等字段一致的大量记录。当前首要收益来自减少配置歧义，而不是更换存储格式。</p></div>
+    </section>
+  </main>
+  <footer><span>UNIVERSAL MENU <span class="footer-divider">/</span> 配置评审</span><span>源码位置：Plugins/GameMainMenu/Source/GameMainMenu</span><a href="index.html">返回界面复刻 <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

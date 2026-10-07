@@ -1,0 +1,301 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Components\\WBP_Button_Confirm.uasset",
+  "package": "/GameMainMenu/BP/UI/Components/WBP_Button_Confirm",
+  "objects": [
+    {
+      "index": 1,
+      "name": "Ctb_ButtonText",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Ctb_ButtonText",
+      "properties": {
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "UMG",
+          "key": "TextBlockDefaultValue",
+          "source": "Text Block"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23.OverlaySlot_0",
+        "DisplayLabel": "Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Ctb_ButtonText",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Ctb_ButtonText",
+      "properties": {
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "UMG",
+          "key": "TextBlockDefaultValue",
+          "source": "Text Block"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23.OverlaySlot_0",
+        "DisplayLabel": "Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "6b7d1e92dcbbc04f9d3574ffe8cfa097"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f4562a46dd12764faa500b5d5908d2f4"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "960d2180a5679649ad7b00e1d450c35e"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "29aee0346cfa0e44b2c3f28b1ec2c9c7"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "Overlay_23",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 8,
+      "name": "Overlay_23",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 9,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23.OverlaySlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 10,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23.OverlaySlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 11,
+      "name": "Default__WBP_Button_Confirm_C",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.Default__WBP_Button_Confirm_C",
+      "properties": {
+        "Style": "SButton_Clear_Confirm_C",
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 12,
+      "name": "WBP_Button_Confirm",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000020000004500000018000000ec999cf0c5fa2b48bd7bbed08a8b4de51b00000000000000bb6d56f1f413064ea2851009cffea2c9"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree",
+        "ParentClass": "FrontendCommonButtonBase",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph"
+        ],
+        "CategorySorting": [
+          "Event Graph"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "e75b42a696e995478d8d3e0b4ddc251f"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "name": "WBP_Button_Confirm_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree"
+      }
+    },
+    {
+      "index": 14,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Overlay_23",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:WidgetTree.Ctb_ButtonText"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Overlay_23",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C:WidgetTree.Ctb_ButtonText"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.SKEL_WBP_Button_Confirm_C",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm_C",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.WBP_Button_Confirm:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.SKEL_WBP_Button_Confirm_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.SKEL_WBP_Button_Confirm_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Confirm.SKEL_WBP_Button_Confirm_C:Tick"
+  ],
+  "text": []
+}

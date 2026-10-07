@@ -1,0 +1,4867 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\Multiplayer\\WBP_MultiplayerScreen.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen",
+  "objects": [
+    {
+      "index": 1,
+      "name": "BackgroundBlur_42",
+      "class": "Object:/Script/UMG.BackgroundBlur",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.BackgroundBlur_42",
+      "properties": {
+        "BlurStrength": 5.0,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 2,
+      "name": "BackgroundBlur_42",
+      "class": "Object:/Script/UMG.BackgroundBlur",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.BackgroundBlur_42",
+      "properties": {
+        "BlurStrength": 5.0,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 3,
+      "name": "B_SessionBorder",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.B_SessionBorder",
+      "properties": {
+        "Background": {
+          "DrawAs": "ESlateBrushDrawType::Border",
+          "Margin": {
+            "Left": 1.0,
+            "Top": 1.0,
+            "Right": 1.0,
+            "Bottom": 1.0
+          }
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_1",
+        "bIsVariable": true,
+        "bHiddenInDesigner": true,
+        "Visibility": "ESlateVisibility::Hidden",
+        "DisplayLabel": "B_SessionBorder"
+      }
+    },
+    {
+      "index": 4,
+      "name": "Border_25",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25",
+      "properties": {
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25.BorderSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 5,
+      "name": "B_SessionBorder",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.B_SessionBorder",
+      "properties": {
+        "Background": {
+          "DrawAs": "ESlateBrushDrawType::Border",
+          "Margin": {
+            "Left": 1.0,
+            "Top": 1.0,
+            "Right": 1.0,
+            "Bottom": 1.0
+          }
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_1",
+        "bIsVariable": true,
+        "bHiddenInDesigner": true,
+        "Visibility": "ESlateVisibility::Hidden",
+        "DisplayLabel": "B_SessionBorder"
+      }
+    },
+    {
+      "index": 6,
+      "name": "Border_25",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25",
+      "properties": {
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25.BorderSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 7,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25.BorderSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61"
+      }
+    },
+    {
+      "index": 8,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25.BorderSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61"
+      }
+    },
+    {
+      "index": 9,
+      "name": "CT_FindServer",
+      "class": "Object:/Script/UMG.CircularThrobber",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CT_FindServer",
+      "properties": {
+        "NumberOfPieces": 14,
+        "Period": 0.9578880071640015,
+        "Radius": 54.28145980834961,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_2",
+        "Visibility": "ESlateVisibility::Collapsed",
+        "DisplayLabel": "CT_FindServer"
+      }
+    },
+    {
+      "index": 10,
+      "name": "CT_FindServer",
+      "class": "Object:/Script/UMG.CircularThrobber",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CT_FindServer",
+      "properties": {
+        "NumberOfPieces": 14,
+        "Period": 0.9578880071640015,
+        "Radius": 54.28145980834961,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_2",
+        "Visibility": "ESlateVisibility::Collapsed",
+        "DisplayLabel": "CT_FindServer"
+      }
+    },
+    {
+      "index": 11,
+      "name": "CommonBoundActionBar_562",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CommonBoundActionBar_562",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "EntrySpacing": {
+          "x": 16.0,
+          "y": 0.0
+        },
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 12,
+      "name": "CommonBoundActionBar_562",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CommonBoundActionBar_562",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "EntrySpacing": {
+          "x": 16.0,
+          "y": 0.0
+        },
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 13,
+      "name": "Ctb_FindServer",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Ctb_FindServer",
+      "properties": {
+        "Style": "SText_Default_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Server-not-found"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_3",
+        "bIsVariable": true,
+        "Visibility": "ESlateVisibility::Collapsed",
+        "DisplayLabel": "Ctb_FindServer"
+      }
+    },
+    {
+      "index": 14,
+      "name": "Ctb_FindServer",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Ctb_FindServer",
+      "properties": {
+        "Style": "SText_Default_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Server-not-found"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_3",
+        "bIsVariable": true,
+        "Visibility": "ESlateVisibility::Collapsed",
+        "DisplayLabel": "Ctb_FindServer"
+      }
+    },
+    {
+      "index": 15,
+      "name": "ContructSessionForWidget",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_8",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_9",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_30",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_31",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallArrayFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_MakeStruct_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_8",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_8",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_9",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_36",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_9",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_10",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_11",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_12",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_13",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_14",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_15",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_MacroInstance_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_12",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_16",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_Knot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_FunctionResult_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_17",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_20",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallArrayFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_PromotableOperator_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_IfThenElse_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_FunctionResult_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "a2f4a5e0149ec34cbf1d6f6b44bbf663"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_13",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_41",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_10",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_14",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_9",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_AssignDelegate_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CreateDelegate_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_13",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_14",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_AddDelegate_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CreateDelegate_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CustomEvent_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CustomEvent_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_11",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_35",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_12",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_8",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_18",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_9",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_19",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_16",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_10",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_21",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_17",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_IfThenElse_1"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "0c1fcd306b68874bb24666cbf7bc1c95"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "name": "GetSessionParam",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam",
+      "properties": {
+        "Schema": "WidgetGraphSchema",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_11",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_10",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_9",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_8",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "001ab477394f4a428aa48412e71e8902"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "name": "CommonListView_MultiplayerList",
+      "class": "Object:/Script/GameMainMenu.FrontendCommonListView",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CommonListView_MultiplayerList",
+      "properties": {
+        "DataListEntryMapping": "DA_ListEntryMapping",
+        "ScrollBarStyle": {
+          "Thickness": 5.0
+        },
+        "ScrollBarPadding": {
+          "Left": 10.0
+        },
+        "EntryWidgetClass": "WBP_ListEntry_Test_C",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_0",
+        "DisplayLabel": "CommonListView_MultiplayerList"
+      }
+    },
+    {
+      "index": 19,
+      "name": "CommonListView_MultiplayerList",
+      "class": "Object:/Script/GameMainMenu.FrontendCommonListView",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CommonListView_MultiplayerList",
+      "properties": {
+        "DataListEntryMapping": "DA_ListEntryMapping",
+        "ScrollBarStyle": {
+          "Thickness": 5.0
+        },
+        "ScrollBarPadding": {
+          "Left": 10.0
+        },
+        "EntryWidgetClass": "WBP_ListEntry_Test_C",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_0",
+        "DisplayLabel": "CommonListView_MultiplayerList"
+      }
+    },
+    {
+      "index": 20,
+      "name": "ContructSessionForWidget",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:ContructSessionForWidget",
+      "properties": {}
+    },
+    {
+      "index": 21,
+      "name": "ExecuteUbergraph_WBP_MultiplayerScreen",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:ExecuteUbergraph_WBP_MultiplayerScreen",
+      "properties": {}
+    },
+    {
+      "index": 22,
+      "name": "GetSessionParam",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:GetSessionParam",
+      "properties": {}
+    },
+    {
+      "index": 23,
+      "name": "OnFindSessionFailed",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnFindSessionFailed",
+      "properties": {}
+    },
+    {
+      "index": 24,
+      "name": "OnFindSessionSuccess",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnFindSessionSuccess",
+      "properties": {}
+    },
+    {
+      "index": 25,
+      "name": "OnHandleCreateGameTabSelected",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnHandleCreateGameTabSelected",
+      "properties": {}
+    },
+    {
+      "index": 26,
+      "name": "OnHandleJoinGameTabSelected",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnHandleJoinGameTabSelected",
+      "properties": {}
+    },
+    {
+      "index": 27,
+      "name": "OnInitialized",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnInitialized",
+      "properties": {}
+    },
+    {
+      "index": 28,
+      "name": "OnJoinGameActionTriggered",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnJoinGameActionTriggered",
+      "properties": {}
+    },
+    {
+      "index": 29,
+      "name": "OnRefreshActionTriggered",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnRefreshActionTriggered",
+      "properties": {}
+    },
+    {
+      "index": 30,
+      "name": "OnStartGameActionTriggered",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnStartGameActionTriggered",
+      "properties": {}
+    },
+    {
+      "index": 31,
+      "name": "K2Node_AddDelegate_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AddDelegate",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_AddDelegate_2",
+      "properties": {
+        "DelegateReference": {
+          "MemberParent": "GI_FrontentGameInstance_C",
+          "MemberName": "OnFindSessionFailure",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "c7f9592073ad204180b30184074d406a"
+          }
+        },
+        "NodePosX": 912,
+        "NodePosY": -1088,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c628fb4890652043894ac2cec4540843"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "name": "K2Node_AssignDelegate_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AssignDelegate",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_AssignDelegate_2",
+      "properties": {
+        "DelegateReference": {
+          "MemberParent": "GI_FrontentGameInstance_C",
+          "MemberName": "OnFindSessionSuccess",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "da9c5ef354d1df42baac9339db2d988c"
+          }
+        },
+        "NodePosX": 512,
+        "NodePosY": -1088,
+        "bHasCompilerMessage": true,
+        "ErrorType": 4,
+        "ErrorMsg": "No value will be returned by reference. Parameter 'Sessions'. Node:  Assign On Find Session Success",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a8b42bbcea317e49926ed17f98c6f4af"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "name": "K2Node_CallArrayFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallArrayFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallArrayFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "KismetArrayLibrary",
+          "MemberName": "Array_AddUnique"
+        },
+        "NodePosX": 3968,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "df56373729c05a4b8f93dff452e356f9"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "name": "K2Node_CallArrayFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallArrayFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallArrayFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetArrayLibrary",
+          "MemberName": "Array_Length"
+        },
+        "NodePosX": -752,
+        "NodePosY": 1984,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2b14c6432ccbad4a9c8a7a6c01b43871"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "name": "K2Node_CallFunction_20",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_20",
+      "properties": {
+        "bWantsEnumToExecExpansion": true,
+        "FunctionReference": {
+          "MemberParent": "AdvancedSessionsLibrary",
+          "MemberName": "GetSessionPropertyBool"
+        },
+        "NodePosX": 2320,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eb255f27e821ac4487d1a2ac78bcbe5e"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_3",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetTextLibrary",
+          "MemberName": "Conv_StringToText"
+        },
+        "NodePosX": 1168,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "6efcb3f24ac3494e9191d12e0267a3e1"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "name": "K2Node_CallFunction_30",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_30",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "AdvancedSessionsLibrary",
+          "MemberName": "GetExtraSettings"
+        },
+        "NodePosX": 336,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8a9b7bc9ae07e94d806030e49c02bfbd"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "name": "K2Node_CallFunction_31",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_31",
+      "properties": {
+        "bWantsEnumToExecExpansion": true,
+        "FunctionReference": {
+          "MemberParent": "AdvancedSessionsLibrary",
+          "MemberName": "GetSessionPropertyString"
+        },
+        "NodePosX": 864,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "76ac8082d26ef04395d379af802bf0d5"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "name": "K2Node_CallFunction_36",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_36",
+      "properties": {
+        "bWantsEnumToExecExpansion": true,
+        "FunctionReference": {
+          "MemberParent": "AdvancedSessionsLibrary",
+          "MemberName": "GetSessionPropertyString"
+        },
+        "NodePosX": 1584,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8f2b8a50f25c8e45a65565907a484de0"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "name": "K2Node_CallFunction_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_4",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetTextLibrary",
+          "MemberName": "Conv_StringToText"
+        },
+        "NodePosX": 1920,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5be728f858fa4441b38d7d3b641fbc6b"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "name": "K2Node_CallFunction_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_7",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FindSessionsCallbackProxy",
+          "MemberName": "GetCurrentPlayers"
+        },
+        "NodePosX": 3312,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8be79ff4fcd57440b9a8912ae606aa61"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "name": "K2Node_CallFunction_8",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_8",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FindSessionsCallbackProxy",
+          "MemberName": "GetMaxPlayers"
+        },
+        "NodePosX": 3584,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ff9ea790d87be140afd18752794af11f"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "name": "K2Node_CallFunction_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_CallFunction_9",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FindSessionsCallbackProxy",
+          "MemberName": "GetPingInMs"
+        },
+        "NodePosX": 3088,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4affcac94df620438f2a8f55c372345a"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 480,
+        "NodePosY": 1776,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "222bde1d1fadb44198ce77821e519582"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_1",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SaveSessionData",
+          "bSelfContext": true
+        },
+        "NodePosX": 304,
+        "NodePosY": -478,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8cfaa9c61daff145a91906170a74d4ec"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "name": "K2Node_CallFunction_10",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_10",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetGameInstance",
+          "bSelfContext": true
+        },
+        "NodePosX": 576,
+        "NodePosY": -528,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e791acb96b6d7d4a9060adcb823251b5"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "name": "K2Node_CallFunction_11",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_11",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "KismetSystemLibrary",
+          "MemberName": "PrintString"
+        },
+        "NodePosX": 240,
+        "NodePosY": 720,
+        "AdvancedPinDisplay": "ENodeAdvancedPins::Hidden",
+        "EnabledState": "ENodeEnabledState::DevelopmentOnly",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c5cc98e8f9c76648aa24eff07959cd95"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "name": "K2Node_CallFunction_12",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_12",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetGameInstance",
+          "bSelfContext": true
+        },
+        "NodePosX": 272,
+        "NodePosY": 1072,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "47edda586c16814d9f6f8c06098eedde"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "name": "K2Node_CallFunction_13",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_13",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 736,
+        "NodePosY": 128,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f42b9f8cd3365f4f85c66f67742071bb"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "name": "K2Node_CallFunction_14",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_14",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetGameInstance",
+          "bSelfContext": true
+        },
+        "NodePosX": 624,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "57aa5f05f22c8b42882d9e93d822dde5"
+        }
+      }
+    },
+    {
+      "index": 51,
+      "name": "K2Node_CallFunction_16",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_16",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 224,
+        "NodePosY": 416,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "780e014a4b3a9a478724c3b11de2980f"
+        }
+      }
+    },
+    {
+      "index": 52,
+      "name": "K2Node_CallFunction_17",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_17",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 1376,
+        "NodePosY": 496,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "778df942b05ae7469c0941cdc13e198e"
+        }
+      }
+    },
+    {
+      "index": 53,
+      "name": "K2Node_CallFunction_18",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_18",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 304,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "deda611e10c3d9439959567e65033c94"
+        }
+      }
+    },
+    {
+      "index": 54,
+      "name": "K2Node_CallFunction_19",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_19",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 544,
+        "NodePosY": 704,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "86c0a4104de6944db00605931c171b91"
+        }
+      }
+    },
+    {
+      "index": 55,
+      "name": "K2Node_CallFunction_21",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_21",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 544,
+        "NodePosY": 416,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "847e2f1f12ff6442ac0b2c35e4728877"
+        }
+      }
+    },
+    {
+      "index": 56,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_3",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 608,
+        "NodePosY": -416,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e49274b4e387e64eb08a73d468382605"
+        }
+      }
+    },
+    {
+      "index": 57,
+      "name": "K2Node_CallFunction_35",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_35",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 272,
+        "NodePosY": 1184,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "d40c5c41bfbbd44aaec2887bd9d6c247"
+        }
+      }
+    },
+    {
+      "index": 58,
+      "name": "K2Node_CallFunction_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_4",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetSessionParam",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "001ab477394f4a428aa48412e71e8902"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 608,
+        "NodePosY": -352,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c97f8ddcbfbcd14fa278a774372536f7"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "name": "K2Node_CallFunction_41",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_41",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "ContructSessionForWidget",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a2f4a5e0149ec34cbf1d6f6b44bbf663"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 864,
+        "NodePosY": 416,
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "04a2ed8e98d89b49a4743d443cfbcb63"
+        }
+      }
+    },
+    {
+      "index": 60,
+      "name": "K2Node_CallFunction_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_5",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "PopulateSessionList",
+          "bSelfContext": true
+        },
+        "NodePosX": 1776,
+        "NodePosY": 416,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "d222f1f951b4a546b35b45e7067369e2"
+        }
+      }
+    },
+    {
+      "index": 61,
+      "name": "K2Node_CallFunction_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_6",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetSelectedSessionResult",
+          "bSelfContext": true
+        },
+        "NodePosX": 272,
+        "NodePosY": 1264,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e5fd57ffac0881498d5cf63405bb19a9"
+        }
+      }
+    },
+    {
+      "index": 62,
+      "name": "K2Node_CallFunction_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_7",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "SetVisibility",
+          "bSelfContext": true
+        },
+        "NodePosX": 480,
+        "NodePosY": 1504,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "146297764034814f8930a6c7d529a4e0"
+        }
+      }
+    },
+    {
+      "index": 63,
+      "name": "K2Node_CallFunction_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CallFunction_9",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetGameInstance",
+          "bSelfContext": true
+        },
+        "NodePosX": 160,
+        "NodePosY": -992,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e3f6aed7861e194b86ff23b8da74d27c"
+        }
+      }
+    },
+    {
+      "index": 64,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_0",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "MenuSessionData",
+          "MemberName": "GetSavedValueAsIntByString"
+        },
+        "NodePosX": 1952,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a7a605086b720f41909a1285b4fe18b0"
+        }
+      }
+    },
+    {
+      "index": 65,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "MenuSessionData",
+          "MemberName": "GetSavedValueAsBoolByString"
+        },
+        "NodePosX": 1664,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "945ca7164a469a4eb5f30938007dea5b"
+        }
+      }
+    },
+    {
+      "index": 66,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_2",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "MenuSessionData",
+          "MemberName": "GetSavedValueByString"
+        },
+        "NodePosX": 1392,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ea4a5a18d5db7440b3db8dc385957b58"
+        }
+      }
+    },
+    {
+      "index": 67,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_3",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "MenuSessionData",
+          "MemberName": "GetSavedValueByString"
+        },
+        "NodePosX": 1072,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "db9b62dfe6021d41847fef9c9a0a9e59"
+        }
+      }
+    },
+    {
+      "index": 68,
+      "name": "K2Node_CallFunction_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_4",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "MenuSessionData",
+          "MemberName": "GetSavedValueAsBoolByString"
+        },
+        "NodePosX": 736,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1dba500bc4c662489ebc92e3d3b2f6ef"
+        }
+      }
+    },
+    {
+      "index": 69,
+      "name": "K2Node_CallFunction_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_CallFunction_5",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "MenuSessionData",
+          "MemberName": "GetSavedValueAsIntByString"
+        },
+        "NodePosX": 416,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0f6c9adf1cea9345be5aaef272b43018"
+        }
+      }
+    },
+    {
+      "index": 70,
+      "name": "K2Node_CreateDelegate_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CreateDelegate",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CreateDelegate_1",
+      "properties": {
+        "SelectedFunctionName": "OnFindSessionSuccess",
+        "SelectedFunctionGuid": {
+          "struct": "Guid",
+          "raw": "3181bb50de06bf43b88bcdbe9fbd6a06"
+        },
+        "NodePosX": 464,
+        "NodePosY": -960,
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "33b796b3d9e0e3458a50d30826891012"
+        }
+      }
+    },
+    {
+      "index": 71,
+      "name": "K2Node_CreateDelegate_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CreateDelegate",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CreateDelegate_2",
+      "properties": {
+        "SelectedFunctionName": "OnFindSessionFailed",
+        "SelectedFunctionGuid": {
+          "struct": "Guid",
+          "raw": "aca349d6aae9a64aa2ab3a88a658fef8"
+        },
+        "NodePosX": 944,
+        "NodePosY": -960,
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "595b473b895eef45b3a3562e20823263"
+        }
+      }
+    },
+    {
+      "index": 72,
+      "name": "K2Node_CustomEvent_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CustomEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CustomEvent_4",
+      "properties": {
+        "CustomFunctionName": "OnFindSessionSuccess",
+        "NodePosX": -32,
+        "NodePosY": 416,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3181bb50de06bf43b88bcdbe9fbd6a06"
+        }
+      }
+    },
+    {
+      "index": 73,
+      "name": "K2Node_CustomEvent_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CustomEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_CustomEvent_5",
+      "properties": {
+        "CustomFunctionName": "OnFindSessionFailed",
+        "NodePosX": -32,
+        "NodePosY": 703,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "aca349d6aae9a64aa2ab3a88a658fef8"
+        }
+      }
+    },
+    {
+      "index": 74,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "W_MultiplayerScreen",
+          "MemberName": "OnJoinGameActionTriggered"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": -48,
+        "NodePosY": 1120,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a21bbcf7469bdc4c8295e6d452e714e8"
+        }
+      }
+    },
+    {
+      "index": 75,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "W_MultiplayerScreen",
+          "MemberName": "OnHandleCreateGameTabSelected"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": -32,
+        "NodePosY": 1519,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e98d6fc9b495dd4fbe3445d9674a9fb2"
+        }
+      }
+    },
+    {
+      "index": 76,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "W_MultiplayerScreen",
+          "MemberName": "OnHandleJoinGameTabSelected"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": -16,
+        "NodePosY": 1792,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8512b65f5d854c4f95babaf2dd0ad32c"
+        }
+      }
+    },
+    {
+      "index": 77,
+      "name": "K2Node_Event_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_3",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "W_MultiplayerScreen",
+          "MemberName": "OnRefreshActionTriggered"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": -64,
+        "NodePosY": 48,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "37d7cf67231fb143b1da2a54e9d63f25"
+        }
+      }
+    },
+    {
+      "index": 78,
+      "name": "K2Node_Event_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_4",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "W_MultiplayerScreen",
+          "MemberName": "OnStartGameActionTriggered"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": -48,
+        "NodePosY": -463,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "06988b586e34924488ffb0fa7fa6183d"
+        }
+      }
+    },
+    {
+      "index": 79,
+      "name": "K2Node_Event_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_5",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "OnInitialized"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": -64,
+        "NodePosY": -1088,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3b36873651220a42ba990f98e3a47884"
+        }
+      }
+    },
+    {
+      "index": 80,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_FunctionEntry_0",
+      "properties": {
+        "LocalVariables": [
+          {
+            "VarName": "Local_Sessions",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "04bd3fe3f159844989c36ad1e9237388"
+            },
+            "VarType": {
+              "raw": "8001000000000000230100000000000085ffffff01000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Local Sessions",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "LocalIndex",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "a09115e8c380e64997ee35d0403f94dc"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Index",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "-1"
+          },
+          {
+            "VarName": "LocalName",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "04f246ed63d8c44aa962e164845dbbbe"
+            },
+            "VarType": {
+              "raw": "8a0100000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Name",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "LocalMap",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "a60b77c8e12e9c40a6367ad9ef1921f5"
+            },
+            "VarType": {
+              "raw": "8a0100000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Map",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "localCurrentPlayer",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "ac95e8e72fec0d479429bdab0173abe9"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Current Player",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "0"
+          },
+          {
+            "VarName": "LocalMaxPlayer",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "8fe0058f1cc42245b4cbc5200ec26763"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Max Player",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "0"
+          },
+          {
+            "VarName": "LocalPrivate",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "f7c37a4cc6df994f82a89fcc76236fe5"
+            },
+            "VarType": {
+              "raw": "320000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Private",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "False"
+          },
+          {
+            "VarName": "LocalPing",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "2d7621f87787404385ee78e28a26dc17"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Local Ping",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "0"
+          },
+          {
+            "VarName": "Loc_Session",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "90d1d3550c4ef3489f9031af8e724308"
+            },
+            "VarType": {
+              "raw": "8001000000000000230100000000000084ffffff00000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Loc Session",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Loc_Index",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "6999aa4cb6ef6c4fb997165471bb680f"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Index",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Loc_ExtraSettings",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "972c722dc1b4ef4a97e3bdc829a93485"
+            },
+            "VarType": {
+              "raw": "8001000000000000230100000000000088ffffff01000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Loc Extra Settings",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          }
+        ],
+        "ExtraFlags": 201457664,
+        "FunctionReference": {
+          "MemberName": "ContructSessionForWidget"
+        },
+        "bIsEditable": true,
+        "NodePosX": -992,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f7b15104a0ba4a47b34bdb05849332ad"
+        }
+      }
+    },
+    {
+      "index": 81,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_FunctionEntry_0",
+      "properties": {
+        "LocalVariables": [
+          {
+            "VarName": "Loc_MaxPlayer",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "36725ca390df7246a245374f3f17d524"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Max Player",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "0"
+          },
+          {
+            "VarName": "Loc_Lan?",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "5baefe4ae9512044b30ac831466610d4"
+            },
+            "VarType": {
+              "raw": "320000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Lan?",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "false"
+          },
+          {
+            "VarName": "Loc_ServerName",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "859d983944f91248a18de7b40b989a5a"
+            },
+            "VarType": {
+              "raw": "7e0100000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Server Name",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Loc_Map",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "1e5bf324d3b0114ea4eb75d6b15fda1e"
+            },
+            "VarType": {
+              "raw": "7e0100000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Map",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Loc_Haspassword",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "99df80d0f4e13c489bace23451a8a632"
+            },
+            "VarType": {
+              "raw": "320000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Haspassword",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "false"
+          },
+          {
+            "VarName": "Loc_Password",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "e7c12bbe4e18bd45947ae811447f5886"
+            },
+            "VarType": {
+              "raw": "d80000000000000023010000000000000000000000000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+            },
+            "FriendlyName": "Loc Password",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": "0"
+          },
+          {
+            "VarName": "Loc_SessionData",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "8d448694449a9a44b8a64e23d1cefe70"
+            },
+            "VarType": {
+              "raw": "26010000000000002301000000000000daffffff00000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Loc Session Data",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500000000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          }
+        ],
+        "ExtraFlags": 469893120,
+        "FunctionReference": {
+          "MemberName": "GetSessionParam"
+        },
+        "bIsEditable": true,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a3938ab92c24094c9851e07d47f71754"
+        }
+      }
+    },
+    {
+      "index": 82,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "ContructSessionForWidget"
+        },
+        "bIsEditable": true,
+        "NodePosX": -496,
+        "NodePosY": 1920,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3cf159c07ef8bb47a177a81e1544b752"
+        }
+      }
+    },
+    {
+      "index": 83,
+      "name": "K2Node_FunctionResult_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_FunctionResult_1",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "ContructSessionForWidget"
+        },
+        "bIsEditable": true,
+        "NodePosY": 1920,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "344e60d5681dd34eab2828fe845f3aa9"
+        }
+      }
+    },
+    {
+      "index": 84,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "GetSessionParam"
+        },
+        "bIsEditable": true,
+        "NodePosX": 2432,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "101c0c4fa14a37469211903e974fa474"
+        }
+      }
+    },
+    {
+      "index": 85,
+      "name": "K2Node_IfThenElse_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_IfThenElse",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_IfThenElse_0",
+      "properties": {
+        "NodePosX": -720,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "50d0b679bd68e64690b6b01486efeeaa"
+        }
+      }
+    },
+    {
+      "index": 86,
+      "name": "K2Node_IfThenElse_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_IfThenElse",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_IfThenElse_1",
+      "properties": {
+        "NodePosX": 1136,
+        "NodePosY": 432,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f31babb605568f468bbce40e7e0e8525"
+        }
+      }
+    },
+    {
+      "index": 87,
+      "name": "K2Node_Knot_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_Knot_1",
+      "properties": {
+        "NodePosX": 192,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b4541c8d2abd184badeb6ab087953b23"
+        }
+      }
+    },
+    {
+      "index": 88,
+      "name": "K2Node_Knot_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_1",
+      "properties": {
+        "NodePosX": 768,
+        "NodePosY": 352,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "22387fe6e498e04b9e2907d92d2e9b1c"
+        }
+      }
+    },
+    {
+      "index": 89,
+      "name": "K2Node_Knot_13",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_13",
+      "properties": {
+        "NodePosX": 464,
+        "NodePosY": -1184,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b1e6b73ba0f4674895910484c7af758b"
+        }
+      }
+    },
+    {
+      "index": 90,
+      "name": "K2Node_Knot_14",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_14",
+      "properties": {
+        "NodePosX": 864,
+        "NodePosY": -1184,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "baceef74cd973b4d984b43ec2374b42b"
+        }
+      }
+    },
+    {
+      "index": 91,
+      "name": "K2Node_Knot_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_2",
+      "properties": {
+        "NodePosX": 224,
+        "NodePosY": 352,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "53f0cefa276ec642898b27086290d968"
+        }
+      }
+    },
+    {
+      "index": 92,
+      "name": "K2Node_Knot_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_3",
+      "properties": {
+        "NodePosX": 1664,
+        "NodePosY": 352,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1ca5b79e998ad64f9fe5477c1fe6bd86"
+        }
+      }
+    },
+    {
+      "index": 93,
+      "name": "K2Node_Knot_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Knot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Knot_4",
+      "properties": {
+        "NodePosX": 1120,
+        "NodePosY": 352,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "d85ad9fa0d9dd14f8f54ed5688a461b6"
+        }
+      }
+    },
+    {
+      "index": 94,
+      "name": "K2Node_MacroInstance_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_MacroInstance",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_MacroInstance_1",
+      "properties": {
+        "MacroGraphReference": {
+          "MacroGraph": "ForEachLoop",
+          "GraphBlueprint": "StandardMacros",
+          "GraphGuid": {
+            "struct": "Guid",
+            "raw": "55fddb990496a740a9a5721f265065da"
+          }
+        },
+        "NodePosX": -288,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "274c8a98d6309843837b3df8db034e4d"
+        }
+      }
+    },
+    {
+      "index": 95,
+      "name": "K2Node_MakeStruct_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_MakeStruct",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_MakeStruct_0",
+      "properties": {
+        "bMadeAfterOverridePinRemoval": true,
+        "ShowPinForProperties": [
+          {
+            "PropertyName": "SessionIndex",
+            "PropertyFriendlyName": "Session Index",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "ServerName",
+            "PropertyFriendlyName": "Server Name",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "MapName",
+            "PropertyFriendlyName": "Map Name",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "CurrentPlayers",
+            "PropertyFriendlyName": "Current Players",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "MaxPlayers",
+            "PropertyFriendlyName": "Max Players",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "bIsPrivate",
+            "PropertyFriendlyName": "Is Private",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "Ping",
+            "PropertyFriendlyName": "Ping",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "SessionResult",
+            "PropertyFriendlyName": "Session Result",
+            "PropertyTooltip": "",
+            "CategoryName": "SessionListItem",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          }
+        ],
+        "StructType": "SessionListItem",
+        "NodePosX": 3936,
+        "NodePosY": 2000,
+        "AdvancedPinDisplay": "ENodeAdvancedPins::Shown",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "68fd4e5b7774a1489710d588d749389f"
+        }
+      }
+    },
+    {
+      "index": 96,
+      "name": "K2Node_Message_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Message",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "BPI_GameInstance_C",
+          "MemberName": "BPI_CreateSession",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "39498a587cbe4445bc6dddfb2923879a"
+          }
+        },
+        "NodePosX": 880,
+        "NodePosY": -480,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f2396d474d1c7a43b43eba76d2726f53"
+        }
+      }
+    },
+    {
+      "index": 97,
+      "name": "K2Node_Message_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Message",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_1",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "BPI_GameInstance_C",
+          "MemberName": "BPI_FindSession",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "cebd32df1ca8a745832b4d74464d4f65"
+          }
+        },
+        "NodePosX": 912,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "27027f8b55e22547a1fa0428d47ec972"
+        }
+      }
+    },
+    {
+      "index": 98,
+      "name": "K2Node_Message_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Message",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_2",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "BPI_GameInstance_C",
+          "MemberName": "BPI_GetGI",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "1b307e2c2ad16d4495540b4614cb4f84"
+          }
+        },
+        "NodePosX": 160,
+        "NodePosY": -1103,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "336b44af44319647914838659a638a49"
+        }
+      }
+    },
+    {
+      "index": 99,
+      "name": "K2Node_Message_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Message",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Message_3",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "BPI_GameInstance_C",
+          "MemberName": "BPI_JoinSession",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "75d9ecc4347578458e4fbf630c85a66a"
+          }
+        },
+        "NodePosX": 544,
+        "NodePosY": 1104,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "901ed5dd9eed22459c189deac59a6897"
+        }
+      }
+    },
+    {
+      "index": 100,
+      "name": "K2Node_PromotableOperator_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_PromotableOperator",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_PromotableOperator_0",
+      "properties": {
+        "OperationName": "Greater",
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetMathLibrary",
+          "MemberName": "Greater_IntInt"
+        },
+        "NodePosX": -688,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ee9d1195ea726d46a6e107e96d007a52"
+        }
+      }
+    },
+    {
+      "index": 101,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Local_Sessions",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "04bd3fe3f159844989c36ad1e9237388"
+          }
+        },
+        "NodePosX": 3808,
+        "NodePosY": 1872,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5a70c3043cc6994ab61453b46e4292ad"
+        }
+      }
+    },
+    {
+      "index": 102,
+      "name": "K2Node_VariableGet_10",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_10",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_ExtraSettings",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "972c722dc1b4ef4a97e3bdc829a93485"
+          }
+        },
+        "NodePosX": 2144,
+        "NodePosY": 1872,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cedfbaf044075d45bd959cf205fc9861"
+        }
+      }
+    },
+    {
+      "index": 103,
+      "name": "K2Node_VariableGet_11",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_11",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalIndex",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a09115e8c380e64997ee35d0403f94dc"
+          }
+        },
+        "NodePosX": 2880,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5be0a28b9ac79943b6605b3742ed94b6"
+        }
+      }
+    },
+    {
+      "index": 104,
+      "name": "K2Node_VariableGet_12",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_12",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Session",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "90d1d3550c4ef3489f9031af8e724308"
+          }
+        },
+        "NodePosX": 3088,
+        "NodePosY": 1968,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e996b9a58a47db48bfebb046057841c7"
+        }
+      }
+    },
+    {
+      "index": 105,
+      "name": "K2Node_VariableGet_13",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_13",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Session",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "90d1d3550c4ef3489f9031af8e724308"
+          }
+        },
+        "NodePosX": 3312,
+        "NodePosY": 1968,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "30278734bce2814798c467128e7e557b"
+        }
+      }
+    },
+    {
+      "index": 106,
+      "name": "K2Node_VariableGet_14",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_14",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Session",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "90d1d3550c4ef3489f9031af8e724308"
+          }
+        },
+        "NodePosX": 3584,
+        "NodePosY": 1968,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "903478e4388f9842965626a989b40edc"
+        }
+      }
+    },
+    {
+      "index": 107,
+      "name": "K2Node_VariableGet_15",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_15",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Session",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "90d1d3550c4ef3489f9031af8e724308"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2304,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "49d5212c0ca48d41bb125811b4030a99"
+        }
+      }
+    },
+    {
+      "index": 108,
+      "name": "K2Node_VariableGet_16",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_16",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Session",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "90d1d3550c4ef3489f9031af8e724308"
+          }
+        },
+        "NodePosX": 384,
+        "NodePosY": 1904,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "dd1db09cbbd2834ca718180647add2b0"
+        }
+      }
+    },
+    {
+      "index": 109,
+      "name": "K2Node_VariableGet_17",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_17",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Local_Sessions",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "04bd3fe3f159844989c36ad1e9237388"
+          }
+        },
+        "NodePosY": 2048,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f1764ad797c1d04cab5cc1d6be61ec0e"
+        }
+      }
+    },
+    {
+      "index": 110,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalIndex",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a09115e8c380e64997ee35d0403f94dc"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 1968,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c9323cc1ebe07c4381c57ceecf12b4ee"
+        }
+      }
+    },
+    {
+      "index": 111,
+      "name": "K2Node_VariableGet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalName",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "04f246ed63d8c44aa962e164845dbbbe"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2016,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "42b2fc0c72ac4149afb62844c72788fa"
+        }
+      }
+    },
+    {
+      "index": 112,
+      "name": "K2Node_VariableGet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalMap",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a60b77c8e12e9c40a6367ad9ef1921f5"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2064,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cff2d48c6e271d4d8cf8e8bb9fd05f22"
+        }
+      }
+    },
+    {
+      "index": 113,
+      "name": "K2Node_VariableGet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "localCurrentPlayer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "ac95e8e72fec0d479429bdab0173abe9"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "98524a36a0e35844a6a5d5b7c0088f61"
+        }
+      }
+    },
+    {
+      "index": 114,
+      "name": "K2Node_VariableGet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalMaxPlayer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8fe0058f1cc42245b4cbc5200ec26763"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2160,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bc1fe177e675ae4b9649d98d0042661d"
+        }
+      }
+    },
+    {
+      "index": 115,
+      "name": "K2Node_VariableGet_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_7",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalPrivate",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "f7c37a4cc6df994f82a89fcc76236fe5"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2208,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2148b3d669ceb444a43b0f0ebfd675f5"
+        }
+      }
+    },
+    {
+      "index": 116,
+      "name": "K2Node_VariableGet_8",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_8",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalPing",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "2d7621f87787404385ee78e28a26dc17"
+          }
+        },
+        "NodePosX": 3744,
+        "NodePosY": 2256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0b940a8952c01c4897e5cc6164da23e8"
+        }
+      }
+    },
+    {
+      "index": 117,
+      "name": "K2Node_VariableGet_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableGet_9",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_ExtraSettings",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "972c722dc1b4ef4a97e3bdc829a93485"
+          }
+        },
+        "NodePosX": 1424,
+        "NodePosY": 1872,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7536fbf2dbbdf44089ffd26b2ec34eed"
+        }
+      }
+    },
+    {
+      "index": 118,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "SessionHeader",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "b6de48044f641846a693549da050f38c"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 288,
+        "NodePosY": 1712,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e64bccfc091f234d95b3e619b393beb9"
+        }
+      }
+    },
+    {
+      "index": 119,
+      "name": "K2Node_VariableGet_10",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_10",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "89227e967c94a843b7bc518873cfffa3"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 624,
+        "NodePosY": 576,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4bafcb03c4c1a14887fcecf3c7f71c50"
+        }
+      }
+    },
+    {
+      "index": 120,
+      "name": "K2Node_VariableGet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "CT_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "b7f825e026f51949a33c029b0e307b40"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 288,
+        "NodePosY": 1664,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bc35ad7caaff294e8b3a721f5c068982"
+        }
+      }
+    },
+    {
+      "index": 121,
+      "name": "K2Node_VariableGet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "89227e967c94a843b7bc518873cfffa3"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 288,
+        "NodePosY": 1616,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c7d2d9e3d46c8a4290a47f4054411b63"
+        }
+      }
+    },
+    {
+      "index": 122,
+      "name": "K2Node_VariableGet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "CT_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "b7f825e026f51949a33c029b0e307b40"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 304,
+        "NodePosY": 576,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a7b253239bb67943a722f1b5705b80b1"
+        }
+      }
+    },
+    {
+      "index": 123,
+      "name": "K2Node_VariableGet_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_7",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "89227e967c94a843b7bc518873cfffa3"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 1440,
+        "NodePosY": 672,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "96f08e5129a291438b0ca6d5691dc1cd"
+        }
+      }
+    },
+    {
+      "index": 124,
+      "name": "K2Node_VariableGet_8",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_8",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "CT_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "b7f825e026f51949a33c029b0e307b40"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 144,
+        "NodePosY": 128,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7cf10563b5cb6e47b0e19ad53a87272a"
+        }
+      }
+    },
+    {
+      "index": 125,
+      "name": "K2Node_VariableGet_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_VariableGet_9",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_FindServer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "89227e967c94a843b7bc518873cfffa3"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 608,
+        "NodePosY": 864,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bdc939326e15f449a84978c133dd9b1b"
+        }
+      }
+    },
+    {
+      "index": 126,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_MaxPlayer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "36725ca390df7246a245374f3f17d524"
+          }
+        },
+        "NodePosX": 2272,
+        "NodePosY": 64,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "35e2d5c899625549a7634e5ed1840e30"
+        }
+      }
+    },
+    {
+      "index": 127,
+      "name": "K2Node_VariableGet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Lan?",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "5baefe4ae9512044b30ac831466610d4"
+          }
+        },
+        "NodePosX": 2272,
+        "NodePosY": 96,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "14547617ba80e14e997214c44c2afad0"
+        }
+      }
+    },
+    {
+      "index": 128,
+      "name": "K2Node_VariableGet_10",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_10",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 736,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bf13c707326012469e01b3ad8b0df975"
+        }
+      }
+    },
+    {
+      "index": 129,
+      "name": "K2Node_VariableGet_11",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_11",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 416,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1492903a89f111489fcc42da15f292c2"
+        }
+      }
+    },
+    {
+      "index": 130,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_ServerName",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "859d983944f91248a18de7b40b989a5a"
+          }
+        },
+        "NodePosX": 2272,
+        "NodePosY": 128,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "935aaa980040714ca4ab6df54b30c55d"
+        }
+      }
+    },
+    {
+      "index": 131,
+      "name": "K2Node_VariableGet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Map",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "1e5bf324d3b0114ea4eb75d6b15fda1e"
+          }
+        },
+        "NodePosX": 2272,
+        "NodePosY": 160,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7b85cef5ec5e72498801efe5caaa80e3"
+        }
+      }
+    },
+    {
+      "index": 132,
+      "name": "K2Node_VariableGet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Haspassword",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "99df80d0f4e13c489bace23451a8a632"
+          }
+        },
+        "NodePosX": 2272,
+        "NodePosY": 192,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0488162ecf8eb04daa381e74c13beffb"
+        }
+      }
+    },
+    {
+      "index": 133,
+      "name": "K2Node_VariableGet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Password",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "e7c12bbe4e18bd45947ae811447f5886"
+          }
+        },
+        "NodePosX": 2272,
+        "NodePosY": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "11832ccff5aeea4cbbe8f1a935b093f4"
+        }
+      }
+    },
+    {
+      "index": 134,
+      "name": "K2Node_VariableGet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 1392,
+        "NodePosY": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "78f5fe3c27b06441b24eeaf201281190"
+        }
+      }
+    },
+    {
+      "index": 135,
+      "name": "K2Node_VariableGet_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_7",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 1952,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7a758a464823c74982c1f771b2be7784"
+        }
+      }
+    },
+    {
+      "index": 136,
+      "name": "K2Node_VariableGet_8",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_8",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 1664,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f7739346d0495b4b9be2fa5891ffd04b"
+        }
+      }
+    },
+    {
+      "index": 137,
+      "name": "K2Node_VariableGet_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableGet_9",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 1072,
+        "NodePosY": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "6cda22de04ac5e46b632e596ae9a36ef"
+        }
+      }
+    },
+    {
+      "index": 138,
+      "name": "K2Node_VariableSet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalIndex",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a09115e8c380e64997ee35d0403f94dc"
+          }
+        },
+        "NodePosX": 2880,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eb74ea11f280c444ab1bf57476cc103c"
+        }
+      }
+    },
+    {
+      "index": 139,
+      "name": "K2Node_VariableSet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalName",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "04f246ed63d8c44aa962e164845dbbbe"
+          }
+        },
+        "NodePosX": 1216,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c2d22849f392614693505ba6e92cb606"
+        }
+      }
+    },
+    {
+      "index": 140,
+      "name": "K2Node_VariableSet_12",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_12",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Session",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "90d1d3550c4ef3489f9031af8e724308"
+          }
+        },
+        "NodePosX": -48,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b007465b42eb624dba343ae63ba539d3"
+        }
+      }
+    },
+    {
+      "index": 141,
+      "name": "K2Node_VariableSet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalMap",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a60b77c8e12e9c40a6367ad9ef1921f5"
+          }
+        },
+        "NodePosX": 1952,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f221d8c93cba2a4e9cf72df45ef08680"
+        }
+      }
+    },
+    {
+      "index": 142,
+      "name": "K2Node_VariableSet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalPrivate",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "f7c37a4cc6df994f82a89fcc76236fe5"
+          }
+        },
+        "NodePosX": 2656,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "013e98ee744f4a4196084539ce97a99e"
+        }
+      }
+    },
+    {
+      "index": 143,
+      "name": "K2Node_VariableSet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalPing",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "2d7621f87787404385ee78e28a26dc17"
+          }
+        },
+        "NodePosX": 3088,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2edfe04944d19d46a9bc60a71bc50a58"
+        }
+      }
+    },
+    {
+      "index": 144,
+      "name": "K2Node_VariableSet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "LocalMaxPlayer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8fe0058f1cc42245b4cbc5200ec26763"
+          }
+        },
+        "NodePosX": 3584,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "df6a5bb8d6843d4382172f13ae770e34"
+        }
+      }
+    },
+    {
+      "index": 145,
+      "name": "K2Node_VariableSet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "localCurrentPlayer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "ac95e8e72fec0d479429bdab0173abe9"
+          }
+        },
+        "NodePosX": 3312,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "43ae7dcb0482fc4bb8db3ff2c632b201"
+        }
+      }
+    },
+    {
+      "index": 146,
+      "name": "K2Node_VariableSet_8",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_8",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_Index",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "6999aa4cb6ef6c4fb997165471bb680f"
+          }
+        },
+        "NodePosX": 144,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "30c9ccd1a9ebab4d82f91945fd1637a0"
+        }
+      }
+    },
+    {
+      "index": 147,
+      "name": "K2Node_VariableSet_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget.K2Node_VariableSet_9",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "ContructSessionForWidget",
+          "MemberName": "Loc_ExtraSettings",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "972c722dc1b4ef4a97e3bdc829a93485"
+          }
+        },
+        "NodePosX": 640,
+        "NodePosY": 1824,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "47b77fcac3396a4b9982b8bd536062ff"
+        }
+      }
+    },
+    {
+      "index": 148,
+      "name": "K2Node_VariableSet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_SessionData",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "8d448694449a9a44b8a64e23d1cefe70"
+          }
+        },
+        "NodePosX": 192,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eabe81634076ec449d55e74ea75ae33b"
+        }
+      }
+    },
+    {
+      "index": 149,
+      "name": "K2Node_VariableSet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_MaxPlayer",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "36725ca390df7246a245374f3f17d524"
+          }
+        },
+        "NodePosX": 416,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ac4cd2195f24d2419a389028a9b65fc6"
+        }
+      }
+    },
+    {
+      "index": 150,
+      "name": "K2Node_VariableSet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Haspassword",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "99df80d0f4e13c489bace23451a8a632"
+          }
+        },
+        "NodePosX": 736,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b4681b057cbdb64abbafbc3817679372"
+        }
+      }
+    },
+    {
+      "index": 151,
+      "name": "K2Node_VariableSet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_ServerName",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "859d983944f91248a18de7b40b989a5a"
+          }
+        },
+        "NodePosX": 1072,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b2dff0594d86c8499f7907acf757fb97"
+        }
+      }
+    },
+    {
+      "index": 152,
+      "name": "K2Node_VariableSet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Map",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "1e5bf324d3b0114ea4eb75d6b15fda1e"
+          }
+        },
+        "NodePosX": 1392,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f1f79cee4f73a94cb4b19a6eed89e3f9"
+        }
+      }
+    },
+    {
+      "index": 153,
+      "name": "K2Node_VariableSet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Lan?",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "5baefe4ae9512044b30ac831466610d4"
+          }
+        },
+        "NodePosX": 1664,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0c738f4d903b57469b8f7d4346605211"
+        }
+      }
+    },
+    {
+      "index": 154,
+      "name": "K2Node_VariableSet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableSet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam.K2Node_VariableSet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "GetSessionParam",
+          "MemberName": "Loc_Password",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "e7c12bbe4e18bd45947ae811447f5886"
+          }
+        },
+        "NodePosX": 1952,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0269f92cbdf2f548a8c7ffceed270a5f"
+        }
+      }
+    },
+    {
+      "index": 155,
+      "name": "Overlay_290",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_3"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 156,
+      "name": "Overlay_366",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 157,
+      "name": "Overlay_61",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61.OverlaySlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25.BorderSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 158,
+      "name": "Overlay_290",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_3"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 159,
+      "name": "Overlay_366",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 160,
+      "name": "Overlay_61",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61.OverlaySlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25.BorderSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 161,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CommonListView_MultiplayerList"
+      }
+    },
+    {
+      "index": 162,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_1",
+      "properties": {
+        "Padding": {
+          "Left": 90.0,
+          "Top": 64.0
+        },
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.B_SessionBorder"
+      }
+    },
+    {
+      "index": 163,
+      "name": "OverlaySlot_2",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_2",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CT_FindServer"
+      }
+    },
+    {
+      "index": 164,
+      "name": "OverlaySlot_3",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290.OverlaySlot_3",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Ctb_FindServer"
+      }
+    },
+    {
+      "index": 165,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.TabListWidget_MultiplayerTabs"
+      }
+    },
+    {
+      "index": 166,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.BackgroundBlur_42"
+      }
+    },
+    {
+      "index": 167,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 168,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CommonListView_MultiplayerList"
+      }
+    },
+    {
+      "index": 169,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_1",
+      "properties": {
+        "Padding": {
+          "Left": 90.0,
+          "Top": 64.0
+        },
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.B_SessionBorder"
+      }
+    },
+    {
+      "index": 170,
+      "name": "OverlaySlot_2",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_2",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CT_FindServer"
+      }
+    },
+    {
+      "index": 171,
+      "name": "OverlaySlot_3",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290.OverlaySlot_3",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Ctb_FindServer"
+      }
+    },
+    {
+      "index": 172,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.TabListWidget_MultiplayerTabs"
+      }
+    },
+    {
+      "index": 173,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.BackgroundBlur_42"
+      }
+    },
+    {
+      "index": 174,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 175,
+      "name": "VerticalBox_0",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0.VerticalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0.VerticalBoxSlot_0"
+        ],
+        "bOverride_Cursor": true,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 176,
+      "name": "VerticalBox_0",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0"
+        ],
+        "bOverride_Cursor": true,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 177,
+      "name": "VerticalBoxSlot_0",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 7.0,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290"
+      }
+    },
+    {
+      "index": 178,
+      "name": "VerticalBoxSlot_2",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0.VerticalBoxSlot_2",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.SessionHeader"
+      }
+    },
+    {
+      "index": 179,
+      "name": "VerticalBoxSlot_0",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 7.0,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290"
+      }
+    },
+    {
+      "index": 180,
+      "name": "VerticalBoxSlot_2",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.SessionHeader"
+      }
+    },
+    {
+      "index": 181,
+      "name": "Default__WBP_MultiplayerScreen_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.Default__WBP_MultiplayerScreen_C",
+      "properties": {
+        "UberGraphFrame": {},
+        "MultiplayerConfig": "DA_MultiplayerConfig",
+        "StartGameAction": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "StartGameAction"
+        },
+        "JoinGameAction": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "JoinGameAction"
+        },
+        "RefreshAction": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "RefreshAction"
+        },
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 182,
+      "name": "DetailsView_ListEntryInfo",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionDetailView.WBP_OptionDetailView_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.DetailsView_ListEntryInfo",
+      "properties": {
+        "DisplayLabel": "DetailsView_ListEntryInfo"
+      }
+    },
+    {
+      "index": 183,
+      "name": "DetailsView_ListEntryInfo",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionDetailView.WBP_OptionDetailView_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.DetailsView_ListEntryInfo",
+      "properties": {
+        "DisplayLabel": "DetailsView_ListEntryInfo"
+      }
+    },
+    {
+      "index": 184,
+      "name": "SessionHeader",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_SessionHeader.WBP_SessionHeader_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.SessionHeader",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0.VerticalBoxSlot_2",
+        "Visibility": "ESlateVisibility::Collapsed",
+        "DisplayLabel": "SessionHeader"
+      }
+    },
+    {
+      "index": 185,
+      "name": "SessionHeader",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_SessionHeader.WBP_SessionHeader_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.SessionHeader",
+      "properties": {
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2",
+        "Visibility": "ESlateVisibility::Collapsed",
+        "DisplayLabel": "SessionHeader"
+      }
+    },
+    {
+      "index": 186,
+      "name": "TabListWidget_MultiplayerTabs",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.TabListWidget_MultiplayerTabs",
+      "properties": {
+        "TabPadding": {
+          "Left": 25.0,
+          "Right": 25.0
+        },
+        "NextTabInputActionData": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "NextTabAction"
+        },
+        "PreviousTabInputActionData": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "PreTabAction"
+        },
+        "bAutoListenForInput": true,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366.OverlaySlot_0",
+        "DisplayLabel": "TabListWidget_MultiplayerTabs"
+      }
+    },
+    {
+      "index": 187,
+      "name": "TabListWidget_MultiplayerTabs",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.TabListWidget_MultiplayerTabs",
+      "properties": {
+        "TabPadding": {
+          "Left": 25.0,
+          "Right": 25.0
+        },
+        "NextTabInputActionData": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "NextTabAction"
+        },
+        "PreviousTabInputActionData": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "PreTabAction"
+        },
+        "bAutoListenForInput": true,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366.OverlaySlot_0",
+        "DisplayLabel": "TabListWidget_MultiplayerTabs"
+      }
+    },
+    {
+      "index": 188,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CommonBoundActionBar_562"
+          },
+          {
+            "Name": "Top_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "f97040d72270874caac4b9837d19e250"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366"
+          },
+          {
+            "Name": "MainLeft_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0"
+          },
+          {
+            "Name": "MainRight_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "9b6a4960be93004c9890ea0ca0aa8dce"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.DetailsView_ListEntryInfo"
+          }
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61.OverlaySlot_1",
+        "bIsVariable": false,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 189,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CommonBoundActionBar_562"
+          },
+          {
+            "Name": "Top_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "f97040d72270874caac4b9837d19e250"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366"
+          },
+          {
+            "Name": "MainLeft_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0"
+          },
+          {
+            "Name": "MainRight_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "9b6a4960be93004c9890ea0ca0aa8dce"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.DetailsView_ListEntryInfo"
+          }
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61.OverlaySlot_1",
+        "bIsVariable": false,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 190,
+      "name": "WBP_MultiplayerScreen",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "000000000f000000340000001a0000001dd81cdc68da464186f084ae3485312f380100003e0000003ee1ab5fd62207498bcf55ea8d3bae89170000002b000000c963d48c98795641a36a43ac8b55265aa60100000000000020f9cbd39bc7fa449e61aeb3b578e5eb6d00000000000000d0b776c312ba6b4289148fc4b16afc4d8600000000000000a42bcf3645d8c849bbbd755a039d764a6c000000330200001bcee3c99435034f967e055fb6227da2380100006f010000dfe358cbd47f4744aa0e86c3fa0947f68401000000000000a20e04a12c757045be8a0baa54f92c2a6701000000000000b6de48044f641846a693549da050f38ca101000001000000cbb5a23dc4efe34aad893849aa7d40d53801000023010000b79316b6968993438131436737a95e6b1500000000000000d6d1549ba929634ea317ceeb0bf73ddf7400000000000000b7f825e026f51949a33c029b0e307b40750000000000000089227e967c94a843b7bc518873cfffa3"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree",
+        "ParentClass": "W_MultiplayerScreen",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph"
+        ],
+        "FunctionGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam"
+        ],
+        "GeneratedVariables": [
+          {
+            "VarName": "SessionHeader",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "b6de48044f641846a693549da050f38c"
+            },
+            "VarType": {
+              "raw": "260100000000000023010000000000007effffff00000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "SessionHeader",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MultiplayerScreen"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Ctb_FindServer",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "89227e967c94a843b7bc518873cfffa3"
+            },
+            "VarType": {
+              "raw": "26010000000000002301000000000000e6ffffff00000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Ctb_FindServer",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MultiplayerScreen"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "CT_FindServer",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "b7f825e026f51949a33c029b0e307b40"
+            },
+            "VarType": {
+              "raw": "26010000000000002301000000000000d3ffffff00000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "CT_FindServer",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MultiplayerScreen"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "B_SessionBorder",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "d6d1549ba929634ea317ceeb0bf73ddf"
+            },
+            "VarType": {
+              "raw": "26010000000000002301000000000000d5ffffff00000000000000000000000000230100000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "B_SessionBorder",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MultiplayerScreen"
+              }
+            ],
+            "DefaultValue": ""
+          }
+        ],
+        "CategorySorting": [
+          "Input",
+          "Events",
+          "Activatable Widget",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "Event Graph",
+          "WBP Multiplayer Screen",
+          "None"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "f8309fc39aa20fc4",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1012977416"
+            },
+            "SavedZoomAmount": 0.5
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "01000000"
+            },
+            "SavedViewOffset": {
+              "raw": "e2ad8ec4b9a78e44",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -997282334"
+            },
+            "SavedZoomAmount": 0.75
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "02000000"
+            },
+            "SavedViewOffset": {
+              "raw": "508d4dc4dcd5e7c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1001550512"
+            },
+            "SavedZoomAmount": 0.5
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "9a54ee8c00ad2b4ba5ac918369c9a1ac"
+        }
+      }
+    },
+    {
+      "index": 191,
+      "name": "WBP_MultiplayerScreen_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree",
+        "UberGraphFunction": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:ExecuteUbergraph_WBP_MultiplayerScreen",
+        "PropertyGuids": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000040000001500000000000000d6d1549ba929634ea317ceeb0bf73ddf7400000000000000b7f825e026f51949a33c029b0e307b40750000000000000089227e967c94a843b7bc518873cfffa36701000000000000b6de48044f641846a693549da050f38c"
+        }
+      }
+    },
+    {
+      "index": 192,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Border_25",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_61",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.BackgroundBlur_42",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.VerticalBox_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.SessionHeader",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_290",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CommonListView_MultiplayerList",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.B_SessionBorder",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CT_FindServer",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Ctb_FindServer",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.DetailsView_ListEntryInfo",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.CommonBoundActionBar_562",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.Overlay_366",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:WidgetTree.TabListWidget_MultiplayerTabs"
+        ]
+      }
+    },
+    {
+      "index": 193,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Border_25",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_61",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.BackgroundBlur_42",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.VerticalBox_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.SessionHeader",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_290",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CommonListView_MultiplayerList",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.B_SessionBorder",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CT_FindServer",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Ctb_FindServer",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.DetailsView_ListEntryInfo",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.CommonBoundActionBar_562",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.Overlay_366",
+          "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:WidgetTree.TabListWidget_MultiplayerTabs"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:GetSessionParam",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:ContructSessionForWidget",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph",
+    "Object:/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:ContructSessionForWidget",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnHandleJoinGameTabSelected",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnHandleJoinGameTabSelected",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnRefreshActionTriggered",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnFindSessionSuccess",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnHandleCreateGameTabSelected",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnInitialized",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnHandleCreateGameTabSelected",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnJoinGameActionTriggered",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnJoinGameActionTriggered",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnInitialized",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:TempGraph.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen:NewFunction.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnFindSessionSuccess",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnStartGameActionTriggered",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:OnFindSessionFailed",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.SKEL_WBP_MultiplayerScreen_C:ContructSessionForWidget",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnRefreshActionTriggered",
+    "Object:/GameMainMenu/BP/UI/Widgets/Multiplayer/WBP_MultiplayerScreen.WBP_MultiplayerScreen_C:OnStartGameActionTriggered"
+  ],
+  "text": []
+}

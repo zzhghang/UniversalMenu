@@ -1,0 +1,466 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\Options\\WBP_OptionScreen.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen",
+  "objects": [
+    {
+      "index": 1,
+      "name": "BackgroundBlur_42",
+      "class": "Object:/Script/UMG.BackgroundBlur",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.BackgroundBlur_42",
+      "properties": {
+        "BlurStrength": 5.0,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Border_25",
+      "class": "Object:/Script/UMG.Border",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25",
+      "properties": {
+        "BrushColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25.BorderSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 3,
+      "name": "BorderSlot_0",
+      "class": "Object:/Script/UMG.BorderSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25.BorderSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61"
+      }
+    },
+    {
+      "index": 4,
+      "name": "CommonBoundActionBar_562",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.CommonBoundActionBar_562",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "EntrySpacing": {
+          "x": 16.0,
+          "y": 0.0
+        },
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 5,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "eb5ab9ea22ced543abea0445e12c4538"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "CommonListView_OptionList",
+      "class": "Object:/Script/GameMainMenu.FrontendCommonListView",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.CommonListView_OptionList",
+      "properties": {
+        "DataListEntryMapping": "DA_ListEntryMapping",
+        "ScrollBarStyle": {
+          "Thickness": 5.0
+        },
+        "ScrollBarPadding": {
+          "Left": 10.0
+        },
+        "EntryWidgetClass": "WBP_ListEntry_Test_C",
+        "DisplayLabel": "CommonListView_OptionList"
+      }
+    },
+    {
+      "index": 7,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "2c702696bce7e14291d692de22f43bbc"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4ef4b31d17f1904c92ab4b5877c2ec98"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5206e1449f307f4f862edac91491c63a"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "name": "Overlay_366",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 11,
+      "name": "Overlay_61",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61.OverlaySlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25.BorderSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 12,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.TabListWidget_OptionTabs"
+      }
+    },
+    {
+      "index": 13,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.BackgroundBlur_42"
+      }
+    },
+    {
+      "index": 14,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 15,
+      "name": "DetailsView_ListEntryInfo",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionDetailView.WBP_OptionDetailView_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.DetailsView_ListEntryInfo",
+      "properties": {
+        "DisplayLabel": "DetailsView_ListEntryInfo"
+      }
+    },
+    {
+      "index": 16,
+      "name": "Default__WBP_OptionScreen_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.Default__WBP_OptionScreen_C",
+      "properties": {
+        "ResetAction": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "ResetAction"
+        },
+        "ResetAllAction": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "ResetAllAction"
+        },
+        "OptionsConfig": "DA_OptionsConfig",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 17,
+      "name": "TabListWidget_OptionTabs",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_TabList.WBP_TabList_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.TabListWidget_OptionTabs",
+      "properties": {
+        "TabPadding": {
+          "Left": 25.0,
+          "Right": 25.0
+        },
+        "NextTabInputActionData": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "NextTabAction"
+        },
+        "PreviousTabInputActionData": {
+          "DataTable": "DT_KeyMapping",
+          "RowName": "PreTabAction"
+        },
+        "bAutoListenForInput": true,
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366.OverlaySlot_0",
+        "DisplayLabel": "TabListWidget_OptionTabs"
+      }
+    },
+    {
+      "index": 18,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.CommonBoundActionBar_562"
+          },
+          {
+            "Name": "Top_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "f97040d72270874caac4b9837d19e250"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366"
+          },
+          {
+            "Name": "MainLeft_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.CommonListView_OptionList"
+          },
+          {
+            "Name": "MainRight_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "9b6a4960be93004c9890ea0ca0aa8dce"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.DetailsView_ListEntryInfo"
+          }
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61.OverlaySlot_1",
+        "bIsVariable": false,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 19,
+      "name": "WBP_OptionScreen",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000090000001b0000001a00000095bee21c6642104282ad09bbbcb1ab80680000003e00000064190a833c4bbc4c8bf730e1876d693d0a0000002b00000066b969b8be77a04fa0be42cf9283b69093000000000000006eac2b7c08151e4f86c9f567371fded622000000330200009c2bb2d7ee9a31429ec0b760dbff6801680000006f01000070484216aa830c45bc8fcd2f812a599185000000000000009948d6e65c8bb84ebb6618bbae8419f623000000000000008978c3f4e27d014bb6aea3312175ae3a2c00000000000000c4e99721b2a6f844a2675adad1e5e44f"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree",
+        "ParentClass": "W_OptionScreen",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph"
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "Input",
+          "Events",
+          "Activatable Widget",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "296bd10eeae5444a82f7c0287ffee977"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "name": "WBP_OptionScreen_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen_C:WidgetTree"
+      }
+    },
+    {
+      "index": 21,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Border_25",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_61",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.BackgroundBlur_42",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.CommonListView_OptionList",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.DetailsView_ListEntryInfo",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.CommonBoundActionBar_562",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.Overlay_366",
+          "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:WidgetTree.TabListWidget_OptionTabs"
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen_C:WidgetTree",
+      "properties": {
+        "RootWidget": null,
+        "AllWidgets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.SKEL_WBP_OptionScreen_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.WBP_OptionScreen:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.SKEL_WBP_OptionScreen_C:Tick",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.SKEL_WBP_OptionScreen_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/Options/WBP_OptionScreen.SKEL_WBP_OptionScreen_C:PreConstruct"
+  ],
+  "text": []
+}

@@ -1,0 +1,91 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Styles\\Button\\SButton_Clear_Menu.uasset",
+  "package": "/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SButton_Clear_Menu",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu",
+      "properties": {
+        "ParentClass": "CommonButtonStyle",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu:EventGraph"
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "3bea39191dae0148beb5f11b053efd2a"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SButton_Clear_Menu_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "09c6ce69a889914ba025122adc607acb"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SButton_Clear_Menu_C",
+      "class": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu_C",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.Default__SButton_Clear_Menu_C",
+      "properties": {
+        "NormalBase": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalHovered": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPressed": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "SelectedBase": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "SelectedHovered": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "SelectedPressed": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalTextStyle": "SText_Default_C",
+        "NormalHoveredTextStyle": "SText_Default_HighLight_C",
+        "SelectedTextStyle": "SText_Default_HighLight_C",
+        "SelectedHoveredTextStyle": "SText_Default_HighLight_C",
+        "DisabledTextStyle": "SText_Default_C",
+        "PressedSlateSound": {
+          "ResourceObject": "Flashlight_Switch"
+        },
+        "HoveredSlateSound": {
+          "ResourceObject": "Selection_Changes"
+        }
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SButton_Clear_Menu_C",
+    "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Menu.SKEL_SButton_Clear_Menu_C"
+  ],
+  "text": []
+}

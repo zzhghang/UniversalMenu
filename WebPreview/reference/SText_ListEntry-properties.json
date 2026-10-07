@@ -1,0 +1,79 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Styles\\Text\\SText_ListEntry.uasset",
+  "package": "/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SText_ListEntry",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry",
+      "properties": {
+        "ParentClass": "CommonTextStyle",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry:EventGraph"
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "68a99a8530ea8448a0d57ac6001d0b2b"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SText_ListEntry_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "0bd48400aa7b2d44b878d5397bf77b44"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SText_ListEntry_C",
+      "class": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry_C",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.Default__SText_ListEntry_C",
+      "properties": {
+        "Font": {
+          "FontObject": "SourceHanSansCN",
+          "OutlineSettings": {
+            "OutlineSize": 1,
+            "OutlineColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.5
+            }
+          },
+          "TypefaceFontName": "Normal",
+          "Size": 18.75
+        },
+        "Color": {
+          "r": 0.30000001192092896,
+          "g": 0.30000001192092896,
+          "b": 0.30000001192092896,
+          "a": 1.0
+        }
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SKEL_SText_ListEntry_C",
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry.SText_ListEntry_C"
+  ],
+  "text": []
+}

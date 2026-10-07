@@ -1,0 +1,88 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_Caution.uasset",
+  "package": "/GameMainMenu/Assets/Others/T_Caution",
+  "objects": [
+    {
+      "index": 1,
+      "name": "InterchangeAssetImportData_0",
+      "class": "Object:/Script/InterchangeEngine.InterchangeAssetImportData",
+      "path": "Object:/GameMainMenu/Assets/Others/T_Caution.T_Caution:InterchangeAssetImportData_0",
+      "properties": {
+        "_error": "invalid name 1526726656",
+        "_raw": "b60000005b7b202252656c617469766546696c656e616d6522203a20222e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f55736572732f62617869792f4465736b746f702f545f43617574696f6e2e706e67222c202254696d657374616d7022203a202231363737383636393435222c202246696c654d443522203a20223761343834396266626365303266383065626663653862373230653935336365222c2022446973706c61794c6162656c4e616d6522203a202222207d5d00001d0000000000000027000000000000000000000031000000002d000000466163746f72795f433a2f55736572732f62617869792f4465736b746f702f545f43617574696f6e2e706e67001e00000000000000"
+      }
+    },
+    {
+      "index": 2,
+      "name": "T_Caution",
+      "class": "Object:/Script/Engine.Texture2D",
+      "path": "Object:/GameMainMenu/Assets/Others/T_Caution.T_Caution",
+      "properties": {
+        "ImportedSize": {
+          "raw": "2400000020000000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "IntPoint",
+                "params": [
+                  {
+                    "name": "/Script/CoreUObject",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+        },
+        "Source": {
+          "Id": {
+            "struct": "Guid",
+            "raw": "918c2e0743980940abbb45706db45708"
+          },
+          "SizeX": 36,
+          "SizeY": 32,
+          "NumSlices": 1,
+          "NumMips": 1,
+          "CompressionFormat": "TSCF_UEDELTA",
+          "bGuidIsHash": true,
+          "LayerColorInfo_LockProtected": [
+            {
+              "ColorMin": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 0.0
+              },
+              "ColorMax": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          ],
+          "Format": "TSF_BGRA8",
+          "LayerFormat": [
+            "TSF_BGRA8"
+          ],
+          "BlockDataOffsets": [
+            0
+          ]
+        },
+        "LightingGuid": {
+          "struct": "Guid",
+          "raw": "143f08eb22abbd47b9e8d4597643af38"
+        },
+        "AssetImportData": "Object:/GameMainMenu/Assets/Others/T_Caution.T_Caution:InterchangeAssetImportData_0",
+        "OodleTextureSdkVersion": "2.9.8",
+        "MipGenSettings": "TMGS_NoMipmaps",
+        "LODGroup": "TEXTUREGROUP_UI",
+        "NeverStream": true
+      }
+    }
+  ],
+  "softReferences": [],
+  "text": []
+}

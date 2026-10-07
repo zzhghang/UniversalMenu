@@ -1,0 +1,85 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Styles\\Text\\SText_ListEntry_HeaderRow.uasset",
+  "package": "/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SText_ListEntry_HeaderRow",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow",
+      "properties": {
+        "ParentClass": "CommonTextStyle",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow:EventGraph"
+        ],
+        "CategorySorting": [
+          "Font",
+          "Color",
+          "Shadow",
+          "Properties"
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "1853a704582223458c7ae65c8d0af06b"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SText_ListEntry_HeaderRow_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "0bd48400aa7b2d44b878d5397bf77b44"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SText_ListEntry_HeaderRow_C",
+      "class": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow_C",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.Default__SText_ListEntry_HeaderRow_C",
+      "properties": {
+        "Font": {
+          "FontObject": "SourceHanSansCN",
+          "OutlineSettings": {
+            "OutlineSize": 1,
+            "OutlineColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.5
+            }
+          },
+          "TypefaceFontName": "Normal",
+          "Size": 22.5
+        },
+        "Color": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1.0
+        }
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SKEL_SText_ListEntry_HeaderRow_C",
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_ListEntry_HeaderRow.SText_ListEntry_HeaderRow_C"
+  ],
+  "text": []
+}

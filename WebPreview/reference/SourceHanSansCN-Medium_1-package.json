@@ -1,0 +1,158 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:PisnlgDr0MeUexjieSUF1lFsa8Y="
+		},
+		"TotalHeaderSize": 1501,
+		"CustomVersions": [
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1",
+		"PackageFlags": 0,
+		"NameCount": 11,
+		"NameOffset": 456,
+		"SoftObjectPathsCount": 0,
+		"SoftObjectPathsOffset": 743,
+		"LocalizationId": "1C9EA1A57148BFCB056D57465D4DD53D",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 743,
+		"ExportCount": 1,
+		"ExportOffset": 876,
+		"ImportCount": 2,
+		"ImportOffset": 796,
+		"CellExportCount": 0,
+		"CellExportOffset": 988,
+		"CellImportCount": 0,
+		"CellImportOffset": 988,
+		"MetaDataOffset": 743,
+		"DependsOffset": 988,
+		"SoftPackageReferencesCount": 0,
+		"SoftPackageReferencesOffset": 992,
+		"SearchableNamesOffset": 992,
+		"ThumbnailTableOffset": 1008,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "7BEC854B4BB2746E8C3F79892E1E3275",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 1,
+				"NameCount": 11
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 1486256549,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 1058,
+		"BulkDataStartOffset": 8360565,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 1501,
+		"NamesReferencedFromExportDataCount": 4,
+		"PayloadTocOffset": 8360569,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"None",
+		"PackageLocalizationNamespace",
+		"SourceFilename",
+		"StrProperty",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium",
+		"/Script/CoreUObject",
+		"/Script/Engine",
+		"Class",
+		"FontFace",
+		"Package",
+		"SourceHanSansCN-Medium"
+	],
+	"SoftObjectPaths": [],
+	"Imports": [
+		{
+			"ObjectName": "FontFace",
+			"PathName": "Object:/Script/Engine.FontFace",
+			"OuterIndex": -2,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "SourceHanSansCN-Medium_1",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1.SourceHanSansCN-Medium_1",
+			"ClassIndex": -1,
+			"Class": "Object:/Script/Engine.FontFace",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 8359064,
+			"SerialOffset": 1501,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 168,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 1,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "FontFace /GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1.SourceHanSansCN-Medium_1",
+			"FileOffset": 996
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1",
+			"PackagePath": "/GameMainMenu/Assets/Font/ShiYuan",
+			"AssetName": "SourceHanSansCN-Medium_1",
+			"AssetClassPath": "Object:/Script/Engine.FontFace",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"AssetImportData": "[{ \"RelativeFilename\" : \"D:\\Fonts\\\u601d\u6e90\u9ed1\u4f53 \u7b80\u4f53\u4e2d\u6587 \u884c\u9ad8\u4fee\u6b63\u7248\uff08\u5efa\u8bae\u5148\u4fdd\u5b58\uff0c\u518d\u4e0b\u8f7d\uff09\\SourceHanSansCN-Medium#1.otf\", \"Timestamp\" : \"-62135596800\", \"FileMD5\" : \"\", \"DisplayLabelName\" : \"\" }]"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

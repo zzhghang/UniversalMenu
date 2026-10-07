@@ -1,0 +1,2367 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\WBP_PressAnyKey.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey",
+  "objects": [
+    {
+      "index": 1,
+      "name": "CommonTextBlock",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.CommonTextBlock",
+      "properties": {
+        "Style": "SText_CopyRight_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[029A13033B32B90D8BB242674588F2A0]",
+          "key": "FF7E97314DCB7D31163F55AF48CF365F",
+          "source": "Copyright © 2026 Hangning. All rights reserved."
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 2,
+      "name": "CTB_PressAnyKey",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.CTB_PressAnyKey",
+      "properties": {
+        "Style": "SText_Default_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "PressAnyKey"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125.OverlaySlot_0",
+        "DisplayLabel": "CTB_PressAnyKey"
+      }
+    },
+    {
+      "index": 3,
+      "name": "Ctb_Version",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Ctb_Version",
+      "properties": {
+        "Style": "SText_CopyRight_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1.OverlaySlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_Version"
+      }
+    },
+    {
+      "index": 4,
+      "name": "CommonTextBlock",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.CommonTextBlock",
+      "properties": {
+        "Style": "SText_CopyRight_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[029A13033B32B90D8BB242674588F2A0]",
+          "key": "FF7E97314DCB7D31163F55AF48CF365F",
+          "source": "Copyright © 2026 Hangning. All rights reserved."
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay.OverlaySlot_0"
+      }
+    },
+    {
+      "index": 5,
+      "name": "CTB_PressAnyKey",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.CTB_PressAnyKey",
+      "properties": {
+        "Style": "SText_Default_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "PressAnyKey"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125.OverlaySlot_0",
+        "DisplayLabel": "CTB_PressAnyKey"
+      }
+    },
+    {
+      "index": 6,
+      "name": "Ctb_Version",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Ctb_Version",
+      "properties": {
+        "Style": "SText_CopyRight_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1.OverlaySlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_Version"
+      }
+    },
+    {
+      "index": 7,
+      "name": "BP_GetDesiredFocusTarget",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_Self_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "13a18d336a13c740b4f00c1ace713782"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "name": "BP_GetDesiredInputConfig",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_MakeStruct_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "cc120a08a1fc3641a58eaaee84e5212b"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2"
+        ],
+        "bAllowDeletion": false,
+        "SubGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "4b86bd9b4ddb8847b63230d5913db3ab"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "name": "Play Animation",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_CallFunction_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "47006f771117e746b7e607e1d1241395"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "name": "Push Main Menu",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_CustomEvent_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_AsyncAction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_CallFunction_1"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "8658da8ab6e6f04f869590c09d16a34a"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "name": "Show Version",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_CallFunction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_FormatText_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "2e3e5790e57de54e9e895ba3860d327f"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "name": "OnKeyDown",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_CallFunction_1"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "23e2bc039b133844975eec844dfc3c71"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "name": "OnMouseButtonDown",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_CallFunction_1"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "3847e87de6562841aa30a5826abe2b73"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "name": "BP_GetDesiredFocusTarget",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:BP_GetDesiredFocusTarget",
+      "properties": {}
+    },
+    {
+      "index": 16,
+      "name": "BP_GetDesiredInputConfig",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:BP_GetDesiredInputConfig",
+      "properties": {}
+    },
+    {
+      "index": 17,
+      "name": "Construct",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:Construct",
+      "properties": {}
+    },
+    {
+      "index": 18,
+      "name": "ExecuteUbergraph_WBP_PressAnyKey",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:ExecuteUbergraph_WBP_PressAnyKey",
+      "properties": {}
+    },
+    {
+      "index": 19,
+      "name": "OnAfterPush_6A1FA3FB4DBBEEA3845261863F15412B",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:OnAfterPush_6A1FA3FB4DBBEEA3845261863F15412B",
+      "properties": {}
+    },
+    {
+      "index": 20,
+      "name": "OnKeyDown",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:OnKeyDown",
+      "properties": {}
+    },
+    {
+      "index": 21,
+      "name": "OnMouseButtonDown",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:OnMouseButtonDown",
+      "properties": {}
+    },
+    {
+      "index": 22,
+      "name": "OnWidgetCreatedBeforePush_6A1FA3FB4DBBEEA3845261863F15412B",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:OnWidgetCreatedBeforePush_6A1FA3FB4DBBEEA3845261863F15412B",
+      "properties": {}
+    },
+    {
+      "index": 23,
+      "name": "PushMainMenu",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:PushMainMenu",
+      "properties": {}
+    },
+    {
+      "index": 24,
+      "name": "K2Node_AsyncAction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AsyncAction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_AsyncAction_0",
+      "properties": {
+        "ProxyFactoryFunctionName": "PushSoftWidget",
+        "ProxyFactoryClass": "AA_PushSoftWidget",
+        "ProxyClass": "AA_PushSoftWidget",
+        "NodePosX": 400,
+        "NodePosY": 480,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "fba31f6aa3eebb4d866152842ffec713"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "PlayAnimation",
+          "bSelfContext": true
+        },
+        "NodePosX": 384,
+        "NodePosY": 176,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e82463b40e5f0e42b51d2810afbb6d28"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_CallFunction_0",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 192,
+        "NodePosY": 544,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eb13c73e85d6324ebb0b180e76915e7b"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FrontendFunctionLibrary",
+          "MemberName": "GetFrontendSoftWidgetClassByTag"
+        },
+        "NodePosY": 608,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "373dd30d1c6ead45949fef9ab80077bd"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "TextBlock",
+          "MemberName": "SetText"
+        },
+        "NodePosX": 848,
+        "NodePosY": 192,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0709bc1d0d888044993dfa4753231f7b"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FrontendFunctionLibrary",
+          "MemberName": "GetProjectVersion"
+        },
+        "NodePosX": 816,
+        "NodePosY": 496,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "027ccab6b07a374ba3ef49c0cbbcec1d"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_CallFunction_2",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetTextLibrary",
+          "MemberName": "Conv_StringToText"
+        },
+        "NodePosX": 800,
+        "NodePosY": 432,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0e6cf5b76a59414cafc49349c8591f5f"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "PushMainMenu",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "910e930fb5d1e94e82672a161480bc13"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 144,
+        "NodePosY": -15,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0c71e18317ef8c41949340fbe5c419f9"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "WidgetBlueprintLibrary",
+          "MemberName": "Handled"
+        },
+        "NodePosX": 368,
+        "NodePosY": 96,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f92d9c0a5ca13c4c9702124240a1cc5d"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberName": "PushMainMenu",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "910e930fb5d1e94e82672a161480bc13"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 208,
+        "NodePosY": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "85619c945b71c0428afb807f24d42f1a"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "WidgetBlueprintLibrary",
+          "MemberName": "Handled"
+        },
+        "NodePosX": 448,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "6bc7941362e1d246a9e64223bddcecaa"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "name": "K2Node_Composite_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_Tunnel_0",
+        "NodePosX": 288,
+        "NodePosY": 192,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "播放 动画(按下任意键 闪烁)",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "392cf3bdecf9354fb35ece3e1482e9be"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "name": "K2Node_Composite_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_Tunnel_0",
+        "NodePosX": 288,
+        "NodePosY": 320,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "显示主菜单界面",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b8c51a4b7f1d254b820ae300352a85c4"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "name": "K2Node_Composite_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_Tunnel_0",
+        "NodePosX": 512,
+        "NodePosY": 192,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "显示版本号信息,需要在设置中设置",
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1db775dd858b2543989e32a3ea795da2"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "name": "K2Node_CustomEvent_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CustomEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_CustomEvent_0",
+      "properties": {
+        "CustomFunctionName": "PushMainMenu",
+        "NodePosY": 465,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "910e930fb5d1e94e82672a161480bc13"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 207,
+        "bCommentBubblePinned": true,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3b32a0cdc92df0498624724f6ebe6faf"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "name": "K2Node_FormatText_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FormatText",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_FormatText_0",
+      "properties": {
+        "PinNames": [
+          "0"
+        ],
+        "NodePosX": 768,
+        "NodePosY": 336,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "843ae6aeaa066d41b5a78b25a0aa825e"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "CommonActivatableWidget",
+          "MemberName": "BP_GetDesiredFocusTarget"
+        },
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a8297bac7dc97147b2ee76d91f379d72"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "CommonActivatableWidget",
+          "MemberName": "BP_GetDesiredInputConfig"
+        },
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1e38a04a3d1fab4b80ba3a37529bc118"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_FunctionEntry_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "OnKeyDown"
+        },
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ad755644bcca3f429501339cb1cac9a4"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_FunctionEntry_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "OnMouseButtonDown"
+        },
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f81e1dcc2881df4ea585f98457cb8610"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonActivatableWidget",
+          "MemberName": "BP_GetDesiredFocusTarget"
+        },
+        "NodePosX": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bd4ff62ecfe5304aadfddd052a1e9d2d"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonActivatableWidget",
+          "MemberName": "BP_GetDesiredInputConfig"
+        },
+        "NodePosX": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7e9610e6c5241b41ac9303063f28a7ac"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "OnKeyDown"
+        },
+        "NodePosX": 368,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5daedff34f9d3349a95f670177480580"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "OnMouseButtonDown"
+        },
+        "NodePosX": 432,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "741f524c92c9cf4ab0b32c14112af32a"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "name": "K2Node_MakeStruct_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_MakeStruct",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_MakeStruct_0",
+      "properties": {
+        "bMadeAfterOverridePinRemoval": true,
+        "ShowPinForProperties": [
+          {
+            "PropertyName": "bIgnoreMoveInput",
+            "PropertyFriendlyName": "Ignore Move Input",
+            "PropertyTooltip": "",
+            "CategoryName": "InputConfig",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "bIgnoreLookInput",
+            "PropertyFriendlyName": "Ignore Look Input",
+            "PropertyTooltip": "",
+            "CategoryName": "InputConfig",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "InputMode",
+            "PropertyFriendlyName": "Input Mode",
+            "PropertyTooltip": "",
+            "CategoryName": "InputConfig",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "MouseCaptureMode",
+            "PropertyFriendlyName": "Mouse Capture Mode",
+            "PropertyTooltip": "",
+            "CategoryName": "InputConfig",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "MouseLockMode",
+            "PropertyFriendlyName": "Mouse Lock Mode",
+            "PropertyTooltip": "",
+            "CategoryName": "InputConfig",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          },
+          {
+            "PropertyName": "bHideCursorDuringViewportCapture",
+            "PropertyFriendlyName": "Hide Cursor During Viewport Capture",
+            "PropertyTooltip": "",
+            "CategoryName": "InputConfig",
+            "bShowPin": true,
+            "bCanToggleVisibility": true,
+            "bPropertyIsCustomized": false,
+            "bHasOverridePin": false,
+            "bIsMarkedForAdvancedDisplay": false,
+            "bIsOverrideEnabled": true,
+            "bIsSetValuePinVisible": true,
+            "bIsOverridePinVisible": true
+          }
+        ],
+        "StructType": "UIInputConfig",
+        "NodePosX": 16,
+        "NodePosY": 96,
+        "AdvancedPinDisplay": "ENodeAdvancedPins::Shown",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "9c4d17bd16000b458446710de0988e3d"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "name": "K2Node_Self_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Self",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_Self_0",
+      "properties": {
+        "NodePosX": 224,
+        "NodePosY": 96,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "967ad0facbd57448bdfd18ef04735937"
+        }
+      }
+    },
+    {
+      "index": 51,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0",
+        "bCanHaveOutputs": true,
+        "NodePosX": 96,
+        "NodePosY": 191,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e62b52f475b06d4393f30b2e66668d55"
+        }
+      }
+    },
+    {
+      "index": 52,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0",
+        "bCanHaveInputs": true,
+        "NodePosX": 848,
+        "NodePosY": 192,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c0ff19f46c01b045b70bfb92483057e6"
+        }
+      }
+    },
+    {
+      "index": 53,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1",
+        "bCanHaveOutputs": true,
+        "NodePosX": -160,
+        "NodePosY": 512,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c2b9f4906eb86c48a6fc00459347f420"
+        }
+      }
+    },
+    {
+      "index": 54,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1.Push Main Menu.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_1",
+        "bCanHaveInputs": true,
+        "NodePosX": 688,
+        "NodePosY": 512,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5b3e0547240ebd45abad2af3891eebf4"
+        }
+      }
+    },
+    {
+      "index": 55,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2",
+        "bCanHaveOutputs": true,
+        "NodePosX": 512,
+        "NodePosY": 336,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ed9d276eb24ea3449373adc29ab0c2dd"
+        }
+      }
+    },
+    {
+      "index": 56,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2",
+        "bCanHaveInputs": true,
+        "NodePosX": 1136,
+        "NodePosY": 336,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4272e1356fb3bc429f60d26aa394875d"
+        }
+      }
+    },
+    {
+      "index": 57,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_0.Play Animation.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "A_flicker",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "0a8f528717827145a8c7c5437f77f4ff"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 224,
+        "NodePosY": 281,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b7017fa41c6fe94eb54bea430bd8cd9f"
+        }
+      }
+    },
+    {
+      "index": 58,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Composite_2.Show Version.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_Version",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "feea054246214941b2ddf1ed2b22982b"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 672,
+        "NodePosY": 272,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0c6f9055646012469f1a4ac0c0135300"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "name": "A_flicker",
+      "class": "Object:/Script/MovieScene.MovieScene",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker",
+      "properties": {
+        "Possessables": [
+          {
+            "Tags": [],
+            "Guid": {
+              "struct": "Guid",
+              "raw": "85e5634d104a8449bde7ff0269700c55"
+            },
+            "Name": "CTB_PressAnyKey",
+            "PossessedObjectClass": {
+              "type": {
+                "name": "SoftObjectProperty",
+                "params": []
+              },
+              "raw": "03000000"
+            },
+            "ParentGuid": {
+              "struct": "Guid",
+              "raw": "00000000000000000000000000000000"
+            },
+            "SpawnableObjectBindingID": {
+              "Guid": {
+                "struct": "Guid",
+                "raw": "00000000000000000000000000000000"
+              },
+              "SequenceID": 0,
+              "ResolveParentIndex": -1
+            }
+          }
+        ],
+        "ObjectBindings": [
+          {
+            "ObjectGuid": {
+              "struct": "Guid",
+              "raw": "85e5634d104a8449bde7ff0269700c55"
+            },
+            "Tracks": [
+              "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0"
+            ],
+            "SortingOrder": -1,
+            "Decorations": []
+          }
+        ],
+        "PlaybackRange": {
+          "raw": "01000000000061ea0000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "MovieSceneFrameRange",
+                "params": [
+                  {
+                    "name": "/Script/MovieScene",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 10)"
+        },
+        "DisplayRate": {
+          "Numerator": 20
+        },
+        "EditorData": {},
+        "NodeGroupCollection": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.NodeGroupCollection",
+        "Signature": {
+          "struct": "Guid",
+          "raw": "4fd39da634d84b4b8bf7696b5f5d0d3d"
+        }
+      }
+    },
+    {
+      "index": 60,
+      "name": "A_flicker",
+      "class": "Object:/Script/MovieScene.MovieScene",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker",
+      "properties": {
+        "Possessables": [
+          {
+            "Tags": [],
+            "Guid": {
+              "struct": "Guid",
+              "raw": "85e5634d104a8449bde7ff0269700c55"
+            },
+            "Name": "CTB_PressAnyKey",
+            "PossessedObjectClass": {
+              "type": {
+                "name": "SoftObjectProperty",
+                "params": []
+              },
+              "raw": "03000000"
+            },
+            "ParentGuid": {
+              "struct": "Guid",
+              "raw": "00000000000000000000000000000000"
+            },
+            "SpawnableObjectBindingID": {
+              "Guid": {
+                "struct": "Guid",
+                "raw": "00000000000000000000000000000000"
+              },
+              "SequenceID": 0,
+              "ResolveParentIndex": -1
+            }
+          }
+        ],
+        "ObjectBindings": [
+          {
+            "ObjectGuid": {
+              "struct": "Guid",
+              "raw": "85e5634d104a8449bde7ff0269700c55"
+            },
+            "Tracks": [
+              "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0"
+            ],
+            "SortingOrder": -1,
+            "Decorations": []
+          }
+        ],
+        "PlaybackRange": {
+          "raw": "01000000000061ea0000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "MovieSceneFrameRange",
+                "params": [
+                  {
+                    "name": "/Script/MovieScene",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 10)"
+        },
+        "DisplayRate": {
+          "Numerator": 20
+        },
+        "EditorData": {},
+        "NodeGroupCollection": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.NodeGroupCollection",
+        "Signature": {
+          "struct": "Guid",
+          "raw": "4fd39da634d84b4b8bf7696b5f5d0d3d"
+        }
+      }
+    },
+    {
+      "index": 61,
+      "name": "EaseInFunction",
+      "class": "Object:/Script/MovieScene.MovieSceneBuiltInEasingFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction",
+      "properties": {}
+    },
+    {
+      "index": 62,
+      "name": "EaseOutFunction",
+      "class": "Object:/Script/MovieScene.MovieSceneBuiltInEasingFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction",
+      "properties": {}
+    },
+    {
+      "index": 63,
+      "name": "EaseInFunction",
+      "class": "Object:/Script/MovieScene.MovieSceneBuiltInEasingFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction",
+      "properties": {}
+    },
+    {
+      "index": 64,
+      "name": "EaseOutFunction",
+      "class": "Object:/Script/MovieScene.MovieSceneBuiltInEasingFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction",
+      "properties": {}
+    },
+    {
+      "index": 65,
+      "name": "MovieSceneFloatSection_0",
+      "class": "Object:/Script/MovieSceneTracks.MovieSceneFloatSection",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0",
+      "properties": {
+        "FloatCurve": {
+          "raw": "04040400000003000000000000003075000060ea00001c000000030000000000803f000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000020000000000803f000000000000000000000000000000000000000002000000000000000000000060ea00000100000000000000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "MovieSceneFloatChannel",
+                "params": [
+                  {
+                    "name": "/Script/MovieScene",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "invalid name 263172"
+        },
+        "Easing": {
+          "EaseIn": {
+            "type": {
+              "name": "InterfaceProperty",
+              "params": []
+            },
+            "raw": "3d000000"
+          },
+          "EaseOut": {
+            "type": {
+              "name": "InterfaceProperty",
+              "params": []
+            },
+            "raw": "3e000000"
+          }
+        },
+        "SectionRange": {
+          "raw": "01000000000160ea0000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "MovieSceneFrameRange",
+                "params": [
+                  {
+                    "name": "/Script/MovieScene",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 10)"
+        },
+        "Signature": {
+          "struct": "Guid",
+          "raw": "a4f7857d5a225f4ebf5e1907d56eb713"
+        }
+      }
+    },
+    {
+      "index": 66,
+      "name": "MovieSceneFloatSection_0",
+      "class": "Object:/Script/MovieSceneTracks.MovieSceneFloatSection",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0",
+      "properties": {
+        "FloatCurve": {
+          "raw": "04040400000003000000000000003075000060ea00001c000000030000000000803f000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000020000000000803f000000000000000000000000000000000000000002000000000000000000000060ea00000100000000000000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "MovieSceneFloatChannel",
+                "params": [
+                  {
+                    "name": "/Script/MovieScene",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "invalid name 263172"
+        },
+        "Easing": {
+          "EaseIn": {
+            "type": {
+              "name": "InterfaceProperty",
+              "params": []
+            },
+            "raw": "3f000000"
+          },
+          "EaseOut": {
+            "type": {
+              "name": "InterfaceProperty",
+              "params": []
+            },
+            "raw": "40000000"
+          }
+        },
+        "SectionRange": {
+          "raw": "01000000000160ea0000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "MovieSceneFrameRange",
+                "params": [
+                  {
+                    "name": "/Script/MovieScene",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 10)"
+        },
+        "Signature": {
+          "struct": "Guid",
+          "raw": "a4f7857d5a225f4ebf5e1907d56eb713"
+        }
+      }
+    },
+    {
+      "index": 67,
+      "name": "MovieSceneFloatTrack_0",
+      "class": "Object:/Script/MovieSceneTracks.MovieSceneFloatTrack",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0",
+      "properties": {
+        "PropertyBinding": {
+          "PropertyName": "RenderOpacity",
+          "PropertyPath": "RenderOpacity",
+          "bCanUseClassLookup": true
+        },
+        "Sections": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0"
+        ],
+        "DisplayName": {
+          "namespace": "UObjectDisplayNames",
+          "key": "Widget:RenderOpacity",
+          "source": "Render Opacity"
+        },
+        "EvaluationFieldGuid": {
+          "struct": "Guid",
+          "raw": "0065047b77e0d24e9fbcd632b3456ee4"
+        },
+        "EvaluationField": {
+          "Entries": [
+            {
+              "Section": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0",
+              "Range": {
+                "LowerBound": {
+                  "Type": "ERangeBoundTypes::Inclusive",
+                  "Value": {
+                    "raw": "00000000",
+                    "type": {
+                      "name": "StructProperty",
+                      "params": [
+                        {
+                          "name": "FrameNumber",
+                          "params": [
+                            {
+                              "name": "/Script/CoreUObject",
+                              "params": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "error": "unpack_from requires a buffer of at least 8 bytes for unpacking 8 bytes at offset 0 (actual buffer size is 4)"
+                  }
+                },
+                "UpperBound": {
+                  "Type": "ERangeBoundTypes::Inclusive",
+                  "Value": {
+                    "raw": "60ea0000",
+                    "type": {
+                      "name": "StructProperty",
+                      "params": [
+                        {
+                          "name": "FrameNumber",
+                          "params": [
+                            {
+                              "name": "/Script/CoreUObject",
+                              "params": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "error": "unpack_from requires a buffer of at least 8 bytes for unpacking 8 bytes at offset 0 (actual buffer size is 4)"
+                  }
+                }
+              },
+              "ForcedTime": {
+                "raw": "00000080",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "FrameNumber",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 8 bytes for unpacking 8 bytes at offset 0 (actual buffer size is 4)"
+              },
+              "Flags": "ESectionEvaluationFlags::None",
+              "LegacySortOrder": {
+                "type": {
+                  "name": "Int16Property",
+                  "params": []
+                },
+                "raw": "0000"
+              }
+            }
+          ]
+        },
+        "Signature": {
+          "struct": "Guid",
+          "raw": "0065047b77e0d24e9fbcd632b3456ee4"
+        }
+      }
+    },
+    {
+      "index": 68,
+      "name": "MovieSceneFloatTrack_0",
+      "class": "Object:/Script/MovieSceneTracks.MovieSceneFloatTrack",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0",
+      "properties": {
+        "PropertyBinding": {
+          "PropertyName": "RenderOpacity",
+          "PropertyPath": "RenderOpacity",
+          "bCanUseClassLookup": true
+        },
+        "Sections": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0"
+        ],
+        "DisplayName": {
+          "namespace": "UObjectDisplayNames",
+          "key": "Widget:RenderOpacity",
+          "source": "Render Opacity"
+        },
+        "EvaluationFieldGuid": {
+          "struct": "Guid",
+          "raw": "0065047b77e0d24e9fbcd632b3456ee4"
+        },
+        "EvaluationField": {
+          "Entries": [
+            {
+              "Section": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.MovieSceneFloatTrack_0.MovieSceneFloatSection_0",
+              "Range": {
+                "LowerBound": {
+                  "Type": "ERangeBoundTypes::Inclusive",
+                  "Value": {
+                    "raw": "00000000",
+                    "type": {
+                      "name": "StructProperty",
+                      "params": [
+                        {
+                          "name": "FrameNumber",
+                          "params": [
+                            {
+                              "name": "/Script/CoreUObject",
+                              "params": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "error": "unpack_from requires a buffer of at least 8 bytes for unpacking 8 bytes at offset 0 (actual buffer size is 4)"
+                  }
+                },
+                "UpperBound": {
+                  "Type": "ERangeBoundTypes::Inclusive",
+                  "Value": {
+                    "raw": "60ea0000",
+                    "type": {
+                      "name": "StructProperty",
+                      "params": [
+                        {
+                          "name": "FrameNumber",
+                          "params": [
+                            {
+                              "name": "/Script/CoreUObject",
+                              "params": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "error": "unpack_from requires a buffer of at least 8 bytes for unpacking 8 bytes at offset 0 (actual buffer size is 4)"
+                  }
+                }
+              },
+              "ForcedTime": {
+                "raw": "00000080",
+                "type": {
+                  "name": "StructProperty",
+                  "params": [
+                    {
+                      "name": "FrameNumber",
+                      "params": [
+                        {
+                          "name": "/Script/CoreUObject",
+                          "params": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "error": "unpack_from requires a buffer of at least 8 bytes for unpacking 8 bytes at offset 0 (actual buffer size is 4)"
+              },
+              "Flags": "ESectionEvaluationFlags::None",
+              "LegacySortOrder": {
+                "type": {
+                  "name": "Int16Property",
+                  "params": []
+                },
+                "raw": "0000"
+              }
+            }
+          ]
+        },
+        "Signature": {
+          "struct": "Guid",
+          "raw": "0065047b77e0d24e9fbcd632b3456ee4"
+        }
+      }
+    },
+    {
+      "index": 69,
+      "name": "NodeGroupCollection",
+      "class": "Object:/Script/MovieScene.MovieSceneNodeGroupCollection",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker.NodeGroupCollection",
+      "properties": {}
+    },
+    {
+      "index": 70,
+      "name": "NodeGroupCollection",
+      "class": "Object:/Script/MovieScene.MovieSceneNodeGroupCollection",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker.NodeGroupCollection",
+      "properties": {}
+    },
+    {
+      "index": 71,
+      "name": "Overlay",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 72,
+      "name": "Overlay_1",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 73,
+      "name": "Overlay_125",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 74,
+      "name": "Overlay",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 75,
+      "name": "Overlay_1",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 76,
+      "name": "Overlay_125",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 77,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.CommonTextBlock"
+      }
+    },
+    {
+      "index": 78,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Ctb_Version"
+      }
+    },
+    {
+      "index": 79,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.CTB_PressAnyKey"
+      }
+    },
+    {
+      "index": 80,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.CommonTextBlock"
+      }
+    },
+    {
+      "index": 81,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Ctb_Version"
+      }
+    },
+    {
+      "index": 82,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.CTB_PressAnyKey"
+      }
+    },
+    {
+      "index": 83,
+      "name": "Default__WBP_PressAnyKey_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.Default__WBP_PressAnyKey_C",
+      "properties": {
+        "UberGraphFrame": {},
+        "bSetVisibilityOnActivated": true,
+        "ActivatedVisibility": "ESlateVisibility::Visible",
+        "bIsFocusable": true,
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 84,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "Center_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "7c638020abc2ab43bfbf58e65dc5dcbb"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125"
+          },
+          {
+            "Name": "LeftBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "5c82f275913a1a458f0a7b8e8b115f42"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay"
+          },
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1"
+          }
+        ],
+        "bIsVariable": false,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 85,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "Center_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "7c638020abc2ab43bfbf58e65dc5dcbb"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125"
+          },
+          {
+            "Name": "LeftBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "5c82f275913a1a458f0a7b8e8b115f42"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay"
+          },
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1"
+          }
+        ],
+        "bIsVariable": false,
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 86,
+      "name": "A_flicker",
+      "class": "Object:/Script/UMG.WidgetAnimation",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker",
+      "properties": {
+        "MovieScene": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker.A_flicker",
+        "AnimationBindings": [
+          {
+            "WidgetName": "CTB_PressAnyKey",
+            "SlotWidgetName": "None",
+            "AnimationGuid": {
+              "struct": "Guid",
+              "raw": "85e5634d104a8449bde7ff0269700c55"
+            },
+            "bIsRootWidget": false,
+            "DynamicBinding": {
+              "Function": null,
+              "ResolveParamsProperty": {
+                "type": {
+                  "name": "FieldPathProperty",
+                  "params": []
+                },
+                "raw": "0000000000000000"
+              },
+              "PayloadVariables": {
+                "type": {
+                  "name": "MapProperty",
+                  "params": [
+                    {
+                      "name": "NameProperty",
+                      "params": []
+                    },
+                    {
+                      "name": "StructProperty",
+                      "params": [
+                        {
+                          "name": "MovieSceneDynamicBindingPayloadVariable",
+                          "params": [
+                            {
+                              "name": "/Script/MovieScene",
+                              "params": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "raw": "0000000000000000"
+              },
+              "ResolveParamsPinName": "None",
+              "WeakEndpoint": null
+            }
+          }
+        ],
+        "DisplayLabel": "A_flicker",
+        "Signature": {
+          "struct": "Guid",
+          "raw": "9e3f803527525f4f83346fd8f2508613"
+        }
+      }
+    },
+    {
+      "index": 87,
+      "name": "A_flicker_INST",
+      "class": "Object:/Script/UMG.WidgetAnimation",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST",
+      "properties": {
+        "MovieScene": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST.A_flicker",
+        "AnimationBindings": [
+          {
+            "WidgetName": "CTB_PressAnyKey",
+            "SlotWidgetName": "None",
+            "AnimationGuid": {
+              "struct": "Guid",
+              "raw": "85e5634d104a8449bde7ff0269700c55"
+            },
+            "bIsRootWidget": false,
+            "DynamicBinding": {
+              "Function": null,
+              "ResolveParamsProperty": {
+                "type": {
+                  "name": "FieldPathProperty",
+                  "params": []
+                },
+                "raw": "0000000000000000"
+              },
+              "PayloadVariables": {
+                "type": {
+                  "name": "MapProperty",
+                  "params": [
+                    {
+                      "name": "NameProperty",
+                      "params": []
+                    },
+                    {
+                      "name": "StructProperty",
+                      "params": [
+                        {
+                          "name": "MovieSceneDynamicBindingPayloadVariable",
+                          "params": [
+                            {
+                              "name": "/Script/MovieScene",
+                              "params": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "raw": "0000000000000000"
+              },
+              "ResolveParamsPinName": "None",
+              "WeakEndpoint": null
+            }
+          }
+        ],
+        "DisplayLabel": "A_flicker",
+        "Signature": {
+          "struct": "Guid",
+          "raw": "9e3f803527525f4f83346fd8f2508613"
+        }
+      }
+    },
+    {
+      "index": 88,
+      "name": "WBP_PressAnyKey",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey",
+      "properties": {
+        "Animations": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:A_flicker"
+        ],
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000080000006a01000000000000511259ee22ed0247988c5c57f23736256000000000000000a7b5723de858af45a4f117b71a83fdb6fe0000007e0000004088efa53542ff4bb1cf1fddd5e26502fe000000000000001db0ff21b769ba42bcf26faea58fbf995b000000000000003d4c96bb72b0e744b9448a20f6089e4a0c000000000000000a8f528717827145a8c7c5437f77f4fffe00000002000000eeb58a7cc680e949bee8c83610100e956100000000000000feea054246214941b2ddf1ed2b22982b"
+        },
+        "TickPrediction": "EWidgetCompileTimeTickPrediction::OnDemand",
+        "TickPredictionReason": "Anim",
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree",
+        "ParentClass": "W_ActivatableBase",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph"
+        ],
+        "FunctionGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget"
+        ],
+        "GeneratedVariables": [
+          {
+            "VarName": "Ctb_Version",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "feea054246214941b2ddf1ed2b22982b"
+            },
+            "VarType": {
+              "raw": "f100000000000000ee00000000000000efffffff00000000000000000000000000ee0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Ctb_Version",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_PressAnyKey"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "A_flicker",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "0a8f528717827145a8c7c5437f77f4ff"
+            },
+            "VarType": {
+              "raw": "f100000000000000ee00000000000000d9ffffff00010000000000000000000000ee0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "A_flicker",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1420008000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "Animations"
+              }
+            ],
+            "DefaultValue": ""
+          }
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "Animations",
+          "Activatable Widget",
+          "Mouse",
+          "Input",
+          "Events",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "WBP Press Any Key"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "a479dec32483c9c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1008830044"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "01000000"
+            },
+            "SavedViewOffset": {
+              "raw": "f8abf4c38c63d4c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1007375368"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "02000000"
+            },
+            "SavedViewOffset": {
+              "raw": "fc2271c314aa37c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1015995652"
+            },
+            "SavedZoomAmount": 1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "f99c903918d10e4693025d08d74e90c7"
+        }
+      }
+    },
+    {
+      "index": 89,
+      "name": "WBP_PressAnyKey_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree",
+        "Animations": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:A_flicker_INST"
+        ],
+        "UberGraphFunction": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:ExecuteUbergraph_WBP_PressAnyKey",
+        "PropertyGuids": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000020000000c000000000000000a8f528717827145a8c7c5437f77f4ff6100000000000000feea054246214941b2ddf1ed2b22982b"
+        }
+      }
+    },
+    {
+      "index": 90,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.WBP_TemplateLayout",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_125",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.CTB_PressAnyKey",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.CommonTextBlock",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Overlay_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:WidgetTree.Ctb_Version"
+        ]
+      }
+    },
+    {
+      "index": 91,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.WBP_TemplateLayout",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_125",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.CTB_PressAnyKey",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.CommonTextBlock",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Overlay_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:WidgetTree.Ctb_Version"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph",
+    "Object:/Script/CommonUI.CommonTextBlock",
+    "Object:/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:OnMouseButtonDown",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:OnKeyDown",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C:OnKeyDown",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C:OnMouseButtonDown",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredInputConfig.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C:BP_GetDesiredInputConfig",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnMouseButtonDown.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C:BP_GetDesiredFocusTarget",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:OnKeyDown.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C:PushMainMenu",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:BP_GetDesiredInputConfig",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey:BP_GetDesiredFocusTarget.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.SKEL_WBP_PressAnyKey_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_PressAnyKey.WBP_PressAnyKey_C:BP_GetDesiredFocusTarget"
+  ],
+  "text": []
+}

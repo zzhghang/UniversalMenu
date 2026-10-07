@@ -1,0 +1,1569 @@
+{
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/DA_OptionsConfig.uasset": {
+    "Tabs": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/DA_Gameplay.DA_Gameplay",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/DA_Audio.DA_Audio",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/DA_Video.DA_Video"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/DA_Audio.uasset": {
+    "TabId": "Tab-Audio",
+    "TabName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Tab_Audio"
+    },
+    "Categories": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/Category-Volume.Category-Volume",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Category-Sound.Category-Sound"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/DA_Gameplay.uasset": {
+    "TabId": "Tab-Gameplay",
+    "TabName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Tab_Gameplay"
+    },
+    "Categories": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Category-HUD.Category-HUD",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Category-Game.Category-Game"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/DA_Video.uasset": {
+    "TabId": "Tab-Video",
+    "TabName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Tab_Video"
+    },
+    "Categories": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Display/Display.Display",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/Graphics.Graphics",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/AdvancedGraphics/AdvancedGraphics.AdvancedGraphics"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Background-Sound.uasset": {
+    "DataId": "Background-Sound",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_BackgroundSound"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_BackgroundSound_Desc"
+    },
+    "BindingKey": "AllowBackgroundSound",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Category-Sound.uasset": {
+    "CategoryId": "Category-Sound",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_Sound"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Background-Sound.Background-Sound",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-DialogueBoost.Sound-DialogueBoost",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-DRC.Sound-DRC",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-HRTF.Sound-HRTF",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-Mono.Sound-Mono",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-Subtitles.Sound-Subtitles"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-DialogueBoost.uasset": {
+    "DataId": "Sound-DialogueBoost",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DialogueBoost"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DialogueBoost_Desc"
+    },
+    "BindingKey": "DialogueBoost",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-DRC.uasset": {
+    "DataId": "Sound-DRC",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DynamicRange"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DynamicRange_Desc"
+    },
+    "BindingKey": "DynamicRangeCompression",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-HRTF.uasset": {
+    "DataId": "Sound-HRTF",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_3DSpatialAudio"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_3DSpatialAudio_Desc"
+    },
+    "BindingKey": "HRTFEnabled",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-Mono.uasset": {
+    "DataId": "Sound-Mono",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_MonoOutput"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_MonoOutput_Desc"
+    },
+    "BindingKey": "MonoOutput",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Sound/Sound-Subtitles.uasset": {
+    "DataId": "Sound-Subtitles",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Subtitles"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Subtitles_Desc"
+    },
+    "BindingKey": "SubtitlesEnabled",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/AmbientVolume.uasset": {
+    "DataId": "AmbientVolume",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_AmbientVolume"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_AmbientVolume_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "AmbientVolume",
+    "bApplyImmediately": false,
+    "DefaultValue": "1.0"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/Category-Volume.uasset": {
+    "CategoryId": "Category-Volume",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_Volume"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/OverallVolume.OverallVolume",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/AmbientVolume.AmbientVolume",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/MusicVolume.MusicVolume",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/SFXVolume.SFXVolume",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/UIVolume.UIVolume",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/VoiceVolume.VoiceVolume"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/MusicVolume.uasset": {
+    "DataId": "MusicVolume",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_MusicVolume"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_MusicVolume_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "MusicVolume",
+    "bApplyImmediately": false,
+    "DefaultValue": "1.0"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/OverallVolume.uasset": {
+    "DataId": "OverallVolume",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_OverallVolume"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_OverallVolume_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "OverallVolume",
+    "bApplyImmediately": false,
+    "DefaultValue": "1.0"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/SFXVolume.uasset": {
+    "DataId": "SFXVolume",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_SFXVolume"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_SFXVolume_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "SFXVolume",
+    "bApplyImmediately": false,
+    "DefaultValue": "1.0"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/UIVolume.uasset": {
+    "DataId": "UIVolume",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_UIVolume"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_UIVolume_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "UIVolume",
+    "bApplyImmediately": false,
+    "DefaultValue": "1.0"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Audio/Volume/VoiceVolume.uasset": {
+    "DataId": "VoiceVolume",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_VoiceVolume"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_VoiceVolume_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "VoiceVolume",
+    "bApplyImmediately": false,
+    "DefaultValue": "1.0"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Category-Game.uasset": {
+    "CategoryId": "Category-Game",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_Game"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Entry-Language.Entry-Language",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Entry-Difficulty.Entry-Difficulty",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Entry-AutoSave.Entry-AutoSave"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Entry-AutoSave.uasset": {
+    "DataId": "Entry-AutoSave",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_AutoSave"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_AutoSave_Desc"
+    },
+    "BindingKey": "AutoSave",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Entry-Difficulty.uasset": {
+    "DataId": "Entry-Difficulty",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Difficulty"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Difficulty_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::String",
+    "BindingKey": "Difficulty",
+    "bApplyImmediately": false,
+    "DefaultStringValue": "Normal",
+    "AvailableOptions": [
+      {
+        "key": "Easy",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Difficulty_Easy"
+        }
+      },
+      {
+        "key": "Normal",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Difficulty_Normal"
+        }
+      },
+      {
+        "key": "Hard",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Difficulty_Hard"
+        }
+      },
+      {
+        "key": "Nightmare",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Difficulty_Nightmare"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/Game/Entry-Language.uasset": {
+    "DataId": "Entry-Language",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Language"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Language_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Culture",
+    "BindingKey": "CurrentCulture",
+    "DefaultStringValue": "en"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Category-HUD.uasset": {
+    "CategoryId": "Category-HUD",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_HUD"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-DamageNumbers.Entry-DamageNumbers",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-HealthBar.Entry-HealthBar",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-HighlightInteraction.Entry-HighlightInteraction",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-Subtitles.Entry-Subtitles"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-DamageNumbers.uasset": {
+    "DataId": "Entry-DamageNumbers",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DamageNumbers"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DamageNumbers_Desc"
+    },
+    "BindingKey": "ShowDamageNumbers",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-HealthBar.uasset": {
+    "DataId": "Entry-HealthBar",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_HealthBar"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_HealthBar_Desc"
+    },
+    "BindingKey": "ShowHealthBar",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-HighlightInteraction.uasset": {
+    "DataId": "Entry-HighlightInteraction",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_HighlightInteraction"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_HighlightInteraction_Desc"
+    },
+    "BindingKey": "HighlightInteraction",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Gameplay/HUD/Entry-Subtitles.uasset": {
+    "DataId": "Entry-Subtitles",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Subtitles"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Subtitles_Desc"
+    },
+    "BindingKey": "ShowSubtitles",
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/AdvancedGraphics/AdvancedGraphics.uasset": {
+    "CategoryId": "AdvancedGraphicsCategory",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_AdvancedGraphics"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/AdvancedGraphics/Entry-VSync.Entry-VSync",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/AdvancedGraphics/Entry-FrameRateLimit.Entry-FrameRateLimit"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/AdvancedGraphics/Entry-FrameRateLimit.uasset": {
+    "DataId": "Entry-FrameRateLimit",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_FrameRateLimit"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_FrameRateLimit_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::String",
+    "BindingKey": "FrameRateLimit",
+    "DefaultStringValue": "0",
+    "AvailableOptions": [
+      {
+        "key": "0",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "FPS_Unlimited"
+        }
+      },
+      {
+        "key": "30",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "FPS_30"
+        }
+      },
+      {
+        "key": "60",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "FPS_60"
+        }
+      },
+      {
+        "key": "120",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "FPS_120"
+        }
+      },
+      {
+        "key": "144",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "FPS_144"
+        }
+      },
+      {
+        "key": "240",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "FPS_240"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/AdvancedGraphics/Entry-VSync.uasset": {
+    "DataId": "Entry-VSync",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_VSync"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_VSync_Desc"
+    },
+    "BindingKey": "VSync"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Display/Display.uasset": {
+    "CategoryId": "Tab-Display",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_Display"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Display/WindowMode.WindowMode",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Display/Resolution.Resolution"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Display/Resolution.uasset": {
+    "DataId": "Resolution",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Resolution"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_Resolution_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Resolution",
+    "BindingKey": "Resolution",
+    "bPackagedBuildOnly": true,
+    "DefaultStringValue": "2554x1352"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Display/WindowMode.uasset": {
+    "DataId": "WindowMode",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_WindowMode"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_WindowMode_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "FullscreenMode"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/AntiAliasingQuality.uasset": {
+    "DataId": "AntiAliasingQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_AAQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_AAQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "AntiAliasingQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/DisplayGamma.uasset": {
+    "DataId": "DisplayGamma",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DisplayGamma"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_DisplayGamma_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "DisplayGamma",
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/GlobalIlluminationQuality.uasset": {
+    "DataId": "GlobalIlluminationQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_GIQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_GIQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "GlobalIlluminationQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/Graphics.uasset": {
+    "CategoryId": "GraphicsCategory",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Category_Graphics"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/DisplayGamma.DisplayGamma",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/OverallQuality.OverallQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ResolutionScale.ResolutionScale",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/GlobalIlluminationQuality.GlobalIlluminationQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ShadowQuality.ShadowQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/AntiAliasingQuality.AntiAliasingQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ViewDistanceQuality.ViewDistanceQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/TextureQuality.TextureQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/VisualEffectsQuality.VisualEffectsQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ReflectionQuality.ReflectionQuality",
+      "/GameMainMenu/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/PostProcessingQuality.PostProcessingQuality"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/OverallQuality.uasset": {
+    "DataId": "OverallQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_OverallQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_OverallQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "OverallScalabilityLevel",
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/PostProcessingQuality.uasset": {
+    "DataId": "PostProcessingQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_PostProcessQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_PostProcessQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "PostProcessingQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ReflectionQuality.uasset": {
+    "DataId": "ReflectionQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ReflectionQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ReflectionQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "ReflectionQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ResolutionScale.uasset": {
+    "DataId": "ResolutionScale",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ResolutionScale"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ResolutionScale_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Scalar",
+    "BindingKey": "ResolutionScaleNormalized",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "1.0",
+    "ScalarOutMin": 0.5,
+    "ScalarOutMax": 1.0
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ShadowQuality.uasset": {
+    "DataId": "ShadowQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ShadowQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ShadowQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "ShadowQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/TextureQuality.uasset": {
+    "DataId": "TextureQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_TextureQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_TextureQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "TextureQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/ViewDistanceQuality.uasset": {
+    "DataId": "ViewDistanceQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ViewDistanceQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_ViewDistanceQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "ViewDistanceQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/OptionScreen/Tabs/Category/Video/Graphics/VisualEffectsQuality.uasset": {
+    "DataId": "VisualEffectsQuality",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_VFXQuality"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_OptionsScreen.ST_OptionsScreen",
+      "key": "Entry_VFXQuality_Desc"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "BindingKey": "VisualEffectQuality",
+    "EditDependencyIds": [
+      "OverallQuality"
+    ],
+    "DefaultValue": "2.2",
+    "ScalarOutMin": 1.7,
+    "ScalarOutMax": 2.7,
+    "DefaultIntValue": 3,
+    "AvailableIntegerOptions": [
+      {
+        "key": 0,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Low"
+        }
+      },
+      {
+        "key": 1,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Medium"
+        }
+      },
+      {
+        "key": 2,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_High"
+        }
+      },
+      {
+        "key": 3,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Epic"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_OptionsValues.ST_OptionsValues",
+          "key": "Quality_Cinematic"
+        }
+      }
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/DA_MultiplayerConfig.uasset": {
+    "Tabs": [
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/DA_CreateGame.DA_CreateGame",
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/DA_JoinGame.DA_JoinGame"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/DA_CreateGame.uasset": {
+    "TabId": "CreateGame",
+    "TabName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Tab_CreateGame"
+    },
+    "Categories": [
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/Cat_General.Cat_General",
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/Advanced/Cat_Advanced.Cat_Advanced"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/DA_JoinGame.uasset": {
+    "TabId": "JoinGame",
+    "TabName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Tab_JoinGame"
+    },
+    "Categories": [
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/JoinGame/DA_Empty.DA_Empty"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/JoinGame/DA_Empty.uasset": {
+    "HeaderColumnGap": 0.0,
+    "HeaderEdgePadding": 0.0,
+    "HeaderVerticalPadding": 0.0
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/JoinGame/DA_SessionRow.uasset": {
+    "CategoryId": "Parameter",
+    "CategoryName": {
+      "namespace": "[3E7F6D2FF1D4262880D278A3F506C706]",
+      "key": "BA4FE0F34B6A8D5ACE46208A4EC5B64A",
+      "source": "Parameter"
+    },
+    "HeaderColumns": [
+      {
+        "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+        "key": "Parameter_JoinServer_ServerName"
+      },
+      {
+        "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+        "key": "Parameter_JoinServer_Map"
+      },
+      {
+        "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+        "key": "Parameter_JoinServer_Players"
+      },
+      {
+        "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+        "key": "Parameter_joinServer_Private"
+      },
+      {
+        "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+        "key": "Parameter_JoinGame_Ping"
+      }
+    ],
+    "HeaderColumnGap": 100.0,
+    "HeaderEdgePadding": 200.0,
+    "HeaderVerticalPadding": 40.0
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/Advanced/Cat_Advanced.uasset": {
+    "CategoryId": "Advanced",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Category_Advanced"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/Advanced/DA_Entry_Lan.DA_Entry_Lan"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/Advanced/DA_Entry_Lan.uasset": {
+    "DataId": "Lan",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Label_Lan"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Desc_Lan"
+    },
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/Cat_General.uasset": {
+    "CategoryId": "Cat-General",
+    "CategoryName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Category_General"
+    },
+    "Entries": [
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_GameName.DA_Entry_GameName",
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_HasPassword.DA_Entry_HasPassword",
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_Password.DA_Entry_Password",
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_Map.DA_Entry_Map",
+      "/GameMainMenu/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_MaxPlayers.DA_Entry_MaxPlayers"
+    ]
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_GameName.uasset": {
+    "DataId": "RoomName",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Label_GameName"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Desc_GameName"
+    },
+    "ValueType": "EMenuEntryValueType::Editable",
+    "bApplyImmediately": false,
+    "MaxCharCount": 16,
+    "HintText": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Hint_GameName"
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_HasPassword.uasset": {
+    "DataId": "HasPassword",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Label_HasPassword"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Desc_HasPassword"
+    },
+    "bApplyImmediately": false
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_Map.uasset": {
+    "DataId": "Map",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Label_Map"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Desc_Map"
+    },
+    "ValueType": "EMenuEntryValueType::String",
+    "bApplyImmediately": false,
+    "DefaultStringValue": "Map_01",
+    "AvailableOptions": [
+      {
+        "key": "Map_01",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map01"
+        }
+      },
+      {
+        "key": "Map_02",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map02"
+        }
+      },
+      {
+        "key": "Map_03",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map03"
+        }
+      },
+      {
+        "key": "Map_04",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map04"
+        }
+      }
+    ],
+    "MaxCharCount": 6,
+    "bIsPassword": true,
+    "HintText": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Hint_Password"
+    },
+    "CharFilter": "EEditableCharFilter::Alphanumeric"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_MaxPlayers.uasset": {
+    "DataId": "MaxPlayers",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Label_MaxPlayers"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Desc_MaxPlayers"
+    },
+    "ValueType": "EMenuEntryValueType::Integer",
+    "bApplyImmediately": false,
+    "DefaultStringValue": "Map_01",
+    "AvailableOptions": [
+      {
+        "key": "Map_01",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map01"
+        }
+      },
+      {
+        "key": "Map_02",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map02"
+        }
+      },
+      {
+        "key": "Map_03",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map03"
+        }
+      },
+      {
+        "key": "Map_04",
+        "value": {
+          "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+          "key": "Map04"
+        }
+      }
+    ],
+    "DefaultIntValue": 8,
+    "AvailableIntegerOptions": [
+      {
+        "key": 2,
+        "value": {
+          "namespace": "[B41D3A463A131066DE451165E6A2EAC7]",
+          "key": "2C74BC8949641E6315CFACACFA6F47B4",
+          "source": "2"
+        }
+      },
+      {
+        "key": 4,
+        "value": {
+          "namespace": "[B41D3A463A131066DE451165E6A2EAC7]",
+          "key": "FDBE58EE441E8BE6C3F9BEA9AAAAEBB5",
+          "source": "4"
+        }
+      },
+      {
+        "key": 8,
+        "value": {
+          "namespace": "[B41D3A463A131066DE451165E6A2EAC7]",
+          "key": "E01B6A2245F0BCB3614E718058602D3D",
+          "source": "8"
+        }
+      },
+      {
+        "key": 16,
+        "value": {
+          "namespace": "[B41D3A463A131066DE451165E6A2EAC7]",
+          "key": "8E6C88E94AB533BC4BBF78B5212CCDE6",
+          "source": "16"
+        }
+      }
+    ],
+    "MaxCharCount": 6,
+    "bIsPassword": true,
+    "HintText": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Hint_Password"
+    },
+    "CharFilter": "EEditableCharFilter::Alphanumeric"
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/MultiplayerScreen/Tabs/Category/CreateGame/General/DA_Entry_Password.uasset": {
+    "DataId": "Password",
+    "DisplayName": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Label_Password"
+    },
+    "Description": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Desc_Password"
+    },
+    "ValueType": "EMenuEntryValueType::Editable",
+    "bApplyImmediately": false,
+    "EditDependencyIds": [
+      "HasPassword"
+    ],
+    "MaxCharCount": 6,
+    "bIsPassword": true,
+    "HintText": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Hint_Password"
+    },
+    "CharFilter": "EEditableCharFilter::NumbersOnly",
+    "DisableRichReason": {
+      "table": "/GameMainMenu/BP/StringTable/ST_Multiplayer.ST_Multiplayer",
+      "key": "Warning_PasswordDisabled"
+    }
+  },
+  "Plugins/GameMainMenu/Content/BP/DataAsset/DA_Credits.uasset": {
+    "Entries": [
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "7A24C65E43E1CA1E1232CFAD03876922",
+          "source": "John Carpenter"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "A967905B44093D1B399BF4BE6F21461C",
+          "source": "Executive Producer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "AC012F15473E0C693D9C049C08D17414",
+          "source": "Sarah Chen"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "C427E7F3483661F305CE1E9ACF160A3B",
+          "source": "Technical Director"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "10C6C7394E3BF5CFC73AF1A30F7DCD89",
+          "source": "Marco Rodriguez"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "CC4C0A2147A5AB642A024292894F0171",
+          "source": "Lead Programmer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "6F356D6A4E5B71E45386FEA53B686ADA",
+          "source": "Yuki Tanaka"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "D99BBBA74C55FD12DD0DCAB0D9E8B1A9",
+          "source": "Engine Programmer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "5E8D407C445B826F37FE7FAC04CFB2A8",
+          "source": "David Kim"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "C2A5FD8F4088636A15FB5AAAD37397FD",
+          "source": "Gameplay Programmer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "B4789EA54F880927705BF4BAA3C6DEBF",
+          "source": "Emily Watson"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "0E55AD33441AD9A0E4768EA6E0E3758A",
+          "source": "UI Programmer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "8A3897044B0FC53BA3404DBA79405240",
+          "source": "Alex Petrov"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "B18CD4F24CA8B6F1B76D1EA8CA74D354",
+          "source": "Tools Programmer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "3AF9C26F4B815E8BE658AEB6546CB5A3",
+          "source": "Lisa Park"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "0B5FD4D047E513CDFDAD1B836B785030",
+          "source": "Lead Artist"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "439DB4DB40FBC09974D0208F5CC7F735",
+          "source": "Thomas Mueller"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "CDA6E68643F0BFFF5B1E498844DA20BF",
+          "source": "Concept Artist"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "35A591B541035BC98D02A680549278D8",
+          "source": "Nina Johansson"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "1E5C71364EF57A5C218EEEB238A480CA",
+          "source": "3D Character Artist"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "86611C894CCCCF3F196A6EBC8D1F5828",
+          "source": "Ryan O'Brien"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "2C02ADB64046130CAF17D79A0939E015",
+          "source": "3D Environment Artist"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "B1B9947E40345F72D168D581647C9656",
+          "source": "Chloe Zhang"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "895784A64B96A7EA821231B6D502BF3C",
+          "source": "Animator"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "8F60D5274A2EC0855E95079B983496AB",
+          "source": "Marcus Webb"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "365A80AB414388E802A04A8F6F9284A3",
+          "source": "VFX Artist"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "A4CC39D246A63EC0DD510385E7771E52",
+          "source": "Sofia Andersson"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "563E4E724043542F5ABACABBCAFA5C61",
+          "source": "Technical Artist"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "7C38268941FF7AC546E3FBB885C8B4BA",
+          "source": "James Murphy"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "F6BAA71346FAFC6B757440984CECE772",
+          "source": "Lead Game Designer"
+        }
+      },
+      {
+        "Name": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "CDB25B594E48294E282D1FA43A76B9B7",
+          "source": "Laura Bennett"
+        },
+        "Role": {
+          "namespace": "[1B57FA30AEF2C3999A7CB056CA5F3B61]",
+          "key": "048A838D4E3696572BA441908F382B2A",
+          "source": "Level Designer"
+        }
+      }
+    ],
+    "LineHeight": 100.0,
+    "EntrySpacing": 100.0,
+    "LogoSpacing": 250.0
+  }
+}

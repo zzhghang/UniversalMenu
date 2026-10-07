@@ -1,0 +1,185 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\MI_AnimatedThrobber.uasset",
+  "package": "/GameMainMenu/Assets/Others/MI_AnimatedThrobber",
+  "objects": [
+    {
+      "index": 1,
+      "name": "MI_AnimatedThrobber",
+      "class": "Object:/Script/Engine.MaterialInstanceConstant",
+      "path": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber",
+      "properties": {
+        "ParameterStateId": {
+          "struct": "Guid",
+          "raw": "7e1a553b5f019c488dcdff3c8e08b7b2"
+        },
+        "Parent": "M_CircularThrobber",
+        "ScalarParameterValues": [
+          {
+            "AtlasData": {
+              "bIsUsedAsAtlasPosition": false,
+              "Curve": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              },
+              "Atlas": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              }
+            },
+            "ParameterInfo": {
+              "Name": "ThrobberThickness",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "ParameterValue": 0.41519999504089355,
+            "ExpressionGUID": {
+              "struct": "Guid",
+              "raw": "68a247a53db0a5448ac3a9424ef0cc36"
+            }
+          },
+          {
+            "AtlasData": {
+              "bIsUsedAsAtlasPosition": false,
+              "Curve": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              },
+              "Atlas": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              }
+            },
+            "ParameterInfo": {
+              "Name": "ThrobberSharpness",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "ParameterValue": 0.10000000149011612,
+            "ExpressionGUID": {
+              "struct": "Guid",
+              "raw": "756c4901b8569248ac51969051afd6ca"
+            }
+          },
+          {
+            "AtlasData": {
+              "bIsUsedAsAtlasPosition": false,
+              "Curve": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              },
+              "Atlas": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              }
+            },
+            "ParameterInfo": {
+              "Name": "ThrobberAnimatedSpeed",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "ParameterValue": 1.0,
+            "ExpressionGUID": {
+              "struct": "Guid",
+              "raw": "d5d4ae10332ef04e8a5ae6092ac61814"
+            }
+          },
+          {
+            "AtlasData": {
+              "bIsUsedAsAtlasPosition": false,
+              "Curve": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              },
+              "Atlas": {
+                "type": {
+                  "name": "SoftObjectProperty",
+                  "params": []
+                },
+                "raw": "00000000"
+              }
+            },
+            "ParameterInfo": {
+              "Name": "RefractionDepthBias",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "ParameterValue": 0.0,
+            "ExpressionGUID": {
+              "struct": "Guid",
+              "raw": "00000000000000000000000000000000"
+            }
+          }
+        ],
+        "VectorParameterValues": [
+          {
+            "ParameterInfo": {
+              "Name": "ThrobberColor",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "ParameterValue": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 0.0
+            },
+            "ExpressionGUID": {
+              "struct": "Guid",
+              "raw": "96b769abc257c24f963899054b0868e5"
+            }
+          }
+        ],
+        "BasePropertyOverrides": {
+          "BlendMode": "BLEND_Translucent",
+          "ShadingModel": "MSM_Unlit",
+          "OpacityMaskClipValue": 0.33329999446868896
+        },
+        "EditorOnlyData": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber:MI_AnimatedThrobberEditorOnlyData",
+        "ThumbnailInfo": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber:SceneThumbnailInfoWithPrimitive_0",
+        "LightingGuid": {
+          "struct": "Guid",
+          "raw": "e6a9a15a56d57c4b8368d6b42f54cdde"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "MI_AnimatedThrobberEditorOnlyData",
+      "class": "Object:/Script/Engine.MaterialInstanceEditorOnlyData",
+      "path": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber:MI_AnimatedThrobberEditorOnlyData",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "SceneThumbnailInfoWithPrimitive_0",
+      "class": "Object:/Script/UnrealEd.SceneThumbnailInfoWithPrimitive",
+      "path": "Object:/GameMainMenu/Assets/Others/MI_AnimatedThrobber.MI_AnimatedThrobber:SceneThumbnailInfoWithPrimitive_0",
+      "properties": {}
+    }
+  ],
+  "softReferences": [
+    null
+  ],
+  "text": []
+}

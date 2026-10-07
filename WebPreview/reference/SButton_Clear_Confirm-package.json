@@ -1,0 +1,478 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:qX7pbEevsUBrX3e2UbYId8HYfkI="
+		},
+		"TotalHeaderSize": 6065,
+		"CustomVersions": [
+			{
+				"Key": "375EC13C06E448FBB50084F0262A717E",
+				"Version": 4
+			},
+			{
+				"Key": "601D1886AC644F84AA16D3DE0DEAC7D6",
+				"Version": 225
+			},
+			{
+				"Key": "697DD581E64F41ABAA4A51ECBEB7B628",
+				"Version": 121
+			},
+			{
+				"Key": "B0D832E41F894F0DACCF7EB736FD4AA2",
+				"Version": 10
+			},
+			{
+				"Key": "CFFC743F43B04480939114DF171D2073",
+				"Version": 37
+			},
+			{
+				"Key": "D89B5E4224BD4D468412ACA8DF641779",
+				"Version": 61
+			},
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm",
+		"PackageFlags": 0,
+		"NameCount": 69,
+		"NameOffset": 533,
+		"SoftObjectPathsCount": 2,
+		"SoftObjectPathsOffset": 2365,
+		"LocalizationId": "C3F0A6843E0C0A25F9ACFD15EC38A374",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 2405,
+		"ExportCount": 4,
+		"ExportOffset": 3268,
+		"ImportCount": 19,
+		"ImportOffset": 2508,
+		"CellExportCount": 0,
+		"CellExportOffset": 3716,
+		"CellImportCount": 0,
+		"CellImportOffset": 3716,
+		"MetaDataOffset": 2405,
+		"DependsOffset": 3716,
+		"SoftPackageReferencesCount": 1,
+		"SoftPackageReferencesOffset": 3732,
+		"SearchableNamesOffset": 3740,
+		"ThumbnailTableOffset": 3768,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "FF2CA2214BF17A00AC58B6A567341924",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 4,
+				"NameCount": 69
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 4142478974,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 3876,
+		"BulkDataStartOffset": 7641,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 6065,
+		"NamesReferencedFromExportDataCount": 45,
+		"PayloadTocOffset": 7645,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm",
+		"/Script/CoreUObject",
+		"/Script/SlateCore",
+		"ArrayProperty",
+		"bAllowDeletion",
+		"bLegacyNeedToPurgeSkelRefs",
+		"BlueprintGuid",
+		"BlueprintSystemVersion",
+		"BlueprintType",
+		"BoolProperty",
+		"ByteProperty",
+		"Disabled",
+		"DisabledTextStyle",
+		"DrawAs",
+		"Engine",
+		"ESlateBrushDrawType",
+		"ESlateBrushDrawType::NoDrawType",
+		"GeneratedClass",
+		"GraphGuid",
+		"Guid",
+		"HoveredSlateSound",
+		"IntProperty",
+		"None",
+		"NormalBase",
+		"NormalHovered",
+		"NormalHoveredTextStyle",
+		"NormalPressed",
+		"NormalTextStyle",
+		"ObjectProperty",
+		"PackageLocalizationNamespace",
+		"ParentClass",
+		"PressedSlateSound",
+		"ResourceObject",
+		"SButton_Clear_Confirm_C",
+		"Schema",
+		"SelectedBase",
+		"SelectedHovered",
+		"SelectedHoveredTextStyle",
+		"SelectedPressed",
+		"SelectedTextStyle",
+		"SKEL_SButton_Clear_Confirm_C",
+		"SlateBrush",
+		"SlateSound",
+		"StructProperty",
+		"UbergraphPages",
+		"/Engine/VREditor/Sounds/UI/Flashlight_Switch",
+		"/Engine/VREditor/Sounds/UI/Selection_Changes",
+		"/GameMainMenu/BP/UI/Styles/Text/SText_Confirm",
+		"/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight",
+		"/Script/BlueprintGraph",
+		"/Script/CommonUI",
+		"/Script/Engine",
+		"Blueprint",
+		"BlueprintGeneratedClass",
+		"Class",
+		"CommonButtonStyle",
+		"Default__CommonButtonStyle",
+		"Default__SButton_Clear_Confirm_C",
+		"EdGraph",
+		"EdGraphSchema_K2",
+		"EventGraph",
+		"Flashlight_Switch",
+		"Object",
+		"Package",
+		"SButton_Clear_Confirm",
+		"Selection_Changes",
+		"SoundWave",
+		"SText_Confirm_C",
+		"SText_Confirm_HightLight_C"
+	],
+	"SoftObjectPaths": [
+		"Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm_C",
+		"Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SKEL_SButton_Clear_Confirm_C"
+	],
+	"Imports": [
+		{
+			"ObjectName": "SText_Confirm_C",
+			"PathName": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm.SText_Confirm_C",
+			"OuterIndex": -12,
+			"Outer": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm",
+			"ClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SText_Confirm_HightLight_C",
+			"PathName": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight_C",
+			"OuterIndex": -13,
+			"Outer": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight",
+			"ClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraphSchema_K2",
+			"PathName": "Object:/Script/BlueprintGraph.EdGraphSchema_K2",
+			"OuterIndex": -14,
+			"Outer": "Object:/Script/BlueprintGraph",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "CommonButtonStyle",
+			"PathName": "Object:/Script/CommonUI.CommonButtonStyle",
+			"OuterIndex": -15,
+			"Outer": "Object:/Script/CommonUI",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Object",
+			"PathName": "Object:/Script/CoreUObject.Object",
+			"OuterIndex": -16,
+			"Outer": "Object:/Script/CoreUObject",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Blueprint",
+			"PathName": "Object:/Script/Engine.Blueprint",
+			"OuterIndex": -17,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "BlueprintGeneratedClass",
+			"PathName": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"OuterIndex": -17,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "EdGraph",
+			"PathName": "Object:/Script/Engine.EdGraph",
+			"OuterIndex": -17,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Default__CommonButtonStyle",
+			"PathName": "Object:/Script/CommonUI.Default__CommonButtonStyle",
+			"OuterIndex": -15,
+			"Outer": "Object:/Script/CommonUI",
+			"ClassPath": "Object:/Script/CommonUI.CommonButtonStyle",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Engine/VREditor/Sounds/UI/Flashlight_Switch",
+			"PathName": "Object:/Engine/VREditor/Sounds/UI/Flashlight_Switch",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Engine/VREditor/Sounds/UI/Selection_Changes",
+			"PathName": "Object:/Engine/VREditor/Sounds/UI/Selection_Changes",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/BP/UI/Styles/Text/SText_Confirm",
+			"PathName": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight",
+			"PathName": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/BlueprintGraph",
+			"PathName": "Object:/Script/BlueprintGraph",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CommonUI",
+			"PathName": "Object:/Script/CommonUI",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/CoreUObject",
+			"PathName": "Object:/Script/CoreUObject",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Flashlight_Switch",
+			"PathName": "Object:/Engine/VREditor/Sounds/UI/Flashlight_Switch.Flashlight_Switch",
+			"OuterIndex": -10,
+			"Outer": "Object:/Engine/VREditor/Sounds/UI/Flashlight_Switch",
+			"ClassPath": "Object:/Script/Engine.SoundWave",
+			"Optional": false
+		},
+		{
+			"ObjectName": "Selection_Changes",
+			"PathName": "Object:/Engine/VREditor/Sounds/UI/Selection_Changes.Selection_Changes",
+			"OuterIndex": -11,
+			"Outer": "Object:/Engine/VREditor/Sounds/UI/Selection_Changes",
+			"ClassPath": "Object:/Script/Engine.SoundWave",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "SButton_Clear_Confirm",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm",
+			"ClassIndex": -6,
+			"Class": "Object:/Script/Engine.Blueprint",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 235,
+			"SerialOffset": 6065,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 231,
+			"bForcedExport": 0,
+			"bNotForClient": 1,
+			"bNotForServer": 1,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "SButton_Clear_Confirm_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm_C",
+			"ClassIndex": -7,
+			"Class": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"SuperIndex": -4,
+			"Super": "Object:/Script/CommonUI.CommonButtonStyle",
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Transactional",
+			"HashNext": -1,
+			"SerialSize": 81,
+			"SerialOffset": 6300,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 9,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "EventGraph",
+			"OuterIndex": 1,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm:EventGraph",
+			"ClassIndex": -8,
+			"Class": "Object:/Script/Engine.EdGraph",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Transactional",
+			"HashNext": -1,
+			"SerialSize": 132,
+			"SerialOffset": 6381,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 128,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		},
+		{
+			"ObjectName": "Default__SButton_Clear_Confirm_C",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.Default__SButton_Clear_Confirm_C",
+			"ClassIndex": 2,
+			"Class": "Object:/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm_C",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | ClassDefaultObject | ArchetypeObject",
+			"HashNext": -1,
+			"SerialSize": 1128,
+			"SerialOffset": 6513,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 1124,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 0,
+			"bNotAlwaysLoadedForEditorGame": 0,
+			"bIsAsset": 0,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [
+		"/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm"
+	],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "Blueprint /GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm",
+			"FileOffset": 3744
+		},
+		{
+			"ObjectFullName": "BlueprintGeneratedClass /GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm_C",
+			"FileOffset": 3756
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm",
+			"PackagePath": "/GameMainMenu/BP/UI/Styles/Button",
+			"AssetName": "SButton_Clear_Confirm",
+			"AssetClassPath": "Object:/Script/Engine.Blueprint",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"GeneratedClass": "/Script/Engine.BlueprintGeneratedClass'/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm.SButton_Clear_Confirm_C'",
+				"ParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonButtonStyle'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonButtonStyle'",
+				"ClassFlags": "4458496",
+				"BlueprintType": "BPTYPE_Normal",
+				"IsDataOnly": "True",
+				"FiBData": "\u0004\u0001\u0001\u0001\u00ad\u0002\u0001\u0001\b\u0001\u0001\u0001\u0001\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\f\u0001\u0001\u0001Qspqfsujft\u0001\u0002\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0006\u0001\u0001\u0001Vcfs\u0001\u0003\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0006\u0001\u0001\u0001Obnf\u0001\u0004\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000e\u0001\u0001\u0001LjtnfuTdifnb\u0001\u001d\u0001\u0001\u0001HsbqiEjtqmbzObnf`FwfouHsbqi\u0001\f\u0001\u0001\u0001FwfouHsbqi\u0001\u0005\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\r\u0001\u0001\u0001Eftdsjqujpo\u0001\u0006\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u000b\u0001\u0001\u0001Cmvfqsjou\u0001\u0010\u0001\u0001\u0001OpHsbqiUppmujq\u0001\b\u0001\u0001\u0001)Opof*\u0001\u0007\u0001\u0001\u0001\t\u0001\u0001\u0001\u0001\u0018\u0001\u0001\u0001GjoeJoCmvfqsjouNbobhfs\u0001\u0007\u0001\u0001\u0001Opeft\u0001\u0007\u0001\u0001\u0001Opeft\u0001{\"0\":[],\"1\":[{\"2\":\"3\",\"4\":\"5\",\"6\":[],\"0\":[]}]}",
+				"NumReplicatedProperties": "0",
+				"NativeComponents": "0",
+				"BlueprintComponents": "0",
+				"BlueprintPath": "SButton_Clear_Confirm",
+				"ImportedNamespaces": "()"
+			},
+			"TaggedAssetBundles": {}
+		},
+		{
+			"PackageName": "/GameMainMenu/BP/UI/Styles/Button/SButton_Clear_Confirm",
+			"PackagePath": "/GameMainMenu/BP/UI/Styles/Button",
+			"AssetName": "SButton_Clear_Confirm_C",
+			"AssetClassPath": "Object:/Script/Engine.BlueprintGeneratedClass",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {
+				"ParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonButtonStyle'",
+				"NativeParentClass": "/Script/CoreUObject.Class'/Script/CommonUI.CommonButtonStyle'",
+				"ClassFlags": "4458496",
+				"BlueprintType": "BPTYPE_Normal",
+				"NumReplicatedProperties": "0",
+				"ModuleName": "SButton_Clear_Confirm"
+			},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

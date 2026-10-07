@@ -1,0 +1,79 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Styles\\Text\\SText_Confirm_HightLight.uasset",
+  "package": "/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SText_Confirm_HightLight",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight",
+      "properties": {
+        "ParentClass": "CommonTextStyle",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight:EventGraph"
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "257665a7b467764da301f686ad910bf5"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SText_Confirm_HightLight_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "0bd48400aa7b2d44b878d5397bf77b44"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SText_Confirm_HightLight_C",
+      "class": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight_C",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.Default__SText_Confirm_HightLight_C",
+      "properties": {
+        "Font": {
+          "FontObject": "SourceHanSansCN",
+          "OutlineSettings": {
+            "OutlineSize": 1,
+            "OutlineColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.5
+            }
+          },
+          "TypefaceFontName": "Default",
+          "Size": 21.0
+        },
+        "Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SKEL_SText_Confirm_HightLight_C",
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_Confirm_HightLight.SText_Confirm_HightLight_C"
+  ],
+  "text": []
+}

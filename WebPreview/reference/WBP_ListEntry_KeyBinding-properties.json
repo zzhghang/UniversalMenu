@@ -1,0 +1,786 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\ListEntries\\WBP_ListEntry_KeyBinding.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding",
+  "objects": [
+    {
+      "index": 1,
+      "name": "Ctb_EntryDisplayName",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Ctb_EntryDisplayName",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[5060AC45B1FFDDF34B6B35B2659104EA]",
+          "key": "4771CE654BE78C9824166895F21EE515",
+          "source": "Setting"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Justification": "ETextJustify::Center",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Ctb_EntryDisplayName",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Ctb_EntryDisplayName",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[5060AC45B1FFDDF34B6B35B2659104EA]",
+          "key": "4771CE654BE78C9824166895F21EE515",
+          "source": "Setting"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Justification": "ETextJustify::Center",
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 3,
+      "name": "BP_GetWidgetToFocusForGamepad",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_VariableGet_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "6b71a3717e4ec84182ed49bf2cc5612c"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "BP_OnToggleEntryWidgetHighLightState",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_Select_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "b681d7b45dcd74468ca8c65424a988f0"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "4ae111f3fc3b7e4a8c31d0408ba57829"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "BP_GetWidgetToFocusForGamepad",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:BP_GetWidgetToFocusForGamepad",
+      "properties": {}
+    },
+    {
+      "index": 7,
+      "name": "BP_OnToggleEntryWidgetHighLightState",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:BP_OnToggleEntryWidgetHighLightState",
+      "properties": {}
+    },
+    {
+      "index": 8,
+      "name": "HorizontalBox_23",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_3"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21.SizeBoxSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 9,
+      "name": "HorizontalBox_23",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_3"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21.SizeBoxSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 10,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 0.800000011920929,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 11,
+      "name": "HorizontalBoxSlot_1",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_1",
+      "properties": {
+        "Size": {
+          "Value": 0.5,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Right",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Cbb_KeyboardSlot"
+      }
+    },
+    {
+      "index": 12,
+      "name": "HorizontalBoxSlot_2",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_2",
+      "properties": {
+        "Size": {
+          "Value": 0.5,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Cbb_GamepadSlot"
+      }
+    },
+    {
+      "index": 13,
+      "name": "HorizontalBoxSlot_3",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_3",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Spacer_74"
+      }
+    },
+    {
+      "index": 14,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 0.800000011920929,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 15,
+      "name": "HorizontalBoxSlot_1",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_1",
+      "properties": {
+        "Size": {
+          "Value": 0.5,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Right",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Cbb_KeyboardSlot"
+      }
+    },
+    {
+      "index": 16,
+      "name": "HorizontalBoxSlot_2",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_2",
+      "properties": {
+        "Size": {
+          "Value": 0.5,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Cbb_GamepadSlot"
+      }
+    },
+    {
+      "index": 17,
+      "name": "HorizontalBoxSlot_3",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_3",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Spacer_74"
+      }
+    },
+    {
+      "index": 18,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonTextBlock",
+          "MemberName": "SetStyle"
+        },
+        "NodePosX": 592,
+        "NodePosY": 32,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bba6651fcb9c5e479996d2e2383b834d"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "W_ListEntry_Base",
+          "MemberName": "BP_GetWidgetToFocusForGamepad"
+        },
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8b3ee6a030be7d4b98d3a22681fc5145"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "W_ListEntry_Base",
+          "MemberName": "BP_OnToggleEntryWidgetHighLightState"
+        },
+        "NodePosY": 47,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "059f682d8cb0184ab5149185ed199ee8"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "W_ListEntry_Base",
+          "MemberName": "BP_GetWidgetToFocusForGamepad"
+        },
+        "NodePosX": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "d1ea1a255fb3d34499287167b849bcff"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "name": "K2Node_Select_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Select",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_Select_0",
+      "properties": {
+        "IndexPinType": {
+          "raw": "160000000000000061000000000000000000000000000000000000000000000000610000000000000000000000000000000000000000000000000000000000000000000000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "EdGraphPinType",
+                "params": [
+                  {
+                    "name": "/Script/Engine",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+        },
+        "NodePosX": 544,
+        "NodePosY": 224,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "91cd56997907e143b3b2d43b4cd00762"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Cbb_GamepadSlot",
+          "bSelfContext": true
+        },
+        "NodePosX": 80,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "dee95aff7d95294786b58ee25cbfcd96"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_EntryDisplayName",
+          "bSelfContext": true
+        },
+        "NodePosX": 288,
+        "NodePosY": 192,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "04b7832f88d02346b7a65c8f162c8eca"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "name": "SizeBox_ListEntry_C_21",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21.SizeBoxSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 26,
+      "name": "SizeBox_ListEntry_C_21",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21.SizeBoxSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 27,
+      "name": "SizeBoxSlot_0",
+      "class": "Object:/Script/UMG.SizeBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21.SizeBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23"
+      }
+    },
+    {
+      "index": 28,
+      "name": "SizeBoxSlot_0",
+      "class": "Object:/Script/UMG.SizeBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21.SizeBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23"
+      }
+    },
+    {
+      "index": 29,
+      "name": "Spacer_74",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Spacer_74",
+      "properties": {
+        "Size": {
+          "x": 250.0,
+          "y": 1.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_3"
+      }
+    },
+    {
+      "index": 30,
+      "name": "Spacer_74",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Spacer_74",
+      "properties": {
+        "Size": {
+          "x": 250.0,
+          "y": 1.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_3"
+      }
+    },
+    {
+      "index": 31,
+      "name": "Cbb_GamepadSlot",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_ListEntry_Image.WBP_Button_ListEntry_Image_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Cbb_GamepadSlot",
+      "properties": {
+        "Size_Image": 55.0,
+        "Test_Image": {
+          "type": {
+            "name": "SoftObjectProperty",
+            "params": []
+          },
+          "raw": "04000000"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_2",
+        "DisplayLabel": "Cbb_GamepadSlot"
+      }
+    },
+    {
+      "index": 32,
+      "name": "Cbb_KeyboardSlot",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_ListEntry_Image.WBP_Button_ListEntry_Image_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Cbb_KeyboardSlot",
+      "properties": {
+        "Size_Image": 55.0,
+        "Test_Image": {
+          "type": {
+            "name": "SoftObjectProperty",
+            "params": []
+          },
+          "raw": "03000000"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_1",
+        "DisplayLabel": "Cbb_KeyboardSlot"
+      }
+    },
+    {
+      "index": 33,
+      "name": "Cbb_GamepadSlot",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_ListEntry_Image.WBP_Button_ListEntry_Image_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Cbb_GamepadSlot",
+      "properties": {
+        "Size_Image": 55.0,
+        "Test_Image": {
+          "type": {
+            "name": "SoftObjectProperty",
+            "params": []
+          },
+          "raw": "04000000"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_2",
+        "DisplayLabel": "Cbb_GamepadSlot"
+      }
+    },
+    {
+      "index": 34,
+      "name": "Cbb_KeyboardSlot",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_ListEntry_Image.WBP_Button_ListEntry_Image_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Cbb_KeyboardSlot",
+      "properties": {
+        "Size_Image": 55.0,
+        "Test_Image": {
+          "type": {
+            "name": "SoftObjectProperty",
+            "params": []
+          },
+          "raw": "03000000"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23.HorizontalBoxSlot_1",
+        "DisplayLabel": "Cbb_KeyboardSlot"
+      }
+    },
+    {
+      "index": 35,
+      "name": "Default__WBP_ListEntry_KeyBinding_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.Default__WBP_ListEntry_KeyBinding_C",
+      "properties": {
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false,
+        "Visibility": "ESlateVisibility::Visible"
+      }
+    },
+    {
+      "index": 36,
+      "name": "WBP_ListEntry_KeyBinding",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000060000007600000016000000b9d6252256060b40a892d234dbd9a43349000000180000003325d1d5ef643044b3bbf052c336bc2b240000000000000065593343ba6ab649a49bb661e43020bb1f00000000000000ceecdc252afc6443aae7b8a508bd8fd31e00000000000000f435a7617f9e2f42952cf6ff77088428800000004b00000068c9365e26764446a163daec7d2a38b7"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree",
+        "ParentClass": "W_ListEntry_KeyBinding",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:EventGraph"
+        ],
+        "FunctionGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState"
+        ],
+        "CategorySorting": [
+          "W List Entry Key Binding",
+          "W List Entry Base",
+          "Input",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "None"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "becbe5c3ec0a5ec3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1008350274"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "01000000"
+            },
+            "SavedViewOffset": {
+              "raw": "dfe501c47685cfc3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1006508577"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "02000000"
+            },
+            "SavedViewOffset": {
+              "raw": "787eaac3785deec3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1012236680"
+            },
+            "SavedZoomAmount": 0.675000011920929
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "400effb1435a124f9a6db2c6ce99c42a"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "name": "WBP_ListEntry_KeyBinding_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree"
+      }
+    },
+    {
+      "index": 38,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.SizeBox_ListEntry_C_21",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.HorizontalBox_23",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Ctb_EntryDisplayName",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Cbb_KeyboardSlot",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Cbb_GamepadSlot",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:WidgetTree.Spacer_74"
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.SizeBox_ListEntry_C_21",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.HorizontalBox_23",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Ctb_EntryDisplayName",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Cbb_KeyboardSlot",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Cbb_GamepadSlot",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:WidgetTree.Spacer_74"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState",
+    "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/Keyboard-Mouse_Icons/T_Keyboard_B.T_Keyboard_B",
+    "Object:/GameMainMenu/Assets/MengGe_Game_UI_Icons/Icons/Textures/PlayStation_Series_Icons/T_PlayStation_Button_Cross.T_PlayStation_Button_Cross",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.SKEL_WBP_ListEntry_KeyBinding_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_GetWidgetToFocusForGamepad.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.SKEL_WBP_ListEntry_KeyBinding_C:BP_OnToggleEntryWidgetHighLightState",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding:BP_OnToggleEntryWidgetHighLightState.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.SKEL_WBP_ListEntry_KeyBinding_C:BP_GetWidgetToFocusForGamepad",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:BP_OnToggleEntryWidgetHighLightState",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_KeyBinding.WBP_ListEntry_KeyBinding_C:BP_GetWidgetToFocusForGamepad"
+  ],
+  "text": []
+}

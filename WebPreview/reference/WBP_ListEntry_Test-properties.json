@@ -1,0 +1,330 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\ListEntries\\WBP_ListEntry_Test.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test",
+  "objects": [
+    {
+      "index": 1,
+      "name": "Ctb_EntryDisplayName",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.Ctb_EntryDisplayName",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[79082426909F9EB5FE7A273A340867D7]",
+          "key": "E6257D714A9C7AE19EBC378F705D598E",
+          "source": "Test Entry"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26.SizeBoxSlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Ctb_EntryDisplayName",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C:WidgetTree.Ctb_EntryDisplayName",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[79082426909F9EB5FE7A273A340867D7]",
+          "key": "E6257D714A9C7AE19EBC378F705D598E",
+          "source": "Test Entry"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": null,
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "df35a2c53cce85408cdc488525972464"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0f883ac95db1cf4d902c7f7611c0a50a"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eaf066a071e0d841944bc4918d3451be"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b23786b91d279a45839f665a5b254a41"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "SizeBox_ListEntry_C_26",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26.SizeBoxSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 8,
+      "name": "SizeBoxSlot_0",
+      "class": "Object:/Script/UMG.SizeBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26.SizeBoxSlot_0",
+      "properties": {
+        "Padding": {
+          "Left": 20.0
+        },
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 9,
+      "name": "Default__WBP_ListEntry_Test_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.Default__WBP_ListEntry_Test_C",
+      "properties": {
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 10,
+      "name": "WBP_ListEntry_Test",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "0000000002000000620000001b0000004b5bc123c8bb8749841f44e2967afb421f00000000000000098112c4f5653046be7aa2c6761d1b80"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree",
+        "ParentClass": "W_ListEntry_Base",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph"
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "W List Entry Base",
+          "Input",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "WBP List Entry Test"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "600ed1f7f8f0cc4db53ccdb0f1962b8c"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "name": "WBP_ListEntry_Test_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C:WidgetTree"
+      }
+    },
+    {
+      "index": 12,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.SizeBox_ListEntry_C_26",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:WidgetTree.Ctb_EntryDisplayName"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C:WidgetTree",
+      "properties": {
+        "RootWidget": null,
+        "AllWidgets": [
+          null,
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C:WidgetTree.Ctb_EntryDisplayName"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.SKEL_WBP_ListEntry_Test_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.WBP_ListEntry_Test:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.SKEL_WBP_ListEntry_Test_C:Tick",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.SKEL_WBP_ListEntry_Test_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Test.SKEL_WBP_ListEntry_Test_C:PreConstruct"
+  ],
+  "text": []
+}

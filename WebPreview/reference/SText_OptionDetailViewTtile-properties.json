@@ -1,0 +1,79 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Styles\\Text\\SText_OptionDetailViewTtile.uasset",
+  "package": "/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile",
+  "objects": [
+    {
+      "index": 1,
+      "name": "SText_OptionDetailViewTtile",
+      "class": "Object:/Script/Engine.Blueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile",
+      "properties": {
+        "ParentClass": "CommonTextStyle",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile:EventGraph"
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "9139205c5f9a504da0167afcc8efa4ee"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "SText_OptionDetailViewTtile_C",
+      "class": "Object:/Script/Engine.BlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile_C",
+      "properties": {}
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "0bd48400aa7b2d44b878d5397bf77b44"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "Default__SText_OptionDetailViewTtile_C",
+      "class": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile_C",
+      "path": "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.Default__SText_OptionDetailViewTtile_C",
+      "properties": {
+        "Font": {
+          "FontObject": "SourceHanSansCN",
+          "OutlineSettings": {
+            "OutlineSize": 1,
+            "OutlineColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.5
+            }
+          },
+          "TypefaceFontName": "Normal",
+          "Size": 30.0
+        },
+        "Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SKEL_SText_OptionDetailViewTtile_C",
+    "Object:/GameMainMenu/BP/UI/Styles/Text/SText_OptionDetailViewTtile.SText_OptionDetailViewTtile_C"
+  ],
+  "text": []
+}

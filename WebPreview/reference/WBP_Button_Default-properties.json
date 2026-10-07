@@ -1,0 +1,343 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Components\\WBP_Button_Default.uasset",
+  "package": "/GameMainMenu/BP/UI/Components/WBP_Button_Default",
+  "objects": [
+    {
+      "index": 1,
+      "name": "Ctb_ButtonText",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Ctb_ButtonText",
+      "properties": {
+        "Style": "SText_Default_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[2861951DCF0DB5D9098B7E34B035F544]",
+          "key": "38C111264A8FE399D5B8098DF4557BF9",
+          "source": "Button Text"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20.OverlaySlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Ctb_ButtonText",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Ctb_ButtonText",
+      "properties": {
+        "Style": "SText_Default_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[2861951DCF0DB5D9098B7E34B035F544]",
+          "key": "38C111264A8FE399D5B8098DF4557BF9",
+          "source": "Button Text"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20.OverlaySlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "8b833d0ffa8d964e916ecff6c7e382c9"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "883328c44765a642b4ca4b3d349ce24e"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cd055a638ad8cd42880b83f019581626"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "7a564c182aed5b45bf32616644251292"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "Overlay_20",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 8,
+      "name": "Overlay_20",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 9,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20.OverlaySlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20",
+        "Content": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 10,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20.OverlaySlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20",
+        "Content": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Ctb_ButtonText"
+      }
+    },
+    {
+      "index": 11,
+      "name": "Default__WBP_Button_Default_C",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.Default__WBP_Button_Default_C",
+      "properties": {
+        "ButtonDisplayText": {
+          "namespace": "[2861951DCF0DB5D9098B7E34B035F544]",
+          "key": "3BC8FF9C4703D4F0A87D97BBF1585173",
+          "source": "Button Text"
+        },
+        "Style": "SButton_Clear_Menu_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 12,
+      "name": "WBP_Button_Default",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000020000004b00000015000000b86a1049b5ebfe49843a3b1076ce5b821e0000000000000015c04aa7eb23d744be1e15c4dc47b665"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree",
+        "ParentClass": "FrontendCommonButtonBase",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph"
+        ],
+        "CategorySorting": [
+          "Event Graph"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "b93126ef8687ac4a8a821c4f55cd9ed6"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "name": "WBP_Button_Default_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree"
+      }
+    },
+    {
+      "index": 14,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Overlay_20",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:WidgetTree.Ctb_ButtonText"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Overlay_20",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C:WidgetTree.Ctb_ButtonText"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.SKEL_WBP_Button_Default_C",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.SKEL_WBP_Button_Default_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.SKEL_WBP_Button_Default_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.SKEL_WBP_Button_Default_C:Tick"
+  ],
+  "text": []
+}

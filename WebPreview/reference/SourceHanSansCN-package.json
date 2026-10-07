@@ -1,0 +1,309 @@
+﻿{
+	"PackageFileSummary": {
+		"Tag": -1641380927,
+		"LegacyFileVersion": -9,
+		"LegacyUE3Version": 864,
+		"FileVersionUE4": 522,
+		"FileVersionUE5": 1018,
+		"FileVersionLicenseeUE4": 0,
+		"SavedHash": {
+			"Data": "Base64:EQvqxmzoUNVwSObNuLkjNzfkP1c="
+		},
+		"TotalHeaderSize": 7254,
+		"CustomVersions": [
+			{
+				"Key": "E4B068EDF49442E9A231DA0B2E46BB41",
+				"Version": 40
+			}
+		],
+		"PackageName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+		"PackageFlags": 0,
+		"NameCount": 60,
+		"NameOffset": 407,
+		"SoftObjectPathsCount": 0,
+		"SoftObjectPathsOffset": 2066,
+		"LocalizationId": "59BE3197FF13E7E6E70B86EA09DEC4A0",
+		"GatherableTextDataCount": 0,
+		"GatherableTextDataOffset": 2066,
+		"ExportCount": 1,
+		"ExportOffset": 2759,
+		"ImportCount": 16,
+		"ImportOffset": 2119,
+		"CellExportCount": 0,
+		"CellExportOffset": 2871,
+		"CellImportCount": 0,
+		"CellImportOffset": 2871,
+		"MetaDataOffset": 2066,
+		"DependsOffset": 2871,
+		"SoftPackageReferencesCount": 0,
+		"SoftPackageReferencesOffset": 2875,
+		"SearchableNamesOffset": 2875,
+		"ThumbnailTableOffset": 7141,
+		"ImportTypeHierarchiesCount": 0,
+		"ImportTypeHierarchiesOffset": 0,
+		"PersistentGuid": "846717CB4ED5F43C09A7B1B02D371199",
+		"GenerationCount": 1,
+		"Generations": [
+			{
+				"ExportCount": 1,
+				"NameCount": 60
+			}
+		],
+		"SavedByEngineVersion": "5.7.4-51494982+++UE5+Release-5.7",
+		"CompatibleWithEngineVersion": "5.7.0-47537391+++UE5+Release-5.7",
+		"CompressionFlags": 0,
+		"CompressedChunks": [],
+		"PackageSource": 466192950,
+		"AdditionalPackagesToCook": [],
+		"AssetRegistryDataOffset": 7178,
+		"BulkDataStartOffset": 10135,
+		"WorldTileInfoDataOffset": 0,
+		"ChunkIDs": [],
+		"PreloadDependencyCount": -1,
+		"PreloadDependencyOffset": 7254,
+		"NamesReferencedFromExportDataCount": 40,
+		"PayloadTocOffset": 10139,
+		"DataResourceOffset": 0
+	},
+	"Names": [
+		"/Script/Engine",
+		"/Script/SlateCore",
+		"ArrayProperty",
+		"Bold",
+		"ByteProperty",
+		"CompositeFont",
+		"Default",
+		"DefaultTypeface",
+		"EFontCacheType",
+		"EFontCacheType::Runtime",
+		"EFontHinting",
+		"EFontHinting::Default",
+		"EFontLoadingPolicy",
+		"EFontLoadingPolicy::LazyLoad",
+		"EnumProperty",
+		"ExtraLight",
+		"Font",
+		"FontCacheType",
+		"FontData",
+		"FontFaceAsset",
+		"FontFilename",
+		"Fonts",
+		"Heavy",
+		"Hinting",
+		"IntProperty",
+		"Light",
+		"LoadingPolicy",
+		"Medium",
+		"Name",
+		"NameProperty",
+		"None",
+		"Normal",
+		"ObjectProperty",
+		"PackageLocalizationNamespace",
+		"Regular",
+		"StrProperty",
+		"StructProperty",
+		"SubFaceIndex",
+		"Typeface",
+		"TypefaceEntry",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Bold",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-ExtraLight",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Light",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Normal",
+		"/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Regular",
+		"/Script/CoreUObject",
+		"Class",
+		"FontFace",
+		"Package",
+		"SourceHanSansCN",
+		"SourceHanSansCN-Bold",
+		"SourceHanSansCN-ExtraLight",
+		"SourceHanSansCN-Heavy",
+		"SourceHanSansCN-Light",
+		"SourceHanSansCN-Medium",
+		"SourceHanSansCN-Normal",
+		"SourceHanSansCN-Regular"
+	],
+	"SoftObjectPaths": [],
+	"Imports": [
+		{
+			"ObjectName": "Font",
+			"PathName": "Object:/Script/Engine.Font",
+			"OuterIndex": -16,
+			"Outer": "Object:/Script/Engine",
+			"ClassPath": "Object:/Script/CoreUObject.Class",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-Bold_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Bold_1.SourceHanSansCN-Bold_1",
+			"OuterIndex": -9,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Bold_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-ExtraLight_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-ExtraLight_1.SourceHanSansCN-ExtraLight_1",
+			"OuterIndex": -10,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-ExtraLight_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-Heavy_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy_1.SourceHanSansCN-Heavy_1",
+			"OuterIndex": -11,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-Light_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Light_1.SourceHanSansCN-Light_1",
+			"OuterIndex": -12,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Light_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-Medium_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1.SourceHanSansCN-Medium_1",
+			"OuterIndex": -13,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-Normal_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Normal_1.SourceHanSansCN-Normal_1",
+			"OuterIndex": -14,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Normal_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "SourceHanSansCN-Regular_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Regular_1.SourceHanSansCN-Regular_1",
+			"OuterIndex": -15,
+			"Outer": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Regular_1",
+			"ClassPath": "Object:/Script/Engine.FontFace",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Bold_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Bold_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-ExtraLight_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-ExtraLight_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Heavy_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Light_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Light_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Medium_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Normal_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Normal_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Regular_1",
+			"PathName": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN-Regular_1",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		},
+		{
+			"ObjectName": "/Script/Engine",
+			"PathName": "Object:/Script/Engine",
+			"OuterIndex": 0,
+			"Outer": null,
+			"ClassPath": "Object:/Script/CoreUObject.Package",
+			"Optional": false
+		}
+	],
+	"Exports": [
+		{
+			"ObjectName": "SourceHanSansCN",
+			"OuterIndex": 0,
+			"Path": "Object:/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN.SourceHanSansCN",
+			"ClassIndex": -1,
+			"Class": "Object:/Script/Engine.Font",
+			"SuperIndex": 0,
+			"Super": null,
+			"TemplateIndex": 0,
+			"Template": null,
+			"ObjectFlags": "Public | Standalone | Transactional",
+			"HashNext": -1,
+			"SerialSize": 2881,
+			"SerialOffset": 7254,
+			"ScriptSerializationStartOffset": 0,
+			"ScriptSerializationEndOffset": 2873,
+			"bForcedExport": 0,
+			"bNotForClient": 0,
+			"bNotForServer": 1,
+			"bNotAlwaysLoadedForEditorGame": 1,
+			"bIsAsset": 1,
+			"bIsInheritedInstance": 0,
+			"bGeneratePublicHash": 0
+		}
+	],
+	"DependsMap": {},
+	"SoftPackageReferences": [],
+	"GatherableTextMap": [],
+	"Thumbnails": [
+		{
+			"ObjectFullName": "Font /GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN.SourceHanSansCN",
+			"FileOffset": 2879
+		}
+	],
+	"AssetRegistry": [
+		{
+			"PackageName": "/GameMainMenu/Assets/Font/ShiYuan/SourceHanSansCN",
+			"PackagePath": "/GameMainMenu/Assets/Font/ShiYuan",
+			"AssetName": "SourceHanSansCN",
+			"AssetClassPath": "Object:/Script/Engine.Font",
+			"PackageFlags": 0,
+			"OptionalOuterPath": null,
+			"ChunkIDs": [],
+			"TagsAndValues": {},
+			"TaggedAssetBundles": {}
+		}
+	]
+}

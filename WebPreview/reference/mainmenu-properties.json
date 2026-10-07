@@ -1,0 +1,1869 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\WBP_MainMenu.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/WBP_MainMenu",
+  "objects": [
+    {
+      "index": 1,
+      "name": "CommonBoundActionBar_147",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.CommonBoundActionBar_147",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "EntrySpacing": {
+          "x": 8.0,
+          "y": 0.0
+        },
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 2,
+      "name": "CommonBoundActionBar_147",
+      "class": "Object:/Script/CommonUI.CommonBoundActionBar",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.CommonBoundActionBar_147",
+      "properties": {
+        "ActionButtonClass": "WBP_Button_BoundAction_C",
+        "EntrySpacing": {
+          "x": 8.0,
+          "y": 0.0
+        },
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 3,
+      "name": "ComponentDelegateBinding_3",
+      "class": "Object:/Script/Engine.ComponentDelegateBinding",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:ComponentDelegateBinding_3",
+      "properties": {
+        "ComponentDelegateBindings": [
+          {
+            "ComponentPropertyName": "Bt_MultiPlayer",
+            "DelegatePropertyName": "OnButtonBaseClicked",
+            "FunctionNameToBind": "BndEvt__WBP_MainMenu_Bt_MultiPlayer_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature"
+          },
+          {
+            "ComponentPropertyName": "Bt_Credits",
+            "DelegatePropertyName": "OnButtonBaseClicked",
+            "FunctionNameToBind": "BndEvt__WBP_MainMenu_Bt_Credits_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature"
+          },
+          {
+            "ComponentPropertyName": "Bt_Options",
+            "DelegatePropertyName": "OnButtonBaseClicked",
+            "FunctionNameToBind": "BndEvt__WBP_MainMenu_Bt_Options_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature"
+          },
+          {
+            "ComponentPropertyName": "Bt_Exit",
+            "DelegatePropertyName": "OnButtonBaseClicked",
+            "FunctionNameToBind": "BndEvt__WBP_MainMenu_Bt_Exit_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "name": "BP_GetDesiredFocusTarget",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_VariableGet_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "16671becd9dce6439e9bc7ffa3534e94"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3"
+        ],
+        "bAllowDeletion": false,
+        "SubGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "96c41b03c0bf5f498ea7592386db5fe5"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "Bt Exit",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_ComponentBoundEvent_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_AsyncAction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_SwitchEnum_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_CallFunction_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "415031065abb7a49af81e66f1cc67d2b"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "Bt Options",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_ComponentBoundEvent_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_AsyncAction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_CallFunction_4"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "eb323c488541c64eb939e24c8564debf"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "name": "Bt Credits",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_ComponentBoundEvent_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_AsyncAction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_CallFunction_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_CallFunction_6"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "2fbea18e9de56c40963b991afa7ad533"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "name": "Bt Multiplayer",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_Tunnel_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_Tunnel_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_ComponentBoundEvent_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_AsyncAction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_CallFunction_2"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "453fae78593d254cad5ebbf5517309a0"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "name": "BndEvt__WBP_MainMenu_Bt_Credits_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_Credits_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature",
+      "properties": {}
+    },
+    {
+      "index": 11,
+      "name": "BndEvt__WBP_MainMenu_Bt_Exit_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_Exit_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature",
+      "properties": {}
+    },
+    {
+      "index": 12,
+      "name": "BndEvt__WBP_MainMenu_Bt_MultiPlayer_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_MultiPlayer_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature",
+      "properties": {}
+    },
+    {
+      "index": 13,
+      "name": "BndEvt__WBP_MainMenu_Bt_Options_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_Options_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature",
+      "properties": {}
+    },
+    {
+      "index": 14,
+      "name": "BP_GetDesiredFocusTarget",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:BP_GetDesiredFocusTarget",
+      "properties": {}
+    },
+    {
+      "index": 15,
+      "name": "ExecuteUbergraph_WBP_MainMenu",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:ExecuteUbergraph_WBP_MainMenu",
+      "properties": {}
+    },
+    {
+      "index": 16,
+      "name": "OnAfterPush_02D96E50439311152D0A748A8C07E322",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnAfterPush_02D96E50439311152D0A748A8C07E322",
+      "properties": {}
+    },
+    {
+      "index": 17,
+      "name": "OnAfterPush_45BF5F484D4EC733FD5520A445BCB78F",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnAfterPush_45BF5F484D4EC733FD5520A445BCB78F",
+      "properties": {}
+    },
+    {
+      "index": 18,
+      "name": "OnAfterPush_AAADBAFC4174D82E8CAC1A85ECAA4FF2",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnAfterPush_AAADBAFC4174D82E8CAC1A85ECAA4FF2",
+      "properties": {}
+    },
+    {
+      "index": 19,
+      "name": "OnConfirmScreenButtonClicked_36343B28453D51B8393518ADD9CE9A49",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnConfirmScreenButtonClicked_36343B28453D51B8393518ADD9CE9A49",
+      "properties": {}
+    },
+    {
+      "index": 20,
+      "name": "OnWidgetCreatedBeforePush_02D96E50439311152D0A748A8C07E322",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnWidgetCreatedBeforePush_02D96E50439311152D0A748A8C07E322",
+      "properties": {}
+    },
+    {
+      "index": 21,
+      "name": "OnWidgetCreatedBeforePush_45BF5F484D4EC733FD5520A445BCB78F",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnWidgetCreatedBeforePush_45BF5F484D4EC733FD5520A445BCB78F",
+      "properties": {}
+    },
+    {
+      "index": 22,
+      "name": "OnWidgetCreatedBeforePush_AAADBAFC4174D82E8CAC1A85ECAA4FF2",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnWidgetCreatedBeforePush_AAADBAFC4174D82E8CAC1A85ECAA4FF2",
+      "properties": {}
+    },
+    {
+      "index": 23,
+      "name": "GridPanel_81",
+      "class": "Object:/Script/UMG.GridPanel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_5"
+        ],
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "GridPanel_81"
+      }
+    },
+    {
+      "index": 24,
+      "name": "GridPanel_81",
+      "class": "Object:/Script/UMG.GridPanel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_5"
+        ],
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "GridPanel_81"
+      }
+    },
+    {
+      "index": 25,
+      "name": "GridSlot_0",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_0",
+      "properties": {
+        "Padding": {
+          "Top": 150.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Continue"
+      }
+    },
+    {
+      "index": 26,
+      "name": "GridSlot_2",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_2",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 1,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_NewStory"
+      }
+    },
+    {
+      "index": 27,
+      "name": "GridSlot_3",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_3",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 3,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Options"
+      }
+    },
+    {
+      "index": 28,
+      "name": "GridSlot_4",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_4",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 4,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Credits"
+      }
+    },
+    {
+      "index": 29,
+      "name": "GridSlot_5",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_5",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 5,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Exit"
+      }
+    },
+    {
+      "index": 30,
+      "name": "GridSlot_6",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_6",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 2,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_MultiPlayer"
+      }
+    },
+    {
+      "index": 31,
+      "name": "GridSlot_0",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_0",
+      "properties": {
+        "Padding": {
+          "Top": 150.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Continue"
+      }
+    },
+    {
+      "index": 32,
+      "name": "GridSlot_2",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_2",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 1,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_NewStory"
+      }
+    },
+    {
+      "index": 33,
+      "name": "GridSlot_3",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_3",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 3,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Options"
+      }
+    },
+    {
+      "index": 34,
+      "name": "GridSlot_4",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_4",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 4,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Credits"
+      }
+    },
+    {
+      "index": 35,
+      "name": "GridSlot_5",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_5",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 5,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Exit"
+      }
+    },
+    {
+      "index": 36,
+      "name": "GridSlot_6",
+      "class": "Object:/Script/UMG.GridSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_6",
+      "properties": {
+        "Padding": {
+          "Top": 36.0
+        },
+        "Row": 2,
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_MultiPlayer"
+      }
+    },
+    {
+      "index": 37,
+      "name": "K2Node_AsyncAction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AsyncAction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_AsyncAction_0",
+      "properties": {
+        "ProxyFactoryFunctionName": "PushConfirmScreen",
+        "ProxyFactoryClass": "AA_PushConfirmScreen",
+        "ProxyClass": "AA_PushConfirmScreen",
+        "NodePosX": 240,
+        "NodePosY": 704,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "283b3436b8513d45ad18353961460f09"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "name": "K2Node_AsyncAction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AsyncAction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_AsyncAction_2",
+      "properties": {
+        "ProxyFactoryFunctionName": "PushSoftWidget",
+        "ProxyFactoryClass": "AA_PushSoftWidget",
+        "ProxyClass": "AA_PushSoftWidget",
+        "NodePosX": 528,
+        "NodePosY": 1024,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "485fbf4533c74e4da42055fde25ea08a"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "name": "K2Node_AsyncAction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AsyncAction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_AsyncAction_3",
+      "properties": {
+        "ProxyFactoryFunctionName": "PushSoftWidget",
+        "ProxyFactoryClass": "AA_PushSoftWidget",
+        "ProxyClass": "AA_PushSoftWidget",
+        "NodePosX": 528,
+        "NodePosY": 1392,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "fcbaadaa2ed87441851aac8c83d4c4ca"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "name": "K2Node_AsyncAction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_AsyncAction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_AsyncAction_1",
+      "properties": {
+        "ProxyFactoryFunctionName": "PushSoftWidget",
+        "ProxyFactoryClass": "AA_PushSoftWidget",
+        "ProxyClass": "AA_PushSoftWidget",
+        "NodePosX": 528,
+        "NodePosY": 1760,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "506ed902151193438a740a2d1fb7bba0"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "KismetSystemLibrary",
+          "MemberName": "QuitGame"
+        },
+        "NodePosX": 1136,
+        "NodePosY": 736,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3fe710476b55434cb4344a6ac8dfaa4c"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_CallFunction_3",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 304,
+        "NodePosY": 1072,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0542f73d84d87a4f80ac923118a4fa87"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "name": "K2Node_CallFunction_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_CallFunction_4",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FrontendFunctionLibrary",
+          "MemberName": "GetFrontendSoftWidgetClassByTag"
+        },
+        "NodePosX": 80,
+        "NodePosY": 1136,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "49c51d9ea459144ba987ee28f737a284"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "name": "K2Node_CallFunction_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_CallFunction_5",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 304,
+        "NodePosY": 1440,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "8c5e5a1c359e754abb08b7e8092379d5"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "name": "K2Node_CallFunction_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_CallFunction_6",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FrontendFunctionLibrary",
+          "MemberName": "GetFrontendSoftWidgetClassByTag"
+        },
+        "NodePosX": 80,
+        "NodePosY": 1504,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "28263fd12a27844b831129529c8ee8df"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_CallFunction_1",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberName": "GetPC",
+          "bSelfContext": true
+        },
+        "NodePosX": 368,
+        "NodePosY": 1808,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "473bbfc4383a9e468fd150e02be73aec"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_CallFunction_2",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "FrontendFunctionLibrary",
+          "MemberName": "GetFrontendSoftWidgetClassByTag"
+        },
+        "NodePosX": 144,
+        "NodePosY": 1872,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4980995219c53d478941246294df4dd9"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "name": "K2Node_ComponentBoundEvent_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_ComponentBoundEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_ComponentBoundEvent_0",
+      "properties": {
+        "DelegatePropertyName": "OnButtonBaseClicked",
+        "DelegateOwnerClass": "CommonButtonBase",
+        "ComponentPropertyName": "Bt_Exit",
+        "EventReference": {
+          "MemberParent": "/Script/CommonUI",
+          "MemberName": "CommonButtonBaseClicked__DelegateSignature"
+        },
+        "bInternalEvent": true,
+        "CustomFunctionName": "BndEvt__WBP_MainMenu_Bt_Exit_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature",
+        "NodePosY": 704,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "d31cc2abe4050147a0448a7350f8c34d"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "name": "K2Node_ComponentBoundEvent_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_ComponentBoundEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_ComponentBoundEvent_1",
+      "properties": {
+        "DelegatePropertyName": "OnButtonBaseClicked",
+        "DelegateOwnerClass": "CommonButtonBase",
+        "ComponentPropertyName": "Bt_Options",
+        "EventReference": {
+          "MemberParent": "/Script/CommonUI",
+          "MemberName": "CommonButtonBaseClicked__DelegateSignature"
+        },
+        "bInternalEvent": true,
+        "CustomFunctionName": "BndEvt__WBP_MainMenu_Bt_Options_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature",
+        "NodePosY": 1024,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5d71431fe7f994429835ffbbec851865"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "name": "K2Node_ComponentBoundEvent_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_ComponentBoundEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_ComponentBoundEvent_2",
+      "properties": {
+        "DelegatePropertyName": "OnButtonBaseClicked",
+        "DelegateOwnerClass": "CommonButtonBase",
+        "ComponentPropertyName": "Bt_Credits",
+        "EventReference": {
+          "MemberParent": "/Script/CommonUI",
+          "MemberName": "CommonButtonBaseClicked__DelegateSignature"
+        },
+        "bInternalEvent": true,
+        "CustomFunctionName": "BndEvt__WBP_MainMenu_Bt_Credits_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature",
+        "NodePosY": 1392,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a892353104f1c34d9da81cb10cc23f9b"
+        }
+      }
+    },
+    {
+      "index": 51,
+      "name": "K2Node_ComponentBoundEvent_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_ComponentBoundEvent",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_ComponentBoundEvent_3",
+      "properties": {
+        "DelegatePropertyName": "OnButtonBaseClicked",
+        "DelegateOwnerClass": "CommonButtonBase",
+        "ComponentPropertyName": "Bt_MultiPlayer",
+        "EventReference": {
+          "MemberParent": "/Script/CommonUI",
+          "MemberName": "CommonButtonBaseClicked__DelegateSignature"
+        },
+        "bInternalEvent": true,
+        "CustomFunctionName": "BndEvt__WBP_MainMenu_Bt_MultiPlayer_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature",
+        "NodePosY": 1760,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1d7a8557b46f37418e2835088921b065"
+        }
+      }
+    },
+    {
+      "index": 52,
+      "name": "K2Node_Composite_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_Tunnel_0",
+        "NodePosY": 688,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "退出按钮点击",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "4a120b52bd32ff4faeffa864774af427"
+        }
+      }
+    },
+    {
+      "index": 53,
+      "name": "K2Node_Composite_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_Tunnel_0",
+        "NodePosX": 160,
+        "NodePosY": 688,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "设置按钮点击",
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "863707fb7af0a24999588ea97e502168"
+        }
+      }
+    },
+    {
+      "index": 54,
+      "name": "K2Node_Composite_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_Tunnel_0",
+        "NodePosX": 336,
+        "NodePosY": 688,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "开发成员按钮点击",
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bcd7fa21ddf7564e8ff997eb176ea192"
+        }
+      }
+    },
+    {
+      "index": 55,
+      "name": "K2Node_Composite_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Composite",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3",
+      "properties": {
+        "BoundGraph": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer",
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_Tunnel_1",
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_Tunnel_0",
+        "NodePosX": 528,
+        "NodePosY": 688,
+        "bCommentBubbleVisible": true,
+        "bCanRenameNode": true,
+        "NodeComment": "多人游戏按钮点击",
+        "ErrorType": 1,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e02a4a5c72e08948b468ecc1a6592b64"
+        }
+      }
+    },
+    {
+      "index": 56,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "CommonActivatableWidget",
+          "MemberName": "BP_GetDesiredFocusTarget"
+        },
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "376609ee1037ac4b97d9bf1b8874d81a"
+        }
+      }
+    },
+    {
+      "index": 57,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonActivatableWidget",
+          "MemberName": "BP_GetDesiredFocusTarget"
+        },
+        "NodePosX": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e1810859054cff4bbc734c3314e9f28b"
+        }
+      }
+    },
+    {
+      "index": 58,
+      "name": "K2Node_SwitchEnum_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_SwitchEnum",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_SwitchEnum_0",
+      "properties": {
+        "Enum": "EConfirmScreenButtonType",
+        "EnumEntries": [
+          "Confirmed",
+          "Cancelled",
+          "Closed"
+        ],
+        "NodePosX": 784,
+        "NodePosY": 736,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "c7edbc73e786084daea42230e9e8605b"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0",
+        "bCanHaveOutputs": true,
+        "NodePosX": -160,
+        "NodePosY": 720,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cc74b1f8df5b6342b09d6281e1f1c69e"
+        }
+      }
+    },
+    {
+      "index": 60,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0.Bt Exit.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_0",
+        "bCanHaveInputs": true,
+        "NodePosX": 1424,
+        "NodePosY": 720,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "fc3856dc5851e2408a2937f54f729d8d"
+        }
+      }
+    },
+    {
+      "index": 61,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1",
+        "bCanHaveOutputs": true,
+        "NodePosX": -160,
+        "NodePosY": 1056,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1333b46f48d3024297ecb7fa8c87cacf"
+        }
+      }
+    },
+    {
+      "index": 62,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1.Bt Options.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_1",
+        "bCanHaveInputs": true,
+        "NodePosX": 816,
+        "NodePosY": 1056,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0eb0537a4930b346b70eb064e8186d0e"
+        }
+      }
+    },
+    {
+      "index": 63,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2",
+        "bCanHaveOutputs": true,
+        "NodePosX": -160,
+        "NodePosY": 1424,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "6c1803e1ceaefa44a2d8bb08a02b16c1"
+        }
+      }
+    },
+    {
+      "index": 64,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2.Bt Credits.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_2",
+        "bCanHaveInputs": true,
+        "NodePosX": 816,
+        "NodePosY": 1424,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "db6572544990bd4192dff3213809fd20"
+        }
+      }
+    },
+    {
+      "index": 65,
+      "name": "K2Node_Tunnel_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_Tunnel_0",
+      "properties": {
+        "OutputSourceNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3",
+        "bCanHaveOutputs": true,
+        "NodePosX": -160,
+        "NodePosY": 1792,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b23bd6de78139540887b3f0f5b75e699"
+        }
+      }
+    },
+    {
+      "index": 66,
+      "name": "K2Node_Tunnel_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Tunnel",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3.Bt Multiplayer.K2Node_Tunnel_1",
+      "properties": {
+        "InputSinkNode": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Composite_3",
+        "bCanHaveInputs": true,
+        "NodePosX": 816,
+        "NodePosY": 1792,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "432d99106f10914191ae6494d8411733"
+        }
+      }
+    },
+    {
+      "index": 67,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Bt_Continue",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "a92000237225b54eab686bb80f08ed5d"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 64,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "cdadc8d0285eeb4a915e98779c0bef68"
+        }
+      }
+    },
+    {
+      "index": 68,
+      "name": "Bt_Continue",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Continue",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "continue"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Continue-desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_0",
+        "DisplayLabel": "Bt_Continue"
+      }
+    },
+    {
+      "index": 69,
+      "name": "Bt_Credits",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Credits",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Credits"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Credits-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_4",
+        "DisplayLabel": "Bt_Credits"
+      }
+    },
+    {
+      "index": 70,
+      "name": "Bt_Exit",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Exit",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Exit"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Exit-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_5",
+        "DisplayLabel": "Bt_Exit"
+      }
+    },
+    {
+      "index": 71,
+      "name": "Bt_MultiPlayer",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_MultiPlayer",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Multiplayer"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Multiplayer-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_6",
+        "DisplayLabel": "Bt_MultiPlayer"
+      }
+    },
+    {
+      "index": 72,
+      "name": "Bt_NewStory",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_NewStory",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "NewStory"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "NewStory-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_2",
+        "DisplayLabel": "Bt_NewStory"
+      }
+    },
+    {
+      "index": 73,
+      "name": "Bt_Options",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Options",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Options"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Options-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81.GridSlot_3",
+        "DisplayLabel": "Bt_Options"
+      }
+    },
+    {
+      "index": 74,
+      "name": "Bt_Continue",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Continue",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "continue"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Continue-desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_0",
+        "DisplayLabel": "Bt_Continue"
+      }
+    },
+    {
+      "index": 75,
+      "name": "Bt_Credits",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Credits",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Credits"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Credits-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_4",
+        "DisplayLabel": "Bt_Credits"
+      }
+    },
+    {
+      "index": 76,
+      "name": "Bt_Exit",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Exit",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Exit"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Exit-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_5",
+        "DisplayLabel": "Bt_Exit"
+      }
+    },
+    {
+      "index": 77,
+      "name": "Bt_MultiPlayer",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_MultiPlayer",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Multiplayer"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Multiplayer-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_6",
+        "DisplayLabel": "Bt_MultiPlayer"
+      }
+    },
+    {
+      "index": 78,
+      "name": "Bt_NewStory",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_NewStory",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "NewStory"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "NewStory-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_2",
+        "DisplayLabel": "Bt_NewStory"
+      }
+    },
+    {
+      "index": 79,
+      "name": "Bt_Options",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_Button_Default.WBP_Button_Default_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Options",
+      "properties": {
+        "ButtonDisplayText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+          "key": "Options"
+        },
+        "bUseUpperCaseForButtonText": true,
+        "ButtonDescriptionText": {
+          "stringTable": "/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+          "key": "Options-Desc"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81.GridSlot_3",
+        "DisplayLabel": "Bt_Options"
+      }
+    },
+    {
+      "index": 80,
+      "name": "WBP_Button_Description",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_Button_Description.WBP_Button_Description_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.WBP_Button_Description",
+      "properties": {
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 81,
+      "name": "WBP_Button_Description",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_Button_Description.WBP_Button_Description_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.WBP_Button_Description",
+      "properties": {
+        "bIsVariable": false
+      }
+    },
+    {
+      "index": 82,
+      "name": "Default__WBP_MainMenu_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.Default__WBP_MainMenu_C",
+      "properties": {
+        "UberGraphFrame": {},
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 83,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "LeftButton_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81"
+          },
+          {
+            "Name": "LeftBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "5c82f275913a1a458f0a7b8e8b115f42"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.WBP_Button_Description"
+          },
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.CommonBoundActionBar_147"
+          }
+        ],
+        "bIsVariable": false,
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 84,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.WBP_TemplateLayout",
+      "properties": {
+        "NamedSlotBindings": [
+          {
+            "Name": "LeftButton_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81"
+          },
+          {
+            "Name": "LeftBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "5c82f275913a1a458f0a7b8e8b115f42"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.WBP_Button_Description"
+          },
+          {
+            "Name": "RightBottom_ExtentPoint",
+            "Guid": {
+              "struct": "Guid",
+              "raw": "441b42aad63c754097380b51fc75792c"
+            },
+            "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.CommonBoundActionBar_147"
+          }
+        ],
+        "bIsVariable": false,
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "WBP_TemplateLayout"
+      }
+    },
+    {
+      "index": 85,
+      "name": "WBP_MainMenu",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "000000000a000000f20000000000000074aa8394eac36d47bb5a31d510d33f1b7900000052000000fff7181450041d4fac050870d3d207782d00000000000000a92000237225b54eab686bb80f08ed5d300000000000000091f29bd6084d974195bc97bc012c383e310000000000000045a92630704a044d8e5e8763b2f19c263200000000000000a081f2ff1faa874dad5737228661c1962e0000000000000060306315df2d2f49a95713252f2b5cb72f00000000000000bbff57e9c04bb048afd1b7ee37c732c3ef00000000000000ebc33c172e81694b9bb41f7e45d8c16044000000940000008588ce6b5bd9684e913beb0e98dd7c46"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree",
+        "ParentClass": "W_ActivatableBase",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph"
+        ],
+        "FunctionGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget"
+        ],
+        "GeneratedVariables": [
+          {
+            "VarName": "Bt_Options",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "a081f2ff1faa874dad5737228661c196"
+            },
+            "VarType": {
+              "raw": "a1000000000000009f00000000000000baffffff000000000000000000000000009f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Bt_Options",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MainMenu"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Bt_NewStory",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "45a92630704a044d8e5e8763b2f19c26"
+            },
+            "VarType": {
+              "raw": "a1000000000000009f00000000000000baffffff000000000000000000000000009f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Bt_NewStory",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MainMenu"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Bt_MultiPlayer",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "91f29bd6084d974195bc97bc012c383e"
+            },
+            "VarType": {
+              "raw": "a1000000000000009f00000000000000baffffff000000000000000000000000009f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Bt_MultiPlayer",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MainMenu"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Bt_Exit",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "bbff57e9c04bb048afd1b7ee37c732c3"
+            },
+            "VarType": {
+              "raw": "a1000000000000009f00000000000000baffffff000000000000000000000000009f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Bt_Exit",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MainMenu"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Bt_Credits",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "60306315df2d2f49a95713252f2b5cb7"
+            },
+            "VarType": {
+              "raw": "a1000000000000009f00000000000000baffffff000000000000000000000000009f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Bt_Credits",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MainMenu"
+              }
+            ],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Bt_Continue",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "a92000237225b54eab686bb80f08ed5d"
+            },
+            "VarType": {
+              "raw": "a1000000000000009f00000000000000baffffff000000000000000000000000009f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Bt_Continue",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "1c00098000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [
+              {
+                "DataKey": "Category",
+                "DataValue": "WBP_MainMenu"
+              }
+            ],
+            "DefaultValue": ""
+          }
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "WBP Main Menu",
+          "Activatable Widget",
+          "Input",
+          "Events",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "4cfd28c49bd9b8c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1003946676"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "01000000"
+            },
+            "SavedViewOffset": {
+              "raw": "60fc42c3c4eeaa43",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1019020192"
+            },
+            "SavedZoomAmount": 1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "0e53011c8d46a04ab732c1a6c392f01e"
+        }
+      }
+    },
+    {
+      "index": 86,
+      "name": "WBP_MainMenu_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree",
+        "DynamicBindingObjects": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:ComponentDelegateBinding_3"
+        ],
+        "UberGraphFunction": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:ExecuteUbergraph_WBP_MainMenu",
+        "PropertyGuids": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000060000002d00000000000000a92000237225b54eab686bb80f08ed5d2e0000000000000060306315df2d2f49a95713252f2b5cb72f00000000000000bbff57e9c04bb048afd1b7ee37c732c3300000000000000091f29bd6084d974195bc97bc012c383e310000000000000045a92630704a044d8e5e8763b2f19c263200000000000000a081f2ff1faa874dad5737228661c196"
+        }
+      }
+    },
+    {
+      "index": 87,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.WBP_TemplateLayout",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.WBP_Button_Description",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.GridPanel_81",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Continue",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_NewStory",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_MultiPlayer",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Options",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Credits",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.Bt_Exit",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:WidgetTree.CommonBoundActionBar_147"
+        ]
+      }
+    },
+    {
+      "index": 88,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.WBP_TemplateLayout",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.WBP_TemplateLayout",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.WBP_Button_Description",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.GridPanel_81",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Continue",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_NewStory",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_MultiPlayer",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Options",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Credits",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.Bt_Exit",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:WidgetTree.CommonBoundActionBar_147"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph",
+    "Object:/GameMainMenu/BP/StringTable/ST_UI_Common.ST_UI_Common",
+    "Object:/GameMainMenu/BP/StringTable/ST_GameMessages.ST_GameMessages",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.SKEL_WBP_MainMenu_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.SKEL_WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_Exit_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu:BP_GetDesiredFocusTarget.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.SKEL_WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_Options_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:BP_GetDesiredFocusTarget",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.SKEL_WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_Credits_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.WBP_MainMenu_C:OnConfirmScreenButtonClicked_36343B28453D51B8393518ADD9CE9A49",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.SKEL_WBP_MainMenu_C:BndEvt__WBP_MainMenu_Bt_MultiPlayer_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_MainMenu.SKEL_WBP_MainMenu_C:BP_GetDesiredFocusTarget"
+  ],
+  "text": []
+}

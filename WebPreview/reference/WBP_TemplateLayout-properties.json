@@ -1,0 +1,1106 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\WBP_TemplateLayout.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout",
+  "objects": [
+    {
+      "index": 1,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "3b580be986e9034c90e562472e4f2632"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "HB_Bottom",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_2",
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "HB_Bottom"
+      }
+    },
+    {
+      "index": 3,
+      "name": "HB_Center",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_1",
+        "DisplayLabel": "HB_Center"
+      }
+    },
+    {
+      "index": 4,
+      "name": "HB_LeftBottom",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom.HorizontalBoxSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_0",
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "HB_LeftBottom"
+      }
+    },
+    {
+      "index": 5,
+      "name": "HB_RightBottom",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom.HorizontalBoxSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_1",
+        "bExpandedInDesigner": true,
+        "DisplayLabel": "HB_RightBottom"
+      }
+    },
+    {
+      "index": 6,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 1.399999976158142,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom"
+      }
+    },
+    {
+      "index": 7,
+      "name": "HorizontalBoxSlot_1",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_1",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom"
+      }
+    },
+    {
+      "index": 8,
+      "name": "HorizontalBoxSlot_2",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_2",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Spacer_466"
+      }
+    },
+    {
+      "index": 9,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 1.2999999523162842,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft"
+      }
+    },
+    {
+      "index": 10,
+      "name": "HorizontalBoxSlot_1",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_1",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight"
+      }
+    },
+    {
+      "index": 11,
+      "name": "HorizontalBoxSlot_2",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_2",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Spacer_76"
+      }
+    },
+    {
+      "index": 12,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom.HorizontalBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.LeftBottom_ExtentPoint"
+      }
+    },
+    {
+      "index": 13,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom.HorizontalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Padding": {
+          "Right": 30.0
+        },
+        "HorizontalAlignment": "HAlign_Right",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.RightBottom_ExtentPoint"
+      }
+    },
+    {
+      "index": 14,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "fb5fa5db62bc914eb0e19d8e37022d50"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "bb1d90695e54e8479e6cb79f5edb0091"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "e1c073d82261f54abff9e09af9114574"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "name": "Center_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Center_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "7c638020abc2ab43bfbf58e65dc5dcbb"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23.OverlaySlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "Center_ExtentPoint"
+      }
+    },
+    {
+      "index": 18,
+      "name": "LeftBottom_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.LeftBottom_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "5c82f275913a1a458f0a7b8e8b115f42"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom.HorizontalBoxSlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "LeftBottom_ExtentPoint"
+      }
+    },
+    {
+      "index": 19,
+      "name": "LeftButton_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.LeftButton_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206.OverlaySlot_1",
+        "bIsVariable": false,
+        "DisplayLabel": "LeftButton_ExtentPoint"
+      }
+    },
+    {
+      "index": 20,
+      "name": "MainLeft_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.MainLeft_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "bda1c5f58ff5de4d8ab425a56afd4601"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206.OverlaySlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "MainLeft_ExtentPoint"
+      }
+    },
+    {
+      "index": 21,
+      "name": "MainRight_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.MainRight_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "9b6a4960be93004c9890ea0ca0aa8dce"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight.VerticalBoxSlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "MainRight_ExtentPoint"
+      }
+    },
+    {
+      "index": 22,
+      "name": "RightBottom_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.RightBottom_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "441b42aad63c754097380b51fc75792c"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom.HorizontalBoxSlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "RightBottom_ExtentPoint"
+      }
+    },
+    {
+      "index": 23,
+      "name": "Top_ExtentPoint",
+      "class": "Object:/Script/UMG.NamedSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Top_ExtentPoint",
+      "properties": {
+        "SlotGuid": {
+          "struct": "Guid",
+          "raw": "f97040d72270874caac4b9837d19e250"
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+        "bIsVariable": false,
+        "DisplayLabel": "Top_ExtentPoint"
+      }
+    },
+    {
+      "index": 24,
+      "name": "Overlay_206",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206.OverlaySlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft.VerticalBoxSlot_1",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 25,
+      "name": "Overlay_23",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23.OverlaySlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23.OverlaySlot_1"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 26,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.MainLeft_ExtentPoint"
+      }
+    },
+    {
+      "index": 27,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206.OverlaySlot_1",
+      "properties": {
+        "Padding": {
+          "Left": 250.0
+        },
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.LeftButton_ExtentPoint"
+      }
+    },
+    {
+      "index": 28,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23.OverlaySlot_0",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Center_ExtentPoint"
+      }
+    },
+    {
+      "index": 29,
+      "name": "OverlaySlot_1",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23.OverlaySlot_1",
+      "properties": {
+        "HorizontalAlignment": "HAlign_Fill",
+        "VerticalAlignment": "VAlign_Fill",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113"
+      }
+    },
+    {
+      "index": 30,
+      "name": "SizeBox_0",
+      "class": "Object:/Script/UMG.SizeBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0",
+      "properties": {
+        "MinDesiredHeight": 80.0,
+        "bOverride_MinDesiredHeight": true,
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0.SizeBoxSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_0"
+      }
+    },
+    {
+      "index": 31,
+      "name": "SizeBoxSlot_0",
+      "class": "Object:/Script/UMG.SizeBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Top_ExtentPoint"
+      }
+    },
+    {
+      "index": 32,
+      "name": "Spacer_466",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Spacer_466",
+      "properties": {
+        "Size": {
+          "x": 64.0,
+          "y": 1.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom.HorizontalBoxSlot_2"
+      }
+    },
+    {
+      "index": 33,
+      "name": "Spacer_76",
+      "class": "Object:/Script/UMG.Spacer",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Spacer_76",
+      "properties": {
+        "Size": {
+          "x": 100.0,
+          "y": 1.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_2"
+      }
+    },
+    {
+      "index": 34,
+      "name": "VB_MainLeft",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft.VerticalBoxSlot_1"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_0",
+        "DisplayLabel": "VB_MainLeft"
+      }
+    },
+    {
+      "index": 35,
+      "name": "VB_MainRight",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight.VerticalBoxSlot_0"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center.HorizontalBoxSlot_1",
+        "DisplayLabel": "VB_MainRight"
+      }
+    },
+    {
+      "index": 36,
+      "name": "VerticalBox_113",
+      "class": "Object:/Script/UMG.VerticalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_2"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23.OverlaySlot_1",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 37,
+      "name": "VerticalBoxSlot_1",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft.VerticalBoxSlot_1",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206"
+      }
+    },
+    {
+      "index": 38,
+      "name": "VerticalBoxSlot_0",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight.VerticalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.MainRight_ExtentPoint"
+      }
+    },
+    {
+      "index": 39,
+      "name": "VerticalBoxSlot_0",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_0",
+      "properties": {
+        "Padding": {
+          "Top": 20.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0"
+      }
+    },
+    {
+      "index": 40,
+      "name": "VerticalBoxSlot_1",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_1",
+      "properties": {
+        "Size": {
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center"
+      }
+    },
+    {
+      "index": 41,
+      "name": "VerticalBoxSlot_2",
+      "class": "Object:/Script/UMG.VerticalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113.VerticalBoxSlot_2",
+      "properties": {
+        "Padding": {
+          "Left": 100.0,
+          "Top": 16.0,
+          "Right": 16.0,
+          "Bottom": 32.0
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom"
+      }
+    },
+    {
+      "index": 42,
+      "name": "Default__WBP_TemplateLayout_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.Default__WBP_TemplateLayout_C",
+      "properties": {
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 43,
+      "name": "WBP_TemplateLayout",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000130000006700000018000000158da3683847b3458ae03fe5ea70d8eb1d000000000000006b79b0bc4a3bbb4e88968e155e6a71af97000000720000003890741f5b601b4b8e5ca4f65fefa6d08a0000000000000054c17acb77251d4584a5579af675394e7900000001000000223d35b01d672d4980ef5ef99e22955b440000000000000042c6e8f5068c0049a06139af7e5eb8559300000000000000d3dc3de0406d524091024f183ab73bfc9400000000000000fd73d46f09cafb4bb17fd1d955eeafaa810000004d000000d983c106e12632408dd3b3bb072de28667000000cf000000e304579516b5ef4abf56ea1c71932668520000000000000072ec459066c13b429262bc41da72648a5100000000000000e311d40f4cf1b942b1717561b47f264e5000000000000000a3941b363a7cb54580cc6c8f3c4342f54300000000000000d3d142441592674eaaa5ae1fab5093df4500000000000000dc73860ce07ff247a1d7fc9684da44234f0000000000000028f9b78a266d1e40b76462c88d378de24600000000000000f517e1697f81244189e905f4c5b473b081000000d301000016716c87ea70d74ebf8a3f712a3daf627300000000000000c13d17b67b3c354598a53d54e980aff5"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree",
+        "ParentClass": "UserWidget",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph"
+        ],
+        "GeneratedVariables": [
+          {
+            "VarName": "Top_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "54c17acb77251d4584a5579af675394e"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Top_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "RightBottom_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "c13d17b67b3c354598a53d54e980aff5"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "RightBottom_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "MainRight_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "72ec459066c13b429262bc41da72648a"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "MainRight_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "MainLeft_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "e311d40f4cf1b942b1717561b47f264e"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "MainLeft_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "LeftButton_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "a3941b363a7cb54580cc6c8f3c4342f5"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "LeftButton_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "LeftBottom_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "28f9b78a266d1e40b76462c88d378de2"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "LeftBottom_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Center_ExtentPoint",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "6b79b0bc4a3bbb4e88968e155e6a71af"
+            },
+            "VarType": {
+              "raw": "64000000000000006300000000000000f9ffffff00000000000000000000000000630000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Center_ExtentPoint",
+            "Category": "",
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0800088000000200"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          }
+        ],
+        "CategorySorting": [
+          "Event Graph"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "4676adf87baa6248bbd99d866fdbc703"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "name": "WBP_TemplateLayout_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C:WidgetTree",
+        "NamedSlots": [
+          "LeftBottom_ExtentPoint",
+          "RightBottom_ExtentPoint",
+          "Center_ExtentPoint",
+          "LeftButton_ExtentPoint",
+          "MainLeft_ExtentPoint",
+          "MainRight_ExtentPoint",
+          "Top_ExtentPoint"
+        ],
+        "NamedSlotsWithID": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000070000004f000000000000005c82f275913a1a458f0a7b8e8b115f427300000000000000441b42aad63c754097380b51fc75792c1d000000000000007c638020abc2ab43bfbf58e65dc5dcbb5000000000000000bda1c5f58ff5de4d8ab425a56afd46015100000000000000bda1c5f58ff5de4d8ab425a56afd460152000000000000009b6a4960be93004c9890ea0ca0aa8dce8a00000000000000f97040d72270874caac4b9837d19e250"
+        },
+        "AvailableNamedSlots": [
+          "LeftBottom_ExtentPoint",
+          "RightBottom_ExtentPoint",
+          "Center_ExtentPoint",
+          "LeftButton_ExtentPoint",
+          "MainLeft_ExtentPoint",
+          "MainRight_ExtentPoint",
+          "Top_ExtentPoint"
+        ],
+        "InstanceNamedSlots": [
+          "LeftBottom_ExtentPoint",
+          "RightBottom_ExtentPoint",
+          "Center_ExtentPoint",
+          "LeftButton_ExtentPoint",
+          "MainLeft_ExtentPoint",
+          "MainRight_ExtentPoint",
+          "Top_ExtentPoint"
+        ],
+        "PropertyGuids": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000070000001d000000000000006b79b0bc4a3bbb4e88968e155e6a71af4f0000000000000028f9b78a266d1e40b76462c88d378de25000000000000000a3941b363a7cb54580cc6c8f3c4342f55100000000000000e311d40f4cf1b942b1717561b47f264e520000000000000072ec459066c13b429262bc41da72648a7300000000000000c13d17b67b3c354598a53d54e980aff58a0000000000000054c17acb77251d4584a5579af675394e"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_23",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Center_ExtentPoint",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VerticalBox_113",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.SizeBox_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Top_ExtentPoint",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Center",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainLeft",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Overlay_206",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.MainLeft_ExtentPoint",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.LeftButton_ExtentPoint",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Spacer_76",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.VB_MainRight",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.MainRight_ExtentPoint",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_Bottom",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_LeftBottom",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.LeftBottom_ExtentPoint",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.Spacer_466",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.HB_RightBottom",
+          "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:WidgetTree.RightBottom_ExtentPoint"
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C:WidgetTree",
+      "properties": {
+        "RootWidget": null,
+        "AllWidgets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.SKEL_WBP_TemplateLayout_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.SKEL_WBP_TemplateLayout_C:Tick",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.SKEL_WBP_TemplateLayout_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.SKEL_WBP_TemplateLayout_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/WBP_TemplateLayout.WBP_TemplateLayout:EventGraph.K2Node_Event_2"
+  ],
+  "text": []
+}

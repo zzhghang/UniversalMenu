@@ -1,0 +1,338 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Components\\WBP_ListEntry_Rotator.uasset",
+  "package": "/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator",
+  "objects": [
+    {
+      "index": 1,
+      "name": "MyText",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.MyText",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[C7BF97D4CD3B528D5DF196946C9870E9]",
+          "key": "372FF2AA4FE03AE58E5499883A9171F9",
+          "source": "Option"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37.OverlaySlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "MyText"
+      }
+    },
+    {
+      "index": 2,
+      "name": "MyText",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.MyText",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[C7BF97D4CD3B528D5DF196946C9870E9]",
+          "key": "372FF2AA4FE03AE58E5499883A9171F9",
+          "source": "Option"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37.OverlaySlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "MyText"
+      }
+    },
+    {
+      "index": 3,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_1",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "a7610aa43b856d4ca3524d0c7b68f958"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "abca04320dbae14bb485dda873459f0a"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "K2Node_Event_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_1",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Construct"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 208,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "ec77aaab88287045ba5f621ceed7ca84"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "K2Node_Event_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_2",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "Tick"
+        },
+        "bOverrideFunction": true,
+        "NodePosY": 416,
+        "EnabledState": "ENodeEnabledState::Disabled",
+        "bCommentBubblePinned": true,
+        "bCommentBubbleVisible": true,
+        "NodeComment": "This node is disabled and will not be called.\nDrag off pins to build functionality.",
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "6fa94796c07c3a409ae89228b12b3267"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "Overlay_37",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 8,
+      "name": "Overlay_37",
+      "class": "Object:/Script/UMG.Overlay",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37.OverlaySlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 9,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37.OverlaySlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37",
+        "Content": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.MyText"
+      }
+    },
+    {
+      "index": 10,
+      "name": "OverlaySlot_0",
+      "class": "Object:/Script/UMG.OverlaySlot",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37.OverlaySlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37",
+        "Content": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.MyText"
+      }
+    },
+    {
+      "index": 11,
+      "name": "Default__WBP_ListEntry_Rotator_C",
+      "class": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.Default__WBP_ListEntry_Rotator_C",
+      "properties": {
+        "Style": "SButton_Clear_NoSound_C",
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false
+      }
+    },
+    {
+      "index": 12,
+      "name": "WBP_ListEntry_Rotator",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000020000004a00000026000000b77f366cf803b6498546c6282f756cd141000000000000000b4fe706300277499a5abda87236a1aa"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree",
+        "ParentClass": "FrontendCommonRotator",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph"
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "WBP List Entry Rotator"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "0000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "unpack_from requires a buffer of at least 16 bytes for unpacking 8 bytes at offset 8 (actual buffer size is 8)"
+            },
+            "SavedZoomAmount": -1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "9592f41e7c3d3b4e84c68982a20bb8f1"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "name": "WBP_ListEntry_Rotator_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree"
+      }
+    },
+    {
+      "index": 14,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.Overlay_37",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:WidgetTree.MyText"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.Overlay_37",
+          "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C:WidgetTree.MyText"
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator_C",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.SKEL_WBP_ListEntry_Rotator_C",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.WBP_ListEntry_Rotator:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.SKEL_WBP_ListEntry_Rotator_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.SKEL_WBP_ListEntry_Rotator_C:Construct",
+    "Object:/GameMainMenu/BP/UI/Components/WBP_ListEntry_Rotator.SKEL_WBP_ListEntry_Rotator_C:Tick"
+  ],
+  "text": []
+}

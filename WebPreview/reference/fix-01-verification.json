@@ -1,0 +1,26 @@
+{
+  "issue": "01 - Options initialization before binding",
+  "build": "Rider Run: UniversalMenu / Development Editor / Win64; build succeeded and editor launched",
+  "automation": {
+    "prefix": "GameMainMenu.Options.Initialization",
+    "passed": 2,
+    "failed": 0,
+    "log": "Saved/Logs/UniversalMenu.log",
+    "results": [
+      "[2026.09.18-13.38.16:533][360]LogAutomationController: Display: Test Completed. Result={成功} Name={ReadsExistingSettings} Path={GameMainMenu.Options.Initialization.ReadsExistingSettings}",
+      "[2026.09.18-13.38.16:567][362]LogAutomationController: Display: Test Completed. Result={成功} Name={ResolutionReadsBinding} Path={GameMainMenu.Options.Initialization.ResolutionReadsBinding}"
+    ]
+  },
+  "manual": {
+    "flow": "Rider -> Unreal Editor -> Play -> Main Menu -> Options -> Gameplay",
+    "setting": "Difficulty",
+    "savedValue": "Hard",
+    "dataAssetDefault": "Normal",
+    "firstOpenDisplayed": "Hard"
+  },
+  "changes": [
+    "Bind getter/setter before AddChildListData initializes the entry",
+    "Resolution calls its base initialization before display fallback"
+  ],
+  "scope": "Initialization fix only; remaining review findings have not been fixed."
+}

@@ -1,0 +1,89 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\Assets\\Others\\T_SliderHandle.uasset",
+  "package": "/GameMainMenu/Assets/Others/T_SliderHandle",
+  "objects": [
+    {
+      "index": 1,
+      "name": "InterchangeAssetImportData_0",
+      "class": "Object:/Script/InterchangeEngine.InterchangeAssetImportData",
+      "path": "Object:/GameMainMenu/Assets/Others/T_SliderHandle.T_SliderHandle:InterchangeAssetImportData_0",
+      "properties": {
+        "_error": "invalid name 1543503871",
+        "_raw": "5effffff5b007b0020002200520065006c0061007400690076006500460069006c0065006e0061006d006500220020003a002000220044003a002f0049006d00610067002f0032006400cc806f662f0054005f0053006c006900640065007200480061006e0064006c0065002e0070006e00670022002c0020002200540069006d0065007300740061006d007000220020003a0020002200310037003700390036003200360031003200310022002c0020002200460069006c0065004d0044003500220020003a00200022003200390066006400330032003900340037006200660064006100390034006100610063003200330039003800330036003800330062006600610039006600340022002c002000220044006900730070006c00610079004c006100620065006c004e0061006d006500220020003a0020002200220020007d005d000000001f000000000000002900000000000000000000005400000000d8ffffff46006100630074006f00720079005f0044003a002f0049006d00610067002f0032006400cc806f662f0054005f0053006c006900640065007200480061006e0064006c0065002e0070006e00670000002000000000000000"
+      }
+    },
+    {
+      "index": 2,
+      "name": "T_SliderHandle",
+      "class": "Object:/Script/Engine.Texture2D",
+      "path": "Object:/GameMainMenu/Assets/Others/T_SliderHandle.T_SliderHandle",
+      "properties": {
+        "Source": {
+          "Id": {
+            "struct": "Guid",
+            "raw": "e4809d8b00e8d03231c65cf367e59859"
+          },
+          "SizeX": 36,
+          "SizeY": 36,
+          "NumSlices": 1,
+          "NumMips": 1,
+          "CompressionFormat": "TSCF_UEDELTA",
+          "bGuidIsHash": true,
+          "LayerColorInfo_LockProtected": [
+            {
+              "ColorMin": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 0.0
+              },
+              "ColorMax": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          ],
+          "Format": "TSF_BGRA8",
+          "LayerFormat": [
+            "TSF_BGRA8"
+          ],
+          "BlockDataOffsets": [
+            0
+          ]
+        },
+        "LightingGuid": {
+          "struct": "Guid",
+          "raw": "5425c39ab9c99745a30b90285819b567"
+        },
+        "AssetImportData": "Object:/GameMainMenu/Assets/Others/T_SliderHandle.T_SliderHandle:InterchangeAssetImportData_0",
+        "OodleTextureSdkVersion": "2.9.14",
+        "AlphaCoverageThresholds": {
+          "raw": "000000000000000000000000000000000000000000000000000000000000e83f",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "Vector4",
+                "params": [
+                  {
+                    "name": "/Script/CoreUObject",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 33 bytes for unpacking 8 bytes at offset 25 (actual buffer size is 32)"
+        },
+        "bUseNewMipFilter": true,
+        "MipGenSettings": "TMGS_NoMipmaps",
+        "CompositeTextureMode": "CTM_Disabled",
+        "bNormalizeNormals": true
+      }
+    }
+  ],
+  "softReferences": [],
+  "text": []
+}

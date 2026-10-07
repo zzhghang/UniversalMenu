@@ -1,0 +1,1188 @@
+{
+  "asset": "Plugins\\GameMainMenu\\Content\\BP\\UI\\Widgets\\ListEntries\\WBP_ListEntry_Scalar.uasset",
+  "package": "/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar",
+  "objects": [
+    {
+      "index": 1,
+      "name": "As_Slider",
+      "class": "Object:/Script/CommonUI.AnalogSlider",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.As_Slider",
+      "properties": {
+        "Value": 0.5,
+        "WidgetStyle": {
+          "NormalBarImage": {
+            "ImageType": "ESlateBrushImageType::FullColor",
+            "ImageSize": {
+              "raw": "0080cb440000c042",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name 1154187264"
+            },
+            "ResourceObject": "T_HeaderLine"
+          },
+          "HoveredBarImage": {
+            "ImageType": "ESlateBrushImageType::FullColor",
+            "ImageSize": {
+              "raw": "0080cb440000c042",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name 1154187264"
+            },
+            "ResourceObject": "T_HeaderLine"
+          },
+          "NormalThumbImage": {
+            "ImageSize": {
+              "raw": "0000c0410000c041",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name 1103101952"
+            },
+            "ResourceObject": "T_SliderHandle",
+            "ResourceName": "None"
+          },
+          "HoveredThumbImage": {
+            "ImageSize": {
+              "raw": "0000c0410000c041",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name 1103101952"
+            },
+            "ResourceObject": "T_SliderHandle",
+            "ResourceName": "None"
+          },
+          "BarThickness": 4.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_2",
+        "DisplayLabel": "As_Slider"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Cnb_Value",
+      "class": "Object:/Script/CommonUI.CommonNumericTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.Cnb_Value",
+      "properties": {
+        "CurrentNumericValue": 5.0,
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "UMG",
+          "key": "TextBlockDefaultValue",
+          "source": "Text Block"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_3",
+        "bIsVariable": true,
+        "DisplayLabel": "Cnb_Value"
+      }
+    },
+    {
+      "index": 3,
+      "name": "Ctb_EntryDisplayName",
+      "class": "Object:/Script/CommonUI.CommonTextBlock",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.Ctb_EntryDisplayName",
+      "properties": {
+        "Style": "SText_ListEntry_C",
+        "bStyleNoLongerNeedsConversion": true,
+        "Text": {
+          "namespace": "[5B9BC16AFB8D375574D79C8AF16C363E]",
+          "key": "CFF16D4F43A34D5F866176B4DD755F05",
+          "source": "Setting Name"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Font": {
+          "FontObject": null,
+          "TypefaceFontName": "None"
+        },
+        "ShadowOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_0",
+        "bIsVariable": true,
+        "DisplayLabel": "Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 4,
+      "name": "BP_GetWidgetToFocusForGamepad",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_FunctionResult_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_VariableGet_0"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "bc26b4f5d470154e9829b0a2cc86e0e2"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "name": "BP_OnToggleEntryWidgetHighLightState",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_FunctionEntry_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_Select_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_4",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_5",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_3",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_6",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_7",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_8",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_9"
+        ],
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "42b11eaf88cf4f4d9f5f6b06aaa47fe5"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "name": "EventGraph",
+      "class": "Object:/Script/Engine.EdGraph",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph",
+      "properties": {
+        "Schema": "EdGraphSchema_K2",
+        "Nodes": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_Event_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_VariableGet_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_CallFunction_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_CallFunction_1",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_VariableGet_2"
+        ],
+        "bAllowDeletion": false,
+        "GraphGuid": {
+          "struct": "Guid",
+          "raw": "d6aa2fe3c5056f4484346cc3d817a114"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "BP_GetWidgetToFocusForGamepad",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:BP_GetWidgetToFocusForGamepad",
+      "properties": {}
+    },
+    {
+      "index": 8,
+      "name": "BP_OnToggleEntryWidgetHighLightState",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:BP_OnToggleEntryWidgetHighLightState",
+      "properties": {}
+    },
+    {
+      "index": 9,
+      "name": "ExecuteUbergraph_WBP_ListEntry_Scalar",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:ExecuteUbergraph_WBP_ListEntry_Scalar",
+      "properties": {}
+    },
+    {
+      "index": 10,
+      "name": "PreConstruct",
+      "class": "Object:/Script/CoreUObject.Function",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:PreConstruct",
+      "properties": {}
+    },
+    {
+      "index": 11,
+      "name": "HorizontalBox_25",
+      "class": "Object:/Script/UMG.HorizontalBox",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_0",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_2",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_3"
+        ],
+        "Slot": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19.SizeBoxSlot_0",
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 12,
+      "name": "HorizontalBoxSlot_0",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_0",
+      "properties": {
+        "Size": {
+          "Value": 0.800000011920929,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.Ctb_EntryDisplayName"
+      }
+    },
+    {
+      "index": 13,
+      "name": "HorizontalBoxSlot_2",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_2",
+      "properties": {
+        "Size": {
+          "Value": 0.800000011920929,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.As_Slider"
+      }
+    },
+    {
+      "index": 14,
+      "name": "HorizontalBoxSlot_3",
+      "class": "Object:/Script/UMG.HorizontalBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25.HorizontalBoxSlot_3",
+      "properties": {
+        "Size": {
+          "Value": 0.10000000149011612,
+          "SizeRule": "ESlateSizeRule::Fill"
+        },
+        "HorizontalAlignment": "HAlign_Center",
+        "VerticalAlignment": "VAlign_Center",
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.Cnb_Value"
+      }
+    },
+    {
+      "index": 15,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "CommonTextBlock",
+          "MemberName": "SetStyle"
+        },
+        "NodePosX": 608,
+        "NodePosY": -64,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3adaa1bf92e71942b5b3b449412d428c"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_1",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "Slider",
+          "MemberName": "SetSliderBarColor"
+        },
+        "NodePosX": 1152,
+        "NodePosY": -64,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "0feed0f36d8a18468619e241ca89b1ec"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "name": "K2Node_CallFunction_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_2",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "Slider",
+          "MemberName": "SetSliderHandleColor"
+        },
+        "NodePosX": 1504,
+        "NodePosY": -64,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "32afa5078779bb439641edf05b995568"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "name": "K2Node_CallFunction_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_3",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetMathLibrary",
+          "MemberName": "SelectColor"
+        },
+        "NodePosX": 1488,
+        "NodePosY": 96,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "81354bf6f0ac1444871917ee66952469"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "name": "K2Node_CallFunction_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_CallFunction_4",
+      "properties": {
+        "bDefaultsToPureFunc": true,
+        "FunctionReference": {
+          "MemberParent": "KismetMathLibrary",
+          "MemberName": "SelectColor"
+        },
+        "NodePosX": 1136,
+        "NodePosY": 96,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "301f6a422cb56e428af61aa19fcd0997"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "name": "K2Node_CallFunction_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_CallFunction_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "Slider",
+          "MemberName": "SetSliderBarColor"
+        },
+        "NodePosX": 400,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3e5fb71579e3944ca357ec5d7cf6fc20"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "name": "K2Node_CallFunction_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_CallFunction",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_CallFunction_1",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "Slider",
+          "MemberName": "SetSliderHandleColor"
+        },
+        "NodePosX": 640,
+        "NodePosY": 16,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3dd9d67b5361244fab85f90eec800792"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "name": "K2Node_Event_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Event",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_Event_0",
+      "properties": {
+        "EventReference": {
+          "MemberParent": "UserWidget",
+          "MemberName": "PreConstruct"
+        },
+        "bOverrideFunction": true,
+        "NodePosX": 48,
+        "NodePosY": 32,
+        "bCommentBubblePinned": true,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "da7c27f359ad7e4d8d05fca4e25b8bf5"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "W_ListEntry_Base",
+          "MemberName": "BP_GetWidgetToFocusForGamepad"
+        },
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "66d6f2a879650e4a938e48ef37de7bbf"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "name": "K2Node_FunctionEntry_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionEntry",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_FunctionEntry_0",
+      "properties": {
+        "ExtraFlags": 1073741824,
+        "FunctionReference": {
+          "MemberParent": "W_ListEntry_Base",
+          "MemberName": "BP_OnToggleEntryWidgetHighLightState"
+        },
+        "NodePosY": -49,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5234d45e456b0c44957940a9bf8ed260"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "name": "K2Node_FunctionResult_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_FunctionResult",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_FunctionResult_0",
+      "properties": {
+        "FunctionReference": {
+          "MemberParent": "W_ListEntry_Base",
+          "MemberName": "BP_GetWidgetToFocusForGamepad"
+        },
+        "NodePosX": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "b8a0ed72197f6748b40c790717134aba"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "name": "K2Node_Select_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_Select",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_Select_0",
+      "properties": {
+        "IndexPinType": {
+          "raw": "19000000000000007f0000000000000000000000000000000000000000000000007f0000000000000000000000000000000000000000000000000000000000000000000000",
+          "type": {
+            "name": "StructProperty",
+            "params": [
+              {
+                "name": "EdGraphPinType",
+                "params": [
+                  {
+                    "name": "/Script/Engine",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          },
+          "error": "unpack_from requires a buffer of at least 70 bytes for unpacking 4 bytes at offset 66 (actual buffer size is 69)"
+        },
+        "NodePosX": 576,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "34500073f1502541aa071a08415d1908"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "As_Slider",
+          "bSelfContext": true
+        },
+        "NodePosX": 112,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "3b1a5980bc0bd04385b0b01540f91227"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "name": "K2Node_VariableGet_0",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_0",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Cnb_Value",
+          "bSelfContext": true
+        },
+        "NodePosX": 384,
+        "NodePosY": 80,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "90c2c39c7587ae48932e48917dab0b0e"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "name": "K2Node_VariableGet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Ctb_EntryDisplayName",
+          "bSelfContext": true
+        },
+        "NodePosX": 352,
+        "NodePosY": 48,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "a36611cf8f633046abc900cc6cddb8f4"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "BP_OnToggleEntryWidgetHighLightState",
+          "MemberName": "bIsHighlighted"
+        },
+        "NodePosX": 1472,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "258f8c7faca4b842873f7c6c4a1452bc"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "name": "K2Node_VariableGet_3",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_3",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "As_Slider",
+          "bSelfContext": true
+        },
+        "NodePosX": 912,
+        "NodePosY": 64,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "caba3659fb4d294f94cb99c13a7417fc"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "name": "K2Node_VariableGet_4",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_4",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "BP_OnToggleEntryWidgetHighLightState",
+          "MemberName": "bIsHighlighted"
+        },
+        "NodePosX": 640,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "eb9bd5751dfbdf4ea9215197cfe992bb"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "name": "K2Node_VariableGet_5",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_5",
+      "properties": {
+        "VariableReference": {
+          "MemberScope": "BP_OnToggleEntryWidgetHighLightState",
+          "MemberName": "bIsHighlighted"
+        },
+        "NodePosX": 1120,
+        "NodePosY": 256,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "5a2b6f29aaecfa4e8f77cbde7e74b44f"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "name": "K2Node_VariableGet_6",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_6",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Default_Color",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "d9dc625e920b094081d9769ad7937a8e"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 944,
+        "NodePosY": 160,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "f658e6c1a80b7c47bbe6ad18e2d377a8"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "name": "K2Node_VariableGet_7",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_7",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Default_Color",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "d9dc625e920b094081d9769ad7937a8e"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 1344,
+        "NodePosY": 160,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "820a209f278a804abe5b3741ceed65d3"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "name": "K2Node_VariableGet_8",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_8",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Default_Color_HightLight",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "722a60ecf128f14d91694b41aed8963e"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 944,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "140db41da686eb4198bf9a94c81347ff"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "name": "K2Node_VariableGet_9",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_VariableGet_9",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Default_Color_HightLight",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "722a60ecf128f14d91694b41aed8963e"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 1344,
+        "NodePosY": 112,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "1d2363314ab41b4aabc2ee29f756ab8c"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "name": "K2Node_VariableGet_1",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_VariableGet_1",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "As_Slider",
+          "bSelfContext": true
+        },
+        "NodePosX": 240,
+        "NodePosY": 96,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "13394386b4cf8c43ba23da74f93c0d8c"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "name": "K2Node_VariableGet_2",
+      "class": "Object:/Script/BlueprintGraph.K2Node_VariableGet",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_VariableGet_2",
+      "properties": {
+        "VariableReference": {
+          "MemberName": "Default_Color",
+          "MemberGuid": {
+            "struct": "Guid",
+            "raw": "d9dc625e920b094081d9769ad7937a8e"
+          },
+          "bSelfContext": true
+        },
+        "NodePosX": 432,
+        "NodePosY": 160,
+        "NodeGuid": {
+          "struct": "Guid",
+          "raw": "95cc71fa5f5e4f44a625489fff9f6bc6"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "name": "SizeBox_ListEntry_C_19",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/SizeBox_ListEntry.SizeBox_ListEntry_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19",
+      "properties": {
+        "Slots": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19.SizeBoxSlot_0"
+        ],
+        "bExpandedInDesigner": true
+      }
+    },
+    {
+      "index": 41,
+      "name": "SizeBoxSlot_0",
+      "class": "Object:/Script/UMG.SizeBoxSlot",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19.SizeBoxSlot_0",
+      "properties": {
+        "Parent": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19",
+        "Content": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25"
+      }
+    },
+    {
+      "index": 42,
+      "name": "Default__WBP_ListEntry_Scalar_C",
+      "class": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.Default__WBP_ListEntry_Scalar_C",
+      "properties": {
+        "UberGraphFrame": {},
+        "Default_Color": {
+          "r": 0.20000000298023224,
+          "g": 0.20000000298023224,
+          "b": 0.20000000298023224,
+          "a": 1.0
+        },
+        "Default_Color_HightLight": {
+          "r": 0.6000000238418579,
+          "g": 0.6000000238418579,
+          "b": 0.6000000238418579,
+          "a": 1.0
+        },
+        "DesignSizeMode": "EDesignPreviewSizeMode::Desired",
+        "bHasScriptImplementedTick": false,
+        "bHasScriptImplementedPaint": false,
+        "Visibility": "ESlateVisibility::Visible"
+      }
+    },
+    {
+      "index": 43,
+      "name": "WBP_ListEntry_Scalar",
+      "class": "Object:/Script/UMGEditor.WidgetBlueprint",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar",
+      "properties": {
+        "WidgetVariableNameToGuidMap": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "0000000005000000a1000000140000001b9b30820df90a4482260fc5d00630535d0000001a000000d971cda2e9bb3d41bae6126b6b88eaf62e00000000000000fca535e8549fe54099f927ea1ad949052900000000000000e266f79a05e7ce4896e9d8878cc6612f09000000000000007c9e572dd4a75a41a7e7cf8e5e855e25"
+        },
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree",
+        "ParentClass": "W_ListEntry_Scalar",
+        "BlueprintSystemVersion": 2,
+        "UbergraphPages": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph"
+        ],
+        "FunctionGraphs": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad"
+        ],
+        "NewVariables": [
+          {
+            "VarName": "Default_Color",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "d9dc625e920b094081d9769ad7937a8e"
+            },
+            "VarType": {
+              "raw": "ae000000000000007f00000000000000cdffffff000000000000000000000000007f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Default Color",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500010000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          },
+          {
+            "VarName": "Default_Color_HightLight",
+            "VarGuid": {
+              "struct": "Guid",
+              "raw": "722a60ecf128f14d91694b41aed8963e"
+            },
+            "VarType": {
+              "raw": "ae000000000000007f00000000000000cdffffff000000000000000000000000007f0000000000000000000000000000000000000000000000000000000000000000000000",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "EdGraphPinType",
+                    "params": [
+                      {
+                        "name": "/Script/Engine",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "bad type count"
+            },
+            "FriendlyName": "Default Color Hight Light",
+            "Category": {
+              "namespace": "KismetSchema",
+              "key": "Default",
+              "source": "Default"
+            },
+            "PropertyFlags": {
+              "type": {
+                "name": "UInt64Property",
+                "params": []
+              },
+              "raw": "0500010000000000"
+            },
+            "RepNotifyFunc": "None",
+            "ReplicationCondition": "COND_None",
+            "MetaDataArray": [],
+            "DefaultValue": ""
+          }
+        ],
+        "CategorySorting": [
+          "Event Graph",
+          "W List Entry Scalar",
+          "W List Entry Base",
+          "Input",
+          "Appearance",
+          "Interaction",
+          "Performance",
+          "Layout",
+          "Behavior",
+          "Render Transform",
+          "Localization",
+          "Rendering",
+          "Navigation",
+          "Default",
+          "None"
+        ],
+        "LastEditedDocuments": [
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "00000000"
+            },
+            "SavedViewOffset": {
+              "raw": "deb5ffc31334bec3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1006651938"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "01000000"
+            },
+            "SavedViewOffset": {
+              "raw": "7c9716c37605b4c3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name -1021929604"
+            },
+            "SavedZoomAmount": 1.0
+          },
+          {
+            "EditedObjectPath": {
+              "struct": "SoftObjectPath",
+              "raw": "02000000"
+            },
+            "SavedViewOffset": {
+              "raw": "000fa143e6d8bcc3",
+              "type": {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "DeprecateSlateVector2D",
+                    "params": [
+                      {
+                        "name": "/Script/SlateCore",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "error": "invalid name 1134628608"
+            },
+            "SavedZoomAmount": 1.0
+          }
+        ],
+        "GeneratedClass": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C",
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "BlueprintGuid": {
+          "struct": "Guid",
+          "raw": "74beda4627dead49b99ea90dec976a6a"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "name": "WBP_ListEntry_Scalar_C",
+      "class": "Object:/Script/UMG.WidgetBlueprintGeneratedClass",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C",
+      "properties": {
+        "WidgetTree": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:WidgetTree",
+        "UberGraphFunction": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:ExecuteUbergraph_WBP_ListEntry_Scalar",
+        "PropertyGuids": {
+          "type": {
+            "name": "MapProperty",
+            "params": [
+              {
+                "name": "NameProperty",
+                "params": []
+              },
+              {
+                "name": "StructProperty",
+                "params": [
+                  {
+                    "name": "Guid",
+                    "params": [
+                      {
+                        "name": "/Script/CoreUObject",
+                        "params": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "raw": "00000000020000003200000000000000722a60ecf128f14d91694b41aed8963e3100000000000000d9dc625e920b094081d9769ad7937a8e"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree",
+      "properties": {
+        "RootWidget": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19",
+        "AllWidgets": [
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.SizeBox_ListEntry_C_19",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.HorizontalBox_25",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.Ctb_EntryDisplayName",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.As_Slider",
+          "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:WidgetTree.Cnb_Value"
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "name": "WidgetTree",
+      "class": "Object:/Script/UMG.WidgetTree",
+      "path": "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:WidgetTree",
+      "properties": {
+        "RootWidget": null,
+        "AllWidgets": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  ],
+  "softReferences": [
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.SKEL_WBP_ListEntry_Scalar_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_Event_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_Event_1",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:EventGraph.K2Node_Event_2",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:BP_GetWidgetToFocusForGamepad",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.SKEL_WBP_ListEntry_Scalar_C:BP_OnToggleEntryWidgetHighLightState",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_OnToggleEntryWidgetHighLightState.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.SKEL_WBP_ListEntry_Scalar_C:BP_GetWidgetToFocusForGamepad",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_FunctionEntry_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar:BP_GetWidgetToFocusForGamepad.K2Node_FunctionResult_0",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.SKEL_WBP_ListEntry_Scalar_C:PreConstruct",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:BP_OnToggleEntryWidgetHighLightState",
+    "Object:/GameMainMenu/BP/UI/Widgets/ListEntries/WBP_ListEntry_Scalar.WBP_ListEntry_Scalar_C:PreConstruct"
+  ],
+  "text": []
+}
