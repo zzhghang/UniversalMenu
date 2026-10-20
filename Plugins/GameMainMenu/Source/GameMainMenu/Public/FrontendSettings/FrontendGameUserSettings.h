@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameUserSettings.h"
+#include "GameplayTagContainer.h"
 #include "FrontendGameUserSettings.generated.h"
 
 /**
@@ -31,6 +32,17 @@ public:
 	virtual void ValidateSettings() override;
 	/** Repairs corrupt dimensions without applying or saving settings. */
 	void RepairResolutionSettings();
+
+	/**
+	 * Applies the runtime effect of a single setting.
+	 *
+	 * Continuous edits (sliders) report one change per input event, so they must not run the full
+	 * ApplyNonResolutionSettings, which re-applies every quality cvar, the culture and all sound mixes.
+	 */
+	void ApplyVolumeSetting(const FGameplayTag& VolumeTag, float Volume);
+	void ApplyDisplayGammaSetting();
+	/** Switches the language, resolving an unset choice from the operating system first. */
+	void ApplyCurrentCultureSetting();
 
 	// ---- Gameplay ----
 	/**@{*/
@@ -205,8 +217,12 @@ public:
 	// ---- Language ----
 	/**@{*/
 
+	/**
+	 * Language to run in: the stored choice, or — while unset — the supported culture matching the
+	 * operating system, so the options screen shows the language the game actually runs in.
+	 */
 	UFUNCTION()
-	FString GetCurrentCulture() const { return CurrentCulture; }
+	FString GetCurrentCulture() const;
 
 	UFUNCTION()
 	void SetCurrentCulture(const FString& InCulture);
@@ -214,6 +230,9 @@ public:
 
 
 private:
+
+	/** Best supported culture for the operating system, or empty when no cultures are configured. */
+	FString ResolveSystemCulture() const;
 
 	// ---- Gameplay ----
 	UPROPERTY(Config)

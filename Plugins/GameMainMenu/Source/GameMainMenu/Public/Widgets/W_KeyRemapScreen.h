@@ -48,6 +48,9 @@ private:
 
 	TSharedPtr<FKeyRemapScreenInputPreprocessor> CachedKeyRemapInputPreprocessor;
 
+	/** Set on the first deactivation request, so extra input in the same frame cannot queue a second one. */
+	bool bDeactivationRequested = false;
+
 	ECommonInputType CachedDesiredInputType = ECommonInputType::MouseAndKeyboard;
 	TWeakObjectPtr<ULocalPlayer> CachedWeakLocalPlayer;
 

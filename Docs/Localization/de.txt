@@ -1,0 +1,259 @@
+120 FPS
+144 FPS
+240 FPS
+30 FPS
+3D-Raumklang
+60 FPS
+<KR_Default>Beliebige </><KR_HighLight>Gamepad</><KR_Default>-Taste drücken</>
+<KR_Default>Beliebige </><KR_HighLight>Tastatur</><KR_Default>-Taste drücken</>
+<Warning>Diese Einstellung kann nur in einem gepackten Build angepasst werden</>
+<Warning>Diese Einstellung ist im randlosen Fenstermodus deaktiviert</>
+<Warning>Diese Einstellung ist nur im Vollbildmodus verfügbar</>
+Push-to-Talk aktivieren oder die Sprachkommunikation mit Teamkollegen umschalten.
+Lautstärke der UI-Sounds anpassen.
+Lautstärke der Umgebungsgeräusche anpassen.
+Gammakorrektur des Displays anpassen. Höhere Werte hellen dunkle Bereiche auf.
+Lautstärke der Musik anpassen.
+Gesamtlautstärke des Spiels anpassen.
+Qualität und Auflösung des Schatten-Renderings anpassen.
+Qualität des Anti-Aliasing für glattere Kanten anpassen.
+Qualität der globalen Beleuchtung anpassen.
+Qualität der Post-Processing-Effekte wie Bloom und Tiefenschärfe anpassen.
+Qualität der Screen-Space- und Planarreflexionen anpassen.
+Qualität der visuellen Effekte wie Partikel und Explosionen anpassen.
+Renderauflösung als Prozentsatz der nativen Auflösung anpassen. Niedrigere Werte verbessern die Leistung.
+Größe des Fadenkreuzes anpassen.
+Lautstärke der Soundeffekte anpassen.
+Texturauflösung und Streaming-Qualität anpassen.
+Sichtweite für das Rendern entfernter Objekte anpassen.
+Lautstärke von Stimme und Dialogen anpassen.
+Verschiedene Spieleinstellungen anpassen
+Erweiterte Grafik
+Zielen
+Alle Gegenstände
+Erlauben, dass das Spiel weiterhin Sounds abspielt, wenn es im Hintergrund läuft.
+Umgebungslautstärke
+Anti-Aliasing-Qualität
+Übernehmen
+Möchten Sie wirklich alle Optionen dieser Kategorie auf ihre Standardwerte zurücksetzen?
+Angriff
+Audio
+Auto-Aufheben
+Automatisch speichern
+Zurück
+Hintergrundsound
+Randlos
+Das Pausenmenü öffnen, um das Spiel anzuhalten und auf die Einstellungen zuzugreifen.
+Abbrechen
+Wählen, ob die Ducken-Taste gehalten oder zum Umschalten gedrückt wird.
+Wählen, ob die Sprinten-Taste gehalten oder zum Umschalten gedrückt wird.
+Wählen, welche Gegenstände in der Nähe automatisch aufgenommen werden.
+Filmreif
+Schließen
+Das Spiel schließen
+Kampf
+Bestätigen
+Fortfahren
+Das Spiel vom letzten Speicherstand fortsetzen
+Steuerung
+Credits
+Fadenkreuzgröße
+Ducken
+Duckmodus
+Benutzerdefiniert
+Schadenszahlen
+Löschen
+Dialogverstärkung
+Schwierigkeit
+Den aktuell gehaltenen Gegenstand, die Waffe oder die Ausrüstung ablegen.
+Anzeige
+Anzeige-Gamma
+Möchten Sie das Spiel beenden?
+Alle Audiosignale auf Mono downmixen. Nützlich für Einzel-Lautsprecher-Setups oder Barrierefreiheit.
+Ablegen
+Dynamikbereich
+Einfach
+HRTF-basierten 3D-Raumklang für Kopfhörer aktivieren. Bietet immersiven Richtungsklang.
+Stimmen und Dialoge klarer machen, indem mittlere Frequenzen angehoben werden.
+Episch
+Beenden
+Mit der aktuellen Waffe feuern oder einen Nahkampfangriff ausführen.
+Taschenlampe
+Bildratenlimit
+Vollbild
+Spiel
+Gamepad
+Gameplay
+Allgemein
+Qualität der globalen Beleuchtung
+Grafik
+HUD
+Schwer
+Lebensbalken
+Hoch
+Interaktionshervorhebung
+Halten
+Welt-Subsysteme werden initialisiert und die Szene wird vorbereitet
+Sofort um 180 Grad drehen, um in die entgegengesetzte Richtung zu blicken.
+Interagieren
+Interaktion
+Ungültig
+Inventar
+Beitreten
+Spiel beitreten
+Springen
+Tastatur
+Sprache
+Über Hindernisse und Gräben springen oder höhere Plattformen erreichen.
+Maximale Bilder pro Sekunde begrenzen. Niedrigere Werte reduzieren die Systemlast, können sich aber weniger reaktionsschnell anfühlen.
+Spiel laden
+Level-Assets werden geladen und Weltdaten gestreamt
+Niedrig
+Die Haltung senken, um Sichtbarkeit, Bewegungsgeräusche und Silhouette zu reduzieren.
+Karte
+Nur Materialien
+Mittel
+Menü
+Mono-Ausgabe
+Bewegung
+Mehrspieler
+Online-Multiplayer-Spiele über Steam
+Musiklautstärke
+Neue Geschichte
+Albtraum
+Nein
+Normal
+OK
+Aus
+An
+Das Inventar öffnen, um gesammelte Gegenstände anzusehen, zu ordnen und zu verwenden.
+Die taktische Karte oder Gebietsübersicht zur Navigation und Planung öffnen.
+Optionen
+Gesamtqualität
+Gesamtlautstärke
+BELIEBIGE TASTE DRÜCKEN
+Pause
+Post-Processing-Qualität
+Schnelldrehung
+Die Waffe heben, um den Zielmodus für bessere Genauigkeit zu aktivieren.
+Den Lautstärkeunterschied zwischen lauten und leisen Geräuschen verringern. Ideal für nächtliches Spielen.
+Reflexionsqualität
+Aktualisieren
+Nachladen
+Die aktuell ausgerüstete Waffe mit Munition nachladen.
+Zurücksetzen
+Kategorie zurücksetzen
+Eintrag zurücksetzen
+Auflösung
+Auflösungsskalierung
+Mit erhöhter Geschwindigkeit rennen, meist begrenzt durch Ausdauer oder Bewegungsmüdigkeit.
+Soundeffekt-Lautstärke
+Speichern
+Die Anzeigesprache auswählen. Änderungen werden wirksam, wenn Sie zum vorherigen Bildschirm zurückkehren.
+Die Bildschirmauflösung des Spiels auswählen. Höhere Auflösungen bieten bessere Bildqualität, können aber die Leistung beeinträchtigen.
+Fensteranzeigemodus auswählen
+Ausgewählte Speicherdaten zum Fortsetzen
+Die Schwierigkeitsstufe des Spiels festlegen.
+Die Voreinstellung für die grafische Gesamtqualität festlegen. Beeinflusst alle einzelnen Qualitätseinstellungen unten.
+Schattenqualität
+Die Minikarte im HUD ein- oder ausblenden.
+Die Munitionsanzahl im HUD ein- oder ausblenden.
+Munitionsanzahl anzeigen
+Minikarte anzeigen
+Sound
+Sprinten
+Sprintmodus
+Ein neues Spiel von Anfang an starten
+Spiel starten
+Hochauflösende Texturen werden gestreamt und das Laden der Assets wird abgeschlossen
+Untertitel
+Untertitel-Sound
+Überleben
+Die Bildrate mit der Bildwiederholrate des Displays synchronisieren, um Bildschirm-Tearing zu verhindern.
+Texturqualität
+Umschalten
+Das automatische Speichern des Spielfortschritts umschalten.
+Die Untertitelanzeige während Dialogen und Zwischensequenzen umschalten.
+Die Untertitelanzeige während Dialogen und Zwischensequenzen umschalten.
+Die befestigte oder tragbare Taschenlampe ein- und ausschalten.
+Die Anzeige der Lebensbalken von Gegnern umschalten.
+Die Anzeige der schwebenden Schadenszahlen umschalten.
+Die Hervorhebungsumrandung interaktiver Objekte umschalten.
+UI-Lautstärke
+Unbegrenzt
+Umgebungsobjekte wie Türen und Schalter verwenden, Gegenstände aufheben oder kontextabhängige Aktionen auslösen.
+Vertikale Synchronisierung
+Video
+Sichtweitenqualität
+Die aktualisierten Mitarbeiter-Credits ansehen
+Qualität der visuellen Effekte
+Stimmlautstärke
+Sprachchat
+Lautstärke
+Warten auf das Spawnen und Übernehmen des Player Controllers
+Gameplay-Systeme werden aufgewärmt und auf den Beginn der Actors wird gewartet
+Fenstermodus
+Fenster
+Ja
+<Warning>Das Passwort ist deaktiviert, wenn „Passwort verwenden“ ausgeschaltet ist</>
+Reichlich
+Anpassen, wie reichlich Beute in der Welt ist.
+Erweitert
+Alle
+Möchten Sie diesem Spiel wirklich beitreten
+Rucksack
+Grundlegend
+Die Wetterbedingungen für das Spiel auswählen.
+Auswählen, welche Gegenstände Spieler beim Tod fallen lassen.
+Klar
+Spiel erstellen
+Todesfall-Drop-Modus
+LAN-Modus aktivieren
+Einen Namen für Ihr Spiel eingeben
+Nebel
+Spielname
+Spielmodus
+Allgemein
+Passwort verwenden
+Eingabehinweis
+Sitzung beitreten
+Spiel beitreten
+LAN
+Liste der hinzufügbaren Räume
+Beutemenge
+Karte
+Karte
+Karte 1
+Karte 2
+Karte 3
+Karte 4
+Maximale Spieler
+Maximal {0} Zeichen erlaubt
+Keine
+Nur Buchstaben und Zahlen sind erlaubt
+Nur Buchstaben sind erlaubt
+Nur Zahlen sind erlaubt
+Passwort
+Ping
+Spieler
+Bitte geben Sie nur die Passwortziffern ein
+Bitte geben Sie den Raumnamen ein
+Privatsphäre
+Privat
+Regen
+Zufällig
+Knapp
+Spielmodus auswählen
+Die zu spielende Karte auswählen
+Die Region auswählen, in der sich der Server befindet
+Server nicht gefunden
+Serverliste
+Servername
+Serverregion
+Raumpasswort festlegen
+Das Spiel auf öffentlich oder privat setzen
+Die maximale Spieleranzahl festlegen
+Festlegen, ob der Raum ein Passwort zum Beitreten erfordert
+Einige Zeichen entsprachen nicht den Eingabebeschränkungen und wurden herausgefiltert
+Standard
+Wettermodus

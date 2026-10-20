@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CommonInputTypeEnum.h"
 #include "Widgets/Options/ListEntries/W_ListEntry_Base.h"
 #include "W_ListEntry_KeyBinding.generated.h"
 
@@ -68,8 +69,8 @@ private:
 	void OnKeyboardSlotClicked();
 	void OnGamepadSlotClicked();
 	
-	void OnKeyRemapPressed(const FKey& PressedKey);
-	void OnKeyRemapCancel(const FString& CancelReason);
+	/** Opens the key remap overlay for the given data object, which is captured for the async callbacks. */
+	void OpenRemapForDataObject(UUListDataObject_KeyBinding* InTargetDataObject, ECommonInputType InInputType);
 
 	UPROPERTY(Transient)
 	UUListDataObject_KeyBinding* CachedOwningKeyBindingDataObject;

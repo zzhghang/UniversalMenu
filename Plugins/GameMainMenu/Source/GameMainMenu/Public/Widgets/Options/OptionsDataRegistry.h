@@ -77,6 +77,8 @@ private:
 	TMap<FName, TSharedPtr<FOptionsDataInteractionHelper>> BindingMap;
 	TArray<TFunction<void(UFrontendGameUserSettings*)>> SettingCommitters;
 	TMap<FName, TFunction<void(UFrontendGameUserSettings*)>> SettingCommittersByKey;
+	/** Runtime effect of a single setting, for edits that must not run a full apply (sliders). */
+	TMap<FName, TFunction<void(UFrontendGameUserSettings*)>> TargetedAppliersByKey;
 	TWeakObjectPtr<UFrontendGameUserSettings> LiveSettings;
 
 	UPROPERTY(Transient)

@@ -28,21 +28,36 @@ TSoftObjectPtr<UTexture2D> UFrontendFunctionLibrary::GetOptionsSoftImageByTag(UP
 
 USoundMix* UFrontendFunctionLibrary::GetDefaultSoundMix()
 {
-	const UFrontendDeveloperSettings* FrontendDeveloperSettings = GetDefault<UFrontendDeveloperSettings>();
+	UFrontendDeveloperSettings* FrontendDeveloperSettings = GetMutableDefault<UFrontendDeveloperSettings>();
 
 	if (FrontendDeveloperSettings->DefaultSoundMix.IsNull()) return nullptr;
 
-	return FrontendDeveloperSettings->DefaultSoundMix.LoadSynchronous();
+	// Volume changes are applied on every slider event, so keep the resolved asset instead of
+	// re-resolving the soft reference each time (and only re-resolve if it was re-pointed).
+	USoundMix* CachedSoundMix = FrontendDeveloperSettings->CachedDefaultSoundMix;
+	if (!CachedSoundMix || CachedSoundMix != FrontendDeveloperSettings->DefaultSoundMix.Get())
+	{
+		CachedSoundMix = FrontendDeveloperSettings->DefaultSoundMix.LoadSynchronous();
+		FrontendDeveloperSettings->CachedDefaultSoundMix = CachedSoundMix;
+	}
+
+	return CachedSoundMix;
 }
 
 USoundClass* UFrontendFunctionLibrary::GetSoundClassByVolumeTag(FGameplayTag InVolumeTag)
 {
-	const UFrontendDeveloperSettings* FrontendDeveloperSettings = GetDefault<UFrontendDeveloperSettings>();
+	UFrontendDeveloperSettings* FrontendDeveloperSettings = GetMutableDefault<UFrontendDeveloperSettings>();
 
 	const TSoftObjectPtr<USoundClass>* FoundSoundClass = FrontendDeveloperSettings->AudioVolumeSoundClassMap.Find(InVolumeTag);
 	if (!FoundSoundClass || FoundSoundClass->IsNull()) return nullptr;
 
-	return FoundSoundClass->LoadSynchronous();
+	TObjectPtr<USoundClass>& CachedSoundClass = FrontendDeveloperSettings->CachedAudioVolumeSoundClasses.FindOrAdd(InVolumeTag);
+	if (!CachedSoundClass || CachedSoundClass != FoundSoundClass->Get())
+	{
+		CachedSoundClass = FoundSoundClass->LoadSynchronous();
+	}
+
+	return CachedSoundClass;
 }
 
 FString UFrontendFunctionLibrary::GetProjectVersion()

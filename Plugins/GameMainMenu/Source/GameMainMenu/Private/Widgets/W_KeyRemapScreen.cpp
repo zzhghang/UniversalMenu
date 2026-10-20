@@ -118,6 +118,8 @@ void UW_KeyRemapScreen::NativeOnActivated()
 {
 	Super::NativeOnActivated();
 
+	bDeactivationRequested = false;
+
 	ULocalPlayer* LocalPlayer = CachedWeakLocalPlayer.IsValid() ? CachedWeakLocalPlayer.Get() : GetOwningLocalPlayer();
 
 	CachedKeyRemapInputPreprocessor = MakeShared<FKeyRemapScreenInputPreprocessor>(CachedDesiredInputType, LocalPlayer);
@@ -170,13 +172,34 @@ void UW_KeyRemapScreen::OnKeySelectionCancel(const FString& CancelReason)
 
 void UW_KeyRemapScreen::RequestDeactivationWidget(TFunction<void()> PreDeactivationCallback)
 {
+	// Several key events can arrive in the same frame (chords, key repeat); only the first one may deactivate.
+	if (bDeactivationRequested)
+	{
+		return;
+	}
+	bDeactivationRequested = true;
+
+	// Stop listening right away, so no further input can queue another callback before the ticker runs.
+	if (CachedKeyRemapInputPreprocessor.IsValid())
+	{
+		FSlateApplication::Get().UnregisterInputPreProcessor(CachedKeyRemapInputPreprocessor);
+		CachedKeyRemapInputPreprocessor.Reset();
+	}
+
+	// Capture weakly instead of using CreateWeakLambda: FTSTicker runs the delegate through Execute(),
+	// which skips the safety check, so a dead widget would still report a dangling this to the lambda.
+	TWeakObjectPtr<UW_KeyRemapScreen> WeakThis(this);
+
 	FTSTicker::GetCoreTicker().AddTicker(
 		FTickerDelegate::CreateLambda(
-			[PreDeactivationCallback,this](float DeltaTime)->bool
+			[WeakThis, PreDeactivationCallback = MoveTemp(PreDeactivationCallback)](float DeltaTime)->bool
 			{
-				PreDeactivationCallback();
+				if (UW_KeyRemapScreen* RemapScreen = WeakThis.Get())
+				{
+					PreDeactivationCallback();
 
-				DeactivateWidget();
+					RemapScreen->DeactivateWidget();
+				}
 
 				return false;
 			}

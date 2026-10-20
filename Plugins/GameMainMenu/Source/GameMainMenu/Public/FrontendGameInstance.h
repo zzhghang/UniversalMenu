@@ -14,6 +14,11 @@ class GAMEMAINMENU_API UFrontendGameInstance : public UAdvancedFriendsGameInstan
 	GENERATED_BODY()
 
 public:
+
+	// Begin UGameInstance Interface
+	virtual void Init() override;
+	// End UGameInstance Interface
+
 	UFUNCTION(BlueprintPure, Category = "MenuSession")
 	UMenuSessionData* GetMenuSessionData() const { return CachedMenuSessionData; }
 
@@ -30,6 +35,10 @@ public:
 	bool TrySaveMenuSessionData();
 
 private:
+
+	/** Runs the hardware benchmark once on first launch and applies the detected quality levels. */
+	void RunHardwareBenchmarkIfNeeded();
+
 	UPROPERTY(Transient)
 	UMenuSessionData* CachedMenuSessionData = nullptr;
 };

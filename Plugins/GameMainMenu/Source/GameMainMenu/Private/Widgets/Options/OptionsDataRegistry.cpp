@@ -4,6 +4,7 @@
 #include "Widgets/Options/OptionsDataRegistry.h"
 
 #include "FrontendSettings/FrontendGameUserSettings.h"
+#include "FrontendGameplayTags.h"
 #include "Widgets/Options/OptionsDataInteractionHelper.h"
 #include "Widgets/Options/OptionsKeyBindingProfile.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
@@ -37,8 +38,10 @@ void UOptionsDataRegistry::InitBindingMap()
 	BindingMap.Reset();
 	SettingCommitters.Reset();
 	SettingCommittersByKey.Reset();
+	TargetedAppliersByKey.Reset();
 	const TWeakObjectPtr<UFrontendGameUserSettings> Draft = PendingSettings;
-	const auto Bind = [this, Draft](FName Key, auto Getter, auto Setter)
+	const auto Bind = [this, Draft](FName Key, auto Getter, auto Setter,
+		TFunction<void(FSettings*)> TargetedApply = nullptr)
 	{
 		BindingMap.Add(Key, FOptionsDataInteractionHelper::Create([Draft]() { return Draft.Get(); }, Getter, Setter));
 		auto Commit = [Draft, Getter, Setter](FSettings* Target)
@@ -47,6 +50,7 @@ void UOptionsDataRegistry::InitBindingMap()
 		};
 		SettingCommitters.Add(Commit);
 		SettingCommittersByKey.Add(Key, MoveTemp(Commit));
+		if (TargetedApply) TargetedAppliersByKey.Add(Key, MoveTemp(TargetedApply));
 	};
 
 	// ---- Gameplay ----
@@ -64,15 +68,24 @@ void UOptionsDataRegistry::InitBindingMap()
 	// ---- HUD ----
 	Bind(TEXT("ShowMinimap"), &FSettings::GetShowMinimap, &FSettings::SetShowMinimap);
 	Bind(TEXT("ShowAmmoCount"), &FSettings::GetShowAmmoCount, &FSettings::SetShowAmmoCount);
-	Bind(TEXT("CrosshairSize"), &FSettings::GetCrosshairSize, &FSettings::SetCrosshairSize);
+	// The HUD reads this value itself, so a continuous edit has nothing to apply.
+	Bind(TEXT("CrosshairSize"), &FSettings::GetCrosshairSize, &FSettings::SetCrosshairSize,
+		[](FSettings*) {});
 
 	// ---- Audio ----
-	Bind(TEXT("OverallVolume"), &FSettings::GetOverallVolume, &FSettings::SetOverallVolume);
-	Bind(TEXT("MusicVolume"), &FSettings::GetMusicVolume, &FSettings::SetMusicVolume);
-	Bind(TEXT("SFXVolume"), &FSettings::GetSFXVolume, &FSettings::SetSFXVolume);
-	Bind(TEXT("VoiceVolume"), &FSettings::GetVoiceVolume, &FSettings::SetVoiceVolume);
-	Bind(TEXT("AmbientVolume"), &FSettings::GetAmbientVolume, &FSettings::SetAmbientVolume);
-	Bind(TEXT("UIVolume"), &FSettings::GetUIVolume, &FSettings::SetUIVolume);
+	// Each volume owns exactly one SoundClass override, which is cheap to apply on every slider event.
+	Bind(TEXT("OverallVolume"), &FSettings::GetOverallVolume, &FSettings::SetOverallVolume,
+		[](FSettings* Target) { Target->ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Overall, Target->GetOverallVolume()); });
+	Bind(TEXT("MusicVolume"), &FSettings::GetMusicVolume, &FSettings::SetMusicVolume,
+		[](FSettings* Target) { Target->ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Music, Target->GetMusicVolume()); });
+	Bind(TEXT("SFXVolume"), &FSettings::GetSFXVolume, &FSettings::SetSFXVolume,
+		[](FSettings* Target) { Target->ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_SFX, Target->GetSFXVolume()); });
+	Bind(TEXT("VoiceVolume"), &FSettings::GetVoiceVolume, &FSettings::SetVoiceVolume,
+		[](FSettings* Target) { Target->ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Voice, Target->GetVoiceVolume()); });
+	Bind(TEXT("AmbientVolume"), &FSettings::GetAmbientVolume, &FSettings::SetAmbientVolume,
+		[](FSettings* Target) { Target->ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Ambient, Target->GetAmbientVolume()); });
+	Bind(TEXT("UIVolume"), &FSettings::GetUIVolume, &FSettings::SetUIVolume,
+		[](FSettings* Target) { Target->ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_UI, Target->GetUIVolume()); });
 	Bind(TEXT("AllowBackgroundSound"), &FSettings::GetAllowBackgroundSound, &FSettings::SetAllowBackgroundSound);
 	Bind(TEXT("SubtitlesEnabled"), &FSettings::GetSubtitlesEnabled, &FSettings::SetSubtitlesEnabled);
 	Bind(TEXT("HRTFEnabled"), &FSettings::GetHRTFEnabled, &FSettings::SetHRTFEnabled);
@@ -83,7 +96,8 @@ void UOptionsDataRegistry::InitBindingMap()
 	// ---- Video ----
 	Bind(TEXT("FullscreenMode"), &FSettings::GetFullscreenMode, &FSettings::SetFullscreenMode);
 	Bind(TEXT("Resolution"), &FSettings::GetScreenResolution, &FSettings::SetScreenResolution);
-	Bind(TEXT("DisplayGamma"), &FSettings::GetCurrentDisplayGamma, &FSettings::SetCurrentDisplayGamma);
+	Bind(TEXT("DisplayGamma"), &FSettings::GetCurrentDisplayGamma, &FSettings::SetCurrentDisplayGamma,
+		[](FSettings* Target) { Target->ApplyDisplayGammaSetting(); });
 	Bind(TEXT("OverallScalabilityLevel"), &FSettings::GetOverallScalabilityLevel, &FSettings::SetOverallScalabilityLevel);
 	Bind(TEXT("ResolutionScaleNormalized"), &FSettings::GetResolutionScaleNormalized, &FSettings::SetResolutionScaleNormalized);
 	Bind(TEXT("GlobalIlluminationQuality"), &FSettings::GetGlobalIlluminationQuality, &FSettings::SetGlobalIlluminationQuality);
@@ -137,6 +151,16 @@ void UOptionsDataRegistry::ApplyPendingSettingImmediately(FName BindingKey)
 	if (!Target || !Commit) return;
 	// Transfer only the edited setting. Other draft fields remain deferred until Back.
 	(*Commit)(Target);
+
+	// Continuous edits (sliders) report one change per input event. Apply just this setting's own
+	// runtime effect; the full ApplyNonResolutionSettings re-applies every quality cvar, the culture
+	// and all sound mixes, which is far too heavy to run on every event.
+	if (const auto* TargetedApply = TargetedAppliersByKey.Find(BindingKey))
+	{
+		(*TargetedApply)(Target);
+		return;
+	}
+
 	if (BindingKey == TEXT("Resolution") || BindingKey == TEXT("FullscreenMode"))
 		Target->ApplyResolutionSettings(true);
 	Target->ApplyNonResolutionSettings();
@@ -336,17 +360,41 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 		[]()->bool { return !(GIsEditor || GIsPlayInEditorWorld); });
 	PackagedBuildOnlyCondition.SetDisableRichReason(TXT_OPT_WARN_PACKAGED_ONLY().ToString());
 
+	TSet<FName> RegisteredTabIds;
+
 	for (UMenuTabConfig* TabData : OptionsConfig->Tabs)
 	{
+		if (!TabData) continue;
+
+		// A tab is looked up by TabId, so an empty or repeated one would be unreachable.
+		if (TabData->TabId.IsNone() || RegisteredTabIds.Contains(TabData->TabId))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Options config: empty or duplicate TabId %s"), *TabData->TabId.ToString());
+			continue;
+		}
+		RegisteredTabIds.Add(TabData->TabId);
+
 		UListDataObject_Collection* Tab = CreateCollection(TabData->TabId, TabData->TabName);
 		TMap<FName, UListDataObject_Base*> EntryLookup;
 
 		for (UMenuCategoryConfig* CatData : TabData->Categories)
 		{
+			if (!CatData) continue;
+
 			UListDataObject_Collection* Cat = CreateCollection(CatData->CategoryId, CatData->CategoryName);
 
 			for (UMenuEntryConfig* EntryData : CatData->Entries)
 			{
+				if (!EntryData) continue;
+
+				// Entries are wired to each other by DataId within their tab, so duplicates would
+				// silently make the edit conditions target whichever entry was added last.
+				if (EntryData->DataId.IsNone() || EntryLookup.Contains(EntryData->DataId))
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Options config: empty or duplicate DataId %s in %s"), *EntryData->DataId.ToString(), *TabData->TabId.ToString());
+					continue;
+				}
+
 				UListDataObject_Base* Entry = CreateEntryFromConfig(EntryData);
 				if (!Entry) continue;
 				Entry->SetShouldApplyChangeImmediately(EntryData->bApplyImmediately);
@@ -397,9 +445,10 @@ void UOptionsDataRegistry::ApplyTabEditConditions(
 	// ---- PackagedBuildOnly via DataAsset flag ----
 	for (const UMenuCategoryConfig* CatData : TabData->Categories)
 	{
+		if (!CatData) continue;
 		for (const UMenuEntryConfig* EntryData : CatData->Entries)
 		{
-			if (!EntryData->bPackagedBuildOnly) continue;
+			if (!EntryData || !EntryData->bPackagedBuildOnly) continue;
 			UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
 			if (EntryPtr && *EntryPtr)
 			{
@@ -411,9 +460,10 @@ void UOptionsDataRegistry::ApplyTabEditConditions(
 	// ---- EditDependencyIds wiring ----
 	for (const UMenuCategoryConfig* CatData : TabData->Categories)
 	{
+		if (!CatData) continue;
 		for (const UMenuEntryConfig* EntryData : CatData->Entries)
 		{
-			if (EntryData->EditDependencyIds.IsEmpty()) continue;
+			if (!EntryData || EntryData->EditDependencyIds.IsEmpty()) continue;
 			UListDataObject_Base* const* EntryPtr = EntryLookup.Find(EntryData->DataId);
 			if (!EntryPtr || !*EntryPtr) continue;
 
@@ -474,9 +524,10 @@ void UOptionsDataRegistry::ApplyTabEditConditions(
 	{
 		for (const UMenuCategoryConfig* CatData : TabData->Categories)
 		{
+			if (!CatData) continue;
 			for (const UMenuEntryConfig* EntryData : CatData->Entries)
 			{
-				if (!EntryData->EditDependencyIds.Contains("OverallQuality")) continue;
+				if (!EntryData || !EntryData->EditDependencyIds.Contains("OverallQuality")) continue;
 				UListDataObject_Base* const* SubEntryPtr = EntryLookup.Find(EntryData->DataId);
 				if (SubEntryPtr && *SubEntryPtr)
 				{

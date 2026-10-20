@@ -2,12 +2,14 @@
 
 
 #include "FrontendSettings/FrontendGameUserSettings.h"
+#include "FrontendSettings/FrontendDeveloperSettings.h"
 #include "FrontendSettings/FrontendResolution.h"
 
 #include "FrontendGameplayTags.h"
 #include "FunctionLibrary/FrontendFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/Engine.h"
+#include "Internationalization/Culture.h"
 #include "Internationalization/Internationalization.h"
 
 namespace
@@ -53,7 +55,6 @@ UFrontendGameUserSettings::UFrontendGameUserSettings()
 	, bMonoOutput(false)
 	, bDynamicRangeCompression(false)
 	, bDialogueBoost(true)
-	, CurrentCulture(TEXT("en"))
 {
 }
 
@@ -107,27 +108,89 @@ void UFrontendGameUserSettings::RepairResolutionSettings()
 void UFrontendGameUserSettings::ApplyNonResolutionSettings()
 {
 	Super::ApplyNonResolutionSettings();
-	if (GEngine) GEngine->DisplayGamma = DisplayGamma;
-	FInternationalization::Get().SetCurrentCulture(CurrentCulture);
 
+	ApplyDisplayGammaSetting();
+	ApplyCurrentCultureSetting();
+
+	ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Overall, OverallVolume);
+	ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Music, MusicVolume);
+	ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_SFX, SFXVolume);
+	ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Voice, VoiceVolume);
+	ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_Ambient, AmbientVolume);
+	ApplyVolumeSetting(FrontendGameplayTags::Frontend_Audio_Volume_UI, UIVolume);
+}
+
+void UFrontendGameUserSettings::ApplyVolumeSetting(const FGameplayTag& VolumeTag, float Volume)
+{
 	UWorld* World = GetGameWorld();
 	if (!World) return;
+
 	USoundMix* SoundMix = UFrontendFunctionLibrary::GetDefaultSoundMix();
 	if (!SoundMix) return;
 
-	const auto ApplyVolume = [World, SoundMix](const FGameplayTag& Tag, float Volume)
+	if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(VolumeTag))
 	{
-		if (USoundClass* SoundClass = UFrontendFunctionLibrary::GetSoundClassByVolumeTag(Tag))
+		UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, Volume);
+	}
+}
+
+void UFrontendGameUserSettings::ApplyDisplayGammaSetting()
+{
+	if (GEngine) GEngine->DisplayGamma = DisplayGamma;
+}
+
+FString UFrontendGameUserSettings::GetCurrentCulture() const
+{
+	// An unset language follows the operating system. Report the culture that would be applied rather
+	// than an empty string, so the options screen selects the language the game actually runs in.
+	return CurrentCulture.IsEmpty() ? ResolveSystemCulture() : CurrentCulture;
+}
+
+FString UFrontendGameUserSettings::ResolveSystemCulture() const
+{
+	const UFrontendDeveloperSettings* FrontendDeveloperSettings = GetDefault<UFrontendDeveloperSettings>();
+	if (!FrontendDeveloperSettings || FrontendDeveloperSettings->SupportedCultures.IsEmpty()) return FString();
+
+	// Culture selection needs the initialized internationalization system; without it, keep the
+	// language the engine already picked.
+	if (!FInternationalization::IsAvailable()) return FString();
+
+	const TArray<FString>& SupportedCultures = FrontendDeveloperSettings->SupportedCultures;
+	FInternationalization& Internationalization = FInternationalization::Get();
+
+	// The engine takes the language from the OS language ("zh") and the locale from the OS locale
+	// ("zh-CN"). The locale carries the region that decides the script a shipped culture uses
+	// ("zh-Hans"), so it is the better source; GetPrioritizedCultureNames expands a name into the
+	// cultures to try, most specific first.
+	TArray<FString> Candidates = Internationalization.GetPrioritizedCultureNames(Internationalization.GetCurrentLocale()->GetName());
+	Candidates.Append(Internationalization.GetPrioritizedCultureNames(Internationalization.GetCurrentLanguage()->GetName()));
+
+	for (const FString& Candidate : Candidates)
+	{
+		if (const FString* Match = SupportedCultures.FindByPredicate([&Candidate](const FString& SupportedCulture)
+			{
+				return SupportedCulture.Equals(Candidate, ESearchCase::IgnoreCase);
+			}))
 		{
-			UGameplayStatics::SetSoundMixClassOverride(World, SoundMix, SoundClass, Volume);
+			return *Match;
 		}
-	};
-	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Overall, OverallVolume);
-	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Music, MusicVolume);
-	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_SFX, SFXVolume);
-	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Voice, VoiceVolume);
-	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_Ambient, AmbientVolume);
-	ApplyVolume(FrontendGameplayTags::Frontend_Audio_Volume_UI, UIVolume);
+	}
+
+	// The OS language is not shipped, so use the primary language, which the config lists first.
+	return SupportedCultures[0];
+}
+
+void UFrontendGameUserSettings::ApplyCurrentCultureSetting()
+{
+	const FString CultureToApply = GetCurrentCulture();
+	if (CultureToApply.IsEmpty()) return;
+
+	// Only switch when the runtime language actually differs: settings are re-applied on every
+	// immediate change, and switching cultures refreshes all localized text.
+	FInternationalization& Internationalization = FInternationalization::Get();
+	if (Internationalization.GetCurrentCulture()->GetName() == CultureToApply) return;
+
+	Internationalization.SetCurrentCulture(CultureToApply);
 }
 
 void UFrontendGameUserSettings::SetOverallVolume(const float InValue)

@@ -130,4 +130,81 @@ bool FOptionsImmediateSettingsTest::RunTest(const FString& Parameters)
 	TestEqual(TEXT("Immediate preset applies foliage too"), Target->GetFoliageQuality(), 3);
 	return true;
 }
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FOptionsContinuousEditCostTest,
+	"GameMainMenu.Options.Immediate.ContinuousEditSkipsFullApply",
+	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FOptionsContinuousEditCostTest::RunTest(const FString& Parameters)
+{
+	auto* Live = UFrontendGameUserSettings::Get();
+	if (!TestNotNull(TEXT("Live settings exist"), Live)) return false;
+	const float OriginalGamma = GEngine->GetDisplayGamma();
+	ON_SCOPE_EXIT
+	{
+		Live->ApplyNonResolutionSettings();
+		GEngine->DisplayGamma = OriginalGamma;
+	};
+	auto* Target = DuplicateObject<UFrontendGameUserSettings>(Live, GetTransientPackage());
+	Target->ScalabilityQuality = Live->ScalabilityQuality;
+	Target->SetOverallVolume(1.f);
+	Target->SetCurrentDisplayGamma(2.2f);
+	Target->SetShowMinimap(true);
+	auto* Config = NewObject<UMenuConfigData>();
+	auto* Tab = NewObject<UMenuTabConfig>(Config);
+	Tab->TabId = TEXT("Tab-Video");
+	Config->Tabs.Add(Tab);
+	auto* Category = NewObject<UMenuCategoryConfig>(Tab);
+	Category->CategoryId = TEXT("ContinuousEditTest");
+	Tab->Categories.Add(Category);
+	const auto Add = [Category](FName Id, FName Key)
+	{
+		auto* Entry = NewObject<UMenuEntryConfig>(Category);
+		Entry->DataId = Id;
+		Entry->BindingKey = Key;
+		Entry->bApplyImmediately = true;
+		Category->Entries.Add(Entry);
+		return Entry;
+	};
+	const auto AddScalar = [&Add](FName Id, FName Key, float Max, const TCHAR* Default)
+	{
+		auto* Entry = Add(Id, Key);
+		auto* Value = NewObject<UMenuScalarValueConfig>(Entry);
+		Value->ScalarMax = Value->ScalarOutMax = Max;
+		Value->DefaultValue = Default;
+		Entry->ValueConfig = Value;
+		return Entry;
+	};
+	AddScalar(TEXT("Gamma"), TEXT("DisplayGamma"), 4.f, TEXT("2.2"));
+	AddScalar(TEXT("Volume"), TEXT("OverallVolume"), 2.f, TEXT("1.0"));
+	auto* Minimap = Add(TEXT("Minimap"), TEXT("ShowMinimap"));
+	auto* MinimapValue = NewObject<UMenuBoolValueConfig>(Minimap);
+	MinimapValue->bDefaultValue = true;
+	Minimap->ValueConfig = MinimapValue;
+
+	auto* Registry = NewObject<UOptionsDataRegistry>();
+	Registry->SetOptionsConfig(Config);
+	Registry->InitOptionsDataRegistry(nullptr, Target);
+	TMap<FName, UListDataObject_Base*> Items;
+	for (auto* Item : Registry->GetListSourceItemBySelectedTabId(Tab->TabId)) Items.Add(Item->GetDataId(), Item);
+
+	// Only a full apply validates and repairs settings, so a corrupt resolution reports whether one ran.
+	const FIntPoint CorruptResolution(622989440, 407);
+	Target->SetScreenResolution(CorruptResolution);
+
+	CastChecked<UListDataObject_Scalar>(Items[TEXT("Gamma")])->SetCurrentValue(3.f);
+	TestEqual(TEXT("Continuous gamma edit is committed"), Target->GetCurrentDisplayGamma(), 3.f);
+	TestEqual(TEXT("Continuous gamma edit still reaches the runtime"), GEngine->GetDisplayGamma(), 3.f);
+	TestEqual(TEXT("Continuous gamma edit does not run a full apply"), Target->GetScreenResolution(), CorruptResolution);
+
+	CastChecked<UListDataObject_Scalar>(Items[TEXT("Volume")])->SetCurrentValue(0.4f);
+	TestEqual(TEXT("Continuous volume edit is committed"), Target->GetOverallVolume(), 0.4f);
+	TestEqual(TEXT("Continuous volume edit does not run a full apply"), Target->GetScreenResolution(), CorruptResolution);
+
+	// Positive control: settings without a targeted effect behave as before.
+	Target->SetShowMinimap(true);
+	CastChecked<UListDataObject_String>(Items[TEXT("Minimap")])->GotoNextOption();
+	TestFalse(TEXT("Immediate bool is still applied"), Target->GetShowMinimap());
+	TestNotEqual(TEXT("Settings without a targeted effect still run a full apply"), Target->GetScreenResolution(), CorruptResolution);
+	return true;
+}
 #endif

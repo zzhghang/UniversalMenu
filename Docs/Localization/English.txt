@@ -1,0 +1,259 @@
+120 FPS
+144 FPS
+240 FPS
+30 FPS
+3DSpatialAudio
+60 FPS
+<KR_Default>Press any </><KR_HighLight>gamepad</> <KR_Default>button </>
+<KR_Default>Press any </><KR_HighLight>keyboard</> <KR_Default>key </>
+<Warning>This setting can only adjusted in a packaged build</>
+<Warning>This setting is disabled in Borderless Window mode</>
+<Warning>This setting is only available in Fullscreen mode</>
+Activate push‑to‑talk or toggle voice communication with teammates.
+Adjust the UI sounds volume level.
+Adjust the ambient sounds volume level.
+Adjust the display gamma correction value. Higher values brighten dark areas.
+Adjust the music volume level.
+Adjust the overall volume level of the game.
+Adjust the quality and resolution of shadow rendering.
+Adjust the quality of anti-aliasing for smoother edges.
+Adjust the quality of global illumination lighting effects.
+Adjust the quality of post-processing effects such as bloom and depth of field.
+Adjust the quality of screen-space and planar reflections.
+Adjust the quality of visual effects such as particles and explosions.
+Adjust the rendering resolution as a percentage of the native resolution. Lower values improve performance.
+Adjust the size of the crosshair.
+Adjust the sound effects volume level.
+Adjust the texture resolution and streaming quality.
+Adjust the view distance for rendering distant objects.
+Adjust the voice/dialogue volume level.
+Adjust various game settings
+AdvancedGraphics
+Aim
+AllItems
+Allow the game to continue playing sounds when it's running in the background.
+Ambient Volume
+AntiAliasing Quality
+Apply
+Are you sure you want to reset all options in this category to their default values?
+Attack
+Audio
+AutoPickup
+AutoSave
+Back
+BackgroundSound
+Borderless
+Bring up the pause menu to halt gameplay and access settings.
+Cancel
+Choose whether to hold the crouch button or press it to toggle crouching on and off.
+Choose whether to hold the sprint button or press it to toggle sprinting on and off.
+Choose which nearby items to pick up automatically.
+Cinematic
+Close
+Close the game
+Combat
+Confirm
+Continue
+Continue playing from your last save
+Control
+Credits
+CrosshairSize
+Crouch
+Crouch Mode
+Custom
+DamageNumbers
+Delete
+DialogueBoost
+Difficulty
+Discard the currently held item, weapon, or equipment.
+Display
+Display Gamma
+Do you want to quit the game?
+Downmix all audio to mono. Useful for single-speaker setups or accessibility needs.
+Drop
+DynamicRange
+Easy
+Enable HRTF-based 3D spatial audio for headphones. Provides immersive directional sound.
+Enhance voice and dialogue clarity by boosting mid-range frequencies.
+Epic
+Exit
+Fire the current weapon or perform a melee attack.
+Flashlight
+Frame Rate Limit
+Fullscreen
+Game
+Gamepad
+Gameplay
+General
+Global Illumination Quality
+Graphics
+HUD
+Hard
+HealthBar
+High
+HighlightInteraction
+Hold
+Initializing world subsystems and preparing scene
+Instantly rotate 180 degrees to face the opposite direction.
+Interact
+Interaction
+Invalid
+Inventory
+Join
+JoinGame
+Jump
+Keyboard
+Language
+Leap over obstacles, gaps, or to reach higher platforms.
+Limit the maximum frames per second. Lower values reduce system load but may feel less responsive.
+Load Game
+Loading level assets and streaming world data
+Low
+Lower your stance to reduce visibility, movement noise, and profile.
+Map
+MaterialsOnly
+Medium
+Menu
+MonoOutput
+Movement
+Multiplayer
+Multiplayer online games based on Steam
+Music Volume
+New Story
+Nightmare
+No
+Normal
+OK
+Off
+On
+Open the inventory screen to view, organize, and use collected items.
+Open the tactical map or area overview for navigation and planning.
+Options
+Overall Quality
+Overall Volume
+PRESS ANY KEY
+Pause
+Post Processing Quality
+QuickTurn
+Raise weapon to enter aiming mode for improved accuracy.
+Reduce the volume difference between loud and quiet sounds. Ideal for late-night gaming.
+Reflection Quality
+Refresh
+Reload
+Reload the currently equipped weapon with ammunition.
+Reset
+Reset Category
+Reset Entry
+Resolution
+ResolutionScale
+Run at increased speed, typically limited by stamina or movement fatigue.
+SFX Volume
+Save
+Select the display language. Changes take effect when you return to the previous screen.
+Select the screen resolution for the game. Higher resolutions provide better visual quality but may impact performance.
+Select the window display mode
+Selected saved data to continue from
+Set the game difficulty level.
+Sets the overall graphics quality preset. Affects all individual quality settings below.
+Shadow Quality
+Show or hide the minimap on the HUD.
+Show or hide your ammunition count on the HUD.
+ShowAmmoCount
+ShowMinimap
+Sound
+Sprint
+Sprint Mode
+Start a new game from the very beginning
+StartGame
+Streaming high-resolution textures and finishing asset loading
+Subtitles
+Subtitles Sound
+Survival
+Synchronize the frame rate with the display refresh rate to prevent screen tearing.
+Texture Quality
+Toggle
+Toggle automatic game progress saving.
+Toggle subtitle display during dialogues and cutscenes.
+Toggle subtitle display during dialogues and cutscenes.
+Toggle the attached or handheld flashlight on and off.	
+Toggle the display of enemy health bars.
+Toggle the display of floating damage numbers.
+Toggle the highlight outline on interactive objects.
+UI Volume
+Unlimited
+Use environmental objects such as doors, switches, pick up items, or trigger context-sensitive actions.
+Vertical Sync
+Video
+View Distance Quality
+View the updated staff credits
+Visual Effects Quality
+Voice Volume
+VoiceChat
+Volume
+Waiting for player controller to spawn and possess
+Warming up gameplay systems and waiting for actors to begin play
+WindowMode
+Windowed
+Yes
+<Warning>Password is disabled when Has Password is turned off</>
+Abundant
+Adjust how plentiful loot is in the world.
+Advanced
+All
+Are you sure you want to join this game
+Backpack
+Basic
+Choose the weather conditions for the game.
+Choose which items players drop when they die.
+Clear
+CreateGame
+Death Drop Mode
+Enable LAN mode
+Enter a name for your game
+Fog
+Game Name
+GameMode
+General
+HasPassword
+Input Notice
+Join Session
+JoinGame
+LAN
+List of rooms that can be added
+Loot Abundance
+Map
+Map
+Map1
+Map2
+Map3
+Map4
+Max Players
+Maximum {0} characters allowed
+None
+Only letters and numbers are allowed
+Only letters are allowed
+Only numbers are allowed
+Password
+Ping
+Players
+Please enter the password numbers only
+Please enter the room name
+Privacy
+Private
+Rain
+Random
+Scarce
+Select Game Mode
+Select the map to play
+Select the region where the server is located
+Server not found
+ServerList
+ServerName
+ServerRegion
+Set room password
+Set the game to public or private
+Set the maximum player count
+Set whether the room requires a password to join
+Some characters did not match the input restrictions and were filtered
+Standard
+Weather Mode

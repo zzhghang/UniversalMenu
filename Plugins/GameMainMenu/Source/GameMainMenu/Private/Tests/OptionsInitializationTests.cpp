@@ -170,4 +170,78 @@ bool FResolutionRepairTest::RunTest(const FString& Parameters)
 	return true;
 }
 
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FOptionsConfigInvalidElementsTest,
+	"GameMainMenu.Options.Initialization.SkipsNullAndDuplicateConfig",
+	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FOptionsConfigInvalidElementsTest::RunTest(const FString& Parameters)
+{
+	const UFrontendGameUserSettings* Settings = UFrontendGameUserSettings::Get();
+	if (!TestNotNull(TEXT("Frontend settings are available"), Settings)) return false;
+
+	UMenuConfigData* Config = NewObject<UMenuConfigData>();
+	Config->Tabs.Add(nullptr);
+
+	UMenuTabConfig* Tab = NewObject<UMenuTabConfig>(Config);
+	Tab->TabId = TEXT("BrokenTab");
+	Config->Tabs.Add(Tab);
+
+	UMenuCategoryConfig* Category = NewObject<UMenuCategoryConfig>(Tab);
+	Category->CategoryId = TEXT("Settings");
+	Tab->Categories.Add(Category);
+	Tab->Categories.Add(nullptr);
+
+	const auto AddEntry = [Category](const TCHAR* Id)
+	{
+		UMenuEntryConfig* Entry = NewObject<UMenuEntryConfig>(Category);
+		Entry->DataId = Id;
+		Entry->ValueType = EMenuEntryValueType::String;
+		Entry->BindingKey = TEXT("Difficulty");
+		Entry->AvailableOptions.Add(TEXT("Normal"), FText::FromString(TEXT("Normal")));
+		Entry->AvailableOptions.Add(TEXT("Hard"), FText::FromString(TEXT("Hard")));
+		Category->Entries.Add(Entry);
+		return Entry;
+	};
+
+	AddEntry(TEXT("Difficulty"));
+	Category->Entries.Add(nullptr);
+	AddEntry(TEXT("Difficulty"));	// Duplicate DataId — edit conditions would target the last one.
+	AddEntry(TEXT(""));				// Empty DataId — cannot be looked up.
+
+	// A second tab reusing an existing TabId would be unreachable behind the first one.
+	UMenuTabConfig* DuplicateTab = NewObject<UMenuTabConfig>(Config);
+	DuplicateTab->TabId = TEXT("BrokenTab");
+	Config->Tabs.Add(DuplicateTab);
+
+	UOptionsDataRegistry* Registry = NewObject<UOptionsDataRegistry>();
+	Registry->SetOptionsConfig(Config);
+	Registry->InitOptionsDataRegistry(nullptr);
+
+	const TArray<UListDataObject_Collection*>& Tabs = Registry->GetRegisteredOptionsCollectionTabs();
+	if (TestEqual(TEXT("Null and duplicate tabs are skipped, Control tab is still added"), Tabs.Num(), 2) && Tabs[0])
+	{
+		TestEqual(TEXT("The valid tab keeps its id"), Tabs[0]->GetDataId().ToString(), FString(TEXT("BrokenTab")));
+	}
+
+	int32 DifficultyEntries = 0;
+	int32 EntriesWithoutId = 0;
+	for (const UListDataObject_Base* Item : Registry->GetListSourceItemBySelectedTabId(TEXT("BrokenTab")))
+	{
+		if (!Item) continue;
+
+		if (Item->GetDataId().IsNone())
+		{
+			++EntriesWithoutId;
+		}
+		else if (Item->GetDataId() == TEXT("Difficulty"))
+		{
+			++DifficultyEntries;
+		}
+	}
+
+	TestEqual(TEXT("Only the first entry of a duplicated DataId is registered"), DifficultyEntries, 1);
+	TestEqual(TEXT("No entry without a DataId is registered"), EntriesWithoutId, 0);
+	return true;
+}
+
 #endif // WITH_DEV_AUTOMATION_TESTS

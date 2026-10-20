@@ -44,4 +44,13 @@ public:
 	UPROPERTY(Config, EditAnywhere, Category = "Localization")
 	TArray<FString> SupportedCultures;
 
+	/**
+	 * Runtime cache resolved by UFrontendFunctionLibrary (not config), kept alive so that repeated
+	 * volume changes — one per slider event — do not re-resolve the soft references above each time.
+	 */
+	UPROPERTY(Transient)
+	TObjectPtr<USoundMix> CachedDefaultSoundMix;
+
+	UPROPERTY(Transient)
+	TMap<FGameplayTag, TObjectPtr<USoundClass>> CachedAudioVolumeSoundClasses;
 };

@@ -1,0 +1,259 @@
+120 FPS
+144 FPS
+240 FPS
+30 FPS
+Audio spaziale 3D
+60 FPS
+<KR_Default>Premi un pulsante qualsiasi del </><KR_HighLight>controller</><KR_Default> per continuare.</>
+<KR_Default>Premi un tasto qualsiasi della </><KR_HighLight>tastiera</><KR_Default> per continuare.</>
+<Warning>Questa impostazione può essere regolata solo in una build pacchettizzata</>
+<Warning>Questa impostazione è disattivata in modalità finestra senza bordi</>
+<Warning>Questa impostazione è disponibile solo in modalità schermo intero</>
+Attiva il push-to-talk o alterna la comunicazione vocale con i compagni.
+Regola il volume dei suoni dell'interfaccia.
+Regola il volume dei suoni ambientali.
+Regola il valore di correzione gamma del display. Valori più alti schiariscono le zone scure.
+Regola il volume della musica.
+Regola il volume generale del gioco.
+Regola la qualità e la risoluzione del rendering delle ombre.
+Regola la qualità dell'antialiasing per bordi più uniformi.
+Regola la qualità dell'illuminazione globale.
+Regola la qualità degli effetti di post-elaborazione come bloom e profondità di campo.
+Regola la qualità dei riflessi in spazio schermo e planari.
+Regola la qualità degli effetti visivi come particelle ed esplosioni.
+Regola la risoluzione di rendering come percentuale della risoluzione nativa. Valori più bassi migliorano le prestazioni.
+Regola le dimensioni del mirino.
+Regola il volume degli effetti sonori.
+Regola la risoluzione delle texture e la qualità dello streaming.
+Regola la distanza di visualizzazione per il rendering degli oggetti lontani.
+Regola il volume di voci e dialoghi.
+Regola le varie impostazioni del gioco
+Grafica avanzata
+Mira
+Tutti gli oggetti
+Consenti al gioco di continuare a riprodurre i suoni quando è in esecuzione in background.
+Volume ambientale
+Qualità antialiasing
+Applica
+Vuoi davvero ripristinare tutte le opzioni di questa categoria ai valori predefiniti?
+Attacca
+Audio
+Raccolta automatica
+Salvataggio automatico
+Indietro
+Suono di sottofondo
+Senza bordi
+Apri il menu di pausa per interrompere il gioco e accedere alle impostazioni.
+Annulla
+Scegli se tenere premuto il pulsante per accovacciarti o premerlo per attivare e disattivare l'accovacciamento.
+Scegli se tenere premuto il pulsante per scattare o premerlo per attivare e disattivare lo scatto.
+Scegli quali oggetti vicini raccogliere automaticamente.
+Cinematografico
+Chiudi
+Chiudi il gioco
+Combattimento
+Conferma
+Continua
+Continua dal tuo ultimo salvataggio
+Controlli
+Crediti
+Dimensioni mirino
+Accovacciati
+Modalità accovacciato
+Personalizzato
+Numeri dei danni
+Elimina
+Potenziamento dialoghi
+Difficoltà
+Scarta l'oggetto, l'arma o l'equipaggiamento attualmente impugnato.
+Display
+Gamma display
+Vuoi uscire dal gioco?
+Riduci tutto l'audio in mono. Utile per configurazioni con un solo altoparlante o esigenze di accessibilità.
+Scarta
+Gamma dinamica
+Facile
+Attiva l'audio spaziale 3D basato su HRTF per le cuffie. Offre un audio direzionale immersivo.
+Migliora la chiarezza di voci e dialoghi aumentando le frequenze medie.
+Epico
+Esci
+Spara con l'arma attuale o esegui un attacco corpo a corpo.
+Torcia
+Limite frame rate
+Schermo intero
+Gioco
+Controller
+Gameplay
+Generale
+Qualità illuminazione globale
+Grafica
+HUD
+Difficile
+Barra della salute
+Alto
+Evidenziazione interazione
+Tieni premuto
+Inizializzazione dei sottosistemi del mondo e preparazione della scena
+Ruota istantaneamente di 180 gradi per guardare nella direzione opposta.
+Interagisci
+Interazione
+Non valido
+Inventario
+Partecipa
+Partecipa alla partita
+Salta
+Tastiera
+Lingua
+Salta ostacoli e voragini o raggiungi piattaforme più alte.
+Limita il numero massimo di frame al secondo. Valori più bassi riducono il carico di sistema ma possono risultare meno reattivi.
+Carica partita
+Caricamento delle risorse del livello e streaming dei dati del mondo
+Basso
+Abbassa la postura per ridurre visibilità, rumore dei movimenti e sagoma.
+Mappa
+Solo materiali
+Medio
+Menu
+Uscita mono
+Movimento
+Multigiocatore
+Giochi multigiocatore online basati su Steam
+Volume musica
+Nuova storia
+Incubo
+No
+Normale
+OK
+Disattivato
+Attivato
+Apri l'inventario per visualizzare, organizzare e usare gli oggetti raccolti.
+Apri la mappa tattica o la panoramica dell'area per la navigazione e la pianificazione.
+Opzioni
+Qualità generale
+Volume generale
+PREMI UN TASTO QUALSIASI
+Pausa
+Qualità post-elaborazione
+Rotazione rapida
+Solleva l'arma per entrare in modalità mira e migliorare la precisione.
+Riduci la differenza di volume tra suoni forti e deboli. Ideale per giocare a tarda notte.
+Qualità riflessi
+Aggiorna
+Ricarica
+Ricarica l'arma equipaggiata con munizioni.
+Ripristina
+Ripristina categoria
+Ripristina voce
+Risoluzione
+Scala risoluzione
+Corri a velocità maggiore, solitamente limitata dalla resistenza o dall'affaticamento.
+Volume effetti sonori
+Salva
+Seleziona la lingua di visualizzazione. Le modifiche hanno effetto quando torni alla schermata precedente.
+Seleziona la risoluzione dello schermo del gioco. Risoluzioni più alte offrono una qualità visiva migliore ma possono influire sulle prestazioni.
+Seleziona la modalità di visualizzazione della finestra
+Dati di salvataggio selezionati da cui continuare
+Imposta il livello di difficoltà del gioco.
+Imposta il preset di qualità grafica generale. Influisce su tutte le singole impostazioni di qualità sottostanti.
+Qualità ombre
+Mostra o nascondi la minimappa nell'HUD.
+Mostra o nascondi la quantità di munizioni nell'HUD.
+Mostra munizioni
+Mostra minimappa
+Suono
+Scatto
+Modalità scatto
+Inizia una nuova partita dall'inizio
+Inizia partita
+Streaming delle texture ad alta risoluzione e completamento del caricamento delle risorse
+Sottotitoli
+Suono sottotitoli
+Sopravvivenza
+Sincronizza il frame rate con la frequenza di aggiornamento del display per evitare il tearing dello schermo.
+Qualità texture
+Attiva/disattiva
+Attiva o disattiva il salvataggio automatico dei progressi.
+Attiva o disattiva i sottotitoli durante dialoghi e filmati.
+Attiva o disattiva i sottotitoli durante dialoghi e filmati.
+Attiva o disattiva la torcia fissata o portatile.
+Attiva o disattiva la visualizzazione delle barre della salute dei nemici.
+Attiva o disattiva la visualizzazione dei numeri dei danni fluttuanti.
+Attiva o disattiva il contorno di evidenziazione sugli oggetti interattivi.
+Volume interfaccia
+Illimitato
+Usa oggetti ambientali come porte e interruttori, raccogli oggetti o attiva azioni contestuali.
+Sincronizzazione verticale
+Video
+Qualità distanza di visualizzazione
+Visualizza i crediti aggiornati
+Qualità effetti visivi
+Volume voci
+Chat vocale
+Volume
+In attesa della generazione e del possesso del controller del giocatore
+Riscaldamento dei sistemi di gioco e attesa dell'avvio degli attori
+Modalità finestra
+Finestra
+Sì
+<Warning>La password è disattivata quando l'opzione «Password» è disattivata</>
+Abbondante
+Regola quanto è abbondante il bottino nel mondo.
+Avanzate
+Tutti
+Vuoi davvero partecipare a questa partita
+Zaino
+Base
+Scegli le condizioni meteorologiche per la partita.
+Scegli quali oggetti i giocatori lasciano cadere alla morte.
+Sereno
+Crea partita
+Modalità rilascio alla morte
+Attiva la modalità LAN
+Inserisci un nome per la tua partita
+Nebbia
+Nome partita
+Modalità di gioco
+Generale
+Password
+Avviso di input
+Partecipa alla sessione
+Partecipa alla partita
+LAN
+Elenco delle stanze aggiungibili
+Abbondanza bottino
+Mappa
+Mappa
+Mappa 1
+Mappa 2
+Mappa 3
+Mappa 4
+Giocatori max
+Massimo {0} caratteri consentiti
+Nessuno
+Sono consentiti solo lettere e numeri
+Sono consentite solo lettere
+Sono consentiti solo numeri
+Password
+Ping
+Giocatori
+Inserisci solo i numeri della password
+Inserisci il nome della stanza
+Privacy
+Privata
+Pioggia
+Casuale
+Scarso
+Seleziona modalità di gioco
+Seleziona la mappa da giocare
+Seleziona la regione in cui si trova il server
+Server non trovato
+Elenco server
+Nome server
+Regione server
+Imposta la password della stanza
+Imposta la partita come pubblica o privata
+Imposta il numero massimo di giocatori
+Imposta se la stanza richiede una password per partecipare
+Alcuni caratteri non rispettavano le restrizioni di input e sono stati filtrati
+Standard
+Modalità meteo

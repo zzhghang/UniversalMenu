@@ -1,0 +1,259 @@
+120 FPS
+144 FPS
+240 FPS
+30 FPS
+Audio spatial 3D
+60 FPS
+<KR_Default>Appuyez sur n'importe quel bouton de la </><KR_HighLight>manette</><KR_Default> pour continuer.</>
+<KR_Default>Appuyez sur n'importe quelle touche du </><KR_HighLight>clavier</><KR_Default> pour continuer.</>
+<Warning>Ce paramètre ne peut être ajusté que dans une version packagée</>
+<Warning>Ce paramètre est désactivé en mode fenêtre sans bordure</>
+<Warning>Ce paramètre est disponible uniquement en mode plein écran</>
+Activer le mode « appuyer pour parler » ou basculer la communication vocale avec vos coéquipiers.
+Régler le volume des sons de l'interface.
+Régler le volume des sons d'ambiance.
+Régler la valeur de correction gamma de l'affichage. Des valeurs plus élevées éclaircissent les zones sombres.
+Régler le volume de la musique.
+Régler le volume global du jeu.
+Régler la qualité et la résolution du rendu des ombres.
+Régler la qualité de l'anticrénelage pour des bords plus lisses.
+Régler la qualité de l'illumination globale.
+Régler la qualité des effets de post-traitement comme le bloom et la profondeur de champ.
+Régler la qualité des réflexions en espace écran et planaires.
+Régler la qualité des effets visuels comme les particules et les explosions.
+Régler la résolution de rendu en pourcentage de la résolution native. Des valeurs plus basses améliorent les performances.
+Régler la taille du réticule.
+Régler le volume des effets sonores.
+Régler la résolution des textures et la qualité du streaming.
+Régler la distance d'affichage pour le rendu des objets éloignés.
+Régler le volume des voix et des dialogues.
+Régler les différents paramètres du jeu
+Graphismes avancés
+Viser
+Tous les objets
+Autoriser le jeu à continuer de jouer les sons lorsqu'il tourne en arrière-plan.
+Volume d'ambiance
+Qualité de l'anticrénelage
+Appliquer
+Voulez-vous vraiment réinitialiser toutes les options de cette catégorie à leurs valeurs par défaut ?
+Attaquer
+Audio
+Ramassage auto
+Sauvegarde auto
+Retour
+Son d'arrière-plan
+Sans bordure
+Ouvrir le menu de pause pour interrompre le jeu et accéder aux paramètres.
+Annuler
+Choisir entre maintenir le bouton d'accroupissement ou appuyer dessus pour basculer l'accroupissement.
+Choisir entre maintenir le bouton de sprint ou appuyer dessus pour basculer le sprint.
+Choisir les objets proches à ramasser automatiquement.
+Cinématique
+Fermer
+Fermer le jeu
+Combat
+Confirmer
+Continuer
+Reprendre la partie depuis la dernière sauvegarde
+Contrôles
+Générique
+Taille du réticule
+S'accroupir
+Mode accroupi
+Personnalisé
+Chiffres de dégâts
+Supprimer
+Amplification des dialogues
+Difficulté
+Jeter l'objet, l'arme ou l'équipement actuellement tenu.
+Affichage
+Gamma d'affichage
+Voulez-vous quitter le jeu ?
+Réduire tout l'audio en mono. Utile pour les configurations à un seul haut-parleur ou les besoins d'accessibilité.
+Jeter
+Plage dynamique
+Facile
+Activer l'audio spatial 3D basé sur HRTF pour les casques. Offre un son directionnel immersif.
+Améliorer la clarté des voix et des dialogues en renforçant les médiums.
+Épique
+Quitter
+Tirer avec l'arme actuelle ou effectuer une attaque au corps à corps.
+Lampe torche
+Limite de fréquence d'images
+Plein écran
+Jeu
+Manette
+Jouabilité
+Général
+Qualité de l'illumination globale
+Graphismes
+HUD
+Difficile
+Barre de vie
+Élevé
+Mise en évidence des interactions
+Maintenir
+Initialisation des sous-systèmes du monde et préparation de la scène
+Pivoter instantanément de 180 degrés pour faire face à la direction opposée.
+Interagir
+Interaction
+Invalide
+Inventaire
+Rejoindre
+Rejoindre une partie
+Sauter
+Clavier
+Langue
+Franchir des obstacles, des fossés ou atteindre des plateformes plus hautes.
+Limiter le nombre maximal d'images par seconde. Des valeurs plus basses réduisent la charge système mais peuvent sembler moins réactives.
+Charger une partie
+Chargement des ressources du niveau et streaming des données du monde
+Faible
+Baisser sa posture pour réduire la visibilité, le bruit de déplacement et la silhouette.
+Carte
+Matériaux uniquement
+Moyen
+Menu
+Sortie mono
+Déplacement
+Multijoueur
+Jeux multijoueurs en ligne via Steam
+Volume de la musique
+Nouvelle histoire
+Cauchemar
+Non
+Normal
+OK
+Désactivé
+Activé
+Ouvrir l'inventaire pour consulter, organiser et utiliser les objets collectés.
+Ouvrir la carte tactique ou la vue d'ensemble de la zone pour la navigation et la planification.
+Options
+Qualité globale
+Volume global
+APPUYEZ SUR UNE TOUCHE
+Pause
+Qualité du post-traitement
+Demi-tour rapide
+Lever l'arme pour passer en mode visée et améliorer la précision.
+Réduire l'écart de volume entre les sons forts et faibles. Idéal pour jouer tard le soir.
+Qualité des réflexions
+Actualiser
+Recharger
+Recharger l'arme équipée avec des munitions.
+Réinitialiser
+Réinitialiser la catégorie
+Réinitialiser l'entrée
+Résolution
+Échelle de résolution
+Courir plus vite, généralement limité par l'endurance ou la fatigue de déplacement.
+Volume des effets sonores
+Sauvegarder
+Choisir la langue d'affichage. Les changements prennent effet au retour à l'écran précédent.
+Choisir la résolution d'écran du jeu. Des résolutions plus élevées offrent une meilleure qualité visuelle mais peuvent affecter les performances.
+Choisir le mode d'affichage de la fenêtre
+Données de sauvegarde sélectionnées pour reprendre
+Définir le niveau de difficulté du jeu.
+Définir le préréglage de qualité graphique global. Affecte tous les réglages de qualité individuels ci-dessous.
+Qualité des ombres
+Afficher ou masquer la mini-carte sur le HUD.
+Afficher ou masquer le nombre de munitions sur le HUD.
+Afficher les munitions
+Afficher la mini-carte
+Son
+Sprint
+Mode sprint
+Commencer une nouvelle partie depuis le tout début
+Démarrer la partie
+Streaming des textures haute résolution et finalisation du chargement des ressources
+Sous-titres
+Son des sous-titres
+Survie
+Synchroniser la fréquence d'images avec le taux de rafraîchissement de l'écran pour éviter le déchirement de l'image.
+Qualité des textures
+Basculer
+Activer ou désactiver la sauvegarde automatique de la progression.
+Activer ou désactiver l'affichage des sous-titres pendant les dialogues et les cinématiques.
+Activer ou désactiver l'affichage des sous-titres pendant les dialogues et les cinématiques.
+Activer ou désactiver la lampe torche fixée ou portative.
+Activer ou désactiver l'affichage des barres de vie des ennemis.
+Activer ou désactiver l'affichage des chiffres de dégâts flottants.
+Activer ou désactiver le contour de mise en évidence des objets interactifs.
+Volume de l'interface
+Illimité
+Utiliser des objets environnementaux comme les portes et les interrupteurs, ramasser des objets ou déclencher des actions contextuelles.
+Synchronisation verticale
+Vidéo
+Qualité de la distance d'affichage
+Consulter le générique mis à jour
+Qualité des effets visuels
+Volume des voix
+Chat vocal
+Volume
+En attente de l'apparition et de la possession du contrôleur de joueur
+Préparation des systèmes de jeu et attente du démarrage des acteurs
+Mode de fenêtre
+Fenêtré
+Oui
+<Warning>Le mot de passe est désactivé lorsque l'option « Mot de passe » est désactivée</>
+Abondant
+Régler la quantité de butin présente dans le monde.
+Avancé
+Tout
+Voulez-vous vraiment rejoindre cette partie
+Sac à dos
+Basique
+Choisir les conditions météorologiques de la partie.
+Choisir les objets que les joueurs lâchent à leur mort.
+Dégagé
+Créer une partie
+Mode de largage à la mort
+Activer le mode LAN
+Saisir un nom pour votre partie
+Brouillard
+Nom de la partie
+Mode de jeu
+Général
+Mot de passe
+Avis de saisie
+Rejoindre la session
+Rejoindre une partie
+LAN
+Liste des salons pouvant être ajoutés
+Quantité de butin
+Carte
+Carte
+Carte 1
+Carte 2
+Carte 3
+Carte 4
+Joueurs max.
+{0} caractères maximum autorisés
+Aucun
+Seuls les lettres et les chiffres sont autorisés
+Seules les lettres sont autorisées
+Seuls les chiffres sont autorisés
+Mot de passe
+Ping
+Joueurs
+Veuillez saisir le mot de passe (chiffres uniquement)
+Veuillez saisir le nom du salon
+Confidentialité
+Privé
+Pluie
+Aléatoire
+Rare
+Choisir le mode de jeu
+Choisir la carte à jouer
+Choisir la région où se trouve le serveur
+Serveur introuvable
+Liste des serveurs
+Nom du serveur
+Région du serveur
+Définir le mot de passe du salon
+Définir la partie comme publique ou privée
+Définir le nombre maximal de joueurs
+Définir si le salon nécessite un mot de passe pour rejoindre
+Certains caractères ne correspondaient pas aux restrictions de saisie et ont été filtrés
+Standard
+Mode météo

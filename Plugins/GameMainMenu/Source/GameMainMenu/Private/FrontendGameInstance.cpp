@@ -2,6 +2,7 @@
 
 #include "FrontendGameInstance.h"
 
+#include "FrontendSettings/FrontendGameUserSettings.h"
 #include "Kismet/GameplayStatics.h"
 #include "Widgets/Multiplayer/MenuSessionData.h"
 
@@ -9,6 +10,34 @@ namespace
 {
 	constexpr const TCHAR* MenuSessionSlotName = TEXT("MenuSession");
 	constexpr int32 MenuSessionSlotIndex = 0;
+}
+
+void UFrontendGameInstance::Init()
+{
+	Super::Init();
+
+	RunHardwareBenchmarkIfNeeded();
+}
+
+void UFrontendGameInstance::RunHardwareBenchmarkIfNeeded()
+{
+	// Dedicated servers have no rendering and no local player, so there is nothing to benchmark.
+	if (IsDedicatedServerInstance())
+	{
+		return;
+	}
+
+	UFrontendGameUserSettings* UserSettings = UFrontendGameUserSettings::Get();
+	if (!UserSettings) return;
+
+	// Only on first launch: ApplyHardwareBenchmarkResults saves the results, so later runs skip this.
+	// RunHardwareBenchmark blocks while it measures CPU and GPU, so it runs once during startup
+	// instead of on every frontend map load.
+	if (UserSettings->GetLastCPUBenchmarkResult() < 0.f || UserSettings->GetLastGPUBenchmarkResult() < 0.f)
+	{
+		UserSettings->RunHardwareBenchmark();
+		UserSettings->ApplyHardwareBenchmarkResults();
+	}
 }
 
 UMenuSessionData* UFrontendGameInstance::GetOrCreateMenuSessionData()

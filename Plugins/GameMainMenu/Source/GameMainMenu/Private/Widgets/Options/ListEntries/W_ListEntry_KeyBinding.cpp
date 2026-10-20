@@ -208,6 +208,58 @@ bool UW_ListEntry_KeyBinding::IsValidKeyForListeningSlot(const FKey& Key) const
 	return true;
 }
 
+/**
+ * Applies a captured key to the data object the remap was requested for.
+ *
+ * Only touches the data object and the UI subsystem captured when the remap was requested: the owning
+ * entry widget is pooled by the ListView and may have been recycled onto another key binding action,
+ * or been destroyed, before this runs.
+ */
+static void ApplyRemappedKeyForDataObject(const TWeakObjectPtr<UUListDataObject_KeyBinding>& InTargetDataObject,
+	const TWeakObjectPtr<UFrontendUISubsystem>& InWeakUISubsystem, const FKey& InPressedKey)
+{
+	UUListDataObject_KeyBinding* TargetDataObject = InTargetDataObject.Get();
+	if (!TargetDataObject)
+	{
+		return;
+	}
+
+	FName ConflictActionName;
+	FText ConflictDisplayName;
+	if (!TargetDataObject->FindConflictingAction(InPressedKey, ConflictActionName, ConflictDisplayName))
+	{
+		// No conflict — bind directly.
+		TargetDataObject->BindNewInputKey(InPressedKey);
+		return;
+	}
+
+	UFrontendUISubsystem* UISubsystem = InWeakUISubsystem.Get();
+	if (!UISubsystem)
+	{
+		return;
+	}
+
+	UISubsystem->PushConfirmWidgetToModalStackAsync(
+		EConfirmScreenType::YesNo,
+		LOCTEXT("KeyConflict_Title", "Key Already Bound"),
+		FText::Format(
+			LOCTEXT("KeyConflict_Message", "'{0}' is already used by '{1}'. Do you want to rebind it?"),
+			InPressedKey.GetDisplayName(),
+			ConflictDisplayName),
+		[InTargetDataObject, InPressedKey](const EConfirmScreenButtonType Result)
+		{
+			if (Result != EConfirmScreenButtonType::Confirmed)
+			{
+				return;
+			}
+
+			if (UUListDataObject_KeyBinding* ConfirmedDataObject = InTargetDataObject.Get())
+			{
+				ConfirmedDataObject->BindNewInputKey(InPressedKey);
+			}
+		});
+}
+
 void UW_ListEntry_KeyBinding::OnKeyboardSlotClicked()
 {
 	if (!CachedOwningKeyBindingDataObject)
@@ -227,24 +279,7 @@ void UW_ListEntry_KeyBinding::OnKeyboardSlotClicked()
 	}
 	if (FoundSlotIndex == INDEX_NONE) return;
 
-	UFrontendUISubsystem* UISubsystem = UFrontendUISubsystem::Get(this);
-	if (!UISubsystem) return;
-
-	UISubsystem->PushSoftWidgetToStackAsync(
-		FrontendGameplayTags::Frontend_WidgetStack_Modal,
-		UFrontendFunctionLibrary::GetFrontendSoftWidgetClassByTag(FrontendGameplayTags::Frontend_Widget_KeyRemap),
-		[this](const EAsyncPushWidgetState InPushState, UW_ActivatableBase* PushWidget)
-		{
-			if (InPushState == EAsyncPushWidgetState::OnCreateBeforePush && PushWidget)
-			{
-				UW_KeyRemapScreen* CreateKeyRemapScreen = CastChecked<UW_KeyRemapScreen>(PushWidget);
-
-				CreateKeyRemapScreen->OnKeyRemapScreenKeyPressed.BindUObject(this,&ThisClass::OnKeyRemapPressed);
-				CreateKeyRemapScreen->OnKeyRemapScreenKeyCancel.BindUObject(this,&ThisClass::OnKeyRemapCancel);
-				CreateKeyRemapScreen->SetRemapInputType(ECommonInputType::MouseAndKeyboard, GetOwningLocalPlayer());
-				PushWidget->SetOwningPlayer(GetOwningPlayer());
-			}
-		});
+	OpenRemapForDataObject(CachedOwningKeyBindingDataObject, ECommonInputType::MouseAndKeyboard);
 }
 
 void UW_ListEntry_KeyBinding::OnGamepadSlotClicked()
@@ -263,67 +298,53 @@ void UW_ListEntry_KeyBinding::OnGamepadSlotClicked()
 	}
 	if (FoundSlotIndex == INDEX_NONE) return;
 
+	OpenRemapForDataObject(CachedOwningKeyBindingDataObject, ECommonInputType::Gamepad);
+}
+
+void UW_ListEntry_KeyBinding::OpenRemapForDataObject(UUListDataObject_KeyBinding* InTargetDataObject,
+	ECommonInputType InInputType)
+{
+	if (!InTargetDataObject)
+	{
+		return;
+	}
+
 	UFrontendUISubsystem* UISubsystem = UFrontendUISubsystem::Get(this);
 	if (!UISubsystem) return;
+
+	// Capture the target now, while this entry still owns it: the request below completes asynchronously,
+	// and this entry can be recycled onto another key binding action before the callbacks run.
+	const TWeakObjectPtr<UUListDataObject_KeyBinding> WeakTargetDataObject = InTargetDataObject;
+	const TWeakObjectPtr<UFrontendUISubsystem> WeakUISubsystem = UISubsystem;
+	const TWeakObjectPtr<ULocalPlayer> WeakLocalPlayer = GetOwningLocalPlayer();
+	const TWeakObjectPtr<APlayerController> WeakOwningPlayer = GetOwningPlayer();
 
 	UISubsystem->PushSoftWidgetToStackAsync(
 		FrontendGameplayTags::Frontend_WidgetStack_Modal,
 		UFrontendFunctionLibrary::GetFrontendSoftWidgetClassByTag(FrontendGameplayTags::Frontend_Widget_KeyRemap),
-		[this](const EAsyncPushWidgetState InPushState, UW_ActivatableBase* PushWidget)
+		[WeakTargetDataObject, WeakUISubsystem, WeakLocalPlayer, WeakOwningPlayer, InInputType](
+			const EAsyncPushWidgetState InPushState, UW_ActivatableBase* PushWidget)
 		{
-			if (InPushState == EAsyncPushWidgetState::OnCreateBeforePush && PushWidget)
+			if (InPushState != EAsyncPushWidgetState::OnCreateBeforePush || !PushWidget)
 			{
-				UW_KeyRemapScreen* CreateKeyRemapScreen = CastChecked<UW_KeyRemapScreen>(PushWidget);
+				return;
+			}
 
-				CreateKeyRemapScreen->OnKeyRemapScreenKeyPressed.BindUObject(this,&ThisClass::OnKeyRemapPressed);
-				CreateKeyRemapScreen->OnKeyRemapScreenKeyCancel.BindUObject(this,&ThisClass::OnKeyRemapCancel);
-				CreateKeyRemapScreen->SetRemapInputType(ECommonInputType::Gamepad, GetOwningLocalPlayer());
-				PushWidget->SetOwningPlayer(GetOwningPlayer());
+			UW_KeyRemapScreen* CreateKeyRemapScreen = CastChecked<UW_KeyRemapScreen>(PushWidget);
+
+			CreateKeyRemapScreen->OnKeyRemapScreenKeyPressed.BindLambda(
+				[WeakTargetDataObject, WeakUISubsystem](const FKey& PressedKey)
+				{
+					ApplyRemappedKeyForDataObject(WeakTargetDataObject, WeakUISubsystem, PressedKey);
+				});
+
+			CreateKeyRemapScreen->SetRemapInputType(InInputType, WeakLocalPlayer.Get());
+
+			if (APlayerController* OwningPlayer = WeakOwningPlayer.Get())
+			{
+				PushWidget->SetOwningPlayer(OwningPlayer);
 			}
 		});
-}
-
-/** Handle key press from the KeyRemap overlay. Shows conflict dialog if key is already bound. */
-void UW_ListEntry_KeyBinding::OnKeyRemapPressed(const FKey& PressedKey)
-{
-	if (!CachedOwningKeyBindingDataObject)
-	{
-		return;
-	}
-
-	FName ConflictActionName;
-	FText ConflictDisplayName;
-	if (CachedOwningKeyBindingDataObject->FindConflictingAction(PressedKey, ConflictActionName, ConflictDisplayName))
-	{
-		UFrontendUISubsystem* UISubsystem = UFrontendUISubsystem::Get(this);
-		if (!UISubsystem) return;
-
-		UISubsystem->PushConfirmWidgetToModalStackAsync(
-			EConfirmScreenType::YesNo,
-			LOCTEXT("KeyConflict_Title", "Key Already Bound"),
-			FText::Format(
-				LOCTEXT("KeyConflict_Message", "'{0}' is already used by '{1}'. Do you want to rebind it?"),
-				PressedKey.GetDisplayName(),
-				ConflictDisplayName),
-			[this, PressedKey](const EConfirmScreenButtonType Result)
-			{
-				if (Result == EConfirmScreenButtonType::Confirmed)
-				{
-					if (CachedOwningKeyBindingDataObject)
-					{
-						CachedOwningKeyBindingDataObject->BindNewInputKey(PressedKey);
-					}
-				}
-			});
-		return;
-	}
-
-	// No conflict — bind directly.
-	CachedOwningKeyBindingDataObject->BindNewInputKey(PressedKey);
-}
-
-void UW_ListEntry_KeyBinding::OnKeyRemapCancel(const FString& CancelReason)
-{
 }
 
 void UW_ListEntry_KeyBinding::UpdateButtonIcons()
