@@ -4,7 +4,6 @@
 #include "Components/FrontendCommonButtonBase.h"
 #include "CommonLazyImage.h"
 #include "CommonTextBlock.h"
-#include "FrontendDebugHelper.h"
 #include "Subsystems/FrontendUISubsystem.h"
 
 void UFrontendCommonButtonBase::NativePreConstruct()

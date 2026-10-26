@@ -5,9 +5,13 @@
 
 #include "PreLoadScreenManager.h"
 #include "Blueprint/UserWidget.h"
+#include "Engine/AssetManager.h"
+#include "Engine/StreamableManager.h"
+#include "UObject/Class.h"
 #include "FrontendGameplayTags.h"
 #include "FrontendSettings/FrontendLoadingScreenSettings.h"
 #include "Interface/FrontendLoadingScreenInterface.h"
+#include "LogGameMainMenu.h"
 
 bool UFrontendLoadingScreenSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 {
@@ -29,7 +33,16 @@ void UFrontendLoadingScreenSubsystem::Deinitialize()
 	FCoreUObjectDelegates::PreLoadMapWithContext.RemoveAll(this);
 	FCoreUObjectDelegates::PostLoadMapWithWorld.RemoveAll(this);
 
+	if (LoadingScreenAssetHandle.IsValid())
+	{
+		LoadingScreenAssetHandle->CancelHandle();
+		LoadingScreenAssetHandle.Reset();
+	}
+
 	TryRemoveLoadingScreen();
+
+	CachedLoadingScreenClass = nullptr;
+	CachedPhaseMapping.Reset();
 }
 
 void UFrontendLoadingScreenSubsystem::Initialize(FSubsystemCollectionBase& Collection)
@@ -38,6 +51,50 @@ void UFrontendLoadingScreenSubsystem::Initialize(FSubsystemCollectionBase& Colle
 	
 	FCoreUObjectDelegates::PreLoadMapWithContext.AddUObject(this, &UFrontendLoadingScreenSubsystem::OnMapPreLoad);
 	FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(this, &UFrontendLoadingScreenSubsystem::OnMapPostLoad);
+
+	PreloadLoadingScreenAssets();
+}
+
+void UFrontendLoadingScreenSubsystem::PreloadLoadingScreenAssets()
+{
+	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+	if (!LoadScreenSettings) return;
+
+	TArray<FSoftObjectPath> AssetsToLoad;
+	if (!LoadScreenSettings->LoadingScreenWidget.IsNull())
+	{
+		AssetsToLoad.Add(LoadScreenSettings->LoadingScreenWidget.ToSoftObjectPath());
+	}
+	if (!LoadScreenSettings->PhaseMapping.IsNull())
+	{
+		AssetsToLoad.Add(LoadScreenSettings->PhaseMapping.ToSoftObjectPath());
+	}
+
+	if (AssetsToLoad.IsEmpty()) return;
+
+	if (!UAssetManager::GetIfInitialized()) return;
+
+	LoadingScreenAssetHandle = UAssetManager::GetStreamableManager().RequestAsyncLoad(
+		AssetsToLoad,
+		FStreamableDelegate::CreateUObject(this, &UFrontendLoadingScreenSubsystem::OnLoadingScreenAssetsLoaded)
+	);
+}
+
+void UFrontendLoadingScreenSubsystem::OnLoadingScreenAssetsLoaded()
+{
+	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+	if (!LoadScreenSettings) return;
+
+	if (UClass* WidgetClass = LoadScreenSettings->LoadingScreenWidget.Get())
+	{
+		CachedLoadingScreenClass = WidgetClass;
+		bLoadingScreenUnavailable = false;
+	}
+
+	if (ULoadingScreenPhaseMapping* PhaseMapping = LoadScreenSettings->PhaseMapping.Get())
+	{
+		CachedPhaseMapping.Reset(PhaseMapping);
+	}
 }
 
 UWorld* UFrontendLoadingScreenSubsystem::GetTickableGameObjectWorld() const
@@ -52,6 +109,20 @@ UWorld* UFrontendLoadingScreenSubsystem::GetTickableGameObjectWorld() const
 
 void UFrontendLoadingScreenSubsystem::Tick(float DeltaTime)
 {
+	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+	if (LoadScreenSettings && LoadScreenSettings->MaxLoadingScreenTime > 0.0f && LoadingScreenVisibleStartTime >= 0.0)
+	{
+		const double ElapsedTime = FPlatformTime::Seconds() - LoadingScreenVisibleStartTime;
+		if (ElapsedTime > LoadScreenSettings->MaxLoadingScreenTime)
+		{
+			UE_LOG(LogGameMainMenu, Warning, TEXT("FrontendLoadingScreen: Loading screen stayed up for %.1fs (MaxLoadingScreenTime %.1fs). Force hiding."), ElapsedTime, LoadScreenSettings->MaxLoadingScreenTime);
+
+			bIsCurrentlyLoadingMap = false;
+			HideLoadingScreenImmediately(true);
+			return;
+		}
+	}
+
 	TryUpdateLoadingScreen();
 }
 
@@ -86,17 +157,43 @@ void UFrontendLoadingScreenSubsystem::OnMapPreLoad(const FWorldContext& WorldCon
 	SetTickableTickType(ETickableTickType::Conditional);
 
 	bIsCurrentlyLoadingMap = true;
+	bLoadingScreenSuppressed = false;
 
 	HoldLoadingScreenStartUpTime = -1.0;
+	HideRequestedTime = -1.0;
+	LastBroadcastLoadingPhase = FGameplayTag();
 
 	TryUpdateLoadingScreen();
 }
 
 void UFrontendLoadingScreenSubsystem::OnMapPostLoad(UWorld* LoadedWorld)
 {
-	if (LoadedWorld && LoadedWorld->GetGameInstance() == GetGameInstance())
+	if (!LoadedWorld)
+	{
+		// PostLoadMapWithWorld is broadcast with a null world when a map load is cancelled or fails.
+		// Without this the subsystem would keep bIsCurrentlyLoadingMap set forever and stay black.
+		// Ignore null broadcasts that do not belong to the load this subsystem started (e.g. another PIE client).
+		if (!bIsCurrentlyLoadingMap) return;
+
+		bIsCurrentlyLoadingMap = false;
+
+		UE_LOG(LogGameMainMenu, Warning, TEXT("FrontendLoadingScreen: Map load finished without a world. Hiding the loading screen."));
+
+		HideLoadingScreenImmediately(true);
+		return;
+	}
+
+	if (LoadedWorld->GetGameInstance() == GetGameInstance())
 	{
 		bIsCurrentlyLoadingMap = false;
+
+		// A force-hidden (stuck) load must not re-enable ticking just to no-op every frame.
+		// OnMapPreLoad clears the suppression for the next load.
+		if (bLoadingScreenSuppressed) return;
+
+		// Re-enable ticking: the screen may have been hidden (and ticking stopped) before the
+		// viewport existed, and the post-load phases are driven from Tick.
+		SetTickableTickType(ETickableTickType::Conditional);
 
 		TryUpdateLoadingScreen();
 	}
@@ -104,6 +201,11 @@ void UFrontendLoadingScreenSubsystem::OnMapPostLoad(UWorld* LoadedWorld)
 
 void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
 {
+	if (bLoadingScreenSuppressed)
+	{
+		return;
+	}
+
 	if (IsPreLoadScreenActive())
 	{
 		return;
@@ -111,6 +213,13 @@ void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
 
 	if (ShouldShowLoadingScreen())
 	{
+		HideRequestedTime = -1.0;
+
+		if (LoadingScreenVisibleStartTime < 0.0)
+		{
+			LoadingScreenVisibleStartTime = FPlatformTime::Seconds();
+		}
+
 		UGameViewportClient* ViewportClient = GetGameInstance()->GetGameViewportClient();
 		if (ViewportClient)
 		{
@@ -121,25 +230,70 @@ void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
 
 		TryDisplayLoadingScreenIfNone();
 
-		OnLoadingPhaseUpdated.Broadcast(CurrentLoadingPhase);
+		// Only broadcast when the phase actually changes. The loading screen sits on screen for
+		// HoldLoadingScreenTime, so broadcasting every tick made the widget re-query its display
+		// info (and re-set its text) at frame rate.
+		if (CurrentLoadingPhase != LastBroadcastLoadingPhase)
+		{
+			LastBroadcastLoadingPhase = CurrentLoadingPhase;
+			OnLoadingPhaseUpdated.Broadcast(CurrentLoadingPhase);
+		}
 	}
 	else
 	{
-		TryRemoveLoadingScreen();
+		HideLoadingScreenImmediately(false);
+	}
+}
 
-		HoldLoadingScreenStartUpTime = -1.0;
+void UFrontendLoadingScreenSubsystem::HideLoadingScreenImmediately(bool bForce)
+{
+	TryRemoveLoadingScreen();
 
-		// 客户端 PC 复制到达晚于地图加载完成,PC 未全部就绪前保持 tick,
-		// 否则 deactivated 错过一次后停 tick,客户端主菜单永远无法创建
-		if (!AllLocalPlayersHaveControllers())
+	// Do not reset HoldLoadingScreenStartUpTime here. While waiting for late player controllers
+	// this function is called once per tick, and resetting it would restart the hold timer and
+	// make ShouldShowLoadingScreen return true again (hide/show loop). OnMapPreLoad resets it
+	// for the next load instead.
+	LoadingScreenVisibleStartTime = -1.0;
+	LastBroadcastLoadingPhase = FGameplayTag();
+
+	if (bForce)
+	{
+		// The load may still be running and will broadcast PostLoadMap later; do not let that
+		// callback re-display the widget after the tick has been stopped.
+		bLoadingScreenSuppressed = true;
+	}
+
+	// The client's player controller can replicate in after the map load finished. Keep ticking
+	// until it exists so the deactivated notification still reaches it (the frontend menu is
+	// created there), but do not wait forever if it never arrives.
+	if (!bForce && bLoadingScreenWasShown && !AllLocalPlayersHaveControllers())
+	{
+		const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+		const double MaxWaitTime = LoadScreenSettings ? LoadScreenSettings->MaxWaitForPlayerControllerTime : 30.0;
+		const double CurrentTime = FPlatformTime::Seconds();
+
+		if (HideRequestedTime < 0.0)
+		{
+			HideRequestedTime = CurrentTime;
+		}
+
+		if (MaxWaitTime <= 0.0 || CurrentTime - HideRequestedTime < MaxWaitTime)
 		{
 			return;
 		}
 
-		NotifyLoadingScreenVisibilityChanged(false);
-
-		SetTickableTickType(ETickableTickType::Never);
+		UE_LOG(LogGameMainMenu, Warning, TEXT("FrontendLoadingScreen: Timed out after %.1fs waiting for local player controllers; deactivated notification may be missed."), CurrentTime - HideRequestedTime);
 	}
+
+	HideRequestedTime = -1.0;
+
+	if (bLoadingScreenWasShown)
+	{
+		NotifyLoadingScreenVisibilityChanged(false);
+		bLoadingScreenWasShown = false;
+	}
+
+	SetTickableTickType(ETickableTickType::Never);
 }
 
 bool UFrontendLoadingScreenSubsystem::IsPreLoadScreenActive() const
@@ -211,49 +365,106 @@ bool UFrontendLoadingScreenSubsystem::CheckIsNeedShowLoadingScreen()
 	return false;
 }
 
+UClass* UFrontendLoadingScreenSubsystem::ResolveLoadingScreenClass()
+{
+	if (CachedLoadingScreenClass)
+	{
+		return CachedLoadingScreenClass.Get();
+	}
+
+	if (bLoadingScreenUnavailable)
+	{
+		return nullptr;
+	}
+
+	// Do not fall back to a synchronous load while the preload is still in flight: that is the
+	// frame hitch this cache exists to avoid. Retry on the next tick instead.
+	if (LoadingScreenAssetHandle.IsValid() && LoadingScreenAssetHandle->IsLoadingInProgress())
+	{
+		return nullptr;
+	}
+
+	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+	if (!LoadScreenSettings) return nullptr;
+
+	UClass* WidgetClass = LoadScreenSettings->GetSoftLoadScreenWidgetClassCheck().Get();
+	if (!WidgetClass)
+	{
+		UE_LOG(LogGameMainMenu, Error, TEXT("FrontendLoadingScreen: Failed to load the loading screen widget class; the loading screen is disabled."));
+
+		bLoadingScreenUnavailable = true;
+		return nullptr;
+	}
+
+	CachedLoadingScreenClass = WidgetClass;
+	return WidgetClass;
+}
+
 void UFrontendLoadingScreenSubsystem::TryDisplayLoadingScreenIfNone()
 {
 	if (CachedLoadingScreenWidget)
 	{
 		return;
 	}
-	
-	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
 
-	TSubclassOf<UUserWidget> LoadWidgetClass = LoadScreenSettings->GetSoftLoadScreenWidgetClassCheck();
-
-	UUserWidget* CreatedLoadingWidget = UUserWidget::CreateWidgetInstance(*GetGameInstance(),LoadWidgetClass,NAME_None);
-
-	if (!ensure(CreatedLoadingWidget))
+	UClass* LoadWidgetClass = ResolveLoadingScreenClass();
+	if (!LoadWidgetClass)
 	{
+		return;
+	}
+
+	UGameInstance* GameInstance = GetGameInstance();
+	if (!GameInstance) return;
+
+	UUserWidget* CreatedLoadingWidget = UUserWidget::CreateWidgetInstance(*GameInstance, LoadWidgetClass, NAME_None);
+
+	if (!CreatedLoadingWidget)
+	{
+		UE_LOG(LogGameMainMenu, Error, TEXT("FrontendLoadingScreen: Failed to create the loading screen widget; the loading screen is disabled."));
+
+		bLoadingScreenUnavailable = true;
 		return;
 	}
 
 	CachedLoadingScreenWidget = CreatedLoadingWidget->TakeWidget();
 
-	UGameViewportClient* ViewportClient = GetGameInstance()->GetGameViewportClient();
-	if (!ViewportClient) return;
+	UGameViewportClient* ViewportClient = GameInstance->GetGameViewportClient();
+	if (!ViewportClient)
+	{
+		CachedLoadingScreenWidget.Reset();
+		return;
+	}
 
 	ViewportClient->AddViewportWidgetContent(
 		CachedLoadingScreenWidget.ToSharedRef(),1000
 	);
+
+	bLoadingScreenWasShown = true;
+
+	// Force the current phase through to the widget that was just constructed. With the
+	// change-only broadcast below, the widget has missed every previous broadcast.
+	LastBroadcastLoadingPhase = FGameplayTag();
 
 	NotifyLoadingScreenVisibilityChanged(true);
 }
 
 void UFrontendLoadingScreenSubsystem::TryRemoveLoadingScreen()
 {
-	if (!CachedLoadingScreenWidget)
-	{
-		return ;
-	}
-	
-	UGameViewportClient* ViewportClient = GetGameInstance()->GetGameViewportClient();
+	UGameInstance* GameInstance = GetGameInstance();
+	UGameViewportClient* ViewportClient = GameInstance ? GameInstance->GetGameViewportClient() : nullptr;
+
 	if (ViewportClient)
 	{
-		ViewportClient->RemoveViewportWidgetContent(
-			CachedLoadingScreenWidget.ToSharedRef()
-		);
+		// Always restore world rendering, even if the widget never got created. Otherwise a
+		// loading screen that was requested but failed to spawn leaves the game black.
+		ViewportClient->bDisableWorldRendering = false;
+
+		if (CachedLoadingScreenWidget)
+		{
+			ViewportClient->RemoveViewportWidgetContent(
+				CachedLoadingScreenWidget.ToSharedRef()
+			);
+		}
 	}
 
 	CachedLoadingScreenWidget.Reset();
@@ -324,11 +535,22 @@ void UFrontendLoadingScreenSubsystem::NotifyLoadingScreenVisibilityChanged(bool 
 
 FLoadingPhaseDisplayInfo UFrontendLoadingScreenSubsystem::GetLoadingPhaseDisplayInfo(FGameplayTag PhaseTag) const
 {
-	const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
-
-	if (const ULoadingScreenPhaseMapping* PhaseMapping = LoadScreenSettings->PhaseMapping.LoadSynchronous())
+	if (!CachedPhaseMapping)
 	{
-		return PhaseMapping->FindDisplayInfo(PhaseTag);
+		const UFrontendLoadingScreenSettings* LoadScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+
+		if (LoadScreenSettings)
+		{
+			if (ULoadingScreenPhaseMapping* PhaseMapping = LoadScreenSettings->PhaseMapping.LoadSynchronous())
+			{
+				CachedPhaseMapping.Reset(PhaseMapping);
+			}
+		}
+	}
+
+	if (CachedPhaseMapping)
+	{
+		return CachedPhaseMapping->FindDisplayInfo(PhaseTag);
 	}
 
 	return ULoadingScreenPhaseMapping::StaticClass()->GetDefaultObject<ULoadingScreenPhaseMapping>()->FindDisplayInfo(PhaseTag);

@@ -8,7 +8,6 @@
 #include "CommonInputBaseTypes.h"
 #include "CommonInputSubsystem.h"
 #include "Framework/Application/SlateApplication.h"
-#include "FrontendDebugHelper.h"
 
 void UUListDataObject_KeyBinding::AddKeyBindingSlot(const FKeyBindingSlotDescriptor& InSlot)
 {

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "CommonNumericTextBlock.h"
+#include "GameplayTagContainer.h"
 #include "Widgets/MenuConfig/MenuConfigTypes.h"
 #include "Widgets/MenuConfig/MenuEntryValueConfig.h"
 #include "Widgets/MenuConfig/MenuFormTypes.h"
@@ -158,6 +159,10 @@ public:
 	FText DisableRichReason;
 
 	// ---- Additional display metadata ----
+	/** Optional image tag resolved through OptionsScreenSoftImageMap and shown in the option detail panel. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Display", meta = (Categories = "Frontend.Image"))
+	FGameplayTag DescriptionImageTag;
+
 	/** Additional rich text displayed in the option detail panel. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "Display", meta = (MultiLine = "true"))
 	FText DynamicDetails;

@@ -39,6 +39,15 @@ void UW_ListEntry_Base::NativeOnItemSelectionChanged(const bool bIsSelected)
 
 void UW_ListEntry_Base::NativeOnEntryReleased()
 {
+	// ListView recycles entry widgets. Without unbinding, this entry keeps receiving the
+	// previous data object's events after it has been reused for another row.
+	if (CachedOwningListDataObject)
+	{
+		CachedOwningListDataObject->OnListDataModified.RemoveAll(this);
+		CachedOwningListDataObject->OnDependencyDataModified.RemoveAll(this);
+		CachedOwningListDataObject = nullptr;
+	}
+
 	IUserObjectListEntry::NativeOnEntryReleased();
 	
 	NativeOnListEntryWidgetHovered(false);

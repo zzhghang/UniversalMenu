@@ -5,8 +5,11 @@
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "GameplayTagContainer.h"
+#include "UObject/StrongObjectPtr.h"
 #include "Widgets/Options/DataObjects/LoadingScreenPhaseMapping.h"
 #include "FrontendLoadingScreenSubsystem.generated.h"
+
+struct FStreamableHandle;
 
 /**
  * 
@@ -55,14 +58,27 @@ private:
 	void OnMapPreLoad(const FWorldContext& WorldContext, const FString&  MapName );
 	
 	void OnMapPostLoad(UWorld* LoadedWorld);
+
+	// Preloads the widget class and phase mapping off the map-load path. Without this the
+	// first PreLoadMap synchronously loads WBP_LoadingScreen and stalls the frame that is
+	// supposed to show it.
+	void PreloadLoadingScreenAssets();
+
+	void OnLoadingScreenAssetsLoaded();
 	
 	void TryUpdateLoadingScreen();
+
+	// Central hide path: restores world rendering, clears timers, delivers the deactivated
+	// notification once, and stops ticking. bForce skips waiting for late local players.
+	void HideLoadingScreenImmediately(bool bForce);
 	
 	bool IsPreLoadScreenActive() const;
 	
 	bool ShouldShowLoadingScreen();
 	
 	bool CheckIsNeedShowLoadingScreen();
+
+	UClass* ResolveLoadingScreenClass();
 	
 	void TryDisplayLoadingScreenIfNone();
 	
@@ -76,7 +92,30 @@ private:
 
 	double HoldLoadingScreenStartUpTime = -1.0;
 
+	// Time we started showing (or trying to show) the loading screen; -1 when hidden.
+	double LoadingScreenVisibleStartTime = -1.0;
+
+	// Time we first entered the "hide but wait for player controllers" state; -1 otherwise.
+	double HideRequestedTime = -1.0;
+
 	FGameplayTag CurrentLoadingPhase;
 
+	FGameplayTag LastBroadcastLoadingPhase;
+
+	bool bLoadingScreenWasShown = false;
+
+	bool bLoadingScreenUnavailable = false;
+
+	// Set when a stuck/failed load force-hides the screen. Keeps the late PostLoadMap callback
+	// from re-displaying the widget after the subsystem stopped ticking.
+	bool bLoadingScreenSuppressed = false;
+
 	TSharedPtr<SWidget> CachedLoadingScreenWidget = nullptr;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UClass> CachedLoadingScreenClass = nullptr;
+
+	mutable TStrongObjectPtr<ULoadingScreenPhaseMapping> CachedPhaseMapping;
+
+	TSharedPtr<FStreamableHandle> LoadingScreenAssetHandle;
 };

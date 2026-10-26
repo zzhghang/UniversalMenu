@@ -3,7 +3,6 @@
 
 #include "Widgets/Options/W_OptionScreen.h"
 
-#include "FrontendDebugHelper.h"
 #include "Input/CommonUIInputTypes.h"
 #include "ICommonInputModule.h"
 #include "Components/FrontendCommonListView.h"

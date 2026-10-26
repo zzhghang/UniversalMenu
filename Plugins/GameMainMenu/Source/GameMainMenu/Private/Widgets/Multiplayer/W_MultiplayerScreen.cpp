@@ -5,9 +5,9 @@
 
 #include "Components/FrontendCommonListView.h"
 #include "Components/FrontendCommonTabListWidgetBase.h"
-#include "FrontendDebugHelper.h"
 #include "FrontendGameInstance.h"
 #include "Input/CommonUIInputTypes.h"
+#include "LogGameMainMenu.h"
 #include "ICommonInputModule.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Editable.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_Session.h"
@@ -247,7 +247,7 @@ UMenuSessionData* UW_MultiplayerScreen::SaveSessionData()
 	UMultiplayerDataRegistry* Registry = GetOrCreateDataRegistry();
 	if (!Registry || !Registry->SaveFormValues(SessionData))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Multiplayer form was not saved: invalid configuration."));
+		UE_LOG(LogGameMainMenu, Warning, TEXT("Multiplayer form was not saved: invalid configuration."));
 		OnSessionSaveCompleted(false);
 		return nullptr;
 	}

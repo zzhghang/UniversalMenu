@@ -13,11 +13,11 @@
 #include "Widgets/Options/DataObjects/UListDataObject_KeyBinding.h"
 #include "Widgets/MenuConfig/MenuConfigData.h"
 #include "LocalizationKeys.h"
+#include "LogGameMainMenu.h"
 
 #include "EnhancedInputSubsystems.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
 #include "InputAction.h"
-#include "FrontendDebugHelper.h"
 
 // ============================================================================
 // Factory helpers
@@ -369,7 +369,7 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 		// A tab is looked up by TabId, so an empty or repeated one would be unreachable.
 		if (TabData->TabId.IsNone() || RegisteredTabIds.Contains(TabData->TabId))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Options config: empty or duplicate TabId %s"), *TabData->TabId.ToString());
+			UE_LOG(LogGameMainMenu, Warning, TEXT("Options config: empty or duplicate TabId %s"), *TabData->TabId.ToString());
 			continue;
 		}
 		RegisteredTabIds.Add(TabData->TabId);
@@ -391,7 +391,7 @@ void UOptionsDataRegistry::InitFromDataAsset(ULocalPlayer* InOwningLocalPlayer)
 				// silently make the edit conditions target whichever entry was added last.
 				if (EntryData->DataId.IsNone() || EntryLookup.Contains(EntryData->DataId))
 				{
-					UE_LOG(LogTemp, Warning, TEXT("Options config: empty or duplicate DataId %s in %s"), *EntryData->DataId.ToString(), *TabData->TabId.ToString());
+					UE_LOG(LogGameMainMenu, Warning, TEXT("Options config: empty or duplicate DataId %s in %s"), *EntryData->DataId.ToString(), *TabData->TabId.ToString());
 					continue;
 				}
 

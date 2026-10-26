@@ -5,6 +5,7 @@
 
 #include "FrontendSettings/FrontendDeveloperSettings.h"
 #include "GeneralProjectSettings.h"
+#include "LogGameMainMenu.h"
 #include "Sound/SoundClass.h"
 #include "Sound/SoundMix.h"
 
@@ -19,11 +20,19 @@ TSoftClassPtr<UW_ActivatableBase> UFrontendFunctionLibrary::GetFrontendSoftWidge
 
 TSoftObjectPtr<UTexture2D> UFrontendFunctionLibrary::GetOptionsSoftImageByTag(UPARAM(meta = (Categories = "Frontend.Image")) FGameplayTag InImageTag)
 {
+	if (!InImageTag.IsValid()) return nullptr;
+
 	const UFrontendDeveloperSettings* FrontendDeveloperSettings = GetDefault<UFrontendDeveloperSettings>();
+	if (!FrontendDeveloperSettings) return nullptr;
 
-	ensureMsgf(FrontendDeveloperSettings->OptionsScreenSoftImageMap.Contains(InImageTag), TEXT("Can not find Image under the tag %s"), *InImageTag.ToString());
+	if (const TSoftObjectPtr<UTexture2D>* FoundImage = FrontendDeveloperSettings->OptionsScreenSoftImageMap.Find(InImageTag))
+	{
+		return *FoundImage;
+	}
 
-	return FrontendDeveloperSettings->OptionsScreenSoftImageMap.FindRef(InImageTag);
+	// Description images are optional; a missing mapping is a configuration warning, not a fatal error.
+	UE_LOG(LogGameMainMenu, Warning, TEXT("Can not find Image under the tag %s in OptionsScreenSoftImageMap"), *InImageTag.ToString());
+	return nullptr;
 }
 
 USoundMix* UFrontendFunctionLibrary::GetDefaultSoundMix()

@@ -3,6 +3,7 @@
 
 #include "Widgets/MenuConfig/MenuConfigData.h"
 
+#include "FunctionLibrary/FrontendFunctionLibrary.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 
@@ -19,6 +20,14 @@ static void ApplyCommonConfig(UListDataObject_Base* Entry, const UMenuEntryConfi
 	Entry->SetDataId(Data->DataId);
 	Entry->SetDataDisplayName(Data->DisplayName);
 	Entry->SetDescriptionRichText(Data->Description);
+
+	// The detail panel image is optional. Resolve it here so Options and Multiplayer entries
+	// created through CreateEntryFromConfig share the same tag -> texture path.
+	if (Data->DescriptionImageTag.IsValid())
+	{
+		Entry->SetSoftDescriptionImage(UFrontendFunctionLibrary::GetOptionsSoftImageByTag(Data->DescriptionImageTag));
+	}
+
 	if (Cast<UListDataObject_Value>(Entry)) Entry->SetShouldApplyChangeImmediately(Data->bApplyImmediately);
 	Entry->SetDynamicDetailsRichText(Data->DynamicDetails);
 	if (!Data->DisableRichReason.IsEmpty())

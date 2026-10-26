@@ -3,6 +3,7 @@
 #include "FrontendGameInstance.h"
 
 #include "FrontendSettings/FrontendGameUserSettings.h"
+#include "LogGameMainMenu.h"
 #include "Kismet/GameplayStatics.h"
 #include "Widgets/Multiplayer/MenuSessionData.h"
 
@@ -65,6 +66,6 @@ void UFrontendGameInstance::SaveMenuSessionData()
 bool UFrontendGameInstance::TrySaveMenuSessionData()
 {
 	const bool bSaved = CachedMenuSessionData && UGameplayStatics::SaveGameToSlot(CachedMenuSessionData, MenuSessionSlotName, MenuSessionSlotIndex);
-	if (!bSaved) UE_LOG(LogTemp, Warning, TEXT("Failed to save MenuSession settings."));
+	if (!bSaved) UE_LOG(LogGameMainMenu, Warning, TEXT("Failed to save MenuSession settings."));
 	return bSaved;
 }

@@ -2,7 +2,10 @@
 
 #include "GameMainMenu.h"
 
+#include "LogGameMainMenu.h"
 #include "UObject/UObjectGlobals.h"
+
+DEFINE_LOG_CATEGORY(LogGameMainMenu);
 
 #define LOCTEXT_NAMESPACE "FGameMainMenuModule"
 

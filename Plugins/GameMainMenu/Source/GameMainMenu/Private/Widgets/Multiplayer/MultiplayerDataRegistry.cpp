@@ -1,5 +1,6 @@
 // HangHang All Rights Reserved
 #include "Widgets/Multiplayer/MultiplayerDataRegistry.h"
+#include "LogGameMainMenu.h"
 #include "Widgets/MenuConfig/MenuConfigData.h"
 #include "Widgets/Multiplayer/MenuSessionData.h"
 #include "Widgets/Multiplayer/DataObjects/ListDataObject_HeaderRow.h"
@@ -47,7 +48,7 @@ void UMultiplayerDataRegistry::InitFromConfig()
 		if (!TabData) continue;
 		if (TabData->TabId.IsNone() || TabIds.Contains(TabData->TabId))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: empty or duplicate TabId %s"), *TabData->TabId.ToString());
+			UE_LOG(LogGameMainMenu, Warning, TEXT("Multiplayer config: empty or duplicate TabId %s"), *TabData->TabId.ToString());
 			bConfigurationErrors = true;
 			continue;
 		}
@@ -80,7 +81,7 @@ void UMultiplayerDataRegistry::InitFromConfig()
 				{
 					if (bExplicitSessionParent)
 					{
-						UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: multiple session list categories"));
+						UE_LOG(LogGameMainMenu, Warning, TEXT("Multiplayer config: multiple session list categories"));
 						bConfigurationErrors = true;
 					}
 					else SessionListParent = Parent;
@@ -94,7 +95,7 @@ void UMultiplayerDataRegistry::InitFromConfig()
 				if (TabData->TabId == Config->JoinGameTabId && EntryData->DataId == TEXT("ServerList")) continue;
 				if (EntryData->DataId.IsNone() || FindEntry(TabData->TabId, EntryData->DataId))
 				{
-					UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: empty or duplicate DataId %s in %s"), *EntryData->DataId.ToString(), *TabData->TabId.ToString());
+					UE_LOG(LogGameMainMenu, Warning, TEXT("Multiplayer config: empty or duplicate DataId %s in %s"), *EntryData->DataId.ToString(), *TabData->TabId.ToString());
 					bConfigurationErrors = true;
 					continue;
 				}
@@ -116,7 +117,7 @@ void UMultiplayerDataRegistry::InitFromConfig()
 				{
 					if (SaveKeys.Contains(Key))
 					{
-						UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: duplicate SaveKey %s"), *Key.ToString());
+						UE_LOG(LogGameMainMenu, Warning, TEXT("Multiplayer config: duplicate SaveKey %s"), *Key.ToString());
 						bConfigurationErrors = true;
 					}
 					SaveKeys.Add(Key);
@@ -162,7 +163,7 @@ void UMultiplayerDataRegistry::WireConditions()
 			if (Source) Sources.Add(Source);
 			else
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Multiplayer config: missing condition source %s for %s"), *Rule.SourceDataId.ToString(), *EntryConfig->DataId.ToString());
+				UE_LOG(LogGameMainMenu, Warning, TEXT("Multiplayer config: missing condition source %s for %s"), *Rule.SourceDataId.ToString(), *EntryConfig->DataId.ToString());
 				bConfigurationErrors = true;
 			}
 		}

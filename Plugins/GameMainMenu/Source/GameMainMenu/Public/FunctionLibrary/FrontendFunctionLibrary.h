@@ -28,7 +28,7 @@ public:
 	UFUNCTION(BlueprintPure,Category="Frontend Function Library")
 	static TSoftClassPtr<UW_ActivatableBase> GetFrontendSoftWidgetClassByTag(UPARAM(meta = (Categories = "Frontend.Widget")) FGameplayTag InWidgetTag);
 
-	/** Resolve an image tag to its soft texture reference from developer settings. */
+	/** Resolve an image tag to its soft texture reference; returns null when the tag is not mapped. */
 	UFUNCTION(BlueprintPure, Category = "Frontend Function Library")
 	static TSoftObjectPtr<UTexture2D> GetOptionsSoftImageByTag(UPARAM(meta = (Categories = "Frontend.Image")) FGameplayTag InImageTag);
 

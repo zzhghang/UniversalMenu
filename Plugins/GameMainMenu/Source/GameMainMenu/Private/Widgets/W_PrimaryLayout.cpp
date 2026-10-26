@@ -3,8 +3,6 @@
 
 #include "Widgets/W_PrimaryLayout.h"
 
-#include "FrontendDebugHelper.h"
-
 UCommonActivatableWidgetContainerBase* UW_PrimaryLayout::FindWidgetStackByTag(const FGameplayTag& WidgetStackTag) const
 {
 	ensureMsgf(RegisteredWidgetStackMap.Contains(WidgetStackTag), TEXT("Can not find widget stack by the tag %s"), *WidgetStackTag.ToString());

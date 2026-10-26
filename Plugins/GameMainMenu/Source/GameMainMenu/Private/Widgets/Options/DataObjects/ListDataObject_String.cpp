@@ -3,7 +3,6 @@
 
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
 
-#include "FrontendDebugHelper.h"
 #include "Widgets/Options/OptionsDataInteractionHelper.h"
 #include "LocalizationKeys.h"
 #include "Misc/DefaultValueHelper.h"
